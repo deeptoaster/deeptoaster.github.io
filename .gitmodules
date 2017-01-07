@@ -1,0 +1,3 @@
+[submodule "lib/breakout"]
+	path = lib/breakout
+	url = ssh://git@github.com/DThought/scrollbar-breakout
