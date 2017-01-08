@@ -3,7 +3,7 @@
 	<head>
 		<title>Deep Toaster</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link href="flaticon.css" type="text/css" rel="stylesheet" />
+		<link href="/lib/breakout/breakout.css" type="text/css" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Raleway:800|Titillium+Web:400,700" type="text/css" rel="stylesheet" />
 		<style type="text/css">
 			html {
@@ -53,67 +53,18 @@
 				padding-bottom: 2em;
 				font-size: 1.5em;
 			}
-			.breakout {
-				position: relative;
-				width: 24em;
-				height: 12em;
-				margin: auto;
-				border: 1px solid #617078;
-				padding: 0.1em;
-				background-color: #232627;
-			}
-			.breakout ul {
-				list-style-type: none;
-				height: 1em;
-				margin: 0;
-				padding: 0.1em 0;
-				line-height: 1em;
-			}
-			.breakout li {
-				display: inline-block;
-				position: relative;
-				width: 2em;
-				height: 1em;
-			}
-			.breakout .breakout-red li {
-				background-color: #8f280d;
-			}
-			.breakout .breakout-orange li {
-				background-color: #8f480d;
-			}
-			.breakout .breakout-yellow li {
-				background-color: #8f5c0d;
-			}
-			.breakout .breakout-green li {
-				background-color: #8f6b0d;
-			}
-			.breakout li::before, .breakout li::after {
-				display: block;
-				position: absolute;
-				content: '';
-				width: 0.1em;
-				height: 1em;
-				background-color: #232627;
-			}
-			.breakout li::after {
-				right: 0;
-			}
-			.breakout .breakout-paddle {
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				overflow: auto;
-			}
-			.breakout .breakout-paddle span {
-				display: block;
-				width: 500%;
-				height: 1px;
-			}
-			.breakout input {
-				position: absolute;
-			}
 		</style>
+		<script type="text/javascript" src="/lib/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/lib/breakout/breakout.js"></script>
+		<script type="text/javascript" src="/lib/breakout/breakoutpresenter.js"></script>
+		<script type="text/javascript">// <![CDATA[
+			$(function() {
+				var presenter = new BreakoutPresenter('#breakout');
+				var breakout = new Breakout(presenter);
+
+				breakout.load(4, 12);
+			});
+		// ]]></script>
 	</head>
 	<body>
 		<div id="header">
@@ -123,18 +74,7 @@
 			</div>
 			<a class="h1" href="/">Deep Toaster</a>
 		</div>
-		<div id="breakout" class="section">
-			<div class="breakout">
-				<ul class="breakout-red"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
-				<ul class="breakout-orange"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
-				<ul class="breakout-yellow"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
-				<ul class="breakout-green"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
-				<div class="breakout-paddle">
-					<span />
-				</div>
-				<input type="radio" checked="checked" />
-			</div>
-		</div>
+		<div id="breakout" class="section"></div>
 	</body>
 </html>
 
