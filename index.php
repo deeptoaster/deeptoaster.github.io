@@ -11,7 +11,41 @@
       }
       body {
         margin: 0;
-        font-size: 20px;
+        font: 20px/1.5em 'Titillium Web', sans-serif;;
+      }
+      h1 {
+        display: inline-block;
+        margin: 0;
+        padding: 0.5em;
+        font-size: 2em;
+      }
+      h2 {
+        margin: 0.625em 0;
+        font-size: 1.6em;
+      }
+      p {
+        margin: 1em 0;
+      }
+      .section {
+        padding: 1em 0;
+      }
+      .lead {
+        font-size: 1.2em;
+      }
+      .pull-right {
+        float: right;
+      }
+      .reel {
+        display: inline-block;
+        height: 1em;
+        overflow: hidden;
+        text-align: right;
+      }
+      .reel-symbol {
+        display: block;
+      }
+      .breakout {
+        margin: 1em auto;
       }
       #header {
         position: fixed;
@@ -21,37 +55,34 @@
         background-color: #161819;
         background-color: rgba(22, 24, 25, 0.8);
       }
-      h1, h3, .h1, .h3 {
+      #header .pull-right, h1, h2 {
+        text-transform: uppercase;
         line-height: 1em;
         font-family: Raleway, sans-serif;
-        text-transform: uppercase;
         letter-spacing: 0.2em;
       }
-      h1, .h1 {
-        font-size: 2em;
-      }
-      h3, .h3 {
-        font-size: 1em;
-      }
-      #header .h1, #header .h3 {
-        display: inline-block;
-        margin: 0;
+      #header a {
+        display: block;
         color: #617078;
         text-decoration: none;
       }
-      #header .h1 {
-        padding: 0.5em;
-      }
-      #header .h3 {
+      #header .pull-right a {
+        display: inline-block;
         padding: 1.5em 1em;
       }
-      .pull-right {
-        float: right;
-      }
       #breakout {
-        padding-top: 4em;
-        padding-bottom: 2em;
+        padding-top: 3em;
         font-size: 1.5em;
+      }
+      #about {
+        padding-left: 8em;
+        padding-right: 8em;
+        background-color: #a6b8c1;
+        color: #374952;
+        text-align: center;
+      }
+      #about h2 {
+        color: #477286;
       }
     </style>
     <script type="text/javascript" src="/lib/js/jquery.min.js"></script>
@@ -74,12 +105,28 @@
   <body>
     <div id="header">
       <div class="pull-right">
-        <a class="h3" href="/blog/">Blog</a>
-        <a class="h3" href="/resume/">Resume</a>
+        <a href="/blog/">Blog</a>
+        <a href="/resume/">Resume</a>
       </div>
-      <a class="h1" href="/">Deep Toaster</a>
+      <h1>
+        <a href="/">Deep Toaster</a>
+      </h1>
     </div>
     <div id="breakout" class="section"></div>
+    <div id="about" class="section">
+      <h2>About</h2>
+      <p class="lead">
+        <span class="reel">
+          <span class="reel-symbol">Game</span>
+          <span class="reel-symbol">Graphic</span>
+          <span class="reel-symbol">Web</span>
+        </span>
+        <span>designer, avid hitchhiker, and student of life who drinks tea and poops code.</span>
+      </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
   </body>
 </html>
 

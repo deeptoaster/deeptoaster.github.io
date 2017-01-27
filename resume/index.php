@@ -18,8 +18,7 @@
 				margin: auto;
 				background-color: #d2d7d9;
 				color: #232627;
-				font-size: 14px;
-				font-family: 'Titillium Web', sans-serif;
+				font: 14px/1.5em 'Titillium Web', sans-serif;
 			}
 			.sidebar {
 				float: right;
@@ -45,7 +44,7 @@
 			h1 {
 				margin: 0;
 				border-bottom: 0.1em solid #859fab;
-				padding-top: 2em;
+				padding-top: 1.5em;
 				padding-bottom: 0.5em;
 				font-size: 2em;
 			}
