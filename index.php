@@ -4,6 +4,7 @@
     <title>Deep Toaster</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="/lib/breakout/breakout.css" type="text/css" rel="stylesheet" />
+		<link href="/lib/fonts/flaticon.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:800|Titillium+Web:400,700" type="text/css" rel="stylesheet" />
     <style type="text/css">
       html {
@@ -23,15 +24,39 @@
         margin: 0.625em 0;
         font-size: 1.6em;
       }
+      h3 {
+        margin: 3em 0 1em 0;
+        font-size: 1em;
+      }
       p {
         margin: 1em 0;
       }
+      cite {
+        display: block;
+        font-size: 0.7em;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+			i {
+				font-style: normal;
+				padding-right: 0.5em;
+			}
       .section {
         padding: 1em 0;
         overflow: hidden;
+        text-align: center;
       }
       .content {
         position: relative;
+      }
+      .col {
+        display: inline-block;
+        vertical-align: top;
       }
       .lead {
         font-size: 1.2em;
@@ -53,6 +78,7 @@
       }
       .map-left img {
         height: 24em;
+        top: 1em;
       }
       .map-right img {
         height: 48em;
@@ -90,8 +116,9 @@
         border-bottom: 1px solid #232627;
         background-color: #161819;
         background-color: rgba(22, 24, 25, 0.8);
+        color: #617078;
       }
-      #header .pull-right, h1, h2 {
+      #header .pull-right, h1, h2, h3 {
         text-transform: uppercase;
         line-height: 1em;
         font-family: Raleway, sans-serif;
@@ -99,7 +126,6 @@
       }
       #header a {
         display: block;
-        color: #617078;
         text-decoration: none;
       }
       #header .pull-right a {
@@ -115,25 +141,40 @@
         background-color: #a6b8c1;
         color: #374952;
       }
+      #about .row {
+        margin: 0 -4em;
+      }
+      #about .col {
+        width: 20em;
+      }
       #about .content {
         padding: 0 16em;
-        text-align: center;
       }
       #about .map span {
-        border-color: #ffa339;
+        border-color: #ff8900;
       }
-      #about h2 {
+      #about h2, #about h3, #about cite {
         color: #477286;
+      }
+      #about ul {
+        list-style-type: none;
+        margin: 1em 0;
+        padding: 0;
+      }
+      #about li {
+        text-align: left;
       }
       #about em {
         display: inline-block;
         height: 1em;
-        margin-top: -0.1em;
-        margin-bottom: -0.3em;
+        margin: -0.1em 0 -0.3em 0;
         border: 0.1em dashed #d4a36a;
         padding-bottom: 0.2em;
         background-color: #ffb158;
         font-style: normal;
+      }
+      #gallery h2 {
+        color: #617078;
       }
 			@media screen and (max-width: 960px) {
 				body {
@@ -141,6 +182,9 @@
 				}
 			}
 			@media screen and (max-width: 768px) {
+        #about .row {
+          margin: 0;
+        }
 				#about .content {
           background-color: #d2dbe0;
           background-color: rgba(255, 255, 255, 0.5);
@@ -250,9 +294,36 @@
           </span>
           <span>designer, avid <em>hitchhiker</em>, and student of life who drinks tea and poops code.</span>
         </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row">
+          <div class="col">
+            <h3>Contact and Profiles</h3>
+            <ul>
+              <li>
+                <i class="flaticon-mail-envelope"></i>
+                <a href="mailto:yizhenwilliam@gmail.com">yizhenwilliam@gmail.com</a>
+              </li>
+              <li>
+                <i class="flaticon-facebook-app-logo"></i>
+                <a href="https://www.facebook.com/yizhenwilliam">fb.com/yizhenwilliam</a>
+              </li>
+              <li>
+                <i class="flaticon-people"></i>
+                <a href="https://www.couchsurfing.com/people/yizhenwilliam">couchsurfing.com/people/yizhenwilliam</a>
+              </li>
+              <li>
+                <i class="flaticon-multimedia"></i>
+                <a href="http://https://github.com/DThought">github.com/DThought</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Affiliations</h3>
+          </div>
+        </div>
       </div>
+    </div>
+    <div id="gallery" class="section">
+      <h2>Gallery</h2>
     </div>
   </body>
 </html>
-
