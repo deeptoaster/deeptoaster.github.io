@@ -114,16 +114,12 @@
       .honeycomb-row {
         margin: -0.9em;
       }
-      .honeycomb-row-offset {
-        margin-left: 3.46em;
-      }
       .honeycomb-cell {
         display: inline-block;
         position: relative;
         width: 3.46em;
         height: 2em;
         margin: 1em -0.05em;
-        background-color: #232627;
         white-space: nowrap;
       }
       .honeycomb-cell::before, .honeycomb-cell::after {
@@ -137,46 +133,102 @@
       }
       .honeycomb-cell::before {
         bottom: 100%;
-        border-bottom: 1em solid #232627;
+        border-bottom: 1em solid transparent;
       }
       .honeycomb-cell::after {
         top: 100%;
-        border-top: 1em solid #232627;
+        border-top: 1em solid transparent;
       }
       .honeycomb-cell.honeycomb-1064 {
-        background-color: #246c60;
+        background-color: #43877b;
       }
       .honeycomb-cell.honeycomb-1064::before {
-        border-bottom: 1em solid #246c60;
+        border-bottom: 1em solid #43877b;
       }
       .honeycomb-cell.honeycomb-1064::after {
+        border-top: 1em solid #43877b;
+      }
+      .honeycomb-cell.honeycomb-1064:hover {
+        background-color: #246c60;
+      }
+      .honeycomb-cell.honeycomb-1064:hover::before {
+        border-bottom: 1em solid #246c60;
+      }
+      .honeycomb-cell.honeycomb-1064:hover::after {
         border-top: 1em solid #246c60;
       }
+      .honeycomb-cell.honeycomb-blacker {
+        background-color: #374952;
+      }
+      .honeycomb-cell.honeycomb-blacker::before {
+        bottom: 100%;
+        border-bottom: 1em solid #374952;
+      }
+      .honeycomb-cell.honeycomb-blacker::after {
+        top: 100%;
+        border-top: 1em solid #374952;
+      }
+      .honeycomb-cell.honeycomb-blacker:hover {
+        background-color: #232627;
+      }
+      .honeycomb-cell.honeycomb-blacker:hover::before {
+        border-bottom: 1em solid #232627;
+      }
+      .honeycomb-cell.honeycomb-blacker:hover::after {
+        border-top: 1em solid #232627;
+      }
       .honeycomb-cell.honeycomb-caltech {
-        background-color: #61412b;
+        background-color: #8b715f;
       }
       .honeycomb-cell.honeycomb-caltech::before {
-        border-bottom: 1em solid #61412b;
+        border-bottom: 1em solid #8b715f;
       }
       .honeycomb-cell.honeycomb-caltech::after {
-        border-top: 1em solid #61412b;
+        border-top: 1em solid #8b715f;
+      }
+      .honeycomb-cell.honeycomb-caltech:hover {
+        background-color: #664f40;
+      }
+      .honeycomb-cell.honeycomb-caltech:hover::before {
+        border-bottom: 1em solid #664f40;
+      }
+      .honeycomb-cell.honeycomb-caltech:hover::after {
+        border-top: 1em solid #664f40;
       }
       .honeycomb-cell.honeycomb-clrhome {
-        background-color: #614d2b;
+        background-color: #8b7b5f;
       }
       .honeycomb-cell.honeycomb-clrhome::before {
-        border-bottom: 1em solid #614d2b;
+        border-bottom: 1em solid #8b7b5f;
       }
       .honeycomb-cell.honeycomb-clrhome::after {
-        border-top: 1em solid #614d2b;
+        border-top: 1em solid #8b7b5f;
+      }
+      .honeycomb-cell.honeycomb-clrhome:hover {
+        background-color: #665840;
+      }
+      .honeycomb-cell.honeycomb-clrhome:hover::before {
+        border-bottom: 1em solid #665840;
+      }
+      .honeycomb-cell.honeycomb-clrhome:hover::after {
+        border-top: 1em solid #665840;
       }
       .honeycomb-cell.honeycomb-omnimaga {
-        background-color: #313975;
+        background-color: #535a92;
       }
       .honeycomb-cell.honeycomb-omnimaga::before {
-        border-bottom: 1em solid #313975;
+        border-bottom: 1em solid #535a92;
       }
       .honeycomb-cell.honeycomb-omnimaga::after {
+        border-top: 1em solid #535a92;
+      }
+      .honeycomb-cell.honeycomb-omnimaga:hover {
+        background-color: #313975;
+      }
+      .honeycomb-cell.honeycomb-omnimaga:hover::before {
+        border-bottom: 1em solid #313975;
+      }
+      .honeycomb-cell.honeycomb-omnimaga:hover::after {
         border-top: 1em solid #313975;
       }
       .honeycomb-honey {
@@ -390,7 +442,7 @@
                 <a class="honeycomb-cell honeycomb-caltech" href="http://caltech.edu/">
                   <img class="honeycomb-honey" src="/lib/img/caltech.png" alt="Caltech" title="Caltech" />
                 </a>
-                <a class="honeycomb-cell" href="https://blacker.caltech.edu/">
+                <a class="honeycomb-cell honeycomb-blacker" href="https://blacker.caltech.edu/">
                   <img class="honeycomb-honey" src="/lib/img/blacker.png" alt="Blacker" title="Blacker" />
                 </a>
                 <a class="honeycomb-cell honeycomb-1064" href="http://ohaithe.re/">

@@ -29,26 +29,26 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="347.42826"
-     inkscape:cy="373.45275"
+     inkscape:cx="367.42826"
+     inkscape:cy="373.45272"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:window-width="1366"
-     inkscape:window-height="740"
-     inkscape:window-x="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1366"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      fit-margin-top="80"
-     fit-margin-left="80"
-     fit-margin-right="80"
+     fit-margin-left="100"
+     fit-margin-right="60"
      fit-margin-bottom="80"
      units="px">
     <inkscape:grid
        type="xygrid"
        id="grid4175"
-       originx="79.499999"
-       originy="79.499084" />
+       originx="99.499999"
+       originy="79.499054" />
   </sodipodi:namedview>
   <metadata
      id="metadata4155">
@@ -66,7 +66,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(79.5,-571.86133)">
+     transform="translate(99.5,-571.86133)">
     <path
        style="fill:#a6b8c1;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 80.5,651.86133 0,80 160,0 0,240 80,0 0,-240 80,0 0,-80 -320,0 z m 160,320 -160,0 0,79.99997 160,0 0,-79.99997 z m -160,0 0,-240 -80,0 0,240 80,0 z"
