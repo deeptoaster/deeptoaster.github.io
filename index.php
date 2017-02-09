@@ -109,7 +109,13 @@
         display: block;
       }
       .honeycomb {
-        font-size: 1.2em;
+        margin: 1em 0;
+      }
+      .honeycomb-row {
+        margin: -0.9em;
+      }
+      .honeycomb-row-offset {
+        margin-left: 3.46em;
       }
       .honeycomb-cell {
         display: inline-block;
@@ -117,7 +123,7 @@
         width: 3.46em;
         height: 2em;
         margin: 1em -0.05em;
-        background-color: #374952;
+        background-color: #232627;
         white-space: nowrap;
       }
       .honeycomb-cell::before, .honeycomb-cell::after {
@@ -131,11 +137,47 @@
       }
       .honeycomb-cell::before {
         bottom: 100%;
-        border-bottom: 1em solid #374952;
+        border-bottom: 1em solid #232627;
       }
       .honeycomb-cell::after {
         top: 100%;
-        border-top: 1em solid #374952;
+        border-top: 1em solid #232627;
+      }
+      .honeycomb-cell.honeycomb-1064 {
+        background-color: #246c60;
+      }
+      .honeycomb-cell.honeycomb-1064::before {
+        border-bottom: 1em solid #246c60;
+      }
+      .honeycomb-cell.honeycomb-1064::after {
+        border-top: 1em solid #246c60;
+      }
+      .honeycomb-cell.honeycomb-caltech {
+        background-color: #61412b;
+      }
+      .honeycomb-cell.honeycomb-caltech::before {
+        border-bottom: 1em solid #61412b;
+      }
+      .honeycomb-cell.honeycomb-caltech::after {
+        border-top: 1em solid #61412b;
+      }
+      .honeycomb-cell.honeycomb-clrhome {
+        background-color: #614d2b;
+      }
+      .honeycomb-cell.honeycomb-clrhome::before {
+        border-bottom: 1em solid #614d2b;
+      }
+      .honeycomb-cell.honeycomb-clrhome::after {
+        border-top: 1em solid #614d2b;
+      }
+      .honeycomb-cell.honeycomb-omnimaga {
+        background-color: #313975;
+      }
+      .honeycomb-cell.honeycomb-omnimaga::before {
+        border-bottom: 1em solid #313975;
+      }
+      .honeycomb-cell.honeycomb-omnimaga::after {
+        border-top: 1em solid #313975;
       }
       .honeycomb-honey {
         position: relative;
@@ -344,12 +386,25 @@
           <div class="col">
             <h3>Affiliations</h3>
             <div class="honeycomb">
-              <a class="honeycomb-cell" href="https://blacker.caltech.edu/">
-                <img class="honeycomb-honey" src="/lib/img/blacker.png" alt="Blacker" />
-              </a>
-              <a class="honeycomb-cell" href="https://www.omnimaga.org/">
-                <img class="honeycomb-honey" src="/lib/img/omnimaga.png" alt="Blacker" />
-              </a>
+              <div class="honeycomb-row">
+                <a class="honeycomb-cell honeycomb-caltech" href="http://caltech.edu/">
+                  <img class="honeycomb-honey" src="/lib/img/caltech.png" alt="Caltech" title="Caltech" />
+                </a>
+                <a class="honeycomb-cell" href="https://blacker.caltech.edu/">
+                  <img class="honeycomb-honey" src="/lib/img/blacker.png" alt="Blacker" title="Blacker" />
+                </a>
+                <a class="honeycomb-cell honeycomb-1064" href="http://ohaithe.re/">
+                  <img class="honeycomb-honey" src="/lib/img/1064.png" alt="1064cbread" title="1064cbread" />
+                </a>
+              </div>
+              <div class="honeycomb-row">
+                <a class="honeycomb-cell honeycomb-omnimaga" href="https://www.omnimaga.org/">
+                  <img class="honeycomb-honey" src="/lib/img/omnimaga.png" alt="Omnimaga" title="Omnimaga" />
+                </a>
+                <a class="honeycomb-cell honeycomb-clrhome" href="http://clrhome.org/">
+                  <img class="honeycomb-honey" src="/lib/img/clrhome.png" alt="ClrHome" title="ClrHome" />
+                </a>
+              </div>
             </div>
           </div>
           <div class="col">
