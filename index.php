@@ -21,15 +21,18 @@
         font-size: 2em;
       }
       h2 {
-        margin: 0.625em 0;
+        margin: 0;
+        padding: 0.625em 0;
         font-size: 1.6em;
       }
       h3 {
-        margin: 3em 0 1em 0;
+        margin: 0;
+        padding: 2.5em 0 0.5em 0;
         font-size: 1em;
       }
       p {
-        margin: 1em 0;
+        margin: 0;
+        padding: 0.5em 0;
       }
       cite {
         display: block;
@@ -55,8 +58,7 @@
         position: relative;
       }
       .col {
-        display: inline-block;
-        vertical-align: top;
+        float: left;
       }
       .lead {
         font-size: 1.2em;
@@ -106,6 +108,40 @@
       .reel-symbol {
         display: block;
       }
+      .honeycomb {
+        font-size: 1.2em;
+      }
+      .honeycomb-cell {
+        display: inline-block;
+        position: relative;
+        width: 3.46em;
+        height: 2em;
+        margin: 1em -0.05em;
+        background-color: #374952;
+        white-space: nowrap;
+      }
+      .honeycomb-cell::before, .honeycomb-cell::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        border-right: 1.73em solid transparent;
+        border-left: 1.73em solid transparent;
+      }
+      .honeycomb-cell::before {
+        bottom: 100%;
+        border-bottom: 1em solid #374952;
+      }
+      .honeycomb-cell::after {
+        top: 100%;
+        border-top: 1em solid #374952;
+      }
+      .honeycomb-honey {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+      }
       .breakout {
         margin: 1em auto;
       }
@@ -144,8 +180,17 @@
       #about .row {
         margin: 0 -4em;
       }
+      #about .row::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
       #about .col {
-        width: 20em;
+        width: 50%;
+      }
+      #about #presence {
+        width: 10em;
+        margin: auto;
       }
       #about .content {
         padding: 0 16em;
@@ -158,8 +203,8 @@
       }
       #about ul {
         list-style-type: none;
-        margin: 1em 0;
-        padding: 0;
+        margin: 0;
+        padding: 0.5em 0;
       }
       #about li {
         text-align: left;
@@ -172,6 +217,13 @@
         padding-bottom: 0.2em;
         background-color: #ffb158;
         font-style: normal;
+      }
+      #activities {
+        background-color: #d2d7d9;
+        color: #232627;
+      }
+      #activities h2 {
+        color: #27556c;
       }
       #gallery h2 {
         color: #617078;
@@ -224,12 +276,6 @@
           console.log((e.pageX - offset.left) / 16, (e.pageY - offset.top) / 16);
         });
 
-        $('.map img').on('error', function() {
-          $(this).attr('src', function(i, attr) {
-            return attr.slice(0, -3) + 'png';
-          }).unbind('error');
-        });
-
         setInterval(function() {
           $('.reel').each(function() {
             var $children = $(this).children();
@@ -261,10 +307,10 @@
     <div id="breakout" class="section"></div>
     <div id="about" class="section">
       <div class="map map-left">
-        <img src="/lib/img/asia.svg" alt="" />
+        <img src="/lib/img/asia.png" alt="" />
       </div>
       <div class="map map-right">
-        <img src="/lib/img/north_america.svg" alt="" />
+        <img src="/lib/img/north_america.png" alt="" />
         <span style="width: 2.1em; height: 1em; top: 15.5em; left: 10.2em; transform: rotate(76deg); -webkit-transform: rotate(76deg); -o-transform: rotate(76deg); -moz-transform: rotate(76deg);"></span>
         <span style="width: 1.8em; height: 1em; top: 13.8em; left: 9.6em; transform: rotate(56deg); -webkit-transform: rotate(56deg); -o-transform: rotate(56deg); -moz-transform: rotate(56deg);"></span>
         <span style="width: 3.5em; height: 2em; top: 14.3em; left: 9.5em; transform: rotate(82deg); -webkit-transform: rotate(82deg); -o-transform: rotate(82deg); -moz-transform: rotate(82deg);"></span>
@@ -296,31 +342,42 @@
         </p>
         <div class="row">
           <div class="col">
-            <h3>Contact and Profiles</h3>
-            <ul>
+            <h3>Affiliations</h3>
+            <div class="honeycomb">
+              <a class="honeycomb-cell" href="https://blacker.caltech.edu/">
+                <img class="honeycomb-honey" src="/lib/img/blacker.png" alt="Blacker" />
+              </a>
+              <a class="honeycomb-cell" href="https://www.omnimaga.org/">
+                <img class="honeycomb-honey" src="/lib/img/omnimaga.png" alt="Blacker" />
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <h3>Presence</h3>
+            <ul id="presence">
               <li>
                 <i class="flaticon-mail-envelope"></i>
-                <a href="mailto:yizhenwilliam@gmail.com">yizhenwilliam@gmail.com</a>
+                <a href="mailto:yizhenwilliam@gmail.com">Email</a>
               </li>
               <li>
                 <i class="flaticon-facebook-app-logo"></i>
-                <a href="https://www.facebook.com/yizhenwilliam">fb.com/yizhenwilliam</a>
+                <a href="https://www.facebook.com/yizhenwilliam">Facebook</a>
               </li>
               <li>
                 <i class="flaticon-people"></i>
-                <a href="https://www.couchsurfing.com/people/yizhenwilliam">couchsurfing.com/people/yizhenwilliam</a>
+                <a href="https://www.couchsurfing.com/people/yizhenwilliam">Couchsurfing</a>
               </li>
               <li>
                 <i class="flaticon-multimedia"></i>
-                <a href="http://https://github.com/DThought">github.com/DThought</a>
+                <a href="http://https://github.com/DThought">GitHub</a>
               </li>
             </ul>
           </div>
-          <div class="col">
-            <h3>Affiliations</h3>
-          </div>
         </div>
       </div>
+    </div>
+    <div id="activities" class="section">
+      <h2>Activities</h2>
     </div>
     <div id="gallery" class="section">
       <h2>Gallery</h2>
