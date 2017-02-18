@@ -1,0 +1,413 @@
+html {
+  background-color: #161819;
+}
+body {
+  margin: 0;
+  font: 20px/1.5em 'Titillium Web', sans-serif;;
+}
+h1 {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5em;
+  font-size: 2em;
+}
+h2 {
+  margin: 0;
+  padding: 0.625em 0;
+  font-size: 1.6em;
+}
+h3 {
+  margin: 0;
+  padding: 2.5em 0 0.5em 0;
+  font-size: 1em;
+}
+p {
+  margin: 0;
+  padding: 0.5em 0;
+}
+cite {
+  display: block;
+  font-size: 0.7em;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+i {
+  font-style: normal;
+  padding-right: 0.5em;
+}
+.section {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.content {
+  position: relative;
+  padding: 1em 0;
+}
+.col {
+  float: left;
+}
+.lead {
+  font-size: 1.2em;
+}
+.map {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+.map-left {
+  left: -20em;
+}
+.map-right {
+  right: -20em;
+}
+.map img {
+  display: block;
+  position: relative;
+}
+.map-left img {
+  height: 24em;
+  top: 1em;
+}
+.map-right img {
+  height: 48em;
+  bottom: 16em;
+}
+.map span {
+  display: block;
+  position: absolute;
+  border-width: 0.2em 0 0 0;
+  border-style: solid;
+  border-radius: 50%;
+}
+.pull-right {
+  float: right;
+}
+.reel {
+  display: inline-block;
+  height: 1em;
+  margin-bottom: -0.2em;
+  padding-bottom: 0.2em;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: top;
+}
+.reel-symbol {
+  display: block;
+}
+.honeycomb {
+  margin: 1em 0;
+}
+.honeycomb-row {
+  margin: -0.9em;
+}
+.honeycomb-cell {
+  display: inline-block;
+  position: relative;
+  width: 3.46em;
+  height: 2em;
+  margin: 1em -0.05em;
+  white-space: nowrap;
+}
+.honeycomb-cell::before, .honeycomb-cell::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  border-right: 1.73em solid transparent;
+  border-left: 1.73em solid transparent;
+}
+.honeycomb-cell::before {
+  bottom: 100%;
+  border-bottom: 1em solid transparent;
+}
+.honeycomb-cell::after {
+  top: 100%;
+  border-top: 1em solid transparent;
+}
+.honeycomb-cell.honeycomb-1064 {
+  background-color: #43877b;
+}
+.honeycomb-cell.honeycomb-1064::before {
+  border-bottom: 1em solid #43877b;
+}
+.honeycomb-cell.honeycomb-1064::after {
+  border-top: 1em solid #43877b;
+}
+.honeycomb-cell.honeycomb-1064:hover {
+  background-color: #246c60;
+}
+.honeycomb-cell.honeycomb-1064:hover::before {
+  border-bottom: 1em solid #246c60;
+}
+.honeycomb-cell.honeycomb-1064:hover::after {
+  border-top: 1em solid #246c60;
+}
+.honeycomb-cell.honeycomb-blacker {
+  background-color: #374952;
+}
+.honeycomb-cell.honeycomb-blacker::before {
+  bottom: 100%;
+  border-bottom: 1em solid #374952;
+}
+.honeycomb-cell.honeycomb-blacker::after {
+  top: 100%;
+  border-top: 1em solid #374952;
+}
+.honeycomb-cell.honeycomb-blacker:hover {
+  background-color: #232627;
+}
+.honeycomb-cell.honeycomb-blacker:hover::before {
+  border-bottom: 1em solid #232627;
+}
+.honeycomb-cell.honeycomb-blacker:hover::after {
+  border-top: 1em solid #232627;
+}
+.honeycomb-cell.honeycomb-caltech {
+  background-color: #8b715f;
+}
+.honeycomb-cell.honeycomb-caltech::before {
+  border-bottom: 1em solid #8b715f;
+}
+.honeycomb-cell.honeycomb-caltech::after {
+  border-top: 1em solid #8b715f;
+}
+.honeycomb-cell.honeycomb-caltech:hover {
+  background-color: #664f40;
+}
+.honeycomb-cell.honeycomb-caltech:hover::before {
+  border-bottom: 1em solid #664f40;
+}
+.honeycomb-cell.honeycomb-caltech:hover::after {
+  border-top: 1em solid #664f40;
+}
+.honeycomb-cell.honeycomb-clrhome {
+  background-color: #8b7b5f;
+}
+.honeycomb-cell.honeycomb-clrhome::before {
+  border-bottom: 1em solid #8b7b5f;
+}
+.honeycomb-cell.honeycomb-clrhome::after {
+  border-top: 1em solid #8b7b5f;
+}
+.honeycomb-cell.honeycomb-clrhome:hover {
+  background-color: #665840;
+}
+.honeycomb-cell.honeycomb-clrhome:hover::before {
+  border-bottom: 1em solid #665840;
+}
+.honeycomb-cell.honeycomb-clrhome:hover::after {
+  border-top: 1em solid #665840;
+}
+.honeycomb-cell.honeycomb-omnimaga {
+  background-color: #535a92;
+}
+.honeycomb-cell.honeycomb-omnimaga::before {
+  border-bottom: 1em solid #535a92;
+}
+.honeycomb-cell.honeycomb-omnimaga::after {
+  border-top: 1em solid #535a92;
+}
+.honeycomb-cell.honeycomb-omnimaga:hover {
+  background-color: #313975;
+}
+.honeycomb-cell.honeycomb-omnimaga:hover::before {
+  border-bottom: 1em solid #313975;
+}
+.honeycomb-cell.honeycomb-omnimaga:hover::after {
+  border-top: 1em solid #313975;
+}
+.honeycomb-honey {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+.coaster {
+  position: relative;
+  height: 12em;
+  overflow: hidden;
+}
+.coaster-track {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  left: 50%;
+  height: 100%;
+}
+.coaster-cap, .coaster-cup, .coaster-line {
+  display: block;
+  position: absolute;
+}
+.coaster-line {
+  border-bottom: 0.3em solid #27556c;
+}
+.coaster-cap span, .coaster-cup span {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 0.3em solid #27556c;
+  border-radius: 100%;
+}
+.coaster-cap::before, .coaster-cap span::after, .coaster-cup::before,
+.coaster-cup span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -0.3em;
+  width: 100%;
+  height: 12em;
+  padding: 0 0.3em;
+}
+.coaster-cap::before {
+  bottom: 75%;
+}
+.coaster-cap span::after {
+  top: 25%;
+}
+.coaster-cup::before {
+  top: 75%;
+}
+.coaster-cup span::after {
+  bottom: 25%;
+}
+.coaster, .coaster-cap span, .coaster-cap span::after, .coaster-cup::before{
+  background-attachment: fixed;
+  background-color: #d2d7d9;
+	background-image: -webkit-linear-gradient(0deg, #859fab, #859fab 0.1em,
+      transparent 0.1em, transparent), -webkit-linear-gradient(90deg, #859fab,
+      #859fab 0.2em, transparent 0.2em, transparent),
+      -webkit-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
+      transparent 0.1em, transparent 0.9em),
+      -webkit-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+      transparent 0.1em, transparent 0.8em);
+	background-image: -moz-linear-gradient(0deg, #859fab, #859fab 0.1em,
+      transparent 0.1em, transparent), -moz-linear-gradient(90deg, #859fab,
+      #859fab 0.2em, transparent 0.2em, transparent),
+      -moz-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
+      transparent 0.1em, transparent 0.9em),
+      -moz-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+      transparent 0.1em, transparent 0.8em);
+	background-image: linear-gradient(0deg, #859fab, #859fab 0.1em, transparent
+      0.1em, transparent), linear-gradient(90deg, #859fab, #859fab 0.2em,
+      transparent 0.2em, transparent), repeating-linear-gradient(56.3deg,
+      #859fab, #859fab 0.1em, transparent 0.1em, transparent 0.9em),
+      repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+      transparent 0.1em, transparent 0.8em);
+	background-size: 1em 1.5em, 1em 1.5em, 1em 1.5em, 1em 1.5em;
+}
+.coaster-cap::before, .coaster-cup span, .coaster-cup span::after,
+.coaster-line {
+  background-color: #d2d7d9;
+}
+.breakout {
+  margin: 1em auto;
+}
+#header {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  border-bottom: 1px solid #232627;
+  background-color: #161819;
+  background-color: rgba(22, 24, 25, 0.8);
+  color: #617078;
+}
+#header .pull-right, h1, h2, h3 {
+  text-transform: uppercase;
+  line-height: 1em;
+  font-family: Raleway, sans-serif;
+  letter-spacing: 0.2em;
+}
+#header a {
+  display: block;
+  text-decoration: none;
+}
+#header .pull-right a {
+  display: inline-block;
+  padding: 1.5em 1em;
+}
+#breakout {
+  padding: 3em 0 1em 0;
+  font-size: 1.5em;
+}
+#about {
+  background-color: #a6b8c1;
+  color: #374952;
+}
+#about .row {
+  margin: 0 -4em;
+}
+#about .row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#about .col {
+  width: 50%;
+}
+#about #presence {
+  width: 10em;
+  margin: auto;
+}
+#about .content {
+  padding-right: 16em;
+  padding-left: 16em;
+}
+#about .map span {
+  border-color: #ff8900;
+}
+#about h2, #about h3, #about cite {
+  color: #477286;
+}
+#about ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5em 0;
+}
+#about li {
+  text-align: left;
+}
+#about em {
+  display: inline-block;
+  height: 1em;
+  margin: -0.1em 0 -0.3em 0;
+  border: 0.1em dashed #d4a36a;
+  padding-bottom: 0.2em;
+  background-color: #ffb158;
+  font-style: normal;
+}
+#activities {
+  background-color: #d2d7d9;
+  color: #232627;
+}
+#activities h2 {
+  color: #27556c;
+}
+#gallery h2 {
+  color: #617078;
+}
+@media screen and (max-width: 960px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about .row {
+    margin: 0;
+  }
+  #about .content {
+    background-color: #d2dbe0;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 1em;
+    padding: 1em;
+  }
+}
