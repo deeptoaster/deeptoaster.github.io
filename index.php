@@ -29,24 +29,24 @@
       </div>
       <div class="map map-right">
         <img src="/lib/img/north_america.png" alt="" />
-        <span style="width: 2.1em; height: 1em; top: 15.5em; left: 10.2em; transform: rotate(76deg); -webkit-transform: rotate(76deg); -o-transform: rotate(76deg); -moz-transform: rotate(76deg);"></span>
-        <span style="width: 1.8em; height: 1em; top: 13.8em; left: 9.6em; transform: rotate(56deg); -webkit-transform: rotate(56deg); -o-transform: rotate(56deg); -moz-transform: rotate(56deg);"></span>
-        <span style="width: 3.5em; height: 2em; top: 14.3em; left: 9.5em; transform: rotate(82deg); -webkit-transform: rotate(82deg); -o-transform: rotate(82deg); -moz-transform: rotate(82deg);"></span>
-        <span style="width: 3.5em; height: 2em; top: 10.8em; left: 9.5em; transform: rotate(98deg); -webkit-transform: rotate(98deg); -o-transform: rotate(98deg); -moz-transform: rotate(98deg);"></span>
-        <span style="width: 1.1em; height: 1em; top: 9em; left: 11.2em; transform: rotate(117deg); -webkit-transform: rotate(117deg); -o-transform: rotate(117deg); -moz-transform: rotate(117deg);"></span>
-        <span style="width: 1.1em; height: 1em; top: 8em; left: 11.7em; transform: rotate(117deg); -webkit-transform: rotate(117deg); -o-transform: rotate(117deg); -moz-transform: rotate(117deg);"></span>
-        <span style="width: 1em; height: 1em; top: 7em; left: 12em; transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg); -moz-transform: rotate(90deg);"></span>
-        <span style="width: 1.8em; height: 1em; top: 15.8em; left: 10.1em; transform: rotate(-124deg); -webkit-transform: rotate(-124deg); -o-transform: rotate(-124deg); -moz-transform: rotate(-124deg);"></span>
-        <span style="width: 2.1em; height: 1em; top: 14em; left: 9.2em; transform: rotate(-104deg); -webkit-transform: rotate(-104deg); -o-transform: rotate(-104deg); -moz-transform: rotate(-104deg);"></span>
-        <span style="width: 3.8em; height: 3em; top: 13.8em; left: 8.8em; transform: rotate(-113deg); -webkit-transform: rotate(-113deg); -o-transform: rotate(-113deg); -moz-transform: rotate(-113deg);"></span>
-        <span style="width: 3.8em; height: 4em; top: 13.3em; left: 8.8em; transform: rotate(-113deg); -webkit-transform: rotate(-113deg); -o-transform: rotate(-113deg); -moz-transform: rotate(-113deg);"></span>
-        <span style="width: 1em; height: 1em; top: 7em; left: 12em; transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -o-transform: rotate(-90deg); -moz-transform: rotate(-90deg);"></span>
-        <span style="width: 1.1em; height: 1em; top: 8em; left: 11.7em; transform: rotate(-63deg); -webkit-transform: rotate(-63deg); -o-transform: rotate(-63deg); -moz-transform: rotate(-63deg);"></span>
-        <span style="width: 1em; height: 2em; top: 6.5em; left: 12em; transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg); -moz-transform: rotate(90deg);"></span>
-        <span style="width: 1.1em; height: 2em; top: 7.5em; left: 11.7em; transform: rotate(117deg); -webkit-transform: rotate(117deg); -o-transform: rotate(117deg); -moz-transform: rotate(117deg);"></span>
-        <span style="width: 2.2em; height: 1em; top: 16em; left: 11.4em; transform: rotate(153deg); -webkit-transform: rotate(153deg); -o-transform: rotate(153deg); -moz-transform: rotate(153deg);"></span>
-        <span style="width: 2.5em; height: 2em; top: 14.3em; left: 13.3em; transform: rotate(-37deg); -webkit-transform: rotate(-37deg); -o-transform: rotate(-37deg); -moz-transform: rotate(-37deg);"></span>
-        <span style="width: 3.5em; height: 2em; top: 13.8em; left: 15.5em; transform: rotate(8deg); -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); -moz-transform: rotate(8deg);"></span>
+        <span style="width: 2.1em; height: 1em; top: 15.5em; left: 10.2em; -webkit-transform: rotate(76deg); -o-transform: rotate(76deg); -moz-transform: rotate(76deg); transform: rotate(76deg);"></span>
+        <span style="width: 1.8em; height: 1em; top: 13.8em; left: 9.6em; -webkit-transform: rotate(56deg); -o-transform: rotate(56deg); -moz-transform: rotate(56deg); transform: rotate(56deg);"></span>
+        <span style="width: 3.5em; height: 2em; top: 14.3em; left: 9.5em; -webkit-transform: rotate(82deg); -o-transform: rotate(82deg); -moz-transform: rotate(82deg); transform: rotate(82deg);"></span>
+        <span style="width: 3.5em; height: 2em; top: 10.8em; left: 9.5em; -webkit-transform: rotate(98deg); -o-transform: rotate(98deg); -moz-transform: rotate(98deg); transform: rotate(98deg);"></span>
+        <span style="width: 1.1em; height: 1em; top: 9em; left: 11.2em; -webkit-transform: rotate(117deg); -o-transform: rotate(117deg); -moz-transform: rotate(117deg); transform: rotate(117deg);"></span>
+        <span style="width: 1.1em; height: 1em; top: 8em; left: 11.7em; -webkit-transform: rotate(117deg); -o-transform: rotate(117deg); -moz-transform: rotate(117deg); transform: rotate(117deg);"></span>
+        <span style="width: 1em; height: 1em; top: 7em; left: 12em; -webkit-transform: rotate(90deg); -o-transform: rotate(90deg); -moz-transform: rotate(90deg); transform: rotate(90deg);"></span>
+        <span style="width: 1.8em; height: 1em; top: 15.8em; left: 10.1em; -webkit-transform: rotate(-124deg); -o-transform: rotate(-124deg); -moz-transform: rotate(-124deg); transform: rotate(-124deg);"></span>
+        <span style="width: 2.1em; height: 1em; top: 14em; left: 9.2em; -webkit-transform: rotate(-104deg); -o-transform: rotate(-104deg); -moz-transform: rotate(-104deg); transform: rotate(-104deg);"></span>
+        <span style="width: 3.8em; height: 3em; top: 13.8em; left: 8.8em; -webkit-transform: rotate(-113deg); -o-transform: rotate(-113deg); -moz-transform: rotate(-113deg); transform: rotate(-113deg);"></span>
+        <span style="width: 3.8em; height: 4em; top: 13.3em; left: 8.8em; -webkit-transform: rotate(-113deg); -o-transform: rotate(-113deg); -moz-transform: rotate(-113deg); transform: rotate(-113deg);"></span>
+        <span style="width: 1em; height: 1em; top: 7em; left: 12em; -webkit-transform: rotate(-90deg); -o-transform: rotate(-90deg); -moz-transform: rotate(-90deg); transform: rotate(-90deg);"></span>
+        <span style="width: 1.1em; height: 1em; top: 8em; left: 11.7em; -webkit-transform: rotate(-63deg); -o-transform: rotate(-63deg); -moz-transform: rotate(-63deg); transform: rotate(-63deg);"></span>
+        <span style="width: 1em; height: 2em; top: 6.5em; left: 12em; -webkit-transform: rotate(90deg); -o-transform: rotate(90deg); -moz-transform: rotate(90deg); transform: rotate(90deg);"></span>
+        <span style="width: 1.1em; height: 2em; top: 7.5em; left: 11.7em; -webkit-transform: rotate(117deg); -o-transform: rotate(117deg); -moz-transform: rotate(117deg); transform: rotate(117deg);"></span>
+        <span style="width: 2.2em; height: 1em; top: 16em; left: 11.4em; -webkit-transform: rotate(153deg); -o-transform: rotate(153deg); -moz-transform: rotate(153deg); transform: rotate(153deg);"></span>
+        <span style="width: 2.5em; height: 2em; top: 14.3em; left: 13.3em; -webkit-transform: rotate(-37deg); -o-transform: rotate(-37deg); -moz-transform: rotate(-37deg); transform: rotate(-37deg);"></span>
+        <span style="width: 3.5em; height: 2em; top: 13.8em; left: 15.5em; -webkit-transform: rotate(8deg); -o-transform: rotate(8deg); -moz-transform: rotate(8deg); transform: rotate(8deg);"></span>
       </div>
       <div class="content">
         <h2>About</h2>
@@ -112,10 +112,53 @@
         <h2>Activities</h2>
       </div>
       <div class="coaster">
-        <div class="coaster-track">
-          <span class="coaster-cap" style="width: 12em; height: 12em; bottom: 0; left: 0;"><span></span></span>
-          <span class="coaster-cup" style="width: 12em; height: 12em; bottom: 0; left: -8em;"><span></span></span>
-          <span class="coaster-line" style="width: 12em; height: 4em; bottom: 4em; left: -8em; transform: rotate(-30deg);"><span></span></span>
+        <div class="coaster-track" style="margin-left: -64.5em">
+          <span class="coaster-cap" style="bottom: 2em; left: 0em; width: 5em; height: 10em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 9.5em; left: 4.9em; width: 4em; -webkit-transform: rotate(70deg); -o-transform: rotate(70deg); -moz-transform: rotate(70deg); transform: rotate(70deg);"><span></span></span>
+          <span class="coaster-cup" style="bottom: 2.2em; left: 6.3em; width: 9em; height: 16em;"><span></span></span>
+          <span class="coaster-cap" style="bottom: -2.4em; left: 14.4em; width: 7em; height: 9em;"><span></span></span>
+          <span class="coaster-cup" style="bottom: 4em; left: 20.9em; width: 4em; height: 4em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 4.8em; left: 24.9em; width: 3em; -webkit-transform: rotate(-55deg); -o-transform: rotate(-55deg); -moz-transform: rotate(-55deg); transform: rotate(-55deg);"><span></span></span>
+          <span class="coaster-cap" style="bottom: -0.2em; left: 26.6em; width: 7em; height: 10em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 7.3em; left: 33.5em; width: 3em; -webkit-transform: rotate(60deg); -o-transform: rotate(60deg); -moz-transform: rotate(60deg); transform: rotate(60deg);"><span></span></span>
+          <span class="coaster-cup" style="bottom: 2.7em; left: 35.1em; width: 5em; height: 8em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 4.5em; left: 40.2em; width: 6em; -webkit-transform: rotate(-60deg); -o-transform: rotate(-60deg); -moz-transform: rotate(-60deg); transform: rotate(-60deg);"><span></span></span>
+          <span class="coaster-clear" style="bottom: 9.8em; left: 5em; width: 38em; height: 2.2em;"></span>
+          <span class="coaster-clear" style="bottom: 6.6em; left: 15em; width: 6em; height: 3.2em;"></span>
+          <span class="coaster-clear" style="bottom: 7.5em; left: 21em; width: 5.6em; height: 2.3em;"></span>
+          <span class="coaster-clear" style="bottom: 7.5em; left: 33.6em; width: 7em; height: 2.3em;"></span>
+        </div>
+        <div class="coaster-track" style="margin-left: -21.5em">
+          <span class="coaster-cap" style="bottom: 2em; left: 0em; width: 5em; height: 10em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 9.5em; left: 4.9em; width: 4em; -webkit-transform: rotate(70deg); -o-transform: rotate(70deg); -moz-transform: rotate(70deg); transform: rotate(70deg);"><span></span></span>
+          <span class="coaster-cup" style="bottom: 2.2em; left: 6.3em; width: 9em; height: 16em;"><span></span></span>
+          <span class="coaster-cap" style="bottom: -2.4em; left: 14.4em; width: 7em; height: 9em;"><span></span></span>
+          <span class="coaster-cup" style="bottom: 4em; left: 20.9em; width: 4em; height: 4em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 4.8em; left: 24.9em; width: 3em; -webkit-transform: rotate(-55deg); -o-transform: rotate(-55deg); -moz-transform: rotate(-55deg); transform: rotate(-55deg);"><span></span></span>
+          <span class="coaster-cap" style="bottom: -0.2em; left: 26.6em; width: 7em; height: 10em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 7.3em; left: 33.5em; width: 3em; -webkit-transform: rotate(60deg); -o-transform: rotate(60deg); -moz-transform: rotate(60deg); transform: rotate(60deg);"><span></span></span>
+          <span class="coaster-cup" style="bottom: 2.7em; left: 35.1em; width: 5em; height: 8em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 4.5em; left: 40.2em; width: 6em; -webkit-transform: rotate(-60deg); -o-transform: rotate(-60deg); -moz-transform: rotate(-60deg); transform: rotate(-60deg);"><span></span></span>
+          <span class="coaster-clear" style="bottom: 9.8em; left: 5em; width: 38em; height: 2.2em;"></span>
+          <span class="coaster-clear" style="bottom: 6.6em; left: 15em; width: 6em; height: 3.2em;"></span>
+          <span class="coaster-clear" style="bottom: 7.5em; left: 21em; width: 5.6em; height: 2.3em;"></span>
+          <span class="coaster-clear" style="bottom: 7.5em; left: 33.6em; width: 7em; height: 2.3em;"></span>
+        </div>
+        <div class="coaster-track" style="margin-left: 21.5em">
+          <span class="coaster-cap" style="bottom: 2em; left: 0em; width: 5em; height: 10em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 9.5em; left: 4.9em; width: 4em; -webkit-transform: rotate(70deg); -o-transform: rotate(70deg); -moz-transform: rotate(70deg); transform: rotate(70deg);"><span></span></span>
+          <span class="coaster-cup" style="bottom: 2.2em; left: 6.3em; width: 9em; height: 16em;"><span></span></span>
+          <span class="coaster-cap" style="bottom: -2.4em; left: 14.4em; width: 7em; height: 9em;"><span></span></span>
+          <span class="coaster-cup" style="bottom: 4em; left: 20.9em; width: 4em; height: 4em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 4.8em; left: 24.9em; width: 3em; -webkit-transform: rotate(-55deg); -o-transform: rotate(-55deg); -moz-transform: rotate(-55deg); transform: rotate(-55deg);"><span></span></span>
+          <span class="coaster-cap" style="bottom: -0.2em; left: 26.6em; width: 7em; height: 10em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 7.3em; left: 33.5em; width: 3em; -webkit-transform: rotate(60deg); -o-transform: rotate(60deg); -moz-transform: rotate(60deg); transform: rotate(60deg);"><span></span></span>
+          <span class="coaster-cup" style="bottom: 2.7em; left: 35.1em; width: 5em; height: 8em;"><span></span></span>
+          <span class="coaster-line" style="bottom: 4.5em; left: 40.2em; width: 6em; -webkit-transform: rotate(-60deg); -o-transform: rotate(-60deg); -moz-transform: rotate(-60deg); transform: rotate(-60deg);"><span></span></span>
+          <span class="coaster-clear" style="bottom: 9.8em; left: 5em; width: 38em; height: 2.2em;"></span>
+          <span class="coaster-clear" style="bottom: 6.6em; left: 15em; width: 6em; height: 3.2em;"></span>
+          <span class="coaster-clear" style="bottom: 7.5em; left: 21em; width: 5.6em; height: 2.3em;"></span>
+          <span class="coaster-clear" style="bottom: 7.5em; left: 33.6em; width: 7em; height: 2.3em;"></span>
         </div>
       </div>
     </div>
