@@ -235,27 +235,31 @@ i {
 }
 .coaster-track {
   position: absolute;
-  right: 50%;
-  bottom: 0;
   left: 50%;
+  width: 43em;
   height: 100%;
 }
-.coaster-cap, .coaster-cup, .coaster-line {
+.coaster-cap, .coaster-cup, .coaster-line, .coaster-clear {
   display: block;
   position: absolute;
+  overflow: hidden;
 }
 .coaster-line {
-  border-bottom: 0.3em solid #27556c;
+  height: 2em;
+  border-bottom: 0.3em solid #859fab;
+  -webkit-transform-origin: bottom left;
+  -o-transform-origin: bottom left;
+  -moz-transform-origin: bottom left;
+  transform-origin: bottom left;
 }
 .coaster-cap span, .coaster-cup span {
-  content: '';
   display: block;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -10%;
   bottom: 0;
-  left: 0;
-  border: 0.3em solid #27556c;
+  left: -10%;
+  border: 0.3em solid #859fab;
   border-radius: 100%;
 }
 .coaster-cap::before, .coaster-cap span::after, .coaster-cup::before,
@@ -280,7 +284,7 @@ i {
 .coaster-cup span::after {
   bottom: 25%;
 }
-.coaster, .coaster-cap span, .coaster-cap span::after, .coaster-cup::before{
+.coaster-track, .coaster-cap span, .coaster-cap span::after, .coaster-cup::before{
   background-attachment: fixed;
   background-color: #d2d7d9;
 	background-image: -webkit-linear-gradient(0deg, #859fab, #859fab 0.1em,
@@ -300,13 +304,13 @@ i {
 	background-image: linear-gradient(0deg, #859fab, #859fab 0.1em, transparent
       0.1em, transparent), linear-gradient(90deg, #859fab, #859fab 0.2em,
       transparent 0.2em, transparent), repeating-linear-gradient(56.3deg,
-      #859fab, #859fab 0.1em, transparent 0.1em, transparent 0.9em),
+      #859fab, #859fab 0.1em, transparent 0.1em, transparent 1.7em),
       repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
-      transparent 0.1em, transparent 0.8em);
-	background-size: 1em 1.5em, 1em 1.5em, 1em 1.5em, 1em 1.5em;
+      transparent 0.1em, transparent 1.6em);
+	background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
 }
 .coaster-cap::before, .coaster-cup span, .coaster-cup span::after,
-.coaster-line {
+.coaster-line, .coaster-clear {
   background-color: #d2d7d9;
 }
 .breakout {
