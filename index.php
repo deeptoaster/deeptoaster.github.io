@@ -108,10 +108,21 @@
       </div>
     </div>
     <div id="activities" class="section">
-      <h2>Activities</h2>
+      <div class="content">
+        <h2>Activities</h2>
+      </div>
+      <div class="coaster">
+        <div class="coaster-track">
+          <span class="coaster-cap" style="width: 12em; height: 12em; bottom: 0; left: 0;"><span></span></span>
+          <span class="coaster-cup" style="width: 12em; height: 12em; bottom: 0; left: -8em;"><span></span></span>
+          <span class="coaster-line" style="width: 12em; height: 4em; bottom: 4em; left: -8em; transform: rotate(-30deg);"><span></span></span>
+        </div>
+      </div>
     </div>
     <div id="gallery" class="section">
-      <h2>Gallery</h2>
+      <div class="content">
+        <h2>Gallery</h2>
+      </div>
     </div>
   </body>
 </html>
