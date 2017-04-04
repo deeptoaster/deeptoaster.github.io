@@ -19,15 +19,15 @@
 	font-family: Flaticon;
 	font-style: normal;
 }
-
-.flaticon-facebook-app-logo:before { content: "\f100"; }
-.flaticon-link-button:before { content: "\f101"; }
-.flaticon-mail-envelope:before { content: "\f102"; }
-.flaticon-match:before { content: "\f103"; }
-.flaticon-multimedia:before { content: "\f104"; }
-.flaticon-people:before { content: "\f105"; }
-.flaticon-set-square:before { content: "\f106"; }
+.flaticon-technology:before { content: "\f100"; }
+.flaticon-multimedia:before { content: "\f101"; }
+.flaticon-link:before { content: "\f102"; }
+.flaticon-note:before { content: "\f103"; }
+.flaticon-telephone-of-old-design:before { content: "\f104"; }
+.flaticon-match:before { content: "\f105"; }
+.flaticon-fountain-pen-close-up:before { content: "\f106"; }
 .flaticon-sports:before { content: "\f107"; }
-.flaticon-technology:before { content: "\f108"; }
-.flaticon-telephone-of-old-design:before { content: "\f109"; }
-.flaticon-write:before { content: "\f10a"; }
+.flaticon-drawing:before { content: "\f108"; }
+.flaticon-people:before { content: "\f109"; }
+.flaticon-square:before { content: "\f10a"; }
+.flaticon-couchsurfing-logo:before { content: "\f10b"; }
