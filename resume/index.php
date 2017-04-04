@@ -275,13 +275,13 @@
 				</tr>
 				<tr>
 					<td>
-						<i class="flaticon-write"></i>
+						<i class="flaticon-fountain-pen-close-up"></i>
 					</td>
 					<td>
 						<i class="flaticon-match"></i>
 					</td>
 					<td>
-						<i class="flaticon-set-square"></i>
+						<i class="flaticon-drawing"></i>
 					</td>
 				</tr>
 			</table>
@@ -293,15 +293,15 @@
 				<a href="tel:+15034278483">(503) 427-8483</a>
 			</p>
 			<p>
-				<i class="flaticon-mail-envelope"></i>
+				<i class="flaticon-note"></i>
 				<a href="mailto:yizhenwilliam@gmail.com">yizhenwilliam@gmail.com</a>
 			</p>
 			<p>
-				<i class="flaticon-facebook-app-logo"></i>
+				<i class="flaticon-square"></i>
 				<a href="https://www.facebook.com/yizhenwilliam">fb.com/yizhenwilliam</a>
 			</p>
 			<p>
-				<i class="flaticon-link-button"></i>
+				<i class="flaticon-link"></i>
 				<a href="http://squiffl.es/">squiffl.es</a>
 			</p>
 			<p>
