@@ -8,7 +8,6 @@ body {
 h1 {
   display: inline-block;
   margin: 0;
-  padding: 0.5em;
   font-size: 2em;
 }
 h2 {
@@ -55,13 +54,27 @@ i {
 .lead {
   font-size: 1.2em;
 }
+.list-group {
+  list-style-type: none;
+  margin: 0.5em 15%;
+  padding: 0;
+}
+.list-group-item {
+  display: inline-block;
+  width: 12em;
+  margin: 0.2em 0;
+}
+.list-group-item span {
+  display: inline-block;
+  padding: 0.4em;
+}
 .map {
   position: absolute;
   top: 0;
   overflow: hidden;
 }
 .map-left {
-  left: -20em;
+  left: -22em;
 }
 .map-right {
   right: -20em;
@@ -71,19 +84,21 @@ i {
   position: relative;
 }
 .map-left img {
-  height: 24em;
-  top: 1em;
+  height: 26em;
 }
 .map-right img {
   height: 48em;
   bottom: 16em;
 }
-.map span {
-  display: block;
-  position: absolute;
+.map span, em {
   border-width: 0.2em 0 0 0;
   border-style: solid;
   border-radius: 50%;
+  font-style: normal;
+}
+.map span {
+  display: block;
+  position: absolute;
 }
 .pull-right {
   float: right;
@@ -327,6 +342,7 @@ i {
 }
 #header .pull-right, h1, h2, h3 {
   text-transform: uppercase;
+  font-weight: bold;
   line-height: 1em;
   font-family: Raleway, sans-serif;
   letter-spacing: 0.2em;
@@ -334,6 +350,9 @@ i {
 #header a {
   display: block;
   text-decoration: none;
+}
+#header h1 a {
+  padding: 0.5em;
 }
 #header .pull-right a {
   display: inline-block;
@@ -366,8 +385,8 @@ i {
   padding-right: 16em;
   padding-left: 16em;
 }
-#about .map span {
-  border-color: #ff8900;
+#about .map span, #about em {
+  border-color: #d4a36a;
 }
 #about h2, #about h3, #about cite {
   color: #477286;
@@ -380,21 +399,16 @@ i {
 #about li {
   text-align: left;
 }
-#about em {
-  display: inline-block;
-  height: 1em;
-  margin: -0.1em 0 -0.3em 0;
-  border: 0.1em dashed #d4a36a;
-  padding-bottom: 0.2em;
-  background-color: #ffb158;
-  font-style: normal;
-}
-#activities {
+#interests {
   background-color: #d2d7d9;
-  color: #232627;
+  color: #617078;
 }
-#activities h2 {
+#interests h2 {
   color: #27556c;
+}
+#interests .list-group-item span {
+  background-color: #a6b8c1;
+  color: #477286;
 }
 #gallery h2 {
   color: #617078;
@@ -403,8 +417,16 @@ i {
   body {
     font-size: 16px;
   }
+  .list-group {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
 }
 @media screen and (max-width: 768px) {
+  .list-group {
+    margin-right: 0;
+    margin-left: 0;
+  }
   #about .row {
     margin: 0;
   }
