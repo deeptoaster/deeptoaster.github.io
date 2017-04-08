@@ -83,6 +83,11 @@ i {
 .post-content {
   padding: 0 0.9em;
 }
+.comments {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 .comment, .comment-respond {
   padding: 0.4em 0.9em;
   background-color: #a6b8c1;
@@ -91,12 +96,13 @@ i {
 .comment-respond h3 {
   padding-top: 0.5em;
 }
-.comment-respond label {
-  display: none;
+.comment-metadata {
+  font-size: 0.8em;
+  font-style: italic;
+  line-height: 1em;
 }
-.comment-title {
-  padding-top: 0.5em;
-  color: #477286;
+.comment-edit-link {
+  padding-left: 0.5em;
 }
 .comment-content {
   margin-left: 3.9em;
@@ -405,17 +411,28 @@ i {
   display: inline-block;
   padding: 1.5em 1em;
 }
+#main, #sidebar {
+  padding-top: 5em;
+  font-size: 16px;
+}
+#main {
+  margin-left: 30%;
+}
 #sidebar {
   position: fixed;
-  top: 4em;
+  top: 0;
   bottom: 0;
   left: 0;
   width: 30%;
+  overflow: hidden;
+  color: #617078;
 }
-#main {
-  padding-top: 5em;
-  margin-left: 30%;
-  font-size: 16px;
+#main label, #sidebar label {
+  display: none;
+}
+#sidebar ul {
+  list-style-type: none;
+  padding: 0 0.4em 2em 1.4em;
 }
 #breakout {
   padding: 3em 0 1em 0;
@@ -480,7 +497,7 @@ i {
     margin-right: 10%;
     margin-left: 10%;
   }
-  #main {
+  #main, #sidebar {
     font-size: 13px;
   }
 }
