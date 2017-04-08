@@ -80,13 +80,19 @@ i {
   background-color: #27556c;
   color: #d2d7d9;
 }
-.post-content, .comment {
+.post-content {
   padding: 0 0.9em;
 }
-.comment {
+.comment, .comment-respond {
   padding: 0.4em 0.9em;
   background-color: #a6b8c1;
   color: #374952;
+}
+.comment-respond h3 {
+  padding-top: 0.5em;
+}
+.comment-respond label {
+  display: none;
 }
 .comment-title {
   padding-top: 0.5em;
@@ -98,6 +104,7 @@ i {
 .avatar {
   float: left;
   width: 3em;
+  height: auto;
   margin-top: 0.5em;
   margin-right: 0.9em;
 }
