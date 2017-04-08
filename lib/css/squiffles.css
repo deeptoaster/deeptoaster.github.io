@@ -1,5 +1,6 @@
 html {
   background-color: #161819;
+  color: #232627;
 }
 body {
   margin: 0;
@@ -67,6 +68,45 @@ i {
 .list-group-item span {
   display: inline-block;
   padding: 0.4em;
+}
+.post {
+  margin: 0.9em;
+  border: 0.9em solid #27556c;
+  border-radius: 0.2em;
+  background-color: #d2d7d9;
+}
+.post-title {
+  padding-top: 0;
+  background-color: #27556c;
+  color: #d2d7d9;
+}
+.post-content, .comment {
+  padding: 0 0.9em;
+}
+.comment {
+  padding: 0.4em 0.9em;
+  background-color: #a6b8c1;
+  color: #374952;
+}
+.comment-title {
+  padding-top: 0.5em;
+  color: #477286;
+}
+.comment-content {
+  margin-left: 3.9em;
+}
+.avatar {
+  float: left;
+  width: 3em;
+  margin-top: 0.5em;
+  margin-right: 0.9em;
+}
+.date {
+  float: right;
+  text-transform: none;
+  font: 0.9em/1em 'Titillium Web', sans-serif;
+  font-weight: bold;
+  letter-spacing: normal;
 }
 .map {
   position: absolute;
@@ -358,6 +398,18 @@ i {
   display: inline-block;
   padding: 1.5em 1em;
 }
+#sidebar {
+  position: fixed;
+  top: 4em;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+}
+#main {
+  padding-top: 5em;
+  margin-left: 30%;
+  font-size: 16px;
+}
 #breakout {
   padding: 3em 0 1em 0;
   font-size: 1.5em;
@@ -420,6 +472,9 @@ i {
   .list-group {
     margin-right: 10%;
     margin-left: 10%;
+  }
+  #main {
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 768px) {
