@@ -4,6 +4,7 @@
     <title>Deep Toaster</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="/lib/breakout/breakout.css" type="text/css" rel="stylesheet" />
+    <link href="/lib/showcase/showcase.css" type="text/css" rel="stylesheet" />
 		<link href="/lib/fonts/flaticon.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:800|Titillium+Web:400,700" type="text/css" rel="stylesheet" />
     <link href="/lib/css/squiffles.css" type="text/css" rel="stylesheet" />
@@ -198,6 +199,34 @@
     <div id="gallery" class="section">
       <div class="content">
         <h2>Gallery</h2>
+        <div class="showcase">
+          <div class="showcase-left">&lang;</div>
+          <div class="showcase-right">&rang;</div>
+          <div class="showcase-grid">
+            <div class="showcase-col">
+              <div class="showcase-thumbnail">
+                <img src="/My_Nut_by_bluesabreWife.jpg" />
+              </div>
+              <div class="showcase-thumbnail">
+                <img src="/My_Nut_by_bluesabreWife.jpg" />
+              </div>
+            </div>
+            <div class="showcase-col">
+              <div class="showcase-centerfold">
+                <img src="/My_Nut_by_bluesabreWife.jpg" />
+              </div>
+            </div>
+            <div class="showcase-col">
+              <div class="showcase-thumbnail">
+                <img src="/My_Nut_by_bluesabreWife.jpg" />
+              </div>
+              <div class="showcase-thumbnail">
+                <img src="/My_Nut_by_bluesabreWife.jpg" />
+              </div>
+            </div>
+          </div>
+          <p class="showcase-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.</p>
+        </div>
       </div>
     </div>
   </body>

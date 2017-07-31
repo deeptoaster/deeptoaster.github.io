@@ -4,7 +4,7 @@ html {
 }
 body {
   margin: 0;
-  font: 20px/1.5em 'Titillium Web', sans-serif;
+  font: 20px/1.5 'Titillium Web', sans-serif;
 }
 h1 {
   display: inline-block;
@@ -15,6 +15,7 @@ h2 {
   margin: 0;
   padding: 0.625em 0;
   font-size: 1.6em;
+  text-indent: 0.3em;
 }
 h3 {
   margin: 0;
@@ -99,7 +100,7 @@ i {
 .comment-metadata {
   font-size: 0.8em;
   font-style: italic;
-  line-height: 1em;
+  line-height: 1;
 }
 .comment-edit-link {
   padding-left: 0.5em;
@@ -117,7 +118,7 @@ i {
 .date {
   float: right;
   text-transform: none;
-  font: 0.9em/1em 'Titillium Web', sans-serif;
+  font: 0.9em/1 'Titillium Web', sans-serif;
   font-weight: bold;
   letter-spacing: normal;
 }
@@ -396,7 +397,7 @@ i {
 #header .pull-right, h1, h2, h3 {
   text-transform: uppercase;
   font-weight: bold;
-  line-height: 1em;
+  line-height: 1;
   font-family: Raleway, sans-serif;
   letter-spacing: 0.2em;
 }
