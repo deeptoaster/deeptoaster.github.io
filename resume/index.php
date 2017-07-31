@@ -13,34 +13,34 @@
 			<h2>Software engineer, game developer, and graphic designer with a knack for <strong>creative, efficient solutions</strong> to novel problems.</h2>
 			<h2>Fast learner, team player, and <strong>detail-oriented problem solver</strong> who likes to have fun and works well under pressure.</h2>
 			<h3>Languages</h3>
-			<div class="column">
+			<div class="col">
 				<p>English</p>
 			</div>
-			<div class="column">
+			<div class="col">
 				<div class="progress">
 					<span style="width: 100%;"></span>
 				</div>
 			</div>
-			<div class="column">
+			<div class="col">
 				<p>Chinese</p>
 			</div>
-			<div class="column">
+			<div class="col">
 				<div class="progress">
 					<span style="width: 100%;"></span>
 				</div>
 			</div>
-			<div class="column">
+			<div class="col">
 				<p>French</p>
 			</div>
-			<div class="column">
+			<div class="col">
 				<div class="progress">
 					<span style="width: 80%;"></span>
 				</div>
 			</div>
-			<div class="column">
+			<div class="col">
 				<p>Spanish</p>
 			</div>
-			<div class="column">
+			<div class="col">
 				<div class="progress">
 					<span style="width: 50%;"></span>
 				</div>
@@ -119,7 +119,7 @@
 				<dd>
 					<h4>Software Development Intern</h4>
 					<h3>Intel</h3>
-					<p>Developed UX tracking library and analysis tool and improved internal tools</p>
+					<p>Developed UX tracking library and analysis tool</p>
 				</dd>
 				<dt>2012</dt>
 				<dd>
@@ -133,11 +133,11 @@
 				<dd>
 					<h4>Computer Science, Aerospace (minor)</h4>
 					<h3>Caltech</h3>
-					<p>Completed tracks in Graphics and Machine Learning</p>
+					<p>Completed tracks in Graphics and Robotics</p>
 				</dd>
 			</dl>
 			<h1>Skills</h1>
-			<div class="column">
+			<div class="col">
 				<div>
 					<h3>Things I Do Well</h3>
 					<ul>
@@ -188,7 +188,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="column">
+			<div class="col">
 				<div>
 					<h3>Things I've Made</h3>
 					<ul>
@@ -213,6 +213,9 @@
 						</li>
 						<li>
 							<span>Program of the Year, ticalc.org</span>
+						</li>
+						<li>
+							<span>Winner, Caltech MCE competition</span>
 						</li>
 					</ul>
 				</div>

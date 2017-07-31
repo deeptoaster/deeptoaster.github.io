@@ -84,7 +84,7 @@ p {
 #sidebar p {
   white-space: nowrap;
 }
-#sidebar .column .progress {
+#sidebar .col .progress {
   margin: 0.8em 0;
   padding-left: 0;
   background-color: #859fab;
@@ -148,18 +148,18 @@ dd {
   padding-top: 1em;
   padding-left: 2em;
 }
-.column {
+.col {
   float: left;
   width: 50%;
 }
-.column > div {
+.col > div {
   padding-right: 0.5em;
 }
-.column + .column > div {
+.col + .col > div {
   padding-right: 0;
   padding-left: 0.5em;
 }
-.column h3 {
+.col h3 {
   padding-top: 1.5em;
   text-align: right;
 }
