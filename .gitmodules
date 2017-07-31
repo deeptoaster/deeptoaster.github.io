@@ -1,6 +1,6 @@
 [submodule "lib/breakout"]
 	path = lib/breakout
-	url = ssh://git@github.com/DThought/scrollbar-breakout
+	url = https://DThought@github.com/DThought/scrollbar-breakout
 [submodule "lib/showcase"]
 	path = lib/showcase
-	url = ssh://git@github.com/DThought/showcase
+	url = https://DThought@github.com/DThought/showcase
