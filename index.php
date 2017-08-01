@@ -23,7 +23,9 @@
         <a href="/">Deep Toaster</a>
       </h1>
     </div>
-    <div id="breakout" class="section"></div>
+    <div id="breakout" class="section">
+      <div></div>
+    </div>
     <div id="about" class="section">
       <div class="map map-left">
         <img src="/lib/img/asia.png" alt="" />
