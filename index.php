@@ -11,6 +11,8 @@
     <script type="text/javascript" src="/lib/js/jquery.min.js"></script>
     <script type="text/javascript" src="/lib/breakout/breakout.js"></script>
     <script type="text/javascript" src="/lib/breakout/breakoutpresenter.js"></script>
+    <script type="text/javascript" src="/lib/showcase/showcase.js"></script>
+    <script type="text/javascript" src="/lib/showcase/showcasepresenter.js"></script>
     <script type="text/javascript" src="/lib/js/squiffles.js"></script>
   </head>
   <body>
@@ -201,34 +203,7 @@
     <div id="gallery" class="section">
       <div class="content">
         <h2>Gallery</h2>
-        <div class="showcase">
-          <div class="showcase-left">&lang;</div>
-          <div class="showcase-right">&rang;</div>
-          <div class="showcase-grid">
-            <div class="showcase-col">
-              <div class="showcase-thumbnail">
-                <img src="/My_Nut_by_bluesabreWife.jpg" />
-              </div>
-              <div class="showcase-thumbnail">
-                <img src="/My_Nut_by_bluesabreWife.jpg" />
-              </div>
-            </div>
-            <div class="showcase-col">
-              <div class="showcase-centerfold">
-                <img src="/My_Nut_by_bluesabreWife.jpg" />
-              </div>
-            </div>
-            <div class="showcase-col">
-              <div class="showcase-thumbnail">
-                <img src="/My_Nut_by_bluesabreWife.jpg" />
-              </div>
-              <div class="showcase-thumbnail">
-                <img src="/My_Nut_by_bluesabreWife.jpg" />
-              </div>
-            </div>
-          </div>
-          <p class="showcase-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.</p>
-        </div>
+        <div></div>
       </div>
     </div>
   </body>
