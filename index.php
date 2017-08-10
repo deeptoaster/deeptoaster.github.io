@@ -108,7 +108,7 @@
               </li>
               <li>
                 <i class="flaticon-multimedia"></i>
-                <a href="http://https://github.com/DThought">GitHub</a>
+                <a href="https://github.com/DThought">GitHub</a>
               </li>
             </ul>
           </div>
