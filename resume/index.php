@@ -91,7 +91,7 @@
 			</p>
 			<p>
 				<i class="flaticon-multimedia"></i>
-				<a href="http://https://github.com/DThought">github.com/DThought</a>
+				<a href="https://github.com/DThought">github.com/DThought</a>
 			</p>
 		</div>
 		<div id="main">
