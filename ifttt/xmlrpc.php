@@ -33,9 +33,9 @@ switch ($xml->methodName) {
 
       foreach($members as $member) {
         if ((string) $member->name == 'title') {
-          $title = (string) $member->value->string;
+          $title = trim((string) $member->value->string);
         } elseif ((string) $member->name == 'description') {
-          $description = (string) $member->value->string;
+          $description = trim((string) $member->value->string);
         }
       }
 
