@@ -27,15 +27,15 @@ switch ($xml->methodName) {
     ifttt_success('<array><data /></array>');
   case 'metaWeblog.newPost':
     if ((string) $xml->params->param[1]->value->string == 'admin' and password_verify((string) $xml->params->param[2]->value->string, '$2y$10$B6nLvebuCgY.hrHTB/vfBu/yT6Gg8BUJWyN3Sy7ecJhl8sp.vuK3e')) {
-      $data = $xml->params->param[3]->value->struct->member;
+      $members = $xml->params->param[3]->value->struct->member;
       $title = '';
       $description = '';
 
-      foreach($data as $datum) {
-        if ((string) $datum->name == 'title') {
-          $title = (string) $datum->value->string;
-        } elseif ((string) $datum->name == 'description') {
-          $description = (string) $datum->value->string;
+      foreach($members as $member) {
+        if ((string) $member->name == 'title') {
+          $title = (string) $member->value->string;
+        } elseif ((string) $member->name == 'description') {
+          $description = (string) $member->value->string;
         }
       }
 
