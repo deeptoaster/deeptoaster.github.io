@@ -18,8 +18,7 @@ EOF;
   die($xml);
 }
 
-$xml = file_get_contents('php://input');
-$xml = simplexml_load_string($xml);
+$xml = simplexml_load_string(file_get_contents('php://input'));
 
 switch ($xml->methodName) {
   case 'mt.supportedMethods':
@@ -27,7 +26,7 @@ switch ($xml->methodName) {
   case 'metaWeblog.getRecentPosts':
     ifttt_success('<array><data /></array>');
   case 'metaWeblog.newPost':
-    mail($email, 'IFTTT', $xml);
+    mail($email, 'IFTTT', var_export($xml, true));
 
     if ($xml->params->param[1]->value->string == 'admin' and password_verify($xml->params->param[2]->value->string, '$2y$10$B6nLvebuCgY.hrHTB/vfBu/yT6Gg8BUJWyN3Sy7ecJhl8sp.vuK3e')) {
       $data = $xml->params->param[3]->value->struct->member;
