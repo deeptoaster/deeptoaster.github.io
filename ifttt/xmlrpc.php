@@ -26,23 +26,21 @@ switch ($xml->methodName) {
   case 'metaWeblog.getRecentPosts':
     ifttt_success('<array><data /></array>');
   case 'metaWeblog.newPost':
-    mail($email, 'IFTTT', password_verify($xml->params->param[2]->value->string, '$2y$10$B6nLvebuCgY.hrHTB/vfBu/yT6Gg8BUJWyN3Sy7ecJhl8sp.vuK3e') ? 'TRUE' : 'FALSE');
-
-    if ($xml->params->param[1]->value->string == 'admin' and password_verify($xml->params->param[2]->value->string, '$2y$10$B6nLvebuCgY.hrHTB/vfBu/yT6Gg8BUJWyN3Sy7ecJhl8sp.vuK3e')) {
+    if ((string) $xml->params->param[1]->value->string == 'admin' and password_verify((string) $xml->params->param[2]->value->string, '$2y$10$B6nLvebuCgY.hrHTB/vfBu/yT6Gg8BUJWyN3Sy7ecJhl8sp.vuK3e')) {
       $data = $xml->params->param[3]->value->struct->member;
       $title = '';
       $description = '';
 
       foreach($data as $datum) {
-        if ($datum->name == 'title') {
-          $title = $datum->value->string;
-        } elseif ($datum->name == 'description') {
-          $description = $datum->value->string;
+        if ((string) $datum->name == 'title') {
+          $title = (string) $datum->value->string;
+        } elseif ((string) $datum->name == 'description') {
+          $description = (string) $datum->value->string;
         }
       }
 
       $ch = curl_init();
-      $cards = preg_match_all('/#(\w+)/', $title, $matches);
+      preg_match_all('/#(\w+)/', $title, $matches);
       curl_setopt($ch, CURLOPT_POST, 3);
       curl_setOpt($ch, CURLOPT_POSTFIELDS, array(
         'key' => '18e84ee5652c3619af4402c4db8b150e',
@@ -52,7 +50,7 @@ switch ($xml->methodName) {
 
       foreach ($matches[1] as $match) {
         curl_setopt($ch, CURLOPT_URL, "https://api.trello.com/1/cards/$match/actions/comments");
-        $response = curl_exec($ch);
+        curl_exec($ch);
       }
 
       curl_close($ch);
