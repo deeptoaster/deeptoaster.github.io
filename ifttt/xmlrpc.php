@@ -39,6 +39,8 @@ switch ($xml->methodName) {
         }
       }
 
+      mail($email, 'IFTTT', $title . 'FOO' . $description);
+
       $ch = curl_init();
       preg_match_all('/#(\w+)/', $title, $matches);
       curl_setopt($ch, CURLOPT_POST, 3);
