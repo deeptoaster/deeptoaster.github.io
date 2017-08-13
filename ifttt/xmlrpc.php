@@ -55,32 +55,8 @@ switch ($xml->methodName) {
       }
 
       curl_close($ch);
-      ifttt_success('200 OK');
-    } else {
-      die(<<<EOF
-<?xml version="1.0"?>
-<methodResponse>
-  <fault>
-    <value>
-      <struct>
-        <member>
-          <name>faultCode</name>
-          <value>
-            <int>403</int>
-          </value>
-        </member>
-        <member>
-          <name>faultString</name>
-          <value>
-            <string>Incorrect username or password.</string>
-          </value>
-        </member>
-      </struct>
-    </value>
-  </fault>
-</methodResponse>
-EOF
-        );
     }
+
+    ifttt_success('200 OK');
 }
 ?>
