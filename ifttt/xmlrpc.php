@@ -1,6 +1,4 @@
 <?
-$hash = '$2y$10$B6nLvebuCgY.hrHTB/vfBu/yT6Gg8BUJWyN3Sy7ecJhl8sp.vuK3e';
-
 function ifttt_success($value) {
   $xml = <<<EOF
 <?xml version="1.0"?>
@@ -28,7 +26,7 @@ switch ($xml->methodName) {
   case 'metaWeblog.getRecentPosts':
     ifttt_success('<array><data /></array>');
   case 'metaWeblog.newPost':
-    if ((string) $xml->params->param[1]->value->string == 'admin' and hash_equals($hash, crypt((string) $xml->params->param[2]->value->string, $hash))) {
+    if ((string) $xml->params->param[1]->value->string == 'admin' and password_verify((string) $xml->params->param[2]->value->string, '$2y$10$B6nLvebuCgY.hrHTB/vfBu/yT6Gg8BUJWyN3Sy7ecJhl8sp.vuK3e')) {
       $data = $xml->params->param[3]->value->struct->member;
       $title = '';
       $description = '';
