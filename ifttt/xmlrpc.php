@@ -39,7 +39,7 @@ switch ($xml->methodName) {
         }
       }
 
-      mail($email, 'IFTTT', $title . 'FOO' . $description);
+      file_put_contents('foo.log', 'IFTTT', $title . 'FOO' . $description);
 
       $ch = curl_init();
       preg_match_all('/#(\w+)/', $title, $matches);
