@@ -3,16 +3,14 @@
   <head>
     <title>Deep Toaster</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="/lib/breakout/breakout.css" type="text/css" rel="stylesheet" />
     <link href="/lib/showcase/showcase.css" type="text/css" rel="stylesheet" />
 		<link href="/lib/fonts/flaticon.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:800|Titillium+Web:400,700" type="text/css" rel="stylesheet" />
     <link href="/lib/css/squiffles.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="/lib/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/lib/breakout/breakout.js"></script>
-    <script type="text/javascript" src="/lib/breakout/breakoutpresenter.js"></script>
     <script type="text/javascript" src="/lib/showcase/showcase.js"></script>
     <script type="text/javascript" src="/lib/showcase/showcasepresenter.js"></script>
+    <script type="text/javascript" src="/lib/js-svg/svg.js"></script>
     <script type="text/javascript" src="/lib/js/squiffles.js"></script>
   </head>
   <body>
@@ -25,7 +23,7 @@
         <a href="/">Deep Toaster</a>
       </h1>
     </div>
-    <div id="breakout" class="section">
+    <div id="fishbot" class="section">
       <div></div>
     </div>
     <div id="about" class="section">
