@@ -382,9 +382,6 @@ i {
 .coaster-line, .coaster-clear {
   background-color: #d2d7d9;
 }
-.breakout {
-  margin: 1em auto;
-}
 #header {
   position: fixed;
   z-index: 9;
