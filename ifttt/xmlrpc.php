@@ -11,10 +11,10 @@ function ifttt_success($value) {
 </methodResponse>
 EOF;
 
-	header('Connection: close');
-	header('Content-Length: ' . strlen($value));
-	header('Content-Type: text/xml');
-	header('Date: ' . date('r'));
+  header('Connection: close');
+  header('Content-Length: ' . strlen($value));
+  header('Content-Type: text/xml');
+  header('Date: ' . date('r'));
   die($xml);
 }
 
@@ -26,7 +26,7 @@ switch ($xml->methodName) {
   case 'metaWeblog.getRecentPosts':
     ifttt_success('<array><data /></array>');
   case 'metaWeblog.newPost':
-    if ((string) $xml->params->param[1]->value->string == 'admin' and password_verify((string) $xml->params->param[2]->value->string, '$2y$10$B6nLvebuCgY.hrHTB/vfBu/yT6Gg8BUJWyN3Sy7ecJhl8sp.vuK3e')) {
+    if ((string) $xml->params->param[1]->value->string == 'admin' and password_verify((string) $xml->params->param[2]->value->string, '$2y$10$oo7w0op8jhhkzCtNTSQ2hOZMWOrHbrlmXu5Eq0aWlJzXPVQBZVA42')) {
       $members = $xml->params->param[3]->value->struct->member;
       $title = '';
       $description = '';
