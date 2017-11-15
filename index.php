@@ -3,15 +3,16 @@
   <head>
     <title>Deep Toaster</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="/lib/showcase/showcase.css" type="text/css" rel="stylesheet" />
-		<link href="/lib/fonts/flaticon.css" type="text/css" rel="stylesheet" />
+    <link href="/lib/showcase/lib/showcase.css" type="text/css" rel="stylesheet" />
+    <link href="/lib/js-svg/lib/svg.css" type="text/css" rel="stylesheet" />
+		<link href="/bin/fonts/flaticon.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:800|Titillium+Web:400,700" type="text/css" rel="stylesheet" />
-    <link href="/lib/css/squiffles.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="/lib/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/lib/showcase/showcase.js"></script>
-    <script type="text/javascript" src="/lib/showcase/showcasepresenter.js"></script>
-    <script type="text/javascript" src="/lib/js-svg/svg.js"></script>
-    <script type="text/javascript" src="/lib/js/squiffles.js"></script>
+    <link href="/lib/squiffles.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/javascript" src="/lib/showcase/lib/showcase.js"></script>
+    <script type="text/javascript" src="/lib/js-svg/lib/svg.js"></script>
+    <script type="text/javascript" src="/lib/squiffles.js"></script>
   </head>
   <body>
     <div id="header">
@@ -28,12 +29,12 @@
     </div>
     <div id="about" class="section">
       <div class="map map-left">
-        <img src="/lib/img/asia.png" alt="" />
+        <img src="/bin/images/asia.png" alt="" />
         <span style="width: 2.5em; height: 2em; top: 9.3em; left: 33.8em; -webkit-transform: rotate(-37deg); -o-transform: rotate(-37deg); -moz-transform: rotate(-37deg); transform: rotate(-37deg);"></span>
         <span style="width: 2.5em; height: 2em; top: 9.3em; left: 33.8em; -webkit-transform: rotate(143deg); -o-transform: rotate(143deg); -moz-transform: rotate(143deg); transform: rotate(143deg);"></span>
       </div>
       <div class="map map-right">
-        <img src="/lib/img/north_america.png" alt="" />
+        <img src="/bin/images/north_america.png" alt="" />
         <span style="width: 2.1em; height: 1em; top: 15.5em; left: 10.2em; -webkit-transform: rotate(76deg); -o-transform: rotate(76deg); -moz-transform: rotate(76deg); transform: rotate(76deg);"></span>
         <span style="width: 1.8em; height: 1em; top: 13.8em; left: 9.6em; -webkit-transform: rotate(56deg); -o-transform: rotate(56deg); -moz-transform: rotate(56deg); transform: rotate(56deg);"></span>
         <span style="width: 3.5em; height: 2em; top: 14.3em; left: 9.5em; -webkit-transform: rotate(82deg); -o-transform: rotate(82deg); -moz-transform: rotate(82deg); transform: rotate(82deg);"></span>
@@ -70,21 +71,21 @@
             <div class="honeycomb">
               <div class="honeycomb-row">
                 <a class="honeycomb-cell honeycomb-caltech" href="http://caltech.edu/">
-                  <img class="honeycomb-honey" src="/lib/img/caltech.png" alt="Caltech" title="Caltech" />
+                  <img class="honeycomb-honey" src="/bin/images/caltech.png" alt="Caltech" title="Caltech" />
                 </a>
                 <a class="honeycomb-cell honeycomb-blacker" href="https://blacker.caltech.edu/">
-                  <img class="honeycomb-honey" src="/lib/img/blacker.png" alt="Blacker" title="Blacker" />
+                  <img class="honeycomb-honey" src="/bin/images/blacker.png" alt="Blacker" title="Blacker" />
                 </a>
                 <a class="honeycomb-cell honeycomb-1064" href="http://ohaithe.re/">
-                  <img class="honeycomb-honey" src="/lib/img/1064.png" alt="1064cbread" title="1064cbread" />
+                  <img class="honeycomb-honey" src="/bin/images/1064.png" alt="1064cbread" title="1064cbread" />
                 </a>
               </div>
               <div class="honeycomb-row">
                 <a class="honeycomb-cell honeycomb-omnimaga" href="https://www.omnimaga.org/">
-                  <img class="honeycomb-honey" src="/lib/img/omnimaga.png" alt="Omnimaga" title="Omnimaga" />
+                  <img class="honeycomb-honey" src="/bin/images/omnimaga.png" alt="Omnimaga" title="Omnimaga" />
                 </a>
                 <a class="honeycomb-cell honeycomb-clrhome" href="http://clrhome.org/">
-                  <img class="honeycomb-honey" src="/lib/img/clrhome.png" alt="ClrHome" title="ClrHome" />
+                  <img class="honeycomb-honey" src="/bin/images/clrhome.png" alt="ClrHome" title="ClrHome" />
                 </a>
               </div>
             </div>
@@ -201,7 +202,7 @@
     <div id="gallery" class="section">
       <div class="content">
         <h2>Gallery</h2>
-        <div></div>
+        <div id="gallery-content"></div>
       </div>
     </div>
   </body>

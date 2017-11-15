@@ -1,0 +1,29 @@
+{
+  "name": "squiffles",
+  "version": "1.0.0",
+  "description": "Fishbot Will Eat You",
+  "main": "squiffles.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DThought/dthought.github.io.git"
+  },
+  "author": "Deep Toaster",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DThought/dthought.github.io/issues"
+  },
+  "homepage": "http://fishbotwilleatyou.com/",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
