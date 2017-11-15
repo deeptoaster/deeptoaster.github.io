@@ -11,10 +11,10 @@ function ifttt_success($value) {
 </methodResponse>
 EOF;
 
-	header('Connection: close');
-	header('Content-Length: ' . strlen($value));
-	header('Content-Type: text/xml');
-	header('Date: ' . date('r'));
+  header('Connection: close');
+  header('Content-Length: ' . strlen($value));
+  header('Content-Type: text/xml');
+  header('Date: ' . date('r'));
   die($xml);
 }
 
