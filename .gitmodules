@@ -1,6 +1,0 @@
-[submodule "lib/showcase"]
-	path = lib/showcase
-	url = ssh://git@github.com/DThought/showcase
-[submodule "lib/js-svg"]
-	path = lib/js-svg
-	url = ssh://git@github.com/DThought/js-svg

@@ -166,8 +166,15 @@ i {
   text-align: right;
   vertical-align: top;
 }
+.reel-scroll {
+  position: relative;
+  animation-name: reel;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
 .reel-symbol {
   display: block;
+  height: 1.5em;
 }
 .honeycomb {
   margin: 1em 0;
@@ -487,6 +494,85 @@ i {
 #gallery h2 {
   color: #617078;
 }
+.showcase {
+  text-align: center;
+  width: 53em;
+  margin: 0 auto 1em auto;
+}
+.showcase-back {
+  position: absolute;
+  width: 53em;
+  height: 16em;
+  overflow: hidden;
+}
+.showcase-page {
+  height: 16em;
+}
+.showcase-page > * {
+  float: left;
+  vertical-align: top;
+}
+.showcase-pager {
+  width: 0.5em;
+  margin: 0.44em 0;
+  outline: none;
+  font-size: 8em;
+  line-height: 1;
+}
+.showcase-pager:hover {
+  color: #617078;
+  text-decoration: none;
+}
+.showcase-col {
+  width: 11em;
+}
+.showcase-thumbnail {
+  display: block;
+  width: 9em;
+  height: 6em;
+  padding: 1em;
+}
+.showcase-thumbnail a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.showcase-thumbnail a:hover {
+  opacity: 1;
+}
+.showcase-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.showcase-placeholder {
+  width: 23em;
+  height: 16em;
+}
+.showcase-front {
+  width: 45em;
+  margin: auto;
+  overflow: hidden;
+}
+.showcase-front-scroll {
+  white-space: nowrap;
+}
+.showcase-centerfold {
+  display: inline-block;
+  width: 45em;
+  vertical-align: top;
+}
+.showcase-image {
+  width: 21em;
+  height: 14em;
+  margin: 1em;
+}
+.showcase-caption {
+  width: 30em;
+  margin: 1em auto;
+  color: #617078;
+}
 @media screen and (max-width: 960px) {
   body {
     font-size: 16px;
@@ -512,5 +598,31 @@ i {
     background-color: rgba(255, 255, 255, 0.5);
     margin: 1em;
     padding: 1em;
+  }
+}
+@keyframes reel {
+	0% {
+		top: 0;
+	}
+	5% {
+		top: -1.5em;
+	}
+  25% {
+    top: -1.5em;
+  }
+  30% {
+    top: -3em;
+  }
+  50% {
+    top: -3em;
+  }
+  55% {
+    top: -4.5em;
+  }
+  75% {
+    top: -4.5em;
+  }
+  80% {
+    top: 0;
   }
 }
