@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>Deep Toaster</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link href="/bin/fonts/flaticon.css" type="text/css" rel="stylesheet" />
+    <link href="/bin/fonts/flaticon.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:800|Titillium+Web:400,700" type="text/css" rel="stylesheet" />
-    <link href="/lib/squiffles.css" type="text/css" rel="stylesheet" />
+    <link href="/bin/css/squiffles.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
     <div id="header">
@@ -17,9 +17,7 @@
         <a href="/">Deep Toaster</a>
       </h1>
     </div>
-    <div id="fishbot" class="section">
-      <div></div>
-    </div>
+    <div id="fishbot" class="section"></div>
     <div id="about" class="section">
       <div class="map map-left">
         <img src="/bin/images/asia.png" alt="" />
