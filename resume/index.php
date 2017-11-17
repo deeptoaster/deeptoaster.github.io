@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>R&eacute;sum&eacute; - Deep Toaster</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link href="/lib/fonts/flaticon.css" type="text/css" rel="stylesheet" />
+		<link href="/bin/fonts/flaticon.css" type="text/css" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Raleway:800|Titillium+Web:400,700" type="text/css" rel="stylesheet" />
-		<link href="/lib/css/resume.css" type="text/css" rel="stylesheet" />
+		<link href="/bin/css/resume.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
 		<div id="sidebar">
@@ -99,13 +99,13 @@
 			<dl>
 				<dt>2016</dt>
 				<dd>
-					<h4>Software Development Intern</h4>
+					<h4>Software Engineer</h4>
 					<h3>Facebook</h3>
 					<p>Developed new client-facing interfaces, internal tools, and external developers APIs</p>
 				</dd>
 				<dt>2015</dt>
 				<dd>
-					<h4>Software Development Intern</h4>
+					<h4>Web Development Intern</h4>
 					<h3>TigerText</h3>
 					<p>Developed client-facing administration panels, features for web interface, and toolchain improvements</p>
 				</dd>
