@@ -19,13 +19,13 @@
     </div>
     <div id="fishbot" class="section"></div>
     <div id="about" class="section">
-      {include name=about}
+      {include file='about.tpl'}
     </div>
     <div id="interests" class="section">
-      {include name=interests}
+      {include file='interests.tpl'}
     </div>
     <div id="gallery" class="section">
-      {include name=gallery}
+      {include file='gallery.tpl'}
     </div>
   </body>
 </html>
