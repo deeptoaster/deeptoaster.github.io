@@ -2,34 +2,10 @@
   <h2>Interests</h2>
   <p class="lead">Things I'm learning, mostly.</p>
   <ul class="list-group">
-    <li class="list-group-item">
-      <span>building things</span>
+{foreach from=$interests item=interest}    <li class="list-group-item">
+      <span>{$interest}</span>
     </li>
-    <li class="list-group-item">
-      <span>calligraphy</span>
-    </li>
-    <li class="list-group-item">
-      <span>climbing</span>
-    </li>
-    <li class="list-group-item">
-      <span>fencing</span>
-    </li>
-    <li class="list-group-item">
-      <span>fire spinning</span>
-    </li>
-    <li class="list-group-item">
-      <span>making music</span>
-    </li>
-    <li class="list-group-item">
-      <span>self-defense</span>
-    </li>
-    <li class="list-group-item">
-      <span>urban exploration</span>
-    </li>
-    <li class="list-group-item">
-      <span>writing</span>
-    </li>
-  </ul>
+{/foreach}  </ul>
 </div>
 <div class="coaster">
   <div class="coaster-track" style="margin-left: -64.5em">
