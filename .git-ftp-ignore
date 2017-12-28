@@ -1,0 +1,6 @@
+.git-ftp-ignore
+.git-ftp-include
+.gitignore
+.gitmodules
+lib/
+src/
