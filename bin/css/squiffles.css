@@ -122,6 +122,33 @@ i {
   font-weight: bold;
   letter-spacing: normal;
 }
+.svg {
+  position: relative;
+  margin: 6em auto;
+  font-size: 10px;
+}
+.svg-ellipse, .svg-line {
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-color: #232627;
+}
+.svg-ellipse {
+  border-radius: 100%;
+}
+.svg-line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -.2em;
+  bottom: -.2em;
+  background-color: #617078;
+  animation-name: left, right;
+  animation-delay: inherit;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in, ease-out;
+}
 .map {
   position: absolute;
   top: 0;
@@ -586,6 +613,9 @@ i {
   }
 }
 @media screen and (max-width: 768px) {
+  .svg {
+    font-size: 6px;
+  }
   .list-group {
     margin-right: 0;
     margin-left: 0;
@@ -624,5 +654,21 @@ i {
   }
   80% {
     top: 0;
+  }
+}
+@keyframes left {
+	0% {
+		left: 0;
+	}
+  15% {
+    left: 100%;
+  }
+}
+@keyframes right {
+	0% {
+		right: 100%;
+	}
+  15% {
+    right: 0;
   }
 }
