@@ -12,16 +12,15 @@ function squiffles_transform($x0, $y0, $x1, $y1, $height) {
   $top = ($y0 + $y1 - $height) / 2;
   $left = ($x0 + $x1 - $width) / 2;
   $theta = atan2($y, $x) * 180 / M_PI;
-  $transform = "transform: rotate(${theta}deg);";
+  $transform = sprintf('transform: rotate(%ddeg);', $theta);
 
   return sprintf(
     'width: %.1fem; height: %.1fem; top: %.1fem; left: %.1fem; -webkit-%s ' .
-        '-o-%s -moz-%s %s',
+        '-moz-%s %s',
     $width,
     $height,
     $top,
     $left,
-    $transform,
     $transform,
     $transform,
     $transform

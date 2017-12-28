@@ -17,7 +17,9 @@
         <a href="/">Deep Toaster</a>
       </h1>
     </div>
-    <div id="fishbot" class="section"></div>
+    <div id="fishbot" class="section">
+      {include_php file='fishbot.php'}
+    </div>
     <div id="about" class="section">
       {include file='about.tpl'}
     </div>
