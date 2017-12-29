@@ -448,13 +448,13 @@ i {
   font-size: 16px;
 }
 #main {
-  margin-left: 30%;
+  margin-right: 30%;
 }
 #sidebar {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 30%;
   overflow: hidden;
   color: #617078;
