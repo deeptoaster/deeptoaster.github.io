@@ -443,18 +443,18 @@ i {
   display: inline-block;
   padding: 1.5em 1em;
 }
-#main {
+#main, #sidebar {
   padding-top: 5em;
   font-size: 16px;
 }
 #main {
-  margin-right: 30%;
+  margin-left: 30%;
 }
 #sidebar {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
+  left: 0;
   width: 30%;
   overflow: hidden;
   color: #617078;
