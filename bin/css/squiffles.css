@@ -443,18 +443,18 @@ i {
   display: inline-block;
   padding: 1.5em 1em;
 }
-#main, #sidebar {
+#main {
   padding-top: 5em;
   font-size: 16px;
 }
 #main {
-  margin-left: 30%;
+  margin-right: 30%;
 }
 #sidebar {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 30%;
   overflow: hidden;
   color: #617078;
@@ -464,7 +464,11 @@ i {
 }
 #sidebar ul {
   list-style-type: none;
-  padding: 0 0.4em 2em 1.4em;
+  margin: 0;
+  padding: 0 0.5em;
+}
+#searchform {
+  padding: 1em 0.5em;
 }
 #fishbot {
   padding: 3em 0 1em 0;
