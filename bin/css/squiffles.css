@@ -387,30 +387,36 @@ i {
 .coaster-cup span::after {
   bottom: 25%;
 }
-.coaster-track, .coaster-cap span, .coaster-cap span::after, .coaster-cup::before{
-  background-attachment: fixed;
+.coaster-track, .coaster-cap span, .coaster-cap span::after,
+.coaster-cup::before {
   background-color: #d2d7d9;
-	background-image: -webkit-linear-gradient(0deg, #859fab, #859fab 0.1em,
-      transparent 0.1em, transparent), -webkit-linear-gradient(90deg, #859fab,
-      #859fab 0.2em, transparent 0.2em, transparent),
-      -webkit-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
-      transparent 0.1em, transparent 0.9em),
-      -webkit-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
-      transparent 0.1em, transparent 0.8em);
-	background-image: -moz-linear-gradient(0deg, #859fab, #859fab 0.1em,
-      transparent 0.1em, transparent), -moz-linear-gradient(90deg, #859fab,
-      #859fab 0.2em, transparent 0.2em, transparent),
-      -moz-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
-      transparent 0.1em, transparent 0.9em),
-      -moz-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
-      transparent 0.1em, transparent 0.8em);
-	background-image: linear-gradient(0deg, #859fab, #859fab 0.1em, transparent
-      0.1em, transparent), linear-gradient(90deg, #859fab, #859fab 0.2em,
-      transparent 0.2em, transparent), repeating-linear-gradient(56.3deg,
-      #859fab, #859fab 0.1em, transparent 0.1em, transparent 1.7em),
-      repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
-      transparent 0.1em, transparent 1.6em);
-	background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
+}
+@supports (not (-moz-osx-font-smoothing: auto)) {
+  .coaster-track, .coaster-cap span, .coaster-cap span::after,
+  .coaster-cup::before {
+    background-attachment: fixed;
+    background-image: -webkit-linear-gradient(0deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent), -webkit-linear-gradient(90deg, #859fab,
+        #859fab 0.2em, transparent 0.2em, transparent),
+        -webkit-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 0.9em),
+        -webkit-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 0.8em);
+    background-image: -moz-linear-gradient(0deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent), -moz-linear-gradient(90deg, #859fab,
+        #859fab 0.2em, transparent 0.2em, transparent),
+        -moz-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 0.9em),
+        -moz-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 0.8em);
+    background-image: linear-gradient(0deg, #859fab, #859fab 0.1em, transparent
+        0.1em, transparent), linear-gradient(90deg, #859fab, #859fab 0.2em,
+        transparent 0.2em, transparent), repeating-linear-gradient(56.3deg,
+        #859fab, #859fab 0.1em, transparent 0.1em, transparent 1.7em),
+        repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 1.6em);
+    background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
+  }
 }
 .coaster-cap::before, .coaster-cup span, .coaster-cup span::after,
 .coaster-line, .coaster-clear {
