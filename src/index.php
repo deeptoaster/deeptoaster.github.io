@@ -1,8 +1,4 @@
 <?
-if (PHP_SAPI != 'CLI') {
-  header('Location: /', true, 301);
-}
-
 include(__DIR__ . '/../lib/cleverly/Cleverly.class.php');
 
 function squiffles_transform($x0, $y0, $x1, $y1, $height) {

@@ -1,1 +1,8 @@
-!index.php
+index.php:src/fishbot.php
+index.php:src/index.php
+index.php:src/templates/about.tpl
+index.php:src/templates/gallery.tpl
+index.php:src/templates/index.tpl
+index.php:src/templates/interests.tpl
+cards/index.php:src/cards/index.php
+cards/index.php:src/cards/templates/index.tpl
