@@ -5,13 +5,13 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link href="/bin/fonts/flaticon.css" type="text/css" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Raleway:800|Titillium+Web:400,700" type="text/css" rel="stylesheet" />
-		<link href="/bin/css/resume.css" type="text/css" rel="stylesheet" />
+		<link href="/bin/css/squiffles.css" type="text/css" rel="stylesheet" />
 	</head>
-	<body>
+	<body class="page">
 		<div id="sidebar">
 			<h1>Will Yu</h1>
-			<h2>Software engineer, game developer, and graphic designer with a knack for <strong>creative, efficient solutions</strong> to novel problems.</h2>
-			<h2>Fast learner, team player, and <strong>detail-oriented problem solver</strong> who likes to have fun and works well under pressure.</h2>
+			<p class="lead">Software engineer, game developer, and graphic designer with a knack for <strong>creative, efficient solutions</strong> to novel problems.</p>
+			<p class="lead">Fast learner, team player, and <strong>detail-oriented problem solver</strong> who likes to have fun and works well under pressure.</p>
 			<h3>Languages</h3>
 			<div class="col">
 				<p>English</p>
@@ -42,7 +42,15 @@
 			</div>
 			<div class="col">
 				<div class="progress">
-					<span style="width: 50%;"></span>
+					<span style="width: 60%;"></span>
+				</div>
+			</div>
+			<div class="col">
+				<p>Russian</p>
+			</div>
+			<div class="col">
+				<div class="progress">
+					<span style="width: 40%;"></span>
 				</div>
 			</div>
 			<h3>Hobbies</h3>
@@ -96,12 +104,12 @@
 		</div>
 		<div id="main">
 			<h1>Experience</h1>
-			<dl>
+			<dl class="timeline">
 				<dt>2016</dt>
 				<dd>
 					<h4>Software Engineer</h4>
 					<h3>Facebook</h3>
-					<p>Developed new client-facing interfaces, internal tools, and external developers APIs</p>
+					<p>Developed new client-facing interfaces, internal tools, and external developer APIs</p>
 				</dd>
 				<dt>2015</dt>
 				<dd>
@@ -128,7 +136,7 @@
 				</dd>
 			</dl>
 			<h1>Education</h1>
-			<dl>
+			<dl class="timeline">
 				<dt>2017</dt>
 				<dd>
 					<h4>Computer Science, Aerospace (minor)</h4>
@@ -143,38 +151,38 @@
 					<ul>
 						<li>
 							<span>General software development</span>
-							<span>
-								<em>C</em>
-								<em>C++</em>
-								<em>C#</em>
-								<em>Java</em>
-							</span>
-							<span>
-								<em>Haskell</em>
-								<em>Lisp</em>
-								<em>Lua</em>
-								<em>Python</em>
-							</span>
+							<ul class="skills">
+								<li>C</li>
+								<li>C++</li>
+								<li>C#</li>
+								<li>Java</li>
+							</ul>
+							<ul class="skills">
+								<li>Haskell</li>
+								<li>Lisp</li>
+								<li>Lua</li>
+								<li>Python</li>
+							</ul>
 						</li>
 						<li>
 							<span>Full-stack web development</span>
-							<span>
-								<em>Apache</em>
-								<em>nginx</em>
-								<em>Node.js</em>
-								<em>PHP</em>
-							</span>
-							<span>
-								<em>CSS3</em>
-								<em>HTML5</em>
-								<em>JavaScript</em>
-							</span>
-							<span>
-								<em>Angular</em>
-								<em>jQuery</em>
-								<em>Knockout</em>
-								<em>React</em>
-							</span>
+							<ul class="skills">
+								<li>Apache</li>
+								<li>nginx</li>
+								<li>Node.js</li>
+								<li>PHP</li>
+							</ul>
+							<ul class="skills">
+								<li>CSS3</li>
+								<li>HTML5</li>
+								<li>JavaScript</li>
+							</ul>
+							<ul class="skills">
+								<li>Angular</li>
+								<li>jQuery</li>
+								<li>Knockout</li>
+								<li>React</li>
+							</ul>
 						</li>
 						<li>
 							<span>Database design and management</span>
