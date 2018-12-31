@@ -2,6 +2,6 @@
 .git-ftp-include
 .gitignore
 .gitmodules
-lib/
+lib/*
 Makefile
-src/
+src/*
