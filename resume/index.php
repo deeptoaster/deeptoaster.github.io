@@ -87,15 +87,15 @@
 			</p>
 			<p>
 				<i class="flaticon-note"></i>
-				<a href="mailto:yizhenwilliam@gmail.com">yizhenwilliam@gmail.com</a>
+				<a href="mailto:deeptoaster@gmail.com">deeptoaster@gmail.com</a>
 			</p>
 			<p>
 				<i class="flaticon-square"></i>
-				<a href="https://www.facebook.com/yizhenwilliam">fb.com/yizhenwilliam</a>
+				<a href="https://www.facebook.com/deeptoaster">fb.com/deeptoaster</a>
 			</p>
 			<p>
 				<i class="flaticon-link"></i>
-				<a href="http://squiffl.es/">squiffl.es</a>
+				<a href="http://fishbotwilleatyou.com/">fishbotwilleatyou.com</a>
 			</p>
 			<p>
 				<i class="flaticon-multimedia"></i>
