@@ -399,7 +399,7 @@ cite {
 }
 .coaster {
   position: relative;
-  height: 12em;
+  height: 14em;
   overflow: hidden;
 }
 .coaster-track {
@@ -407,6 +407,17 @@ cite {
   left: 50%;
   width: 43em;
   height: 100%;
+}
+.coaster-track::after {
+  content: '\01f682\fe0e';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  margin-left: -0.3em;
+  animation-name: train-bottom, train-linear;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 .coaster-cap, .coaster-cup, .coaster-line, .coaster-clear {
   display: block;
@@ -871,5 +882,72 @@ body.page #sidebar {
 	}
   15% {
     right: 0;
+  }
+}
+@keyframes train-bottom {
+  0% {
+    bottom: 12em;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0.4);
+  }
+  15% {
+    bottom: 8em;
+    animation-timing-function: cubic-bezier(0.2, 1.6, 0.8, 1.6);
+  }
+  25% {
+    bottom: 4em;
+    animation-timing-function: cubic-bezier(0.3, 2.8, 0.7, 3.4);
+  }
+  35% {
+    bottom: 5em;
+    animation-timing-function: cubic-bezier(0.2, -0.8, 0.7, -1);
+  }
+  40% {
+    bottom: 6em;
+    animation-timing-function: cubic-bezier(0.4, -6.8, 0.8, -3.4);
+  }
+  60% {
+    bottom: 5em;
+    animation-timing-function: cubic-bezier(0.3, -1.4, 0.6, -1.2);
+  }
+  70% {
+    bottom: 7em;
+    animation-timing-function: cubic-bezier(0.2, 0.4, 0.6, 1);
+  }
+  100% {
+    bottom: 12em;
+  }
+}
+@keyframes train-linear {
+  0% {
+    left: 2.3em;
+    transform: scale(2) rotateY(180deg);
+  }
+  15% {
+    left: 6.2em;
+    transform: scale(2) rotate(70deg) rotateY(180deg);
+  }
+  25% {
+    left: 13.3em;
+    transform: scale(2) rotate(-50deg) rotateY(180deg);
+  }
+  35% {
+    left: 21.4em;
+    transform: scale(2) rotate(45deg) rotateY(180deg);
+  }
+  40% {
+    left: 24.9em;
+    transform: scale(2) rotate(-55deg) rotateY(180deg);
+  }
+  60% {
+    left: 35.5em;
+    transform: scale(2) rotate(60deg) rotateY(180deg);
+  }
+  70% {
+    left: 40.8em;
+    transform: scale(2) rotate(-65deg) rotateY(180deg);
+  }
+  100% {
+    left: 45.3em;
+    transform: scale(2) rotateY(180deg);
   }
 }

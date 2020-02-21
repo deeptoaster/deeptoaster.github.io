@@ -8,7 +8,8 @@
 		<link href="/bin/css/resume.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body class="page">
-{foreach loop=10}    <div class="card"></div>
+{foreach loop=10}    <div class="card">
+	  {$fishbot}	</div>
 {/foreach}	</body>
 </html>
 
