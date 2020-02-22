@@ -408,7 +408,7 @@ cite {
   width: 43em;
   height: 100%;
 }
-.coaster-track::after {
+.coaster-track::before, .coaster-track::after {
   content: '\01f682\fe0e';
   display: block;
   position: absolute;
@@ -418,6 +418,9 @@ cite {
   animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+.coaster-track::after {
+  animation-delay: -4s;
 }
 .coaster-cap, .coaster-cup, .coaster-line, .coaster-clear {
   display: block;
@@ -889,7 +892,7 @@ body.page #sidebar {
     bottom: 12em;
     animation-timing-function: cubic-bezier(0.4, 0, 0.8, 0.4);
   }
-  15% {
+  12.5% {
     bottom: 8em;
     animation-timing-function: cubic-bezier(0.2, 1.6, 0.8, 1.6);
   }
@@ -897,19 +900,19 @@ body.page #sidebar {
     bottom: 4em;
     animation-timing-function: cubic-bezier(0.3, 2.8, 0.7, 3.4);
   }
-  35% {
+  37.5% {
     bottom: 5em;
     animation-timing-function: cubic-bezier(0.2, -0.8, 0.7, -1);
   }
-  40% {
+  43.75% {
     bottom: 6em;
     animation-timing-function: cubic-bezier(0.4, -6.8, 0.8, -3.4);
   }
-  60% {
+  68.75% {
     bottom: 5em;
     animation-timing-function: cubic-bezier(0.3, -1.4, 0.6, -1.2);
   }
-  70% {
+  81.25% {
     bottom: 7em;
     animation-timing-function: cubic-bezier(0.2, 0.4, 0.6, 1);
   }
@@ -922,7 +925,7 @@ body.page #sidebar {
     left: 2.3em;
     transform: scale(2) rotateY(180deg);
   }
-  15% {
+  12.5% {
     left: 6.2em;
     transform: scale(2) rotate(70deg) rotateY(180deg);
   }
@@ -930,19 +933,19 @@ body.page #sidebar {
     left: 13.3em;
     transform: scale(2) rotate(-50deg) rotateY(180deg);
   }
-  35% {
+  37.5% {
     left: 21.4em;
     transform: scale(2) rotate(45deg) rotateY(180deg);
   }
-  40% {
+  43.75% {
     left: 24.9em;
     transform: scale(2) rotate(-55deg) rotateY(180deg);
   }
-  60% {
+  68.75% {
     left: 35.5em;
     transform: scale(2) rotate(60deg) rotateY(180deg);
   }
-  70% {
+  81.25% {
     left: 40.8em;
     transform: scale(2) rotate(-65deg) rotateY(180deg);
   }
