@@ -1,6 +1,6 @@
 [submodule "lib/cleverly"]
 	path = lib/cleverly
-	url = ssh://git@github.com/DThought/cleverly
+	url = ssh://git@github.com/deeptoaster/cleverly
 [submodule "force-closure"]
 	path = force-closure
-	url = ssh://git@github.com/DThought/force-closure
+	url = ssh://git@github.com/deeptoaster/force-closure
