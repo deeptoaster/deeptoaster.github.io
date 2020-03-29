@@ -6,4 +6,5 @@ index.php:src/templates/index.tpl
 index.php:src/templates/interests.tpl
 cards/index.php:src/cards/index.php
 cards/index.php:src/cards/templates/index.tpl
+!goodreads/config.php
 !ifttt/config.php
