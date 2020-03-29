@@ -1,4 +1,15 @@
 <?
+define('FILE', __DIR__ . '/users.txt');
+
+$known_users = @file(FILE, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)
+  ?: array();
+$url = array_shift($known_users);
+
+if (@$_GET['format'] == 'xml') {
+  header('Location: ' . $url);
+  die();
+}
+
 $config = array(
   'access_url' => 'https://www.goodreads.com/oauth/access_token',
   'authorize_url' => 'https://www.goodreads.com/oauth/authorize',
@@ -7,7 +18,6 @@ $config = array(
 
 include(__DIR__ . '/config.php');
 
-define('FILE', __DIR__ . '/users.txt');
 session_start();
 
 $oauth = new OAuth(
@@ -75,9 +85,6 @@ do {
 } while (count($new_ids));
 
 sort($ids, SORT_NUMERIC);
-$known_users = @file(FILE, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)
-  ?: array();
-$url = array_shift($known_users);
 $known_ids = array_map('intval', $known_users);
 
 if ($ids != $known_ids) {
