@@ -4,4 +4,4 @@ squiffles:
 	cd src/cards && php -f index.php > ../../cards/index.php
 
 clean:
-	rm index.php
+	rm -f index.php
