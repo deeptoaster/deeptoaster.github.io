@@ -47,22 +47,22 @@ switch ($xml->methodName) {
         }
       }
 
-      $ch = curl_init();
+      $handle = curl_init();
       preg_match_all('/#(\w+)/', $title, $matches);
-      curl_setopt($ch, CURLOPT_POST, 3);
-      curl_setOpt($ch, CURLOPT_POSTFIELDS, $config);
+      curl_setopt($handle, CURLOPT_POST, 3);
+      curl_setopt($handle, CURLOPT_POSTFIELDS, $config);
 
       foreach ($matches[1] as $match) {
         curl_setopt(
-          $ch,
+          $handle,
           CURLOPT_URL,
           "https://api.trello.com/1/cards/$match/actions/comments"
         );
 
-        curl_exec($ch);
+        curl_exec($handle);
       }
 
-      curl_close($ch);
+      curl_close($handle);
     }
 
     ifttt_success('200 OK');
