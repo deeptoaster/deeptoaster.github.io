@@ -1,13 +1,69 @@
 <?
 define('FILE', __DIR__ . '/users.txt');
 
+$callback = sprintf(
+  'http%s://%s%s',
+  @$_SERVER['HTTPS'] ? 's' : '',
+  $_SERVER['HTTP_HOST'],
+  strtok($_SERVER['REQUEST_URI'], '?')
+);
+
 $known_users = @file(FILE, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)
   ?: array();
 $url = array_shift($known_users);
 
 if (@$_GET['format'] == 'xml') {
-  header('Location: ' . $url);
-  die();
+  $feed = file_get_contents($url);
+  $feed = str_replace(' href="/', ' href="https://www.goodreads.com/', $feed);
+  $feed = preg_replace('/\s*<dc:date>[^<]+<\/dc:date>/', '', $feed);
+  $feed = preg_replace('/ only_path="\w+"/', '', $feed);
+
+  $feed = preg_replace(
+    '/ xmlns:dc="[^"]+"/',
+    ' xmlns:atom="http://www.w3.org/2005/Atom"' .
+        ' xmlns:content="http://purl.org/rss/1.0/modules/content/"',
+    $feed
+  );
+
+  $feed = preg_replace(
+    '/(\s*)<item>/',
+    "$1<atom:link href=\"$callback?format=xml\" rel=\"self\" />$1<item>",
+    $feed,
+    1
+  );
+
+  $feed = preg_replace(
+    '/\s*<item>\s*<title>([^<]+ (liked a [^<]+|entered a giveaway)|#?&amp;#60;['
+        .'^<]+&amp;#62;)<\/title>.*?<\/item>/s',
+    '',
+    $feed
+  );
+
+  $feed = preg_replace(
+    '/(\s*)<title>([^<]+) [a-z]+ed [^<]+<\/title>/',
+    '$0$1<author>$2</author>',
+    $feed
+  );
+
+  $feed = preg_replace_callback(
+    '/(\s*)<link>([^<]+)<\/link>/',
+    function($match) {
+      return preg_match(
+        "/<meta content='([^']+)' property='og:image'>/",
+        file_get_contents($match[2]),
+        $submatch
+      )
+        ? $match[0] . $match[1] .
+              '<content:encoded><![CDATA[<img src="' .
+              $submatch[1] . '" />]]></content:encoded>'
+        : $match[0];
+    },
+    $feed,
+    3
+  );
+
+  header('Content-Type: application/rss+xml');
+  die($feed);
 }
 
 $config = array(
@@ -25,13 +81,6 @@ $oauth = new OAuth(
   $config['secret'],
   OAUTH_SIG_METHOD_HMACSHA1,
   OAUTH_AUTH_TYPE_URI
-);
-
-$callback = sprintf(
-  'http%s://%s%s',
-  @$_SERVER['HTTPS'] ? 's' : '',
-  $_SERVER['HTTP_HOST'],
-  strtok($_SERVER['REQUEST_URI'], '?')
 );
 
 if (!isset($_GET['oauth_token']) && $_SESSION['goodreads_oauth_state'] == 1) {
@@ -78,10 +127,12 @@ $i = 1;
 do {
   $oauth->fetch("https://www.goodreads.com/group/members/1080207.xml?page=$i");
   $xml = simplexml_load_string($oauth->getLastResponse());
-  $new_users = $xml->xpath('/GoodreadsResponse/group_users/group_user/id');
+  $new_users = $xml->xpath('/GoodreadsResponse/group_users/group_user/user/id');
   $new_ids = array_map('intval', $new_users);
   $ids = array_merge($ids, $new_ids);
   $i++;
+
+  echo $xml->asXML();
 } while (count($new_ids));
 
 sort($ids, SORT_NUMERIC);
