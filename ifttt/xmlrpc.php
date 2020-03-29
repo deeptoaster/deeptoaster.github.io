@@ -26,7 +26,13 @@ switch ($xml->methodName) {
   case 'metaWeblog.getRecentPosts':
     ifttt_success('<array><data /></array>');
   case 'metaWeblog.newPost':
-    if ((string) $xml->params->param[1]->value->string == 'admin' and password_verify((string) $xml->params->param[2]->value->string, '$2y$10$oo7w0op8jhhkzCtNTSQ2hOZMWOrHbrlmXu5Eq0aWlJzXPVQBZVA42')) {
+    if (
+      (string)$xml->params->param[1]->value->string == 'admin' and
+          password_verify(
+        (string)$xml->params->param[2]->value->string,
+        '$2y$10$oo7w0op8jhhkzCtNTSQ2hOZMWOrHbrlmXu5Eq0aWlJzXPVQBZVA42'
+      )
+    ) {
       $members = $xml->params->param[3]->value->struct->member;
       $title = '';
       $config = array('text' => '');
@@ -47,7 +53,12 @@ switch ($xml->methodName) {
       curl_setOpt($ch, CURLOPT_POSTFIELDS, $config);
 
       foreach ($matches[1] as $match) {
-        curl_setopt($ch, CURLOPT_URL, "https://api.trello.com/1/cards/$match/actions/comments");
+        curl_setopt(
+          $ch,
+          CURLOPT_URL,
+          "https://api.trello.com/1/cards/$match/actions/comments"
+        );
+
         curl_exec($ch);
       }
 

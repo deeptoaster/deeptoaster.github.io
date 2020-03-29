@@ -13,8 +13,7 @@ function squiffles_draw($xml, $settings, $scale) {
 
   switch ($xml->getName()) {
     case 'ellipse':
-      $top = ($xml['cy'] - $xml['ry'] - $settings['stroke-width'] / 2) *
-          $scale;
+      $top = ($xml['cy'] - $xml['ry'] - $settings['stroke-width'] / 2) * $scale;
       $left = ($xml['cx'] - $xml['rx'] - $settings['stroke-width'] / 2) *
           $scale;
       $width = ($xml['rx'] * 2 - $settings['stroke-width'] * 2) * $scale;
@@ -54,7 +53,8 @@ EOF;
 
       $delay = random_int(1, 3) / 3;
 
-      printf(<<<EOF
+      printf(
+        <<<EOF
         <span class="svg-line svg-%s" style="top: %.1fem; left: %.1fem; width: %.1fem; border-width: %s;%s -webkit-%s -moz-%s %s animation-delay: %.1fs, %.1fs"></span>
 
 EOF
