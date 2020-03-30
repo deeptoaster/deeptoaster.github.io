@@ -1,5 +1,6 @@
 <?
-define('FILE', __DIR__ . '/users.txt');
+define('FEED_FILE', __DIR__ . '/feed.xml');
+define('USERS_FILE', __DIR__ . '/users.txt');
 
 $callback = sprintf(
   'http%s://%s%s',
@@ -8,59 +9,65 @@ $callback = sprintf(
   strtok($_SERVER['REQUEST_URI'], '?')
 );
 
-$known_users = @file(FILE, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)
+$known_users = @file(USERS_FILE, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)
   ?: array();
 $url = array_shift($known_users);
 
 if (@$_GET['format'] == 'xml') {
-  $feed = file_get_contents($url);
-  $feed = str_replace(' href="/', ' href="https://www.goodreads.com/', $feed);
-  $feed = preg_replace('/\s*<dc:date>[^<]+<\/dc:date>/', '', $feed);
-  $feed = preg_replace('/ only_path="\w+"/', '', $feed);
+  if (time() - @filemtime(FEED_FILE) < 3600) {
+    $feed = file_get_contents(FEED_FILE);
+  } else {
+    $feed = file_get_contents($url);
+    $feed = str_replace(' href="/', ' href="https://www.goodreads.com/', $feed);
+    $feed = preg_replace('/\s*<dc:date>[^<]+<\/dc:date>/', '', $feed);
+    $feed = preg_replace('/ only_path="\w+"/', '', $feed);
 
-  $feed = preg_replace(
-    '/ xmlns:dc="[^"]+"/',
-    ' xmlns:atom="http://www.w3.org/2005/Atom"' .
-        ' xmlns:content="http://purl.org/rss/1.0/modules/content/"',
-    $feed
-  );
+    $feed = preg_replace(
+      '/ xmlns:dc="[^"]+"/',
+      ' xmlns:atom="http://www.w3.org/2005/Atom"' .
+          ' xmlns:content="http://purl.org/rss/1.0/modules/content/"',
+      $feed
+    );
 
-  $feed = preg_replace(
-    '/(\s*)<item>/',
-    "$1<atom:link href=\"$callback?format=xml\" rel=\"self\" />$1<item>",
-    $feed,
-    1
-  );
+    $feed = preg_replace(
+      '/(\s*)<item>/',
+      "$1<atom:link href=\"$callback?format=xml\" rel=\"self\" />$1<item>",
+      $feed,
+      1
+    );
 
-  $feed = preg_replace(
-    '/\s*<item>\s*<title>([^<]+ (liked a [^<]+|entered a giveaway)|#?&amp;#60;['
-        .'^<]+&amp;#62;)<\/title>.*?<\/item>/s',
-    '',
-    $feed
-  );
+    $feed = preg_replace(
+      '/\s*<item>\s*<title>([^<]+ (liked a [^<]+|entered a giveaway)|#?&amp;#60'
+          . ';[^<]+&amp;#62;)<\/title>.*?<\/item>/s',
+      '',
+      $feed
+    );
 
-  $feed = preg_replace(
-    '/(\s*)<title>([^<]+) [a-z]+ed [^<]+<\/title>/',
-    '$0$1<author>$2</author>',
-    $feed
-  );
+    $feed = preg_replace(
+      '/(\s*)<title>([^<]+) [a-z]+ed [^<]+<\/title>/',
+      '$0$1<author>$2</author>',
+      $feed
+    );
 
-  $feed = preg_replace_callback(
-    '/(\s*)<link>([^<]+)<\/link>/',
-    function($match) {
-      return preg_match(
-        "/<meta content='([^']+)' property='og:image'>/",
-        file_get_contents($match[2]),
-        $submatch
-      )
-        ? $match[0] . $match[1] .
-              '<content:encoded><![CDATA[<img src="' .
-              $submatch[1] . '" />]]></content:encoded>'
-        : $match[0];
-    },
-    $feed,
-    3
-  );
+    $feed = preg_replace_callback(
+      '/(\s*)<link>([^<]+)<\/link>/',
+      function($match) {
+        return preg_match(
+          "/<meta content='([^']+)' property='og:image'>/",
+          file_get_contents($match[2]),
+          $submatch
+        )
+          ? $match[0] . $match[1] .
+                '<content:encoded><![CDATA[<img src="' .
+                $submatch[1] . '" />]]></content:encoded>'
+          : $match[0];
+      },
+      $feed,
+      3
+    );
+
+    file_put_contents(FEED_FILE, $feed);
+  }
 
   header('Content-Type: application/rss+xml');
   die($feed);
@@ -140,7 +147,7 @@ $known_ids = array_map('intval', $known_users);
 
 if ($ids != $known_ids) {
   $handle = curl_init();
-  curl_setopt($handle, CURLOPT_COOKIEFILE, FILE);
+  curl_setopt($handle, CURLOPT_COOKIEFILE, USERS_FILE);
   curl_setopt($handle, CURLOPT_COOKIEJAR, 'nom-nom');
   curl_setopt($handle, CURLOPT_COOKIESESSION, true);
   curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
@@ -161,7 +168,7 @@ if ($ids != $known_ids) {
   curl_setopt($handle, CURLOPT_POSTFIELDS, $fields);
   $response = curl_exec($handle);
   preg_match('/http:\/\/rssmix.com\/u\/\d+\/rss.xml/', $response, $match);
-  $handle = fopen(FILE, 'w');
+  $handle = fopen(USERS_FILE, 'w');
   fwrite($handle, $match[0] . "\n");
 
   foreach ($ids as $id) {
