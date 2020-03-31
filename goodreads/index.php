@@ -44,7 +44,7 @@ if (@$_GET['format'] == 'xml') {
     );
 
     $feed = preg_replace(
-      '/(\s*)<title>([^<]+) [a-z]+ed [^<]+<\/title>/',
+      '/(\s*)<title>([^<]+) ([a-z]+(ed|s)) [^<]+<\/title>/',
       '$0$1<author>$2</author>',
       $feed
     );
