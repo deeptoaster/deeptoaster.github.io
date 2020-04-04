@@ -1,4 +1,8 @@
 <?
+$config = array();
+
+include(__DIR__ . '/../config.php');
+
 function ifttt_success($value) {
   $xml = <<<EOF
 <?xml version="1.0"?>
@@ -35,22 +39,24 @@ switch ($xml->methodName) {
     ) {
       $members = $xml->params->param[3]->value->struct->member;
       $title = '';
-      $config = array('text' => '');
-
-      include(__DIR__ . '/config.php');
+      $fields = array(
+        'key' => $config['trello_key'],
+        'text' => '',
+        'token' => $config['trello_token']
+      );
 
       foreach($members as $member) {
-        if ((string) $member->name == 'title') {
-          $title = trim((string) $member->value->string);
-        } elseif ((string) $member->name == 'description') {
-          $config['text'] = trim((string) $member->value->string);
+        if ((string)$member->name == 'title') {
+          $title = trim((string)$member->value->string);
+        } elseif ((string)$member->name == 'description') {
+          $fields['text'] = trim((string)$member->value->string);
         }
       }
 
       $handle = curl_init();
       preg_match_all('/#(\w+)/', $title, $matches);
       curl_setopt($handle, CURLOPT_POST, 3);
-      curl_setopt($handle, CURLOPT_POSTFIELDS, $config);
+      curl_setopt($handle, CURLOPT_POSTFIELDS, $fields);
 
       foreach ($matches[1] as $match) {
         curl_setopt(
