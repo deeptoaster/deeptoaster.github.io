@@ -20,7 +20,7 @@ if (isset($_GET['of'])) {
 
     if (strtolower($row[0]) == $_GET['of']) {
       $path = "/trigger/$config[ifttt_event]/with/key/$config[ifttt_key]";
-      $content = '{"value1": "' . $row[8] . '"}';
+      $content = "{\"value1\": \"$row[8] $row[9]\"}";
       $length = strlen($content);
       $ifttt = fsockopen('ssl://' . $config['ifttt_host'], 443);
       fwrite($ifttt, "POST $path HTTP/1.1\r\n");
