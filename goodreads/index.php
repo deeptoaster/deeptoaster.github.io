@@ -147,37 +147,61 @@ if (time() - @filemtime(FEED_FILE) < 3600) {
     1
   );
 
-  $feed = preg_replace(
-    '/\s*<item>\s*<title>([^<]+ (liked a [^<]+|entered a giveaway)|#?&amp;#60;['
-        . '^<]+&amp;#62;)<\/title>.*?<\/item>/s',
-    '',
-    $feed
-  );
-
   $feed = preg_replace_callback(
-    '/(\s*)<title>([^<]+) ([a-z]+(ed|s)) [^<]+<\/title>/',
+    '/(\s*<item>(\s*)<title>)(.*?)<\/title>(.*?)(\s*<\/item>)/s',
     function($match) {
-      return substr($match[0], 0, 2) .
-          preg_replace('/\r?\n\s*/', ' ', substr($match[0], 2)) . $match[1] .
-          "<author>$match[2]</author>";
+      static $count = 0;
+
+      if (!preg_match('/^(.+?)( ([a-z]+(ed|s)) .+)$/', $match[3], $title_match)) {
+        return '';
+      }
+
+      if ($title_match[3] == 'liked') {
+        return '';
+      }
+
+      if (!preg_match('/<link>([^<]+)<\/link>/', $match[4], $link_match)) {
+        return '';
+      }
+
+      $name = trim($title_match[1]);
+      $title = $name . $title_match[2];
+      $image = '';
+      $author_fields = "\"name\": \"$name\"";
+
+      if ($count < 10) {
+        $page = file_get_contents($link_match[1]);
+
+        if (preg_match(
+          "/<meta content='([^']+)' property='og:image'>/",
+          $page,
+          $image_match
+        )) {
+          $image = $match[2] . '<content:encoded><![CDATA[<img src="' .
+              $image_match[1] . '" />]]></content:encoded>';
+        }
+
+        if (preg_match('/\/user\/show\/(\d+)(-[\w-]*)*/', $page, $user_match)) {
+          $author_fields .=
+              ", \"url\": \"https://www.goodreads.com$user_match[0]\"";
+
+          if (preg_match(
+            '/https:\/\/images\.gr-assets\.com\/users\/\w+\/' . $user_match[1] .
+                '\.jpg/',
+            $page,
+            $profile_match
+          )) {
+            $author_fields .= ", \"icon_url\": \"$profile_match[0]\"";
+          }
+        }
+
+        $count++;
+      }
+
+      return "$match[1]$title</title>$match[2]<author>{" . $author_fields .
+          "}</author>$match[4]$image$match[5]";
     },
     $feed
-  );
-
-  $feed = preg_replace_callback(
-    '/(\s*)<link>([^<]+)<\/link>/',
-    function($match) {
-      return preg_match(
-        "/<meta content='([^']+)' property='og:image'>/",
-        file_get_contents($match[2]),
-        $submatch
-      )
-        ? "$match[0]$match[1]<content:encoded><![CDATA[<img src=\"$submatch[1]"
-              . '" />]]></content:encoded>'
-        : $match[0];
-    },
-    $feed,
-    3
   );
 
   file_put_contents(FEED_FILE, $feed);
