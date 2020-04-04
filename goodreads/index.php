@@ -79,13 +79,13 @@ $config = array(
   'request_url' => 'https://www.goodreads.com/oauth/request_token'
 );
 
-include(__DIR__ . '/config.php');
+include(__DIR__ . '/../config.php');
 
 session_start();
 
 $oauth = new OAuth(
-  $config['key'],
-  $config['secret'],
+  $config['goodreads_key'],
+  $config['goodreads_key'],
   OAUTH_SIG_METHOD_HMACSHA1,
   OAUTH_AUTH_TYPE_URI
 );
