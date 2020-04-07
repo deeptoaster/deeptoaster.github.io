@@ -99,7 +99,7 @@
 			</p>
 			<p>
 				<i class="flaticon-multimedia"></i>
-				<a href="https://github.com/DThought">github.com/DThought</a>
+				<a href="https://github.com/deeptoaster">github.com/deeptoaster</a>
 			</p>
 		</div>
 		<div id="main">
@@ -121,13 +121,13 @@
 				<dd>
 					<h4>IMSS Representative</h4>
 					<h3>Caltech</h3>
-					<p>Built and maintained as sysadmin a large RAID 60 server and developed web, mail, and other services</p>
+					<p>Built large RAID 60 server and developed web, mail, and other services</p>
 				</dd>
 				<dt>2013</dt>
 				<dd>
 					<h4>Software Development Intern</h4>
 					<h3>Intel</h3>
-					<p>Developed UX tracking library and analysis tool</p>
+					<p>Developed UX tracking library and analysis tool to determine cognitive load of using various internal tools</p>
 				</dd>
 				<dt>2012</dt>
 				<dd>
@@ -140,8 +140,8 @@
 				<dt>2017</dt>
 				<dd>
 					<h4>Computer Science, Aerospace (minor)</h4>
-					<h3>Caltech</h3>
-					<p>Completed tracks in Graphics and Robotics</p>
+					<h3>BS, Caltech</h3>
+					<p>Completed Graphics, Robotics, and Machine Learning tracks, as well as the Mechanical Engineering capstone project; 3.9 GPA</p>
 				</dd>
 			</dl>
 			<h1>Skills</h1>
