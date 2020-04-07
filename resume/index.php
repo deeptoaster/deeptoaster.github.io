@@ -109,7 +109,7 @@
 				<dd>
 					<h4>Software Engineer</h4>
 					<h3>Facebook</h3>
-					<p>Developed complete rendering platform for arbitrary content review and internal tools while mentoring interns and other engineers</p>
+					<p>Tech lead to develop rendering platform for arbitrary content review and internal tools while mentoring interns and other engineers</p>
 				</dd>
 				<dt>2015</dt>
 				<dd>
