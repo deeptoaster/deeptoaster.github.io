@@ -67,4 +67,3 @@
 {/foreach}    </div>
   </body>
 </html>
-
