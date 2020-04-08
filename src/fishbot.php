@@ -21,7 +21,7 @@ function squiffles_draw($xml, $settings, $scale) {
       $border = $settings['stroke-width'] * $scale;
 
       echo <<<EOF
-        <span class="svg-ellipse" style="top: ${top}em; left: ${left}em; width: ${width}em; height: ${height}em; border-width: $border;"></span>
+  <span class="svg-ellipse" style="top: ${top}em; left: ${left}em; width: ${width}em; height: ${height}em; border-width: $border;"></span>
 
 EOF;
 
@@ -55,7 +55,7 @@ EOF;
 
       printf(
         <<<EOF
-        <span class="svg-line svg-%s" style="top: %.1fem; left: %.1fem; width: %.1fem; border-width: %s;%s -webkit-%s -moz-%s %s animation-delay: %.1fs, %.1fs"></span>
+  <span class="svg-line svg-%s" style="top: %.1fem; left: %.1fem; width: %.1fem; border-width: %s;%s -webkit-%s -moz-%s %s animation-delay: %.1fs, %.1fs"></span>
 
 EOF
         ,
@@ -94,7 +94,7 @@ squiffles_draw($xml, array(
 ), 0.1);
 
 echo <<<EOF
-      </div>
+</div>
 
 EOF;
 ?>
