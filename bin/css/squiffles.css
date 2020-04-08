@@ -304,93 +304,93 @@ cite {
   background-color: #43877b;
 }
 .honeycomb-cell.honeycomb-1064::before {
-  border-bottom: 1em solid #43877b;
+  border-bottom-color: #43877b;
 }
 .honeycomb-cell.honeycomb-1064::after {
-  border-top: 1em solid #43877b;
+  border-top-color: #43877b;
 }
 .honeycomb-cell.honeycomb-1064:hover {
   background-color: #246c60;
 }
 .honeycomb-cell.honeycomb-1064:hover::before {
-  border-bottom: 1em solid #246c60;
+  border-bottom-color: #246c60;
 }
 .honeycomb-cell.honeycomb-1064:hover::after {
-  border-top: 1em solid #246c60;
+  border-top-color: #246c60;
 }
 .honeycomb-cell.honeycomb-blacker {
   background-color: #374952;
 }
 .honeycomb-cell.honeycomb-blacker::before {
   bottom: 100%;
-  border-bottom: 1em solid #374952;
+  border-bottom-color: #374952;
 }
 .honeycomb-cell.honeycomb-blacker::after {
   top: 100%;
-  border-top: 1em solid #374952;
+  border-top-color: #374952;
 }
 .honeycomb-cell.honeycomb-blacker:hover {
   background-color: #232627;
 }
 .honeycomb-cell.honeycomb-blacker:hover::before {
-  border-bottom: 1em solid #232627;
+  border-bottom-color: #232627;
 }
 .honeycomb-cell.honeycomb-blacker:hover::after {
-  border-top: 1em solid #232627;
+  border-top-color: #232627;
 }
 .honeycomb-cell.honeycomb-caltech {
   background-color: #8b715f;
 }
 .honeycomb-cell.honeycomb-caltech::before {
-  border-bottom: 1em solid #8b715f;
+  border-bottom-color: #8b715f;
 }
 .honeycomb-cell.honeycomb-caltech::after {
-  border-top: 1em solid #8b715f;
+  border-top-color: #8b715f;
 }
 .honeycomb-cell.honeycomb-caltech:hover {
   background-color: #664f40;
 }
 .honeycomb-cell.honeycomb-caltech:hover::before {
-  border-bottom: 1em solid #664f40;
+  border-bottom-color: #664f40;
 }
 .honeycomb-cell.honeycomb-caltech:hover::after {
-  border-top: 1em solid #664f40;
+  border-top-color: #664f40;
 }
 .honeycomb-cell.honeycomb-clrhome {
   background-color: #8b7b5f;
 }
 .honeycomb-cell.honeycomb-clrhome::before {
-  border-bottom: 1em solid #8b7b5f;
+  border-bottom-color: #8b7b5f;
 }
 .honeycomb-cell.honeycomb-clrhome::after {
-  border-top: 1em solid #8b7b5f;
+  border-top-color: #8b7b5f;
 }
 .honeycomb-cell.honeycomb-clrhome:hover {
   background-color: #665840;
 }
 .honeycomb-cell.honeycomb-clrhome:hover::before {
-  border-bottom: 1em solid #665840;
+  border-bottom-color: #665840;
 }
 .honeycomb-cell.honeycomb-clrhome:hover::after {
-  border-top: 1em solid #665840;
+  border-top-color: #665840;
 }
 .honeycomb-cell.honeycomb-omnimaga {
   background-color: #535a92;
 }
 .honeycomb-cell.honeycomb-omnimaga::before {
-  border-bottom: 1em solid #535a92;
+  border-bottom-color: #535a92;
 }
 .honeycomb-cell.honeycomb-omnimaga::after {
-  border-top: 1em solid #535a92;
+  border-top-color: #535a92;
 }
 .honeycomb-cell.honeycomb-omnimaga:hover {
   background-color: #313975;
 }
 .honeycomb-cell.honeycomb-omnimaga:hover::before {
-  border-bottom: 1em solid #313975;
+  border-bottom-color: #313975;
 }
 .honeycomb-cell.honeycomb-omnimaga:hover::after {
-  border-top: 1em solid #313975;
+  border-top-color: #313975;
 }
 .honeycomb-honey {
   position: relative;
@@ -577,7 +577,6 @@ cite {
   border-bottom: 1px solid #232627;
   background-color: #161819;
   background-color: rgba(22, 24, 25, 0.8);
-  color: #617078;
 }
 #header .pull-right, h1, h2, h3, .timeline dt {
   text-transform: uppercase;
@@ -589,10 +588,17 @@ cite {
 #header a {
   display: inline-block;
   padding: 0.5em;
+  color: #617078;
   text-decoration: none;
+}
+#header a:hover {
+  color: #994a5c;
 }
 #header .pull-right a {
   padding: 1.5em 1em;
+}
+#header .pull-right a:hover {
+  color: #a7a151;
 }
 #main, #sidebar {
   padding-top: 5em;
@@ -699,7 +705,7 @@ body.page #sidebar {
   padding-left: 16em;
 }
 #about .map span, #about em {
-  border-color: #d4a36a;
+  border-color: #994a5c;
 }
 #about h2, #about h3, #about cite {
   color: #477286;
@@ -804,6 +810,96 @@ body.page #sidebar {
   width: 30em;
   margin: 1em auto;
   color: #617078;
+}
+.page-inner {
+  padding: 0.25in;
+  margin: -4px;
+}
+.card {
+  position: relative;
+  float: left;
+  width: 2in;
+  height: 3.5in;
+  border: 1px dotted #666;
+  overflow: hidden;
+  background-color: #a6b8c1;
+  page-break-inside: avoid;
+}
+.card-inner {
+  position: absolute;
+  left: 2in;
+  width: 3.5in;
+  height: 2in;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+.card-fishbot {
+  position: absolute;
+  top: -0.5in;
+  left: -3.4in;
+  padding: 0.3in;
+  background-color: #161819;
+}
+.card .svg {
+  font-size: 0.05in;
+}
+.card .svg-ellipse, .card .svg-line {
+  border-color: #617078;
+}
+.card .svg-line::after {
+  display: none;
+}
+.card .honeycomb {
+  position: absolute;
+  top: 0.63in;
+  left: -0.05in;
+  text-align: center;
+  font-size: 0.07in;
+  line-height: 1;
+  transform: rotate(-90deg);
+}
+.honeycomb-cell.honeycomb-dark {
+  background-color: #161819;
+}
+.honeycomb-cell.honeycomb-dark::before {
+  border-bottom-color: #161819;
+}
+.honeycomb-cell.honeycomb-dark::after {
+  border-top-color: #161819;
+}
+.honeycomb-cell.honeycomb-medium {
+  background-color: #5c6970;
+}
+.honeycomb-cell.honeycomb-medium::before {
+  border-bottom-color: #5c6970;
+}
+.honeycomb-cell.honeycomb-medium::after {
+  border-top-color: #5c6970;
+}
+.honeycomb-cell.honeycomb-light {
+  background-color: #819098;
+}
+.honeycomb-cell.honeycomb-light::before {
+  border-bottom-color: #819098;
+}
+.honeycomb-cell.honeycomb-light::after {
+  border-top-color: #829097;
+}
+.card-content {
+  position: absolute;
+  top: 0.3in;
+  right: 0.3in;
+  text-align: right;
+  font-size: 0.14in;
+  line-height: 1;
+}
+.card h2 {
+  margin-bottom: 0.3in;
+  color: #994a5c;
+}
+.card i {
+  padding-right: 0;
+  padding-left: 0.5em;
 }
 @media screen and (max-width: 1920px) {
   body {
