@@ -21,7 +21,7 @@ function squiffles_draw($xml, $settings, $scale) {
       $border = $settings['stroke-width'] * $scale;
 
       echo <<<EOF
-  <span class="svg-ellipse" style="top: ${top}em; left: ${left}em; width: ${width}em; height: ${height}em; border-width: $border;"></span>
+  <span class="svg-ellipse" style="top: ${top}em; left: ${left}em; width: ${width}em; height: ${height}em; border-width: ${border}em;"></span>
 
 EOF;
 
