@@ -1,33 +1,34 @@
 @font-face {
-	font-family: "Flaticon";
-	src: url("./Flaticon.eot");
-	src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
-		url("./Flaticon.woff") format("woff"),
-		url("./Flaticon.ttf") format("truetype"),
-		url("./Flaticon.svg#Flaticon") format("svg");
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+      url("./Flaticon.woff") format("woff"),
+      url("./Flaticon.ttf") format("truetype"),
+      url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-	@font-face {
-		font-family: "Flaticon";
-		src: url("./Flaticon.svg#Flaticon") format("svg");
-	}
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
 }
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-	font-family: Flaticon;
-	font-style: normal;
+  font-family: Flaticon;
+  font-style: normal;
 }
-.flaticon-technology:before { content: "\f100"; }
-.flaticon-multimedia:before { content: "\f101"; }
-.flaticon-link:before { content: "\f102"; }
-.flaticon-note:before { content: "\f103"; }
-.flaticon-telephone-of-old-design:before { content: "\f104"; }
-.flaticon-match:before { content: "\f105"; }
-.flaticon-fountain-pen-close-up:before { content: "\f106"; }
-.flaticon-sports:before { content: "\f107"; }
-.flaticon-drawing:before { content: "\f108"; }
-.flaticon-people:before { content: "\f109"; }
-.flaticon-square:before { content: "\f10a"; }
-.flaticon-couchsurfing-logo:before { content: "\f10b"; }
+.flaticon-magnifying-glass-search:before { content: "\f100"; }
+.flaticon-couchsurfing-logo:before { content: "\f101"; }
+.flaticon-square:before { content: "\f102"; }
+.flaticon-drawing:before { content: "\f103"; }
+.flaticon-sports:before { content: "\f104"; }
+.flaticon-fountain-pen-close-up:before { content: "\f105"; }
+.flaticon-telephone-of-old-design:before { content: "\f106"; }
+.flaticon-hiker:before { content: "\f107"; }
+.flaticon-note:before { content: "\f108"; }
+.flaticon-link:before { content: "\f109"; }
+.flaticon-multimedia:before { content: "\f10a"; }
+.flaticon-matches:before { content: "\f10b"; }
+.flaticon-headphones:before { content: "\f10c"; }
