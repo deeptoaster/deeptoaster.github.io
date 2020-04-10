@@ -680,14 +680,37 @@ body.page #sidebar {
   font-size: 1em;
 }
 #searchform {
+  position: relative;
   padding: 1em 4em 1em 1.2em;
+}
+#searchform::before, #searchsubmit {
+  position: absolute;
+  top: 0.2em;
+  right: 1.5em;
+  width: 1em;
+  height: 1em;
+  padding: 0.2em 0.5em 0.7em 0.5em;
+  font-size: 2em;
+}
+#searchform::before {
+  display: block;
+  content: '\f100';
+  font-family: Flaticon;
+}
+#searchsubmit {
+  box-sizing: content-box;
+  border: none;
+  color: transparent;
+  background-color: transparent;
+  cursor: pointer;
 }
 #s {
   width: 100%;
   margin: -0.3em -0.4em;
-  border: 1px solid #232627;
+  border: 2px solid #232627;
   border-radius: 0.1em;
   padding: 0.3em 0.4em;
+  color: #617078;
   background-color: #161819;
   font-size: 2em;
 }
