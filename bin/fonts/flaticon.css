@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Flaticon";
+  font-family: "icon";
   src: url("./Flaticon.eot");
   src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
       url("./Flaticon.woff") format("woff"),
@@ -10,13 +10,13 @@
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: "Flaticon";
+    font-family: "icon";
     src: url("./Flaticon.svg#Flaticon") format("svg");
   }
 }
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-  font-family: Flaticon;
+  font-family: icon;
   font-style: normal;
 }
 .flaticon-magnifying-glass-search:before { content: "\f100"; }
