@@ -676,7 +676,7 @@ body.page #sidebar {
   padding: 0 0.5em;
 }
 #sidebar .lead {
-  margin-top: 1em;
+  margin: 1em 0;
   font-size: 1em;
 }
 #searchform {
@@ -695,7 +695,7 @@ body.page #sidebar {
 #searchform::before {
   display: block;
   content: '\f100';
-  font-family: Flaticon;
+  font-family: icon;
 }
 #searchsubmit {
   box-sizing: content-box;
