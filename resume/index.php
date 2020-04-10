@@ -57,10 +57,10 @@
 			<table>
 				<tr>
 					<td>
-						<i class="flaticon-people"></i>
+						<i class="flaticon-hiker"></i>
 					</td>
 					<td>
-						<i class="flaticon-technology"></i>
+						<i class="flaticon-headphones"></i>
 					</td>
 					<td>
 						<i class="flaticon-sports"></i>
@@ -71,7 +71,7 @@
 						<i class="flaticon-fountain-pen-close-up"></i>
 					</td>
 					<td>
-						<i class="flaticon-match"></i>
+						<i class="flaticon-matches"></i>
 					</td>
 					<td>
 						<i class="flaticon-drawing"></i>

@@ -602,11 +602,12 @@ cite {
   color: #a7a151;
 }
 #main, #sidebar {
-  padding-top: 5em;
+  padding-top: 8em;
   font-size: 16px;
 }
 #main {
   margin-right: 30%;
+  padding-left: 1em;
 }
 body.page #main {
   height: 100%;
@@ -679,7 +680,21 @@ body.page #sidebar {
   font-size: 1em;
 }
 #searchform {
-  padding: 1em 0.5em;
+  padding: 1em 4em 1em 1.2em;
+}
+#s {
+  width: 100%;
+  margin: -0.3em -0.4em;
+  border: 1px solid #232627;
+  border-radius: 0.1em;
+  padding: 0.3em 0.4em;
+  background-color: #161819;
+  font-size: 2em;
+}
+#s:hover, #s:focus {
+  border-color: #617078;
+  background-color: #232627;
+  color: #d2d7d9;
 }
 #fishbot {
   padding: 3em 0 1em 0;
