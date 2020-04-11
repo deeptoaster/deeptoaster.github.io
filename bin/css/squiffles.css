@@ -192,7 +192,7 @@ cite {
 .svg {
   position: relative;
   margin: 6em auto;
-  font-size: 10px;
+  font-size: 0.4em;
 }
 .svg-ellipse, .svg-line {
   display: block;
