@@ -42,7 +42,7 @@ switch ($xml->methodName) {
       $fields = array(
         'key' => $config['trello_key'],
         'text' => '',
-        'token' => $config['trello_secret']
+        'token' => $config['trello_token']
       );
 
       foreach($members as $member) {
