@@ -14,9 +14,15 @@ if (isset($_GET['of'])) {
   fwrite($google, "GET $config[google_path] HTTP/1.1\r\n");
   fwrite($google, "Host: $config[google_host]\r\n\r\n");
   fwrite($google, "Connection: close\r\n\r\n");
-  $of = substr($_GET['of'], -3) == ' is'
-    ? substr($_GET['of'], 0, -3)
-    : $_GET['of'];
+  $of = $_GET['of'];
+
+  if (substr($of, -3) == ' is') {
+    $of = substr($of, 0, -3);
+  }
+
+  if (substr($of, -4) == ' are') {
+    $of = substr($of, 0, -4);
+  }
 
   while (!feof($google)) {
     $row = str_getcsv(trim(fgets($google), ','));
