@@ -32,7 +32,9 @@ h2 {
   margin: 0;
   padding: 0.625em 0;
   font-size: 1.6em;
-  text-indent: 0.3em;
+}
+.content h2 {
+  text-indent: 0.2em;
 }
 h3 {
   margin: 0;
@@ -140,15 +142,20 @@ cite {
 .post {
   margin-right: 1em;
 }
+.post a, .post-title, .wp-block-quote.block-warning {
+  color: #806d15;
+}
 .post-title {
   border-radius: 0.2em 0.2em 0 0;
-  padding: 0.7em 0.5em;
+  padding: 0.6em 0.8em;
   background-color: #d4c26a;
-  color: #806d15;
+  line-height: 1.2;
 }
 .post-content {
   padding: 0.6em 1.3em;
-  background-color: #fff0aa;
+  background-color: #fff8d6;
+}
+.post-content, #main .post-content h3 {
   color: #292100;
 }
 .post-comments {
@@ -161,6 +168,9 @@ cite {
   padding: 1.1em 1.3em;
   background-color: #a6b8c1;
   color: #374952;
+}
+.post-comments a, .comment-respond h3, .wp-block-quote {
+  color: #467286;
 }
 .comment-respond h3 {
   padding-top: 0.5em;
@@ -189,6 +199,34 @@ cite {
   font: 0.9em/1 'Titillium Web', sans-serif;
   font-weight: bold;
   letter-spacing: normal;
+}
+.wp-block-image {
+  margin: 1em 0;
+}
+.wp-block-image img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+.wp-block-quote {
+  background-color: #dbdfce;
+  background-color: rgba(166, 184, 193, 0.4);
+  margin: 1em 0;
+  border-left: 0.2em solid;
+  padding: 0 1em;
+}
+.wp-block-quote > p:first-child::before {
+  content: 'NB: ';
+  font-weight: bold;
+}
+.wp-block-quote.block-warning {
+  background-color: #eee3ab;
+  background-color: rgba(212, 194, 106, 0.4);
+}
+.wp-block-quote.block-error {
+  background-color: #e7bcb0;
+  background-color: rgba(196, 98, 119, 0.4);
+  color: #761429;
 }
 .svg {
   position: relative;
@@ -239,7 +277,7 @@ cite {
   height: 48em;
   bottom: 16em;
 }
-.map span, em {
+.map span, #about em {
   border-width: 0.2em 0 0 0;
   border-style: solid;
   border-radius: 50%;
@@ -521,7 +559,7 @@ cite {
   position: relative;
   float: left;
   clear: left;
-  width: 4.5em;
+  width: 4.9em;
   height: 1em;
   margin-top: 1em;
   margin-left: 1.4em;
@@ -559,7 +597,7 @@ cite {
   background-color: #27556c;
 }
 .timeline > dd {
-  margin-left: 11.4em;
+  margin-left: 11.9em;
   border-left: 0.2em solid #859fab;
   padding-top: 1em;
   padding-left: 2em;
@@ -685,13 +723,21 @@ body.page #sidebar {
   margin: 0;
   padding: 0 0.5em;
 }
+#sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#sidebar > ul {
+  padding: 0 1em;
+}
 #sidebar .lead {
   margin: 1em 0;
   font-size: 1em;
 }
 #searchform {
   position: relative;
-  padding: 1em 7em 1em 1.2em;
+  padding: 1em 7em 1em 1em;
 }
 #searchform::before, #searchsubmit {
   position: absolute;
@@ -985,7 +1031,7 @@ body.page #sidebar {
     display: block;
   }
   .timeline > dd {
-    margin-left: 2em;
+    margin-left: 2.2em;
     padding-left: 3em;
   }
   .page .timeline > dd {
@@ -993,7 +1039,7 @@ body.page #sidebar {
   }
   .post {
     position: relative;
-    top: -2em;
+    top: -2.5em;
     clear: left;
   }
   #main, #sidebar {
