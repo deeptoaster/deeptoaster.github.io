@@ -24,29 +24,35 @@
       <h3>Affiliations</h3>
       <div class="honeycomb">
         <div class="honeycomb-row">
-          <a class="honeycomb-cell honeycomb-caltech" href="http://caltech.edu/">
-            <img class="honeycomb-honey" src="/bin/images/caltech.png" alt="Caltech" title="Caltech" />
+          <a class="honeycomb-cell honeycomb-revsoft" href="https://hackpgh.org/" title="Hack Pittsburgh">
+            <img class="honeycomb-honey" src="/bin/images/hack.png" alt="Hack Pittsburgh" />
           </a>
-          <a class="honeycomb-cell honeycomb-blacker" href="https://blacker.caltech.edu/">
-            <img class="honeycomb-honey" src="/bin/images/blacker.png" alt="Blacker" title="Blacker" />
+          <a class="honeycomb-cell honeycomb-caltech" href="https://caltech.edu/" title="Caltech">
+            <img class="honeycomb-honey" src="/bin/images/caltech.png" alt="Caltech" />
           </a>
-          <a class="honeycomb-cell honeycomb-1064" href="http://ohaithe.re/">
-            <img class="honeycomb-honey" src="/bin/images/1064.png" alt="1064cbread" title="1064cbread" />
+          <a class="honeycomb-cell honeycomb-blacker" href="https://blacker.caltech.edu/" title="Blacker Hovse">
+            <img class="honeycomb-honey" src="/bin/images/blacker.png" alt="Blacker Hovse" />
+          </a>
+          <a class="honeycomb-cell honeycomb-clrhome" href="http://clrhome.org/" title="ClrHome">
+            <img class="honeycomb-honey" src="/bin/images/clrhome.png" alt="ClrHome" />
           </a>
         </div>
         <div class="honeycomb-row">
-          <a class="honeycomb-cell honeycomb-omnimaga" href="https://www.omnimaga.org/">
-            <img class="honeycomb-honey" src="/bin/images/omnimaga.png" alt="Omnimaga" title="Omnimaga" />
+          <a class="honeycomb-cell honeycomb-blacker" href="https://na31.org/" title="NATO">
+            <img class="honeycomb-honey" src="/bin/images/nato.png" alt="NATO" />
           </a>
-          <a class="honeycomb-cell honeycomb-clrhome" href="http://clrhome.org/">
-            <img class="honeycomb-honey" src="/bin/images/clrhome.png" alt="ClrHome" title="ClrHome" />
+          <a class="honeycomb-cell honeycomb-omnimaga" href="https://www.omnimaga.org/" title="Omnimaga">
+            <img class="honeycomb-honey" src="/bin/images/omnimaga.png" alt="Omnimaga" />
+          </a>
+          <a class="honeycomb-cell honeycomb-revsoft" href="http://revsoft.tifreakware.net/" title="Revolution Software">
+            <img class="honeycomb-honey" src="/bin/images/revsoft.png" alt="Revolution Software" />
           </a>
         </div>
       </div>
     </div>
     <div class="col">
       <h3>Presence</h3>
-      <ul id="presence">
+      <ul>
         <li>
           <i class="flaticon-note"></i>
           <a href="mailto:deeptoaster@gmail.com">Email</a>
