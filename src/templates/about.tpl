@@ -20,7 +20,7 @@
     <span>designer, avid <em>hitchhiker</em>, and student of life who drinks tea and poops code.</span>
   </p>
   <div class="row">
-    <div class="col">
+    <div class="col col-60">
       <h3>Affiliations</h3>
       <div class="honeycomb">
         <div class="honeycomb-row">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col col-40">
       <h3>Presence</h3>
       <ul>
         <li>
@@ -67,7 +67,7 @@
         </li>
         <li>
           <i class="flaticon-multimedia"></i>
-          <a href="https://github.com/DThought">GitHub</a>
+          <a href="https://github.com/deeptoaster">GitHub</a>
         </li>
       </ul>
     </div>

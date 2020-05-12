@@ -117,6 +117,12 @@ td i {
   float: left;
   width: 50%;
 }
+.col-40 {
+  width: 40%;
+}
+.col-60 {
+  width: 60%;
+}
 .lead {
   font-size: 1.2em;
   margin: 0 2em;
@@ -916,6 +922,7 @@ body.page #sidebar {
   width: 30em;
   margin: 1em auto;
   color: #617078;
+  white-space: normal;
 }
 .page-inner {
   padding: 0.25in;

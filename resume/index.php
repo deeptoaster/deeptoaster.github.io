@@ -13,42 +13,42 @@
 			<p class="lead">Software engineer, game developer, and graphic designer with a knack for <strong>creative, efficient solutions</strong> to novel problems.</p>
 			<p class="lead">Fast learner, team player, and <strong>detail-oriented problem solver</strong> who likes to have fun and works well under pressure.</p>
 			<h3>Languages</h3>
-			<div class="col">
+			<div class="col col-40">
 				<p>English</p>
 			</div>
-			<div class="col">
+			<div class="col col-60">
 				<div class="progress">
 					<span style="width: 100%;"></span>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col col-40">
 				<p>Chinese</p>
 			</div>
-			<div class="col">
+			<div class="col col-60">
 				<div class="progress">
 					<span style="width: 100%;"></span>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col col-40">
 				<p>French</p>
 			</div>
-			<div class="col">
+			<div class="col col-60">
 				<div class="progress">
 					<span style="width: 80%;"></span>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col col-40">
 				<p>Spanish</p>
 			</div>
-			<div class="col">
+			<div class="col col-60">
 				<div class="progress">
 					<span style="width: 60%;"></span>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col col-40">
 				<p>Russian</p>
 			</div>
-			<div class="col">
+			<div class="col col-60">
 				<div class="progress">
 					<span style="width: 40%;"></span>
 				</div>
