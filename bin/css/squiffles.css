@@ -204,13 +204,16 @@ td i {
   font-weight: bold;
   letter-spacing: normal;
 }
-.wp-block-image {
+.wp-block-embed, .wp-block-image {
   margin: 1em 0;
 }
-.wp-block-image img {
+.wp-block-embed .fb-post, .wp-block-image img {
   display: block;
   max-width: 100%;
   margin: auto;
+}
+.wp-block-embed .fb-post {
+  width: 500px;
 }
 .wp-block-quote {
   background-color: #dbdfce;
@@ -530,33 +533,6 @@ td i {
 .coaster-track, .coaster-cap span, .coaster-cap span::after,
 .coaster-cup::before {
   background-color: #d2d7d9;
-}
-@supports not (-moz-osx-font-smoothing: auto) {
-  .coaster-track, .coaster-cap span, .coaster-cap span::after,
-  .coaster-cup::before {
-    background-attachment: fixed;
-    background-image: -webkit-linear-gradient(0deg, #859fab, #859fab 0.1em,
-        transparent 0.1em, transparent), -webkit-linear-gradient(90deg, #859fab,
-        #859fab 0.2em, transparent 0.2em, transparent),
-        -webkit-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
-        transparent 0.1em, transparent 0.9em),
-        -webkit-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
-        transparent 0.1em, transparent 0.8em);
-    background-image: -moz-linear-gradient(0deg, #859fab, #859fab 0.1em,
-        transparent 0.1em, transparent), -moz-linear-gradient(90deg, #859fab,
-        #859fab 0.2em, transparent 0.2em, transparent),
-        -moz-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
-        transparent 0.1em, transparent 0.9em),
-        -moz-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
-        transparent 0.1em, transparent 0.8em);
-    background-image: linear-gradient(0deg, #859fab, #859fab 0.1em, transparent
-        0.1em, transparent), linear-gradient(90deg, #859fab, #859fab 0.2em,
-        transparent 0.2em, transparent), repeating-linear-gradient(56.3deg,
-        #859fab, #859fab 0.1em, transparent 0.1em, transparent 1.7em),
-        repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
-        transparent 0.1em, transparent 1.6em);
-    background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
-  }
 }
 .coaster-cap::before, .coaster-cup span, .coaster-cup span::after,
 .coaster-line, .coaster-clear {
@@ -1013,6 +989,33 @@ body.page #sidebar {
 .card i {
   padding-right: 0;
   padding-left: 0.5em;
+}
+@supports not (-moz-osx-font-smoothing: auto) {
+  .coaster-track, .coaster-cap span, .coaster-cap span::after,
+  .coaster-cup::before {
+    background-attachment: fixed;
+    background-image: -webkit-linear-gradient(0deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent), -webkit-linear-gradient(90deg, #859fab,
+        #859fab 0.2em, transparent 0.2em, transparent),
+        -webkit-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 0.9em),
+        -webkit-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 0.8em);
+    background-image: -moz-linear-gradient(0deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent), -moz-linear-gradient(90deg, #859fab,
+        #859fab 0.2em, transparent 0.2em, transparent),
+        -moz-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 0.9em),
+        -moz-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 0.8em);
+    background-image: linear-gradient(0deg, #859fab, #859fab 0.1em, transparent
+        0.1em, transparent), linear-gradient(90deg, #859fab, #859fab 0.2em,
+        transparent 0.2em, transparent), repeating-linear-gradient(56.3deg,
+        #859fab, #859fab 0.1em, transparent 0.1em, transparent 1.7em),
+        repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+        transparent 0.1em, transparent 1.6em);
+    background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
+  }
 }
 @media screen and (max-width: 1920px) {
   body {
