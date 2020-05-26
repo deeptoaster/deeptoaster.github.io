@@ -54,7 +54,7 @@
 				</div>
 			</div>
 			<h3>Hobbies</h3>
-			<table>
+			<table class="grid">
 				<tr>
 					<td>
 						<i class="flaticon-hiker"></i>

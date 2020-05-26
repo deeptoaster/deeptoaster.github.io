@@ -89,12 +89,15 @@ table {
   width: 100%;
 }
 td {
+  vertical-align: top;
+}
+.grid td {
   background-color: #859fab;
   text-align: center;
   font-size: 3em;
   line-height: 1.2em;
 }
-td i {
+.grid td i {
   padding-right: 0;
   color: #467286;
 }
@@ -146,7 +149,10 @@ td i {
   border-radius: 0.3em;
   overflow: hidden;
 }
-.post a, .post-title, .wp-block-quote.block-warning {
+.post a, .comment-respond h3, .wp-block-quote {
+  color: #467286;
+}
+.post-title, .wp-block-quote.block-warning {
   color: #806d15;
 }
 .post-title {
@@ -154,12 +160,18 @@ td i {
   background-color: #d4c26a;
   line-height: 1.2;
 }
+.post-content, #main .post-content h3 {
+  color: #292100;
+}
 .post-content {
   padding: 0.6em 1.3em;
   background-color: #fff8d6;
+  font-size: 1.2em;
 }
-.post-content, #main .post-content h3 {
-  color: #292100;
+.post-content figcaption {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 0.8em;
 }
 .post-comments {
   list-style-type: none;
@@ -173,9 +185,6 @@ td i {
 }
 .post-comments > li:nth-child(2n) {
   background-color: #bcc8cd;
-}
-.post-comments a, .comment-respond h3, .wp-block-quote {
-  color: #467286;
 }
 .comment-respond h3 {
   padding-top: 0.5em;
@@ -211,6 +220,9 @@ td i {
   display: block;
   max-width: 100%;
   margin: auto;
+  border: 0.1em solid #fff8d6;
+  box-shadow: 0 0 0.2em #292100;
+  background-color: #fff;
 }
 .wp-block-embed .fb-post {
   width: 500px;
