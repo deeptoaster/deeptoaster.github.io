@@ -746,7 +746,7 @@ body.page #sidebar {
   margin-top: 0;
   padding-top: 4em;
 }
-#main label, #sidebar label {
+#sidebar label, .comment-form-comment label {
   display: none;
 }
 #sidebar ul {
