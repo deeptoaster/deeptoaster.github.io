@@ -203,9 +203,6 @@ td {
 .comment-body, .comment-respond {
   padding: 1.1em 1.3em;
 }
-.comment-respond h3 {
-  padding-top: 0.5em;
-}
 .comment-meta {
   font-size: 0.8em;
 }
@@ -214,6 +211,12 @@ td {
 }
 .comment-body p, .comment-body .reply {
   margin-left: 3.9em;
+}
+.comment-respond h3 {
+  padding-top: 0.5em;
+}
+.comment-respond .comment-subscription-form {
+  margin-bottom: 0;
 }
 .avatar {
   float: left;
@@ -720,7 +723,9 @@ body.page #main {
   top: 0;
   bottom: 0;
   right: 0;
+  list-style-type: none;
   width: 30%;
+  margin: 0;
   overflow: auto;
   color: #617078;
 }
@@ -752,14 +757,6 @@ body.page #sidebar {
 #sidebar ul {
   list-style-type: none;
   margin: 0;
-  padding: 0 0.5em;
-}
-#sidebar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-#sidebar > ul {
   padding: 0 1em;
 }
 #sidebar .lead {
@@ -1094,7 +1091,7 @@ body.page #sidebar {
   }
   .post {
     position: relative;
-    top: -2.5em;
+    top: -2em;
     clear: left;
   }
   #main, #sidebar {
