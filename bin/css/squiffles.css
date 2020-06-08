@@ -176,6 +176,10 @@ td {
   text-align: center;
   font-size: 0.8em;
 }
+.post-end::after {
+  content: '  \220e';
+  white-space: pre;
+}
 .post-comments, .post-comments .children {
   list-style-type: none;
   padding: 0;
