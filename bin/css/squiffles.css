@@ -180,6 +180,9 @@ td {
   content: '  \220e';
   white-space: pre;
 }
+.sharedaddy.sharedaddy.sharedaddy h3 {
+  font-size: 1em;
+}
 .post-comments, .post-comments .children {
   list-style-type: none;
   padding: 0;
@@ -218,6 +221,7 @@ td {
 }
 .comment-respond h3 {
   padding-top: 0.5em;
+  padding-bottom: 1.5em;
 }
 .comment-respond .comment-subscription-form {
   margin-bottom: 0;
@@ -742,6 +746,10 @@ body.page #sidebar {
   color: #374952;
   font-size: 14px;
 }
+#sidebar form {
+  position: relative;
+  padding: 1em 7em 1em 1em;
+}
 #sidebar h1, #sidebar h3 {
   color: #467286;
 }
@@ -755,8 +763,23 @@ body.page #sidebar {
   margin-top: 0;
   padding-top: 4em;
 }
+#sidebar input[type=text], #sidebar input[type=email] {
+  width: 100%;
+  border: 2px solid #232627;
+  color: #617078;
+  background-color: #161819;
+}
+#sidebar input[type=text]:hover, #sidebar input[type=text]:focus,
+#sidebar input[type=email]:hover, #sidebar input[type=email]:focus {
+  border-color: #617078;
+  background-color: #232627;
+  color: #d2d7d9;
+}
 #sidebar label, .comment-form-comment label {
   display: none;
+}
+#sidebar #subscribe-email, #sidebar #subscribe-submit {
+  padding: 0;
 }
 #sidebar ul {
   list-style-type: none;
@@ -767,11 +790,7 @@ body.page #sidebar {
   margin: 1em 0;
   font-size: 1em;
 }
-#searchform {
-  position: relative;
-  padding: 1em 7em 1em 1em;
-}
-#searchform::before, #searchsubmit {
+#searchform::before, #searchsubmit, #subscribe-submit button {
   position: absolute;
   top: 0.2em;
   right: 1.6em;
@@ -785,7 +804,7 @@ body.page #sidebar {
   content: '\f100';
   font-family: icon;
 }
-#searchsubmit {
+#searchsubmit, #subscribe-submit button {
   box-sizing: content-box;
   border: none;
   color: transparent;
@@ -793,19 +812,25 @@ body.page #sidebar {
   cursor: pointer;
 }
 #s {
-  width: 100%;
   margin: -0.3em -1.8em -0.3em -0.4em;
-  border: 2px solid #232627;
   border-radius: 0.2em;
   padding: 0.3em 1.8em 0.3em 0.4em;
-  color: #617078;
-  background-color: #161819;
   font-size: 2em;
 }
-#s:hover, #s:focus {
-  border-color: #617078;
-  background-color: #232627;
-  color: #d2d7d9;
+#subscribe-email input {
+  margin: -0.6em -3.6em -0.6em -0.8em;
+  border-radius: 0.4em;
+  padding: 0.6em 3.6em 0.6em 0.8em;
+  font-size: 1em;
+}
+#subscribe-submit button {
+  height: 0.5em;
+  padding-top: 0;
+  padding-bottom: 0.9em;
+  color: #617078;
+}
+#subscribe-submit button::-moz-focus-inner {
+  border: none;
 }
 #fishbot {
   padding: 3em 0 1em 0;
