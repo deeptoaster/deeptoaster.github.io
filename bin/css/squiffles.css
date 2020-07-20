@@ -841,7 +841,7 @@ body.page #sidebar {
   color: #374952;
 }
 #about .row {
-  margin: 0 -4em;
+  margin: 0 -2em 0 -4em;
 }
 #about .row::after {
   content: '';

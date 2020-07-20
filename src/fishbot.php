@@ -1,9 +1,40 @@
 <?
-function squiffles_draw($xml, $settings, $scale) {
+function squiffles_collect($xml, &$lines, &$ellipses) {
+  switch ($xml->getName()) {
+    case 'ellipse':
+      $ellipses[] = array(
+        'cx' => $xml['cx'],
+        'cy' => $xml['cy'],
+        'rx' => $xml['rx'],
+        'ry' => $xml['ry']
+      );
+
+      break;
+    case 'line':
+      $lines[] = array(
+        'x1' => $xml['x1'],
+        'x2' => $xml['x2'],
+        'y1' => $xml['y1'],
+        'y2' => $xml['y2']
+      );
+
+      break;
+  }
+
+  foreach ($xml->children() as $child) {
+    squiffles_collect($child, $lines, $ellipses);
+  }
+}
+
+function squiffles_fill($xml, $scale) {
+  $lines = array();
+  $ellipses = array();
+  squiffles_collect($xml, $lines, $ellipses);
+}
+
+function squiffles_stroke($xml, $settings, $scale) {
   foreach ($xml->attributes() as $key => $value) {
     switch ($key) {
-      case 'fill':
-      case 'stroke':
       case 'stroke-linecap':
       case 'stroke-width':
         $settings[$key] = $value;
@@ -76,7 +107,7 @@ EOF
   }
 
   foreach ($xml->children() as $child) {
-    squiffles_draw($child, $settings, $scale);
+    squiffles_stroke($child, $settings, $scale);
   }
 }
 
@@ -89,9 +120,8 @@ echo <<<EOF
 
 EOF;
 
-squiffles_draw($xml, array(
-  'stroke-linecap' => 'butt'
-), 0.1);
+squiffles_stroke($xml, array('stroke-linecap' => 'butt'), 0.1);
+squiffles_fill($xml, 0.1);
 
 echo <<<EOF
 </div>
