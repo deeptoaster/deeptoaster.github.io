@@ -1,7 +1,8 @@
 <?
 $config = array(
   'google_host' => 'docs.google.com',
-  'google_path' => '/spreadsheets/d/e/2PACX-1vR9CXcrxfkPTUlannj7GQGXRbxaN3LCmcjDc0zvKwpm_is2Khy630Ru4_X6r3in_ZB_YqKpgzCOXssp/pub?gid=1831278462&single=true&output=csv',
+  'google_path' =>
+      '/spreadsheets/d/e/2PACX-1vRNxE3dj-KVDKAuqzZLvXAV4Stx06UqxcpbVOP0ajqxUawYGUV97rL-Y-EBJjQGCcuuKrWaLDVgRdBj/pubhtml?gid=1831278462&single=true',
   'ifttt_event' => 'notify',
   'ifttt_host' => 'maker.ifttt.com'
 );
