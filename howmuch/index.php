@@ -2,7 +2,7 @@
 $config = array(
   'google_host' => 'docs.google.com',
   'google_path' =>
-      '/spreadsheets/d/e/2PACX-1vRNxE3dj-KVDKAuqzZLvXAV4Stx06UqxcpbVOP0ajqxUawYGUV97rL-Y-EBJjQGCcuuKrWaLDVgRdBj/pubhtml?gid=1831278462&single=true',
+      '/spreadsheets/d/e/2PACX-1vRNxE3dj-KVDKAuqzZLvXAV4Stx06UqxcpbVOP0ajqxUawYGUV97rL-Y-EBJjQGCcuuKrWaLDVgRdBj/pub?gid=1831278462&single=true&output=csv',
   'ifttt_event' => 'notify',
   'ifttt_host' => 'maker.ifttt.com'
 );
@@ -10,11 +10,7 @@ $config = array(
 include(__DIR__ . '/../config.php');
 
 if (isset($_GET['of'])) {
-  $google =
-      fsockopen('ssl://' . $config['google_host'], 443);
-  fwrite($google, "GET $config[google_path] HTTP/1.1\r\n");
-  fwrite($google, "Host: $config[google_host]\r\n\r\n");
-  fwrite($google, "Connection: close\r\n\r\n");
+  $google = fopen("https://$config[google_host]$config[google_path]", 'r');
   $of = $_GET['of'];
 
   if (substr($of, -3) == ' is') {
