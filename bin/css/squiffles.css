@@ -325,24 +325,21 @@ td {
 .pull-right {
   float: right;
 }
-.reel {
-  display: inline-block;
-  height: 1em;
-  margin-bottom: -0.2em;
-  padding-bottom: 0.2em;
-  overflow: hidden;
-  text-align: right;
-  vertical-align: top;
-}
-.reel-scroll {
-  position: relative;
-  animation-name: reel;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-}
-.reel-symbol {
+.links {
   display: block;
-  height: 1.5em;
+  position: absolute;
+  bottom: 2em;
+  width: 80%;
+  margin: 0 10%;
+  padding: 0;
+  list-style-type: none;
+}
+.links > li {
+  display: block;
+  float: left;
+  width: 25%;
+  text-align: center;
+  text-transform: lowercase;
 }
 .honeycomb-row {
   float: left;
@@ -358,6 +355,9 @@ td {
   height: 3.46em;
   margin: 0.15em;
   white-space: nowrap;
+}
+a.honeycomb-cell {
+  z-index: 1;
 }
 .honeycomb-cell::before, .honeycomb-cell::after {
   content: '';
@@ -729,10 +729,12 @@ td {
   font-family: Raleway, sans-serif;
   letter-spacing: 0.2em;
 }
+#header a, #fishbot .links {
+  color: #617078;
+}
 #header a {
   display: inline-block;
   padding: 0.5em;
-  color: #617078;
   text-decoration: none;
 }
 #header a:hover, #header a:focus {
@@ -900,6 +902,9 @@ body.page #sidebar {
   left: 50%;
   font-size: 0.4em;
   transform: translate(-50%, -50%);
+}
+#fishbot .links {
+  font-size: 0.6em;
 }
 #scroll {
   position: absolute;

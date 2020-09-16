@@ -21,6 +21,7 @@
     </div>
     <div id="fishbot">
       {include_php file='fishbot.php'}
+      {include file='links.tpl'}
     </div>
     <div id="scroll">
       <div id="about">
