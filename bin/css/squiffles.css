@@ -1,7 +1,9 @@
 @page {
   margin: 0;
 }
-html, #gallery {
+html, #gallery, .coaster-cap span, .coaster-cap span::after,
+.coaster-cup::before, .coaster-cap::before, .coaster-cup span,
+.coaster-cup span::after, .coaster-line, .coaster-clear {
   background-color: #161819;
 }
 body {
@@ -409,7 +411,7 @@ td {
 }
 .coaster {
   position: relative;
-  height: 14em;
+  height: 13em;
   overflow: hidden;
 }
 .coaster-track {
@@ -439,7 +441,7 @@ td {
 }
 .coaster-line {
   height: 2em;
-  border-bottom: 0.3em solid #859fab;
+  border-bottom: 0.3em solid #617078;
   -webkit-transform-origin: bottom left;
   -o-transform-origin: bottom left;
   -moz-transform-origin: bottom left;
@@ -452,7 +454,7 @@ td {
   right: -10%;
   bottom: 0;
   left: -10%;
-  border: 0.3em solid #859fab;
+  border: 0.3em solid #617078;
   border-radius: 100%;
 }
 .coaster-cap::before, .coaster-cap span::after, .coaster-cup::before,
@@ -476,14 +478,6 @@ td {
 }
 .coaster-cup span::after {
   bottom: 25%;
-}
-.coaster-track, .coaster-cap span, .coaster-cap span::after,
-.coaster-cup::before {
-  background-color: #d2d7d9;
-}
-.coaster-cap::before, .coaster-cup span, .coaster-cup span::after,
-.coaster-line, .coaster-clear {
-  background-color: #d2d7d9;
 }
 .progress {
   margin: 0.7em 0;
@@ -1071,32 +1065,32 @@ body.page #sidebar {
 #gallery {
   padding-top: 2em;
 }
-#gallery h2 {
+#gallery h2, #gallery .coaster-track {
   color: #617078;
 }
 @supports not (-moz-osx-font-smoothing: auto) {
   .coaster-track, .coaster-cap span, .coaster-cap span::after,
   .coaster-cup::before {
     background-attachment: fixed;
-    background-image: -webkit-linear-gradient(0deg, #859fab, #859fab 0.1em,
-        transparent 0.1em, transparent), -webkit-linear-gradient(90deg, #859fab,
-        #859fab 0.2em, transparent 0.2em, transparent),
-        -webkit-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
+    background-image: -webkit-linear-gradient(0deg, #617078, #617078 0.1em,
+        transparent 0.1em, transparent), -webkit-linear-gradient(90deg, #617078,
+        #617078 0.2em, transparent 0.2em, transparent),
+        -webkit-repeating-linear-gradient(56.3deg, #617078, #617078 0.1em,
         transparent 0.1em, transparent 0.9em),
-        -webkit-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+        -webkit-repeating-linear-gradient(-56.3deg, #617078, #617078 0.1em,
         transparent 0.1em, transparent 0.8em);
-    background-image: -moz-linear-gradient(0deg, #859fab, #859fab 0.1em,
-        transparent 0.1em, transparent), -moz-linear-gradient(90deg, #859fab,
-        #859fab 0.2em, transparent 0.2em, transparent),
-        -moz-repeating-linear-gradient(56.3deg, #859fab, #859fab 0.1em,
+    background-image: -moz-linear-gradient(0deg, #617078, #617078 0.1em,
+        transparent 0.1em, transparent), -moz-linear-gradient(90deg, #617078,
+        #617078 0.2em, transparent 0.2em, transparent),
+        -moz-repeating-linear-gradient(56.3deg, #617078, #617078 0.1em,
         transparent 0.1em, transparent 0.9em),
-        -moz-repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+        -moz-repeating-linear-gradient(-56.3deg, #617078, #617078 0.1em,
         transparent 0.1em, transparent 0.8em);
-    background-image: linear-gradient(0deg, #859fab, #859fab 0.1em, transparent
-        0.1em, transparent), linear-gradient(90deg, #859fab, #859fab 0.2em,
+    background-image: linear-gradient(0deg, #617078, #617078 0.1em, transparent
+        0.1em, transparent), linear-gradient(90deg, #617078, #617078 0.2em,
         transparent 0.2em, transparent), repeating-linear-gradient(56.3deg,
-        #859fab, #859fab 0.1em, transparent 0.1em, transparent 1.7em),
-        repeating-linear-gradient(-56.3deg, #859fab, #859fab 0.1em,
+        #617078, #617078 0.1em, transparent 0.1em, transparent 1.7em),
+        repeating-linear-gradient(-56.3deg, #617078, #617078 0.1em,
         transparent 0.1em, transparent 1.6em);
     background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
   }

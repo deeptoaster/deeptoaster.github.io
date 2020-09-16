@@ -105,3 +105,14 @@
     </div>
   </div>
 </div>
+<div class="coaster">
+  <div class="coaster-track" style="margin-left: -64.5em">
+    {include file='coaster.tpl'}
+  </div>
+  <div class="coaster-track" style="margin-left: -21.5em">
+    {include file='coaster.tpl'}
+  </div>
+  <div class="coaster-track" style="margin-left: 21.5em">
+    {include file='coaster.tpl'}
+  </div>
+</div>
