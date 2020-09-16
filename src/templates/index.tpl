@@ -23,11 +23,8 @@
       {include_php file='fishbot.php'}
     </div>
     <div id="scroll">
-      <div id="about-old">
-        {include file='about_old.tpl'}
-      </div>
-      <div id="interests">
-        {include file='interests.tpl'}
+      <div id="about">
+        {include file='about.tpl'}
       </div>
       <div id="gallery">
         {include file='gallery.tpl'}

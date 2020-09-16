@@ -29,22 +29,22 @@
               <div class="honeycomb-cell honeycomb-medium"></div>
               <div class="honeycomb-cell honeycomb-medium"></div>
               <div class="honeycomb-cell honeycomb-medium"></div>
-              <div class="honeycomb-cell honeycomb-medium"></div>
               <div class="honeycomb-cell"></div>
+              <div class="honeycomb-cell honeycomb-medium"></div>
               <div class="honeycomb-cell honeycomb-medium"></div>
               <div class="honeycomb-cell honeycomb-medium"></div>
               <div class="honeycomb-cell honeycomb-medium"></div>
             </div>
             <div class="honeycomb-row">
+              <div class="honeycomb-cell"></div>
+              <div class="honeycomb-cell honeycomb-light"></div>
+              <div class="honeycomb-cell honeycomb-light"></div>
+              <div class="honeycomb-cell"></div>
               <div class="honeycomb-cell honeycomb-light"></div>
               <div class="honeycomb-cell"></div>
               <div class="honeycomb-cell honeycomb-light"></div>
               <div class="honeycomb-cell"></div>
               <div class="honeycomb-cell honeycomb-light"></div>
-              <div class="honeycomb-cell"></div>
-              <div class="honeycomb-cell honeycomb-light"></div>
-              <div class="honeycomb-cell honeycomb-light"></div>
-              <div class="honeycomb-cell"></div>
             </div>
           </div>
           <div class="card-fishbot">
