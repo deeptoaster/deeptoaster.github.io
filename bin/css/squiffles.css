@@ -911,17 +911,20 @@ body.page #sidebar {
   text-align: center;
 }
 #about, #about .honeycomb-cell.honeycomb-light {
-  background-color: #a6b8c1;
+  background-color: #d2d7d9;
 }
 #about {
   height: 24em;
   color: #374952;
 }
-#about .aside, #about .honeycomb-cell {
-  background-color: #467286;
-}
-#about .aside {
+#about h2 {
   color: #a6b8c1;
+}
+#about .aside, #about .honeycomb-cell {
+  background-color: #374952;
+}
+#about .drop {
+  color: #27556c;
 }
 #about .honeycomb {
   position: absolute;
@@ -933,16 +936,16 @@ body.page #sidebar {
   float: right;
 }
 #about .honeycomb-cell::before {
-  border-right-color: #467286;
+  border-right-color: #374952;
 }
 #about .honeycomb-cell::after {
-  border-left-color: #467286;
+  border-left-color: #374952;
 }
 #about .honeycomb-cell.honeycomb-light::before {
-  border-right-color: #a6b8c1;
+  border-right-color: #d2d7d9;
 }
 #about .honeycomb-cell.honeycomb-light::after {
-  border-left-color: #a6b8c1;
+  border-left-color: #d2d7d9;
 }
 #about .honeycomb-cell.honeycomb-1064 {
   background-color: #43877b;
@@ -1055,12 +1058,12 @@ body.page #sidebar {
 #about .lead {
   margin: 1.5em 13em 1.5em 3em;
 }
-#interests {
-  background-color: #d2d7d9;
-  color: #617078;
+#travel {
+  height: 24em;
+  background-color: #a6b8c1;
 }
-#interests h2 {
-  color: #27556c;
+#travel h2 {
+  color: #467286;
 }
 #gallery {
   padding-top: 2em;

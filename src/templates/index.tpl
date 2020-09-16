@@ -26,6 +26,9 @@
       <div id="about">
         {include file='about.tpl'}
       </div>
+      <div id="travel">
+        {include file='travel.tpl'}
+      </div>
       <div id="gallery">
         {include file='gallery.tpl'}
       </div>
