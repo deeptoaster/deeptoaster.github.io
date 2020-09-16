@@ -21,7 +21,7 @@ if (isset($_GET['of'])) {
     $of = substr($of, 0, -4);
   }
 
-  while (!feof($google)) {
+  while ($google && !feof($google)) {
     $row = str_getcsv(trim(fgets($google), ','));
 
     if (strtolower($row[0]) == $of) {
@@ -36,7 +36,7 @@ if (isset($_GET['of'])) {
       fwrite($ifttt, "Content-Length: $length\r\n\r\n");
       fwrite($ifttt, "$content\r\n\r\n");
 
-      while (!feof($ifttt)) {
+      while ($ifttt && !feof($ifttt)) {
         fgets($ifttt);
       }
 

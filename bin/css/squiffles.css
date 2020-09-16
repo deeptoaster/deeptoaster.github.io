@@ -1,7 +1,7 @@
 @page {
   margin: 0;
 }
-html {
+html, #gallery {
   background-color: #161819;
 }
 body {
@@ -106,11 +106,6 @@ td {
   color: #467286;
   text-align: right;
   font-size: 0.7em;
-}
-.section {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
 }
 .content {
   position: relative;
@@ -284,8 +279,6 @@ td {
 }
 .svg {
   position: relative;
-  margin: 6em auto;
-  font-size: 0.4em;
 }
 .svg-ellipse, .svg-line {
   display: block;
@@ -331,7 +324,7 @@ td {
   height: 48em;
   bottom: 16em;
 }
-.map span, #about em {
+.map span, #about-old em {
   border-width: 0.2em 0 0 0;
   border-style: solid;
   border-radius: 50%;
@@ -356,7 +349,7 @@ td {
 .reel-scroll {
   position: relative;
   animation-name: reel;
-  animation-duration: 8s;
+  animation-duration: 6s;
   animation-iteration-count: infinite;
 }
 .reel-symbol {
@@ -835,37 +828,57 @@ body.page #sidebar {
   border: none;
 }
 #fishbot {
-  padding: 3em 0 1em 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   font-size: 1.5em;
 }
-#about {
+#fishbot .svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.4em;
+  transform: translate(-50%, -50%);
+}
+#scroll {
+  position: absolute;
+  top: 100%;
+}
+#scroll > div {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+#about-old {
   background-color: #a6b8c1;
   color: #374952;
 }
-#about .row {
+#about-old .row {
   margin: 0 -2em 0 -4em;
 }
-#about .row::after {
+#about-old .row::after {
   content: '';
   display: block;
   clear: both;
 }
-#about .content {
+#about-old .content {
   padding-right: 16em;
   padding-left: 16em;
 }
-#about .map span, #about em {
+#about-old .map span, #about-old em {
   border-color: rgba(157, 54, 76, 0.6);
 }
-#about h2, #about h3 {
+#about-old h2, #about-old h3 {
   color: #467286;
 }
-#about ul {
+#about-old ul {
   list-style-type: none;
   width: 9em;
   margin: auto;
 }
-#about li {
+#about-old li {
   text-align: left;
 }
 #interests {
@@ -986,7 +999,7 @@ body.page #sidebar {
 }
 .card-fishbot {
   position: absolute;
-  top: -0.5in;
+  top: -0.2in;
   left: -3.4in;
   padding: 0.3in;
   background-color: #161819;
@@ -1137,10 +1150,10 @@ body.page #sidebar {
     margin-right: 0;
     margin-left: 0;
   }
-  #about .row {
+  #about-old .row {
     margin: 0;
   }
-  #about .content {
+  #about-old .content {
     background-color: #d2dbe0;
     background-color: rgba(255, 255, 255, 0.6);
     margin: 1em;
@@ -1154,22 +1167,16 @@ body.page #sidebar {
 	5% {
 		top: -1.5em;
 	}
-  25% {
+  33% {
     top: -1.5em;
   }
-  30% {
+  38% {
     top: -3em;
   }
-  50% {
+  67% {
     top: -3em;
   }
-  55% {
-    top: -4.5em;
-  }
-  75% {
-    top: -4.5em;
-  }
-  80% {
+  72% {
     top: 0;
   }
 }

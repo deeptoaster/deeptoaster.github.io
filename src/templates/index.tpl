@@ -19,17 +19,19 @@
         <a href="/">Deep Toaster</a>
       </h1>
     </div>
-    <div id="fishbot" class="section">
+    <div id="fishbot">
       {include_php file='fishbot.php'}
     </div>
-    <div id="about" class="section">
-      {include file='about.tpl'}
-    </div>
-    <div id="interests" class="section">
-      {include file='interests.tpl'}
-    </div>
-    <div id="gallery" class="section">
-      {include file='gallery.tpl'}
+    <div id="scroll">
+      <div id="about-old">
+        {include file='about_old.tpl'}
+      </div>
+      <div id="interests">
+        {include file='interests.tpl'}
+      </div>
+      <div id="gallery">
+        {include file='gallery.tpl'}
+      </div>
     </div>
   </body>
 </html>

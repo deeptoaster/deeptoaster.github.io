@@ -13,7 +13,6 @@
       <span class="reel-scroll">
         <span class="reel-symbol">Game</span>
         <span class="reel-symbol">Graphic</span>
-        <span class="reel-symbol">Industrial</span>
         <span class="reel-symbol">Web</span>
       </span>
     </span>
