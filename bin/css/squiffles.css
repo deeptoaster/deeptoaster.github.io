@@ -291,36 +291,22 @@ td {
   animation-timing-function: ease-in, ease-out;
 }
 .map {
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-}
-.map-left {
-  left: -22em;
-}
-.map-right {
-  right: -20em;
+  position: relative;
+  height: 100%;
+  overflow: auto;
 }
 .map img {
   display: block;
-  position: relative;
-}
-.map-left img {
-  height: 26em;
-}
-.map-right img {
-  height: 48em;
-  bottom: 16em;
+  position: absolute;
+  height: 100%;
 }
 .map span {
+  display: block;
+  position: absolute;
   border-width: 0.2em 0 0 0;
   border-style: solid;
   border-radius: 50%;
   font-style: normal;
-}
-.map span {
-  display: block;
-  position: absolute;
 }
 .pull-right {
   float: right;
@@ -1046,6 +1032,9 @@ body.page #sidebar {
 }
 #travel h2 {
   color: #467286;
+}
+#travel .map span {
+  border-color: rgba(157, 54, 76, 0.6);
 }
 #gallery {
   padding-top: 2em;
