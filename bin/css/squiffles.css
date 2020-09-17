@@ -574,82 +574,59 @@ a.honeycomb-cell {
 }
 .showcase {
   text-align: center;
-  width: 53em;
-  margin: 0 auto 1em auto;
+  width: 50em;
+  margin: -4em auto 0 auto;
 }
-.showcase-back {
-  position: absolute;
-  width: 53em;
-  height: 16em;
+.showcase-pages {
+  position: relative;
+  z-index: 1;
+  height: 14em;
   overflow: hidden;
 }
 .showcase-page {
-  height: 16em;
+  clear: left;
 }
-.showcase-page > * {
+.showcase-page::before {
+  content: '';
+  display: block;
+  height: 4em;
+}
+.showcase-pager, .showcase-thumbnail {
   float: left;
-  vertical-align: top;
 }
 .showcase-pager {
-  width: 0.5em;
-  margin: 0.44em 0;
-  outline: none;
-  font-size: 8em;
-  line-height: 1;
+  width: 1em;
+  color: #232627;
+  font-size: 3em;
+  line-height: 3.2em;
 }
 .showcase-pager:hover {
   color: #617078;
   text-decoration: none;
 }
-.showcase-col {
-  width: 11em;
-}
 .showcase-thumbnail {
-  display: block;
   width: 9em;
   height: 6em;
-  padding: 1em;
+  padding: 2em 1em;
 }
-.showcase-thumbnail a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-}
-.showcase-thumbnail a:hover {
-  opacity: 1;
-}
-.showcase-thumbnail img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.showcase-placeholder {
-  width: 23em;
-  height: 16em;
-}
-.showcase-front {
-  width: 45em;
-  margin: auto;
-  overflow: hidden;
-}
-.showcase-front-scroll {
+.showcase-focus {
   white-space: nowrap;
+  overflow: hidden;
+  margin-top: -14em;
 }
 .showcase-centerfold {
   display: inline-block;
-  width: 45em;
+  width: 42em;
+  padding: 14em 4em 0 4em;
   vertical-align: top;
 }
-.showcase-image {
-  width: 21em;
-  height: 14em;
-  margin: 1em;
+.showcase-thumbnail > img, .showcase-centerfold > img {
+  display: block;
+  width: 100%;
 }
 .showcase-caption {
   width: 30em;
   margin: 1em auto;
-  color: #617078;
   white-space: normal;
 }
 .page-inner {
@@ -1072,8 +1049,6 @@ body.page #sidebar {
 }
 #gallery {
   padding-top: 2em;
-}
-#gallery h2, #gallery .coaster-track {
   color: #617078;
 }
 @supports not (-moz-osx-font-smoothing: auto) {
