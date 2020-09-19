@@ -4,6 +4,6 @@
 [submodule "force-closure"]
 	path = force-closure
 	url = ssh://git@github.com/deeptoaster/force-closure
-[submodule "lib/detect-polygons"]
-	path = lib/detect-polygons
-	url = ssh://git@github.com/deeptoaster/detect-polygons
+[submodule "css"]
+	path = css
+	url = ssh://git@github.com/deeptoaster/stupid-css
