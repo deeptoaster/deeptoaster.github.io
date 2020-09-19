@@ -68,24 +68,17 @@ $arcs = array(
   squiffles_transform( 3.1390,  101.6869,  5.4380,  100.3882, 10)  // 2019-01-26
 );
 
-$interests = array(
-  'building things',
-  'calligraphy',
-  'climbing',
-  'fencing',
-  'fire spinning',
-  'making music',
-  'self-defense',
-  'urban exploration',
-  'writing'
-);
-
 $cleverly = new Cleverly();
 $cleverly->preserveIndent = true;
 $cleverly->setTemplateDir(__DIR__ . '/templates');
+ob_start();
+
+include(__DIR__ . '/coaster.php');
+
+$coaster = ob_get_clean();
 
 $cleverly->display('index.tpl', array(
-  'interests' => $interests,
   'arcs' => $arcs,
+  'coaster' => $coaster,
 ));
 ?>

@@ -430,7 +430,6 @@ a.honeycomb-cell {
   ), repeating-linear-gradient(
     -56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 1.6em
   );
-  background-position: inherit;
   background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
 }
 .coaster-track {
@@ -929,7 +928,7 @@ body.page #sidebar {
 }
 #about .honeycomb {
   position: absolute;
-  right: 6.6em;
+  right: 6.63em;
   font-size: 0.83em;
   top: -3.7em;
 }

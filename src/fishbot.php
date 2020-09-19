@@ -67,7 +67,7 @@ EOF;
       $left = $cx * $scale - $width / 2;
       $theta = atan2($y, $x) * 180 / M_PI;
       $transform = sprintf('transform: rotate(%.1fdeg);', $theta);
-      $border = ceil($settings['stroke-width'] / 2) * $scale . 'em';
+      $border = ceil($settings['stroke-width'] / 2) * $scale;
       $radius = '';
       $linecap = $settings['stroke-linecap'];
 
@@ -86,7 +86,7 @@ EOF;
 
       printf(
         <<<EOF
-  <span class="svg-line svg-%s" style="top: %.1fem; left: %.1fem; width: %.1fem; border-width: %s;%s -webkit-%s -moz-%s %s animation-delay: %.1fs, %.1fs"></span>
+  <span class="svg-line svg-%s" style="top: %.1fem; left: %.1fem; width: %.1fem; border-width: %.1fem;%s -webkit-%s -moz-%s %s animation-delay: %.1fs, %.1fs"></span>
 
 EOF
         ,
