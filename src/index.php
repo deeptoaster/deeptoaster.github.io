@@ -5,8 +5,8 @@ function squiffles_project($lat, $lng) {
   list($width, $height) = getimagesize(__DIR__ . '/../bin/images/world.png');
 
   return array(
-    ($lng + 186) * $width / 330,
-    340 - $width * log(tan(M_PI / 4 + $lat * M_PI / 360)) / M_PI / 2
+    ($lng + 187) * $width / 330,
+    355 - $width * log(tan(M_PI / 4 + $lat * M_PI / 360)) / M_PI / 2 * 1.1
   );
 }
 
@@ -64,7 +64,7 @@ $arcs = array(
   squiffles_transform(37.7749, -122.4194, 39.1677, -120.1452, 10), // 2017-09-03
   squiffles_transform(45.4408,   12.3155, 44.4949,   11.3426, 10), // 2018-03-26
   squiffles_transform(33.5731,   -7.5898, 31.6295,   -7.9811, 10), // 2018-09-08
-  squiffles_transform(56.5047,   21.0108, 55.9202,   21.0678,  5), // 2018-09-21
+  squiffles_transform(55.9202,   21.0678, 56.5047,   21.0108,  5), // 2018-09-21
   squiffles_transform( 3.1390,  101.6869,  5.4380,  100.3882, 10)  // 2019-01-26
 );
 
