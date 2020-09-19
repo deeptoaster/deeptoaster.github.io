@@ -1,9 +1,10 @@
 @page {
   margin: 0;
 }
-html, #gallery, .coaster-cap span, .coaster-cap span::after,
-.coaster-cup::before, .coaster-cap::before, .coaster-cup span,
-.coaster-cup span::after, .coaster-line, .coaster-clear {
+html, #gallery, .coaster-cap > span, .coaster-cap > span > span,
+.coaster-cup > span:first-child, .coaster-cap::before,
+.coaster-cup > span + span, .coaster-cup > span + span::after, .coaster-line,
+.coaster-clear {
   background-color: #161819;
 }
 body {
@@ -400,6 +401,38 @@ a.honeycomb-cell {
   height: 13em;
   overflow: hidden;
 }
+.coaster-track, .coaster-cap > span, .coaster-cap > span > span,
+.coaster-cup > span:first-child {
+  background-image: -webkit-linear-gradient(
+    0deg, #617078, #617078 0.1em, transparent 0.1em, transparent
+  ), -webkit-linear-gradient(
+    90deg, #617078, #617078 0.2em, transparent 0.2em, transparent
+  ), -webkit-repeating-linear-gradient(
+    56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 0.9em
+  ), -webkit-repeating-linear-gradient(
+    -56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 0.8em
+  );
+  background-image: -moz-linear-gradient(
+    0deg, #617078, #617078 0.1em, transparent 0.1em, transparent
+  ), -moz-linear-gradient(
+    90deg, #617078, #617078 0.2em, transparent 0.2em, transparent
+  ), -moz-repeating-linear-gradient(
+    56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 0.9em
+  ), -moz-repeating-linear-gradient(
+    -56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 0.8em
+  );
+  background-image: linear-gradient(
+    0deg, #617078, #617078 0.1em, transparent 0.1em, transparent
+  ), linear-gradient(
+    90deg, #617078, #617078 0.2em, transparent 0.2em, transparent
+  ), repeating-linear-gradient(
+    56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 1.7em
+  ), repeating-linear-gradient(
+    -56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 1.6em
+  );
+  background-position: inherit;
+  background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
+}
 .coaster-track {
   position: absolute;
   left: 50%;
@@ -433,7 +466,7 @@ a.honeycomb-cell {
   -moz-transform-origin: bottom left;
   transform-origin: bottom left;
 }
-.coaster-cap span, .coaster-cup span {
+.coaster-cap > span, .coaster-cup > span + span {
   display: block;
   position: absolute;
   top: 0;
@@ -443,8 +476,8 @@ a.honeycomb-cell {
   border: 0.3em solid #617078;
   border-radius: 100%;
 }
-.coaster-cap::before, .coaster-cap span::after, .coaster-cup::before,
-.coaster-cup span::after {
+.coaster-cap::before, .coaster-cap > span > span,
+.coaster-cup > span:first-child, .coaster-cup > span + span::after {
   content: '';
   display: block;
   position: absolute;
@@ -456,13 +489,13 @@ a.honeycomb-cell {
 .coaster-cap::before {
   bottom: 75%;
 }
-.coaster-cap span::after {
+.coaster-cap > span > span {
   top: 25%;
 }
-.coaster-cup::before {
+.coaster-cup > span:first-child {
   top: 75%;
 }
-.coaster-cup span::after {
+.coaster-cup > span + span::after {
   bottom: 25%;
 }
 .progress {
@@ -1039,33 +1072,6 @@ body.page #sidebar {
 #gallery {
   padding-top: 2em;
   color: #617078;
-}
-@supports not (-moz-osx-font-smoothing: auto) {
-  .coaster-track, .coaster-cap span, .coaster-cap span::after,
-  .coaster-cup::before {
-    background-attachment: fixed;
-    background-image: -webkit-linear-gradient(0deg, #617078, #617078 0.1em,
-        transparent 0.1em, transparent), -webkit-linear-gradient(90deg, #617078,
-        #617078 0.2em, transparent 0.2em, transparent),
-        -webkit-repeating-linear-gradient(56.3deg, #617078, #617078 0.1em,
-        transparent 0.1em, transparent 0.9em),
-        -webkit-repeating-linear-gradient(-56.3deg, #617078, #617078 0.1em,
-        transparent 0.1em, transparent 0.8em);
-    background-image: -moz-linear-gradient(0deg, #617078, #617078 0.1em,
-        transparent 0.1em, transparent), -moz-linear-gradient(90deg, #617078,
-        #617078 0.2em, transparent 0.2em, transparent),
-        -moz-repeating-linear-gradient(56.3deg, #617078, #617078 0.1em,
-        transparent 0.1em, transparent 0.9em),
-        -moz-repeating-linear-gradient(-56.3deg, #617078, #617078 0.1em,
-        transparent 0.1em, transparent 0.8em);
-    background-image: linear-gradient(0deg, #617078, #617078 0.1em, transparent
-        0.1em, transparent), linear-gradient(90deg, #617078, #617078 0.2em,
-        transparent 0.2em, transparent), repeating-linear-gradient(56.3deg,
-        #617078, #617078 0.1em, transparent 0.1em, transparent 1.7em),
-        repeating-linear-gradient(-56.3deg, #617078, #617078 0.1em,
-        transparent 0.1em, transparent 1.6em);
-    background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
-  }
 }
 @media screen and (max-width: 1920px) {
   body {
