@@ -301,13 +301,80 @@ td {
   position: absolute;
   height: 100%;
 }
-.map span {
+.map-arc {
   display: block;
   position: absolute;
   border-width: 0.2em 0 0 0;
   border-style: solid;
   border-radius: 50%;
   font-style: normal;
+}
+.map-point {
+  display: block;
+  position: absolute;
+  width: 0.35em;
+  height: 0.35em;
+  margin: -0.2em;
+  border: 0.05em solid;
+  border-radius: 0.2em;
+}
+.map-point::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  bottom: -0.5em;
+  left: -0.5em;
+}
+.map-point > span {
+  display: block;
+  position: absolute;
+  top: 0.2em;
+  width: 20em;
+  height: 2em;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.7em;
+  transition: width 300ms linear
+}
+.map-point:hover > span {
+  width: 20em;
+}
+.map-point.map-point-left > span {
+  right: 0.5em;
+}
+.map-point.map-point-right > span {
+  left: 0.5em;
+}
+.map-point > span::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  border-width: 0 0 0.8em 0;
+  border-style: solid;
+  border-color: transparent #aa9439;
+}
+.map-point > span > span {
+  display: block;
+  position: absolute;
+  padding: 0.2em 0.4em;
+  background-color: #aa9439;
+}
+.map-point.map-point-left > span::after {
+  right: 0;
+  border-left-width: 1.2em;
+}
+.map-point.map-point-right > span::after {
+  left: 0;
+  border-right-width: 1.2em;
+}
+.map-point.map-point-left > span > span {
+  right: 1.1em;
+}
+.map-point.map-point-right > span > span {
+  left: 1.1em;
 }
 .pull-right {
   float: right;
@@ -1065,8 +1132,12 @@ body.page #sidebar {
 #travel h2 {
   color: #467286;
 }
-#travel .map span {
+#travel .map-arc {
   border-color: rgba(157, 54, 76, 0.6);
+}
+#travel .map-point {
+  border-color: #374952;
+  background-color: #aa9439;
 }
 #gallery {
   padding-top: 2em;
