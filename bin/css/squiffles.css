@@ -309,13 +309,18 @@ td {
   border-radius: 50%;
   font-style: normal;
 }
+.map-arc.map-arc-plane {
+  border-width: 0.1em 0 0 0;
+}
+.map-arc.map-arc-thumb {
+  border-width: 0.2em 0 0 0;
+}
 .map-point {
   display: block;
   position: absolute;
-  width: 0.35em;
-  height: 0.35em;
+  width: 0.4em;
+  height: 0.4em;
   margin: -0.2em;
-  border: 0.05em solid;
   border-radius: 0.2em;
 }
 .map-point::before {
@@ -331,7 +336,7 @@ td {
   display: block;
   position: absolute;
   top: 0.2em;
-  width: 20em;
+  width: 0;
   height: 2em;
   overflow: hidden;
   white-space: nowrap;
@@ -643,19 +648,19 @@ a.honeycomb-cell {
 }
 .aside {
   position: absolute;
+  bottom: 0;
   width: 24em;
   padding: 2em 0;
 }
 .aside-left {
-  left: -24em;
-  width: 24em;
+  left: 7.6em;
   transform: rotate(-90deg);
-  transform-origin: top right;
+  transform-origin: bottom left;
 }
 .aside-right {
-  right: -24em;
+  right: 7.6em;
   transform: rotate(90deg);
-  transform-origin: top left;
+  transform-origin: bottom right;
 }
 .showcase {
   text-align: center;
@@ -984,11 +989,11 @@ body.page #sidebar {
   height: 24em;
   color: #374952;
 }
-#about h2 {
-  color: #a6b8c1;
-}
 #about .aside, #about .honeycomb-cell {
   background-color: #374952;
+}
+#about h2 {
+  color: #a6b8c1;
 }
 #about .drop {
   color: #27556c;
@@ -1126,17 +1131,19 @@ body.page #sidebar {
   margin: 1.5em 13em 1.5em 3em;
 }
 #travel {
-  height: 24em;
+  height: 28em;
   background-color: #a6b8c1;
 }
 #travel h2 {
   color: #467286;
 }
-#travel .map-arc {
+#travel .map-arc.map-arc-plane {
+  border-color: rgba(55, 73, 82, 0.6);
+}
+#travel .map-arc.map-arc-thumb {
   border-color: rgba(157, 54, 76, 0.6);
 }
 #travel .map-point {
-  border-color: #374952;
   background-color: #aa9439;
 }
 #gallery {
