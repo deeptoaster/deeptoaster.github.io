@@ -1,10 +1,8 @@
 @page {
   margin: 0;
 }
-html, #gallery, .coaster-cap > span, .coaster-cap > span > span,
-.coaster-cup > span:first-child, .coaster-cap::before,
-.coaster-cup > span + span, .coaster-cup > span + span::after, .coaster-line,
-.coaster-clear {
+html, #gallery, .coaster-cap::before, .coaster-cup > span + span,
+.coaster-cup > span + span::after, .coaster-line, .coaster-clear {
   background-color: #161819;
 }
 body {
@@ -73,6 +71,9 @@ a {
 }
 a:hover, a:focus {
   text-decoration: underline;
+}
+a img {
+  border: none;
 }
 i {
   font-style: normal;
@@ -475,7 +476,8 @@ a.honeycomb-cell {
 }
 .coaster-track, .coaster-cap > span, .coaster-cap > span > span,
 .coaster-cup > span:first-child {
-  background-image: -webkit-linear-gradient(
+  background: #30383b;
+  background: -webkit-linear-gradient(
     0deg, #617078, #617078 0.1em, transparent 0.1em, transparent
   ), -webkit-linear-gradient(
     90deg, #617078, #617078 0.2em, transparent 0.2em, transparent
@@ -483,8 +485,8 @@ a.honeycomb-cell {
     56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 0.9em
   ), -webkit-repeating-linear-gradient(
     -56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 0.8em
-  );
-  background-image: -moz-linear-gradient(
+  ) #161819;
+  background: -moz-linear-gradient(
     0deg, #617078, #617078 0.1em, transparent 0.1em, transparent
   ), -moz-linear-gradient(
     90deg, #617078, #617078 0.2em, transparent 0.2em, transparent
@@ -492,8 +494,8 @@ a.honeycomb-cell {
     56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 0.9em
   ), -moz-repeating-linear-gradient(
     -56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 0.8em
-  );
-  background-image: linear-gradient(
+  ) #161819;
+  background: linear-gradient(
     0deg, #617078, #617078 0.1em, transparent 0.1em, transparent
   ), linear-gradient(
     90deg, #617078, #617078 0.2em, transparent 0.2em, transparent
@@ -501,7 +503,7 @@ a.honeycomb-cell {
     56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 1.7em
   ), repeating-linear-gradient(
     -56.3deg, #617078, #617078 0.1em, transparent 0.1em, transparent 1.6em
-  );
+  ) #161819;
   background-size: 2em 3em, 2em 3em, 2em 3em, 2em 3em;
 }
 .coaster-track {
@@ -514,6 +516,7 @@ a.honeycomb-cell {
   content: '\01f682\fe0e';
   display: block;
   position: absolute;
+  bottom: -1em;
   z-index: 1;
   margin-left: -0.3em;
   animation-name: train-bottom, train-linear;
