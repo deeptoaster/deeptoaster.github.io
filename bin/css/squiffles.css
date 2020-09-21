@@ -1199,11 +1199,6 @@ body.page #sidebar {
     font-size: 13px;
   }
 }
-@media screen and (max-width: 768px) {
-  .svg {
-    font-size: 6px;
-  }
-}
 @keyframes reel {
 	0% {
 		top: 0;
