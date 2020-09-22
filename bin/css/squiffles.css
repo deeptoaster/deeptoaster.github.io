@@ -998,8 +998,9 @@ body.page #sidebar {
 #about h2 {
   color: #a6b8c1;
 }
-#about .drop {
+#about a, #about .drop {
   color: #27556c;
+  font-weight: bold;
 }
 #about .honeycomb {
   position: absolute;

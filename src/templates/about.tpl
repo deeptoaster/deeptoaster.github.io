@@ -63,5 +63,5 @@
 </div>
 <p class="lead">
   <span class="drop">Hi.</span>
-  <span>I'm a designer-developer, avid hitchhiker, and student of life who drinks <strong>tea</strong> and poops <strong>code</strong>. I like music, calligraphy, krav maga, and <strong>opportunities</strong> to build things, climb things, or spin things. I do stupid things with CSS.</span>
+  <span>I'm a designer-developer, avid hitchhiker, and student of life who drinks <strong>tea</strong> and poops <strong>code</strong>. I like music, calligraphy, krav maga, and <strong>opportunities</strong> to build things, climb things, or spin things. I do <a href="/css/">stupid things with CSS</a>.</span>
 </p>
