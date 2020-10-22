@@ -5,7 +5,6 @@ body {
   height: 25em;
   margin: 0;
   background-color: #161819;
-  overflow: hidden;
   font-size: 4vh;
   line-height: 1.5;
   user-select: none;
@@ -55,6 +54,12 @@ pre {
 }
 pre:first-child, .demo:first-child {
   margin-top: 0;
+}
+.presentation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .slide {
   position: absolute;
@@ -349,6 +354,11 @@ pre:first-child, .demo:first-child {
   height: 1em;
   opacity: 1;
   transition: height 400ms, opacity 200ms 200ms;
+}
+@media (max-aspect-ratio: 1/1) {
+  body {
+    font-size: 4vw;
+  }
 }
 @keyframes fade-in {
   0% {

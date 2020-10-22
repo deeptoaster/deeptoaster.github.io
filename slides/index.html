@@ -3,446 +3,449 @@
   <head>
     <title>CSS</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:800%7CTitillium+Web:400,700" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="slides.css" />
   </head>
   <body>
-    <input type="radio" id="slide-cover" name="slide" class="slide-toggle" autofocus="autofocus" checked="checked" />
-    <div class="slide slide-cover">
-      <h1>CSS</h1>
-      <p class="lead">How I Learned to Stop Worrying and Love the Quirks</p>
-      <label class="slide-next" for="slide-title-1"></label>
-    </div>
-    <input type="radio" id="slide-title-1" name="slide" class="slide-toggle" />
-    <div class="slide slide-title">
-      <h1>Part I</h1>
-      <p class="lead">The Elements of Style</p>
-      <label class="slide-next" for="slide-about"></label>
-      <label class="slide-previous" for="slide-cover"></label>
-    </div>
-    <input type="radio" id="slide-about" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>What is CSS?</h1>
-      <ul>
-        <li><b>CSS</b> stands for <b>cascading style sheets</b></li>
-        <li>CSS is a <b>declarative</b> language that describes how webpages should be styled</li>
-        <li>Styles in CSS are prioritized in a particular order (hence "cascading")</li>
-        <li>Today, HTML, CSS, and Javascript form the basis of <b>front-end web development</b></li>
-      </ul>
-      <label class="slide-next" for="slide-history"></label>
-      <label class="slide-previous" for="slide-title-1"></label>
-    </div>
-    <input type="radio" id="slide-history" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>A Brief History</h1>
-      <table class="timeline">
-        <tr>
-          <th>1989</th>
-          <th>1994</th>
-          <th>1995</th>
-          <th>1996</th>
-          <th>1997</th>
-          <th>2014</th>
-        </tr>
-        <tr>
-          <td>
-            <p>HTML first proposed by Tim Berners-Lee<p>
-          </td>
-          <td>
-            <p>CSS first proposed by H&aring;kon Wium Lie</p>
-          </td>
-          <td>
-            <p>HTML standardized (HTML2)</p>
-            <p>JavaScript first proposed by Netscape</p>
-          </td>
-          <td>
-            <p>CSS standardized (CSS1)</p>
-          </td>
-          <td>
-            <p>JavaScript standardized (ECMAScript 1)</p>
-          </td>
-          <td>
-            <p>Current version of HTML (HTML5)</p>
-          </td>
-        </tr>
-      </table>
-      <label class="slide-next" for="slide-chaos"></label>
-      <label class="slide-previous" for="slide-about"></label>
-    </div>
-    <input type="radio" id="slide-chaos" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Before CSS: Chaos</h1>
-      <div class="half">
+    <div class="presentation">
+      <input type="radio" id="slide-cover" name="slide" class="slide-toggle" autofocus="autofocus" checked="checked" />
+      <div class="slide slide-cover">
+        <h1>CSS</h1>
+        <p class="lead">How I Learned to Stop Worrying and Love the Quirks</p>
+        <label class="slide-next" for="slide-title-1"></label>
+      </div>
+      <input type="radio" id="slide-title-1" name="slide" class="slide-toggle" />
+      <div class="slide slide-title">
+        <h1>Part I</h1>
+        <p class="lead">The Elements of Style</p>
+        <label class="slide-next" for="slide-about"></label>
+        <label class="slide-previous" for="slide-cover"></label>
+      </div>
+      <input type="radio" id="slide-about" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>What is CSS?</h1>
         <ul>
-          <li>All styling was woven into the content</li>
-          <li><code>&lt;font /&gt;</code> tags everywhere</li>
-          <li>Nothing was reusable</li>
-          <li>Very hard to update</li>
+          <li><b>CSS</b> stands for <b>cascading style sheets</b></li>
+          <li>CSS is a <b>declarative</b> language that describes how webpages should be styled</li>
+          <li>Styles in CSS are prioritized in a particular order (hence "cascading")</li>
+          <li>Today, HTML, CSS, and Javascript form the basis of <b>front-end web development</b></li>
         </ul>
+        <label class="slide-next" for="slide-history"></label>
+        <label class="slide-previous" for="slide-title-1"></label>
       </div>
-      <div class="half">
-        <div class="demo">
-          <span class="demo-key">W</span> to go <span class="demo-direction">UP</span>
-          <span class="demo-key">A</span> to go <span class="demo-direction">LEFT</span>
-          <span class="demo-key">S</span> to go <span class="demo-direction">DOWN</span>
-          <span class="demo-key">D</span> to go <span class="demo-direction">RIGHT</span>
+      <input type="radio" id="slide-history" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>A Brief History</h1>
+        <table class="timeline">
+          <tr>
+            <th>1989</th>
+            <th>1994</th>
+            <th>1995</th>
+            <th>1996</th>
+            <th>1997</th>
+            <th>2014</th>
+          </tr>
+          <tr>
+            <td>
+              <p>HTML first proposed by Tim Berners-Lee<p>
+            </td>
+            <td>
+              <p>CSS first proposed by H&aring;kon Wium Lie</p>
+            </td>
+            <td>
+              <p>HTML standardized (HTML2)</p>
+              <p>JavaScript first proposed by Netscape</p>
+            </td>
+            <td>
+              <p>CSS standardized (CSS1)</p>
+            </td>
+            <td>
+              <p>JavaScript standardized (ECMAScript 1)</p>
+            </td>
+            <td>
+              <p>Current version of HTML (HTML5)</p>
+            </td>
+          </tr>
+        </table>
+        <label class="slide-next" for="slide-chaos"></label>
+        <label class="slide-previous" for="slide-about"></label>
+      </div>
+      <input type="radio" id="slide-chaos" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Before CSS: Chaos</h1>
+        <div class="half">
+          <ul>
+            <li>All styling was woven into the content</li>
+            <li><code>&lt;font /&gt;</code> tags everywhere</li>
+            <li>Nothing was reusable</li>
+            <li>Very hard to update</li>
+          </ul>
         </div>
-        <pre>
-          &lt;font color="gray" face="monospace"&gt;W&lt;/font&gt;
-          to go &lt;b&gt;&lt;font color="blue"&gt;UP&lt;/font&gt;&lt;/b&gt;
-          &lt;font color="gray" face="monospace"&gt;A&lt;/font&gt;
-          to go &lt;b&gt;&lt;font color="blue"&gt;LEFT&lt;/font&gt;&lt;/b&gt;
-          &lt;font color="gray" face="monospace"&gt;S&lt;/font&gt;
-          to go &lt;b&gt;&lt;font color="blue"&gt;DOWN&lt;/font&gt;&lt;/b&gt;
-          &lt;font color="gray" face="monospace"&gt;D&lt;/font&gt;
-          to go &lt;b&gt;&lt;font color="blue"&gt;RIGHT&lt;/font&gt;&lt;/b&gt;
-        </pre>
-      </div>
-      <label class="slide-next" for="slide-better"></label>
-      <label class="slide-previous" for="slide-history"></label>
-    </div>
-    <input type="radio" id="slide-better" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>After CSS: Better?</h1>
-      <div class="half">
-        <ul>
-          <li>Separating style from content</li>
-          <li>Themes shared across site</li>
-          <li>Complex layouts</li>
-          <li>Steeper learning curve</li>
-        </ul>
-      </div>
-      <div class="half">
-        <div class="demo">
-          <span class="demo-key">W</span> to go <span class="demo-direction">UP</span>
-          <span class="demo-key">A</span> to go <span class="demo-direction">LEFT</span>
-          <span class="demo-key">S</span> to go <span class="demo-direction">DOWN</span>
-          <span class="demo-key">D</span> to go <span class="demo-direction">RIGHT</span>
+        <div class="half">
+          <div class="demo">
+            <span class="demo-key">W</span> to go <span class="demo-direction">UP</span>
+            <span class="demo-key">A</span> to go <span class="demo-direction">LEFT</span>
+            <span class="demo-key">S</span> to go <span class="demo-direction">DOWN</span>
+            <span class="demo-key">D</span> to go <span class="demo-direction">RIGHT</span>
+          </div>
+          <pre>
+            &lt;font color="gray" face="monospace"&gt;W&lt;/font&gt;
+            to go &lt;b&gt;&lt;font color="blue"&gt;UP&lt;/font&gt;&lt;/b&gt;
+            &lt;font color="gray" face="monospace"&gt;A&lt;/font&gt;
+            to go &lt;b&gt;&lt;font color="blue"&gt;LEFT&lt;/font&gt;&lt;/b&gt;
+            &lt;font color="gray" face="monospace"&gt;S&lt;/font&gt;
+            to go &lt;b&gt;&lt;font color="blue"&gt;DOWN&lt;/font&gt;&lt;/b&gt;
+            &lt;font color="gray" face="monospace"&gt;D&lt;/font&gt;
+            to go &lt;b&gt;&lt;font color="blue"&gt;RIGHT&lt;/font&gt;&lt;/b&gt;
+          </pre>
         </div>
-        <pre>
-          &lt;span class="key"&gt;W&lt;/span&gt;
-          to go &lt;span class="direction"&gt;UP&lt;/span&gt;
-          &lt;span class="key"&gt;A&lt;/span&gt;
-          to go &lt;span class="direction"&gt;LEFT&lt;/span&gt;
-          &lt;span class="key"&gt;S&lt;/span&gt;
-          to go &lt;span class="direction"&gt;DOWN&lt;/span&gt;
-          &lt;span class="key"&gt;D&lt;/span&gt;
-          to go &lt;span class="direction"&gt;RIGHT&lt;/span&gt;
-        </pre>
+        <label class="slide-next" for="slide-better"></label>
+        <label class="slide-previous" for="slide-history"></label>
       </div>
-      <label class="slide-next" for="slide-title-2"></label>
-      <label class="slide-previous" for="slide-chaos"></label>
-    </div>
-    <input type="radio" id="slide-title-2" name="slide" class="slide-toggle" />
-    <div class="slide slide-title">
-      <h1>Part II</h1>
-      <p class="lead">The Good, the Bad, and the Weird</p>
-      <label class="slide-next" for="slide-anatomy"></label>
-      <label class="slide-previous" for="slide-better"></label>
-    </div>
-    <input type="radio" id="slide-anatomy" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Block Anatomy</h1>
-      <div class="half">
-        <ul>
-          <li>A <b>selector</b> selects content to apply to</li>
-          <li>A <b>rule</b> sets a property to a value</li>
-          <li>A <b>block</b> contains one ore more rules</li>
-        </ul>
-      </div>
-      <div class="half">
-        <div class="demo">
-          <span class="demo-key">W</span> to go <span class="demo-direction">UP</span>
-          <span class="demo-key">A</span> to go <span class="demo-direction">LEFT</span>
-          <span class="demo-key">S</span> to go <span class="demo-direction">DOWN</span>
-          <span class="demo-key">D</span> to go <span class="demo-direction">RIGHT</span>
+      <input type="radio" id="slide-better" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>After CSS: Better?</h1>
+        <div class="half">
+          <ul>
+            <li>Separating style from content</li>
+            <li>Themes shared across site</li>
+            <li>Complex layouts</li>
+            <li>Steeper learning curve</li>
+          </ul>
         </div>
-        <pre>
-          .key {
-          &nbsp;&nbsp;color: gray;
-          &nbsp;&nbsp;font-family: monospace;
-          }
-          .direction {
-          &nbsp;&nbsp;color: blue;
-          &nbsp;&nbsp;font-weight: bold;
-          }
-        </pre>
+        <div class="half">
+          <div class="demo">
+            <span class="demo-key">W</span> to go <span class="demo-direction">UP</span>
+            <span class="demo-key">A</span> to go <span class="demo-direction">LEFT</span>
+            <span class="demo-key">S</span> to go <span class="demo-direction">DOWN</span>
+            <span class="demo-key">D</span> to go <span class="demo-direction">RIGHT</span>
+          </div>
+          <pre>
+            &lt;span class="key"&gt;W&lt;/span&gt;
+            to go &lt;span class="direction"&gt;UP&lt;/span&gt;
+            &lt;span class="key"&gt;A&lt;/span&gt;
+            to go &lt;span class="direction"&gt;LEFT&lt;/span&gt;
+            &lt;span class="key"&gt;S&lt;/span&gt;
+            to go &lt;span class="direction"&gt;DOWN&lt;/span&gt;
+            &lt;span class="key"&gt;D&lt;/span&gt;
+            to go &lt;span class="direction"&gt;RIGHT&lt;/span&gt;
+          </pre>
+        </div>
+        <label class="slide-next" for="slide-title-2"></label>
+        <label class="slide-previous" for="slide-chaos"></label>
       </div>
-      <label class="slide-next" for="slide-cascade"></label>
-      <label class="slide-previous" for="slide-title-2"></label>
-    </div>
-    <input type="radio" id="slide-cascade" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>The Cascade</h1>
-      <ul>
-        <li>
-          <p>Precedence</p>
-          <ol>
-            <li>Whether or not it's <code>!important</code></li>
-            <li>Whether or not a specific media type is being targeted</li>
-            <li>Specificity of the selector</li>
-            <li>Order in which the rule appears</li>
-            <li>Source of the rule</li>
-          </ol>
-        </li>
-      </ul>
-      <label class="slide-next" for="slide-sources"></label>
-      <label class="slide-previous" for="slide-anatomy"></label>
-    </div>
-    <input type="radio" id="slide-sources" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Cascading Sources</h1>
-      <div class="half">
+      <input type="radio" id="slide-title-2" name="slide" class="slide-toggle" />
+      <div class="slide slide-title">
+        <h1>Part II</h1>
+        <p class="lead">The Good, the Bad, and the Weird</p>
+        <label class="slide-next" for="slide-anatomy"></label>
+        <label class="slide-previous" for="slide-better"></label>
+      </div>
+      <input type="radio" id="slide-anatomy" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Block Anatomy</h1>
+        <div class="half">
+          <ul>
+            <li>A <b>selector</b> selects content to apply to</li>
+            <li>A <b>rule</b> sets a property to a value</li>
+            <li>A <b>block</b> contains one ore more rules</li>
+          </ul>
+        </div>
+        <div class="half">
+          <div class="demo">
+            <span class="demo-key">W</span> to go <span class="demo-direction">UP</span>
+            <span class="demo-key">A</span> to go <span class="demo-direction">LEFT</span>
+            <span class="demo-key">S</span> to go <span class="demo-direction">DOWN</span>
+            <span class="demo-key">D</span> to go <span class="demo-direction">RIGHT</span>
+          </div>
+          <pre>
+            .key {
+            &nbsp;&nbsp;color: gray;
+            &nbsp;&nbsp;font-family: monospace;
+            }
+            .direction {
+            &nbsp;&nbsp;color: blue;
+            &nbsp;&nbsp;font-weight: bold;
+            }
+          </pre>
+        </div>
+        <label class="slide-next" for="slide-cascade"></label>
+        <label class="slide-previous" for="slide-title-2"></label>
+      </div>
+      <input type="radio" id="slide-cascade" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>The Cascade</h1>
         <ul>
           <li>
-            <p>Source</p>
+            <p>Precedence</p>
             <ol>
-              <li>Inline</li>
-              <li>Embedded</li>
-              <li>External</li>
-              <li>Client</li>
-              <li>Browser</li>
+              <li>Whether or not it's <code>!important</code></li>
+              <li>Whether or not a specific media type is being targeted</li>
+              <li>Specificity of the selector</li>
+              <li>Order in which the rule appears</li>
+              <li>Source of the rule</li>
             </ol>
           </li>
         </ul>
+        <label class="slide-next" for="slide-sources"></label>
+        <label class="slide-previous" for="slide-anatomy"></label>
       </div>
-      <div class="half">
-        <pre>
-          &lt;span style="color: red;"&gt;Hello, world!&lt;/span&gt;
-        </pre>
-        <pre>
-          &lt;style type="text/css"&gt;
-          &nbsp;&nbsp;span {
-          &nbsp;&nbsp;&nbsp;&nbsp;color: red;
-          &nbsp;&nbsp;}
-          &lt;/style&gt;
-        </pre>
-        <pre>
-          &lt;link href="style.css" rel="stylesheet" type="text/css"&gt;&lt;/link&gt;
-        </pre>
+      <input type="radio" id="slide-sources" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Cascading Sources</h1>
+        <div class="half">
+          <ul>
+            <li>
+              <p>Source</p>
+              <ol>
+                <li>Inline</li>
+                <li>Embedded</li>
+                <li>External</li>
+                <li>Client</li>
+                <li>Browser</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+        <div class="half">
+          <pre>
+            &lt;span style="color: red;"&gt;Hello, world!&lt;/span&gt;
+          </pre>
+          <pre>
+            &lt;style type="text/css"&gt;
+            &nbsp;&nbsp;span {
+            &nbsp;&nbsp;&nbsp;&nbsp;color: red;
+            &nbsp;&nbsp;}
+            &lt;/style&gt;
+          </pre>
+          <pre>
+            &lt;link href="style.css" rel="stylesheet" type="text/css"&gt;&lt;/link&gt;
+          </pre>
+        </div>
+        <label class="slide-next" for="slide-specificity"></label>
+        <label class="slide-previous" for="slide-cascade"></label>
       </div>
-      <label class="slide-next" for="slide-specificity"></label>
-      <label class="slide-previous" for="slide-cascade"></label>
-    </div>
-    <input type="radio" id="slide-specificity" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Specificity: Add It Up</h1>
-      <div class="half">
-        <ul>
-          <li>IDs (<code>#about</code>)</li>
-          <li>Classes, pseudo-classes (<code>.row</code>, <code>:hover</code>)</li>
-          <li>Elements, pseudo-elements (<code>a</code>, <code>::before</code>)</li>
-        </ul>
+      <input type="radio" id="slide-specificity" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Specificity: Add It Up</h1>
+        <div class="half">
+          <ul>
+            <li>IDs (<code>#about</code>)</li>
+            <li>Classes, pseudo-classes (<code>.row</code>, <code>:hover</code>)</li>
+            <li>Elements, pseudo-elements (<code>a</code>, <code>::before</code>)</li>
+          </ul>
+        </div>
+        <div class="half">
+          <pre>
+            &lt;div id="about"&gt;
+            &nbsp;&nbsp;&lt;a class="row" href="tel:5558675309"&gt;Phone: (555) 867-5309&lt;/a&gt;
+            &nbsp;&nbsp;&lt;a class="row" href="mailto:noreply@example.com"&gt;Email: noreply@example.com&lt;/a&gt;
+            &lt;/div&gt;
+          </pre>
+          <pre>
+            #about a.row:hover::before {
+            &nbsp;&nbsp;/* specificity 1-2-2 */
+            }
+            a:hover {
+            &nbsp;&nbsp;/* specificity 0-1-1 */
+            }
+          </pre>
+        </div>
+        <label class="slide-next" for="slide-model"></label>
+        <label class="slide-previous" for="slide-sources"></label>
       </div>
-      <div class="half">
-        <pre>
-          &lt;div id="about"&gt;
-          &nbsp;&nbsp;&lt;a class="row" href="tel:5558675309"&gt;Phone: (555) 867-5309&lt;/a&gt;
-          &nbsp;&nbsp;&lt;a class="row" href="mailto:noreply@example.com"&gt;Email: noreply@example.com&lt;/a&gt;
-          &lt;/div&gt;
-        </pre>
-        <pre>
-          #about a.row:hover::before {
-          &nbsp;&nbsp;/* specificity 1-2-2 */
-          }
-          a:hover {
-          &nbsp;&nbsp;/* specificity 0-1-1 */
-          }
-        </pre>
-      </div>
-      <label class="slide-next" for="slide-model"></label>
-      <label class="slide-previous" for="slide-sources"></label>
-    </div>
-    <input type="radio" id="slide-model" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>The Box Model</h1>
-      <div class="half">
-        <ul>
-          <li>Every layout engine is still built around the box model</li>
-          <li>Basic concepts established in CSS1</li>
-          <li>It makes sense considering what <a href="http://www.dolekemp96.org/main.htm">CSS was designed for</a></li>
-        </ul>
-      </div>
-      <div class="half">
-        <div class="demo">
-          <div class="demo-margin">
-            <div class="demo-border">
-              <div class="demo-padding">
-                <div class="demo-content"></div>
+      <input type="radio" id="slide-model" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>The Box Model</h1>
+        <div class="half">
+          <ul>
+            <li>Every layout engine is still built around the box model</li>
+            <li>Basic concepts established in CSS1</li>
+            <li>It makes sense considering what <a href="http://www.dolekemp96.org/main.htm">CSS was designed for</a></li>
+          </ul>
+        </div>
+        <div class="half">
+          <div class="demo">
+            <div class="demo-margin">
+              <div class="demo-border">
+                <div class="demo-padding">
+                  <div class="demo-content"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="demo-margin">
-            <div class="demo-border">
-              <div class="demo-padding">
-                <div class="demo-content"></div>
+            <div class="demo-margin">
+              <div class="demo-border">
+                <div class="demo-padding">
+                  <div class="demo-content"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <label class="slide-next" for="slide-flow"></label>
+        <label class="slide-previous" for="slide-specificity"></label>
       </div>
-      <label class="slide-next" for="slide-flow"></label>
-      <label class="slide-previous" for="slide-specificity"></label>
-    </div>
-    <input type="radio" id="slide-flow" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Flow</h1>
-      <ul>
-        <li>Elements display as either <b>block</b> or <b>inline</b> (and sometimes <b>inline-block</b>)</li>
-        <li>Inline and inline-block elements flow top to bottom, left to right</li>
-        <li>Block elements only flow top to bottom, unless it has <code>float</code></li>
-        <li>This can be overridden by the <code>display</code> property</li>
-        <li><code>position: absolute;</code> and <code>position: fixed;</code> takes an element out of flow entirely</li>
-      </ul>
-      <label class="slide-next" for="slide-layering"></label>
-      <label class="slide-previous" for="slide-model"></label>
-    </div>
-    <input type="radio" id="slide-layering" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Layering</h1>
-      <div class="half">
+      <input type="radio" id="slide-flow" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Flow</h1>
         <ul>
-          <li><code>z-index</code> only works with set <code>position</code>&mdash;a new stacking context</li>
-          <li><code>z-index</code> orders within the context</li>
-          <li>Alternatives: <code>float</code> and negative <code>margin</code></li>
+          <li>Elements display as either <b>block</b> or <b>inline</b> (and sometimes <b>inline-block</b>)</li>
+          <li>Inline and inline-block elements flow top to bottom, left to right</li>
+          <li>Block elements only flow top to bottom, unless it has <code>float</code></li>
+          <li>This can be overridden by the <code>display</code> property</li>
+          <li><code>position: absolute;</code> and <code>position: fixed;</code> takes an element out of flow entirely</li>
         </ul>
+        <label class="slide-next" for="slide-layering"></label>
+        <label class="slide-previous" for="slide-model"></label>
       </div>
-      <div class="half">
-        <div class="demo">
-          <div class="demo-layer" style="z-index: 6; position: relative;">
-            <span>6</span>
-            <div class="demo-layer" style="z-index: 5;">
-              <span>5</span>
-              <div class="demo-layer" style="z-index: 3; position: relative;">
-                <span>3</span>
-                <div class="demo-layer"></div>
+      <input type="radio" id="slide-layering" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Layering</h1>
+        <div class="half">
+          <ul>
+            <li><code>z-index</code> only works with set <code>position</code>&mdash;a new stacking context</li>
+            <li><code>z-index</code> orders within the context</li>
+            <li>Alternatives: <code>float</code> and negative <code>margin</code></li>
+          </ul>
+        </div>
+        <div class="half">
+          <div class="demo">
+            <div class="demo-layer" style="z-index: 6; position: relative;">
+              <span>6</span>
+              <div class="demo-layer" style="z-index: 5;">
+                <span>5</span>
+                <div class="demo-layer" style="z-index: 3; position: relative;">
+                  <span>3</span>
+                  <div class="demo-layer"></div>
+                </div>
+              </div>
+              <div class="demo-layer" style="z-index: 4; position: relative;">
+                <span>4</span>
+                <div class="demo-layer" style="z-index: 2; position: relative;">
+                  <span>2</span>
+                  <div class="demo-layer"></div>
+                </div>
+                <div class="demo-layer" style="z-index: 1; position: relative;">
+                  <span>1</span>
+                  <div class="demo-layer"></div>
+                </div>
               </div>
             </div>
-            <div class="demo-layer" style="z-index: 4; position: relative;">
-              <span>4</span>
-              <div class="demo-layer" style="z-index: 2; position: relative;">
-                <span>2</span>
-                <div class="demo-layer"></div>
-              </div>
-              <div class="demo-layer" style="z-index: 1; position: relative;">
-                <span>1</span>
-                <div class="demo-layer"></div>
-              </div>
-            </div>
+            <p>The order here is 2 &gt; 1 &gt; 4 &gt; 3 &gt; 5 &gt; 6.</p>
           </div>
-          <p>The order here is 2 &gt; 1 &gt; 4 &gt; 3 &gt; 5 &gt; 6.</p>
         </div>
+        <label class="slide-next" for="slide-reminders"></label>
+        <label class="slide-previous" for="slide-model"></label>
       </div>
-      <label class="slide-next" for="slide-reminders"></label>
-      <label class="slide-previous" for="slide-model"></label>
-    </div>
-    <input type="radio" id="slide-reminders" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Reminders</h1>
-      <div class="half">
-        <ul>
-          <li>Don't underuse CSS</li>
-          <li>Track selector specificity</li>
-          <li>Track stacking contexts</li>
-          <li>Stay in flow (no <code>position</code>) if possible</li>
-          <li>Check browser compatibilities</li>
-        </ul>
-      </div>
-      <div class="half">
-        <ul>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">Mozilla Developer Network</a></li>
-          <li><a href="https://www.w3schools.com/">W3Schools</a></li>
-          <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
-          <li><a href="https://caniuse.com/">Can I use...</a></li>
-        </ul>
-      </div>
-      <label class="slide-next" for="slide-title-3"></label>
-      <label class="slide-previous" for="slide-layering"></label>
-    </div>
-    <input type="radio" id="slide-title-3" name="slide" class="slide-toggle" />
-    <div class="slide slide-title">
-      <h1>Part III</h1>
-      <p class="lead">In Case of Emergency, Break Rules</p>
-      <label class="slide-next" for="slide-underuse"></label>
-      <label class="slide-previous" for="slide-reminders"></label>
-    </div>
-    <input type="radio" id="slide-underuse" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Don't Underuse It</h1>
-      <div class="half">
-        <ul>
-          <li>HTML provides the structure and content</li>
-          <li>CSS provides the styling</li>
-          <li>JavaScript provides the functionality</li>
-        </ul>
-      </div>
-      <div class="half">
-        <div class="demo">
-          <blockquote class="demo-quote">
-            <p>Do unto others twenty-five percent better than you expect them to do unto you. The twenty-five percent is for error.</p>
-            <cite>Linus Pauling</cite>
-          </blockquote>
+      <input type="radio" id="slide-reminders" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Reminders</h1>
+        <div class="half">
+          <ul>
+            <li>Don't underuse CSS</li>
+            <li>Track selector specificity</li>
+            <li>Track stacking contexts</li>
+            <li>Stay in flow (no <code>position</code>) if possible</li>
+            <li>Check browser compatibilities</li>
+          </ul>
         </div>
+        <div class="half">
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">Mozilla Developer Network</a></li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+            <li><a href="https://caniuse.com/">Can I use...</a></li>
+          </ul>
+        </div>
+        <label class="slide-next" for="slide-title-3"></label>
+        <label class="slide-previous" for="slide-layering"></label>
       </div>
-      <label class="slide-next" for="slide-correct"></label>
-      <label class="slide-previous" for="slide-underuse"></label>
-    </div>
-    <input type="radio" id="slide-correct" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Doing It Right</h1>
-      <div class="half">
-        <pre>
-          &lt;div class="quote"&gt;
-          &nbsp;&nbsp;&lt;div class="quote-text"&gt; ... &lt;/div&gt;
-          &nbsp;&nbsp;&lt;div class="quote-author"&gt;LINUS PAULING&lt;/div&gt;
-          &nbsp;&nbsp;&lt;div class="quote-mark"&gt;&ldquo;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;script type="text/javascript"&gt;
-          &nbsp;&nbsp;$('.quote').hover(function() {
-          &nbsp;&nbsp;&nbsp;&nbsp;$('quote-author').show();
-          &nbsp;&nbsp;}, function() {
-          &nbsp;&nbsp;&nbsp;&nbsp;$('quote-author').hide();
-          &nbsp;&nbsp;});
-          &lt;/script&gt;
-        </pre>
+      <input type="radio" id="slide-title-3" name="slide" class="slide-toggle" />
+      <div class="slide slide-title">
+        <h1>Part III</h1>
+        <p class="lead">In Case of Emergency, Break Rules</p>
+        <label class="slide-next" for="slide-underuse"></label>
+        <label class="slide-previous" for="slide-reminders"></label>
       </div>
-      <div class="half">
-        <pre>
-          &lt;blockquote class="quote"&gt;
-          &nbsp;&nbsp;&lt;p&gt;Do unto others twenty-five percent better than you expect them to do unto you. The twenty-five percent is for error.&lt;/p&gt;
-          &nbsp;&nbsp;&lt;cite&gt;Linus Pauling&lt;/cite&gt;
-          &lt;/blockquote&gt;
-          &lt;style type="text/css"&gt;=
-          &nbsp;&nbsp;.quote::before {
-          &nbsp;&nbsp;&nbsp;content: '\201c';
-          &nbsp;&nbsp;&nbsp;font-size: 4em;
-          &nbsp;&nbsp;}
-          &nbsp;&nbsp;.quote cite {
-          &nbsp;&nbsp;&nbsp;&nbsp;height: 0;
-          &nbsp;&nbsp;&nbsp;&nbsp;opacity: 0;
-          &nbsp;&nbsp;&nbsp;&nbsp;text-transform: uppercase;
-          &nbsp;&nbsp;&nbsp;&nbsp;transition: height 400ms, opacity 400ms;
-          &nbsp;&nbsp;}
-          &nbsp;&nbsp;.demo-quote:hover cite {
-          &nbsp;&nbsp;&nbsp;&nbsp;height: 1em;
-          &nbsp;&nbsp;&nbsp;&nbsp;opacity: 1;
-          &nbsp;&nbsp;}
-          &lt;/style&gt;
-        </pre>
+      <input type="radio" id="slide-underuse" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Don't Underuse It</h1>
+        <div class="half">
+          <ul>
+            <li>HTML provides the structure and content</li>
+            <li>CSS provides the styling</li>
+            <li>JavaScript provides the functionality</li>
+          </ul>
+        </div>
+        <div class="half">
+          <div class="demo">
+            <blockquote class="demo-quote">
+              <p>Do unto others twenty-five percent better than you expect them to do unto you. The twenty-five percent is for error.</p>
+              <cite>Linus Pauling</cite>
+            </blockquote>
+          </div>
+        </div>
+        <label class="slide-next" for="slide-correct"></label>
+        <label class="slide-previous" for="slide-title-3"></label>
       </div>
-      <label class="slide-next" for="slide-overuse"></label>
-      <label class="slide-previous" for="slide-underuse"></label>
-    </div>
-    <input type="radio" id="slide-overuse" name="slide" class="slide-toggle" />
-    <div class="slide">
-      <h1>Maybe Overuse It?</h1>
-      <ul>
-        <li>People have made all sorts of <a href="https://diana-adrianne.com/purecss-francine/">pure CSS art</a></li>
-        <li>CSS is <a href="https://jsfiddle.net/Camilo/eQyBa/">(sorta) Turing-complete</a></li>
-        <li>CSS is indisputably a <a href="/css/">complete DFA</a></li>
-      </ul>
-      <label class="slide-next" for="slide-cover"></label>
-      <label class="slide-previous" for="slide-correct"></label>
+      <input type="radio" id="slide-correct" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Doing It Right</h1>
+        <div class="half">
+          <pre>
+            &lt;div class="quote"&gt;
+            &nbsp;&nbsp;&lt;div class="quote-text"&gt; ... &lt;/div&gt;
+            &nbsp;&nbsp;&lt;div class="quote-author"&gt;LINUS PAULING&lt;/div&gt;
+            &nbsp;&nbsp;&lt;div class="quote-mark"&gt;&ldquo;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;script type="text/javascript"&gt;
+            &nbsp;&nbsp;$('.quote').hover(function() {
+            &nbsp;&nbsp;&nbsp;&nbsp;$('quote-author').show();
+            &nbsp;&nbsp;}, function() {
+            &nbsp;&nbsp;&nbsp;&nbsp;$('quote-author').hide();
+            &nbsp;&nbsp;});
+            &lt;/script&gt;
+          </pre>
+        </div>
+        <div class="half">
+          <pre>
+            &lt;blockquote class="quote"&gt;
+            &nbsp;&nbsp;&lt;p&gt;Do unto others twenty-five percent better than you expect them to do unto you. The twenty-five percent is for error.&lt;/p&gt;
+            &nbsp;&nbsp;&lt;cite&gt;Linus Pauling&lt;/cite&gt;
+            &lt;/blockquote&gt;
+            &lt;style type="text/css"&gt;=
+            &nbsp;&nbsp;.quote::before {
+            &nbsp;&nbsp;&nbsp;content: '\201c';
+            &nbsp;&nbsp;&nbsp;font-size: 4em;
+            &nbsp;&nbsp;}
+            &nbsp;&nbsp;.quote cite {
+            &nbsp;&nbsp;&nbsp;&nbsp;height: 0;
+            &nbsp;&nbsp;&nbsp;&nbsp;opacity: 0;
+            &nbsp;&nbsp;&nbsp;&nbsp;text-transform: uppercase;
+            &nbsp;&nbsp;&nbsp;&nbsp;transition: height 400ms, opacity 400ms;
+            &nbsp;&nbsp;}
+            &nbsp;&nbsp;.demo-quote:hover cite {
+            &nbsp;&nbsp;&nbsp;&nbsp;height: 1em;
+            &nbsp;&nbsp;&nbsp;&nbsp;opacity: 1;
+            &nbsp;&nbsp;}
+            &lt;/style&gt;
+          </pre>
+        </div>
+        <label class="slide-next" for="slide-overuse"></label>
+        <label class="slide-previous" for="slide-underuse"></label>
+      </div>
+      <input type="radio" id="slide-overuse" name="slide" class="slide-toggle" />
+      <div class="slide">
+        <h1>Maybe Overuse It?</h1>
+        <ul>
+          <li>People have made all sorts of <a href="https://diana-adrianne.com/purecss-francine/">pure CSS art</a></li>
+          <li>CSS is <a href="https://jsfiddle.net/Camilo/eQyBa/">(sorta) Turing-complete</a></li>
+          <li>CSS is indisputably a <a href="/css/">complete DFA</a></li>
+        </ul>
+        <label class="slide-next" for="slide-cover"></label>
+        <label class="slide-previous" for="slide-correct"></label>
+      </div>
     </div>
   </body>
 </html>
