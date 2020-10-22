@@ -1,7 +1,7 @@
 squiffles:
-	cd src && php -f index.php > ../index.php
+	cd src && php -f index.php > ../index.html
 	mkdir -p cards
-	cd src/cards && php -f index.php > ../../cards/index.php
+	cd src/cards && php -f index.php > ../../cards/index.html
 
 clean:
-	rm -f index.php
+	rm -rf index.html cards

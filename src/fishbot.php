@@ -76,7 +76,7 @@ EOF;
           $border .= ' 0';
           break;
         case 'round':
-          $radius = " border-radius: $border;";
+          $radius = " border-radius: ${border}em;";
         case 'square':
           $left -= $settings['stroke-width'] * $scale;
           break;

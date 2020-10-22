@@ -1,4 +1,4 @@
-body, samp {
+body, .demo {
   font-family: 'Titillium Web', sans-serif;
 }
 body {
@@ -42,7 +42,7 @@ code {
   padding: 0.2em 0.3em;
   font-size: 0.8em;
 }
-pre, samp {
+pre, .demo {
   margin: 1em 0;
   border: 0.125em solid #859fab;
   padding: 1em;
@@ -53,12 +53,7 @@ pre, samp {
 pre {
   white-space: pre-line;
 }
-samp {
-  display: block;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #000;
-}
-pre:first-child, samp:first-child {
+pre:first-child, .demo:first-child {
   margin-top: 0;
 }
 .slide {
@@ -250,6 +245,11 @@ pre:first-child, samp:first-child {
 }
 .timeline td p:first-child:last-child {
   border-radius: 0.5em;
+}
+.demo {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
 }
 .demo-key {
   color: gray;

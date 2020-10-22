@@ -41,7 +41,7 @@ EOF
 function squiffles_cup($bottom, $left, $width, $height) {
   printf(
     <<<EOF
-<span class="coaster-cup" style="bottom: %.1fem; left: %.1fem; width: %dem; height: %eem;">
+<span class="coaster-cup" style="bottom: %.1fem; left: %.1fem; width: %dem; height: %dem;">
   <span style="background-position: %.2fem %.2fem"></span>
   <span></span>
 </span>
