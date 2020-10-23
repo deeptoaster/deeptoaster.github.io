@@ -1,7 +1,7 @@
 <?
 function squiffles_cap($bottom, $left, $width, $height) {
   $x = $width / 10 - $left - 0.3;
-  $y = $bottom + $height - 13 - 0.3;
+  $y = $bottom + $height - 14 - 0.3;
 
   printf(
     <<<EOF
@@ -53,7 +53,7 @@ EOF
     $width,
     $height,
     -$left + 0.3,
-    $bottom + $height / 4 - 13
+    $bottom + $height / 4 - 14
   );
 }
 

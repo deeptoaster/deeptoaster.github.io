@@ -470,7 +470,8 @@ a.honeycomb-cell {
 }
 .coaster {
   position: relative;
-  height: 13em;
+  height: 14em;
+  margin-op: -1em;
   overflow: hidden;
 }
 .coaster-track, .coaster-cap > span, .coaster-cap > span > span,
