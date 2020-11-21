@@ -7,3 +7,6 @@
 [submodule "css"]
 	path = css
 	url = ssh://git@github.com/deeptoaster/stupid-css
+[submodule "slides"]
+	path = slides
+	url = ssh://git@github.com/deeptoaster/stupid-css-slides
