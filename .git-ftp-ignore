@@ -4,9 +4,5 @@
 .gitignore
 .gitmodules
 Makefile
-css/.gitignore
-css/Makefile
 lib/*
-slides/.gitignore
-slides/Makefile
 src/*
