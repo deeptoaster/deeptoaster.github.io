@@ -1,7 +1,12 @@
+.browserslistrc
 .git-ftp-ignore
 .git-ftp-include
 .gitignore
 .gitmodules
-lib/*
 Makefile
+css/.gitignore
+css/Makefile
+lib/*
+slides/.gitignore
+slides/Makefile
 src/*
