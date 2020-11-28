@@ -1,7 +1,6 @@
 cards/index.html:src/cards/index.php
 cards/index.html:src/cards/templates/index.tpl
 cards/index.html:src/fishbot.php
-css/css.css:css/src/css.css
 index.html:src/coaster.php
 index.html:src/fishbot.php
 index.html:src/index.php
@@ -10,6 +9,5 @@ index.html:src/templates/gallery.tpl
 index.html:src/templates/index.tpl
 index.html:src/templates/links.tpl
 index.html:src/templates/travel.tpl
-slides/slides.css:slides/src/slides.css
 squiffles.css:src/squiffles.css
 !config.php
