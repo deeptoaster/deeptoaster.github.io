@@ -593,6 +593,8 @@ a.honeycomb-cell {
 }
 .timeline > dt {
   position: relative;
+  position: sticky;
+  top: 6em;
   float: left;
   clear: left;
   width: 4.9em;
@@ -601,7 +603,10 @@ a.honeycomb-cell {
   background-color: #27556c;
 }
 .page .timeline > dt {
+  position: relative;
+  top: 0;
   width: 3em;
+  margin-top: 1em;
   font-size: 1em;
 }
 .timeline > dt::before {
@@ -659,6 +664,28 @@ a.honeycomb-cell {
 }
 .post-category-updates:hover, .post-category-updates:focus {
   background-color: #ac0a2d;
+}
+.cat-item {
+  overflow: hidden;
+}
+.cat-item a {
+  position: relative;
+}
+.cat-item a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.7em;
+  left: 100%;
+  width: 40em;
+  height: 0.4em;
+  margin-left: 1em;
+}
+.cat-item-2 a::after {
+  background-color: #764b8e;
+}
+.cat-item-2 a:hover::after, .cat-item-2 a:focus::after {
+  background-color: #9775aa;
 }
 .timeline > dd {
   margin-left: 11.9em;
@@ -1220,13 +1247,13 @@ body.page #sidebar {
     font-size: 16px;
   }
   .timeline > dt {
-    top: 3em;
-    left: -2.4em;
+    top: 8em;
+    margin-left: -1em;
     transform: rotate(-90deg);
   }
   .page .timeline > dt {
     top: 0;
-    left: 0;
+    margin-left: 1.4em;
     transform: none;
   }
   .timeline > dt::before, .timeline > dt::after {
