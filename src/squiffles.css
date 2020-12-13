@@ -5,10 +5,14 @@ html, #gallery, .coaster-cap::before, .coaster-cup > span + span,
 .coaster-cup > span + span::after, .coaster-line, .coaster-clear {
   background-color: #161819;
 }
+body, .post-title {
+  font-family: 'Titillium Web', sans-serif;
+}
 body {
   margin: 0;
   color: #232627;
-  font: 34px/1.5 'Titillium Web', sans-serif;
+  font-size: 34px;
+  line-height: 1.5;
 }
 body.page {
   position: relative;
@@ -71,12 +75,15 @@ a {
 a:hover, a:focus {
   text-decoration: underline;
 }
-a img {
-  border: none;
-}
 i {
   font-style: normal;
   padding-right: 0.5em;
+}
+a img {
+  border: none;
+}
+p img, ul img {
+  vertical-align: middle;
 }
 ul {
   list-style-type: square;
@@ -148,7 +155,10 @@ td {
 .post-title {
   padding: 0.6em 0.8em;
   background-color: #d4c26a;
+  text-transform: none;
+  font-weight: bold;
   line-height: 1.2;
+  letter-spacing: normal;
 }
 .post-content, #main .post-content h3 {
   color: #222;
