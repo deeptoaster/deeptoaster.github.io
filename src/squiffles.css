@@ -691,6 +691,12 @@ a.honeycomb-cell {
   height: 0.4em;
   margin-left: 1em;
 }
+.cat-item-1 a::after {
+  background-color: #9d344b;
+}
+.cat-item-1 a:hover::after, .cat-item-1 a:focus::after {
+  background-color: #c56277;
+}
 .cat-item-2 a::after {
   background-color: #764b8e;
 }
