@@ -278,6 +278,9 @@ td {
   background-color: rgba(196, 98, 119, 0.4);
   color: #761429;
 }
+.wp-block-quote a {
+  text-decoration: underline;
+}
 .svg {
   position: relative;
 }
@@ -1247,6 +1250,14 @@ body.page #sidebar {
 #gallery {
   padding-top: 2em;
   color: #617078;
+}
+@media (max-aspect-ratio: 4/5) {
+  #fishbot .links {
+    font-size: 1em;
+  }
+  .links > li {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 1920px) {
   body {
