@@ -706,6 +706,12 @@ a.honeycomb-cell {
 .cat-item-2 a:hover::after, .cat-item-2 a:focus::after {
   background-color: #9775aa;
 }
+.cat-item-3 a::after {
+  background-color: #aa7539;
+}
+.cat-item-3 a:hover::after, .cat-item-3 a:focus::after {
+  background-color: #d4a36a;
+}
 .timeline > dd {
   margin-left: 11.9em;
   border-left: 0.2em solid #859fab;
@@ -1274,7 +1280,8 @@ body.page #sidebar {
     font-size: 16px;
   }
   .timeline > dt {
-    top: 8em;
+    position: relative;
+    top: 1em;
     margin-left: -1em;
     transform: rotate(-90deg);
   }
