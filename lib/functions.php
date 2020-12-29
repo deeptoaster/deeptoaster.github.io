@@ -1,4 +1,6 @@
 <?
+define('SQUIFFLES_TRELLO_PATTERN', '/\bhttps?:\/\/trello.com\/c\/(\w+)/');
+
 $config = array();
 
 include(__DIR__ . '/../config.php');
@@ -31,7 +33,7 @@ function squiffles_attach_to_trello($cards, $url) {
   curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
 
   foreach ($cards as $card) {
-    if (preg_match('/^https?:\/\/trello.com\/c\/(\w+)/', $card, $matches)) {
+    if (preg_match(SQUIFFLES_TRELLO_PATTERN, $card, $matches)) {
       $api_url = "https://api.trello.com/1/cards/$matches[1]/attachments";
       curl_setopt($handle, CURLOPT_HTTPGET, true);
       curl_setopt($handle, CURLOPT_URL, "$api_url?$query");
