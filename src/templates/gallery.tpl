@@ -3,83 +3,28 @@
   <div class="showcase">
     <div class="showcase-pages">
       <div>
-        <div id="showcase-page-0" class="showcase-page">
-          <a class="showcase-pager" href="#showcase-page-1">
+{foreach from=$pages item=page}        <div id="showcase-page-{$page.id}" class="showcase-page">
+          <a class="showcase-pager" href="#showcase-page-{$page.previous}">
             &lang;
           </a>
-          <a class="showcase-thumbnail" href="#showcase-centerfold-0">
-            <img src="http://via.placeholder.com/450x300" alt="" />
+{foreach from=$page.thumbnails item=thumbnail}          <a class="showcase-thumbnail" href="#showcase-centerfold-{$thumbnail.id}">
+            <img src="{$thumbnail.image}" alt="" />
           </a>
-          <a class="showcase-thumbnail" href="#showcase-centerfold-1">
-            <img src="http://via.placeholder.com/600x400" alt="" />
-          </a>
-          <a class="showcase-thumbnail" href="#showcase-centerfold-2">
-            <img src="http://via.placeholder.com/750x500" alt="" />
-          </a>
-          <a class="showcase-thumbnail" href="#showcase-centerfold-3">
-            <img src="http://via.placeholder.com/450x300" alt="" />
-          </a>
-          <a class="showcase-pager" href="#showcase-page-1">
+{/foreach}          <a class="showcase-pager" href="#showcase-page-{$page.next}">
             &rang;
           </a>
         </div>
-        <div id="showcase-page-1" class="showcase-page">
-          <a class="showcase-pager" href="#showcase-page-0">
-            &lang;
-          </a>
-          <a class="showcase-thumbnail" href="#showcase-centerfold-4">
-            <img src="http://via.placeholder.com/600x400" alt="" />
-          </a>
-          <a class="showcase-thumbnail" href="#showcase-centerfold-5">
-            <img src="http://via.placeholder.com/750x500" alt="" />
-          </a>
-          <span class="showcase-thumbnail"></span>
-          <span class="showcase-thumbnail"></span>
-          <a class="showcase-pager" href="#showcase-page-0">
-            &rang;
-          </a>
-        </div>
-      </div>
+{/foreach}      </div>
     </div>
     <div class="showcase-focus">
       <div>
-        <div id="showcase-centerfold-0" class="showcase-centerfold">
-          <img src="http://via.placeholder.com/450x300" alt="" />
+{foreach from=$pages item=page}{foreach from=$page.thumbnails item=thumbnail}        <div id="showcase-centerfold-{$thumbnail.id}" class="showcase-centerfold">
+          <img src="{$thumbnail.image}" alt="" />
           <div class="showcase-caption">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
           </div>
         </div>
-        <div id="showcase-centerfold-1" class="showcase-centerfold">
-          <img src="http://via.placeholder.com/600x400" alt="" />
-          <div class="showcase-caption">
-            <p>sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam,</p>
-          </div>
-        </div>
-        <div id="showcase-centerfold-2" class="showcase-centerfold">
-          <img src="http://via.placeholder.com/750x500" alt="" />
-          <div class="showcase-caption">
-            <p>quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.</p>
-          </div>
-        </div>
-        <div id="showcase-centerfold-3" class="showcase-centerfold">
-          <img src="http://via.placeholder.com/450x300" alt="" />
-          <div class="showcase-caption">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
-          </div>
-        </div>
-        <div id="showcase-centerfold-4" class="showcase-centerfold">
-          <img src="http://via.placeholder.com/600x400" alt="" />
-          <div class="showcase-caption">
-            <p>sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam,</p>
-          </div>
-        </div>
-        <div id="showcase-centerfold-5" class="showcase-centerfold">
-          <img src="http://via.placeholder.com/750x500" alt="" />
-          <div class="showcase-caption">
-            <p>quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.</p>
-          </div>
-        </div>
-      </div>
+{/foreach}{/foreach}      </div>
     </div>
   </div>
 </div>

@@ -1,4 +1,6 @@
 <?
+define('SQUIFFLES_ITEMS_PER_PAGE', 4);
+
 include(__DIR__ . '/../lib/cleverly/Cleverly.class.php');
 
 function squiffles_project($lat, $lng) {
@@ -45,6 +47,35 @@ function squiffles_point($lat, $lng, $label, $right) {
     'side' => $right ? 'right' : 'left',
     'style' => sprintf('top: %.2fem; left: %.2fem;', $y / 20, $x / 20)
   );
+}
+
+function squiffles_showcase($items) {
+  $pages = array();
+
+  $page_count = (int)(
+    (count($items) + SQUIFFLES_ITEMS_PER_PAGE - 1) / SQUIFFLES_ITEMS_PER_PAGE
+  );
+
+  foreach ($items as $item_number => $item) {
+    if ($item_number % SQUIFFLES_ITEMS_PER_PAGE === 0) {
+      $page_number = (int)($item_number / 4);
+
+      $pages[$page_number] = array(
+        'id' => $page_number,
+        'next' => $page_number === $page_count - 1
+          ? 0
+          : $page_number + 1,
+        'previous' => $page_number === 0
+          ? $page_count - 1
+          : $page_number - 1,
+        'thumbnails' => array()
+      );
+    }
+
+    $pages[$page_number]['thumbnails'][] = $item;
+  }
+
+  return $pages;
 }
 
 $arcs = array(
@@ -157,6 +188,46 @@ $points = array(
   squiffles_point(21.4360, -158.1849, 'Waianae, Hawaii', true)
 );
 
+$items = array(
+  array(
+    'description' =>
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit,',
+    'id' => 0,
+    'image' => 'http://via.placeholder.com/450x300'
+  ),
+  array(
+    'description' =>
+        'sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam,',
+    'id' => 1,
+    'image' => 'http://via.placeholder.com/600x400'
+  ),
+  array(
+    'description' =>
+        'quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.',
+    'id' => 2,
+    'image' => 'http://via.placeholder.com/750x500'
+  ),
+  array(
+    'description' =>
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit,',
+    'id' => 3,
+    'image' => 'http://via.placeholder.com/450x300'
+  ),
+  array(
+    'description' =>
+        'sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam,',
+    'id' => 4,
+    'image' => 'http://via.placeholder.com/600x400'
+  ),
+  array(
+    'description' =>
+        'quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.',
+    'id' => 5,
+    'image' => 'http://via.placeholder.com/750x500'
+  )
+);
+
+$pages = squiffles_showcase($items);
 $cleverly = new Cleverly();
 $cleverly->preserveIndent = true;
 $cleverly->setTemplateDir(__DIR__ . '/templates');
@@ -169,6 +240,7 @@ $coaster = ob_get_clean();
 $cleverly->display('index.tpl', array(
   'arcs' => $arcs,
   'coaster' => $coaster,
-  'points' => $points
+  'points' => $points,
+  'pages' => $pages
 ));
 ?>

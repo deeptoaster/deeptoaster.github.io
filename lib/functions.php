@@ -7,8 +7,8 @@ include(__DIR__ . '/../config.php');
 
 /**
  * Creates attachments from a URL on each of a list of Trello cards.
- * @param $cards The list of card URLs to attach to.
- * @param $url The URL from which to create attachments.
+ * @param array<string> $cards The list of card URLs to attach to.
+ * @param string $url The URL from which to create attachments.
  */
 function squiffles_attach_to_trello($cards, $url) {
   global $config;
