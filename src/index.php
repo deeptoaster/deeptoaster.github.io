@@ -72,9 +72,11 @@ function squiffles_showcase($items) {
       );
     }
 
-    $pages[$page_number]['thumbnails'][] = $item;
+    $pages[$page_number]['thumbnails'][] = $item + array('id' => $item_number);
+    $pages[$page_number]['padding'] = array();
   }
 
+  $pages[$page_number]['padding'] = array_fill(0, SQUIFFLES_ITEMS_PER_PAGE - 1 - (count($items) + SQUIFFLES_ITEMS_PER_PAGE - 1) % SQUIFFLES_ITEMS_PER_PAGE, null);
   return $pages;
 }
 
@@ -188,46 +190,39 @@ $points = array(
   squiffles_point(21.4360, -158.1849, 'Waianae, Hawaii', true)
 );
 
-$items = array(
+$pages = squiffles_showcase(array(
   array(
     'description' =>
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit,',
-    'id' => 0,
-    'image' => 'http://via.placeholder.com/450x300'
+        'This is a <a href="https://blacker.caltech.edu/">website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
+    'image' => '/bin/images/showcase_blacker.png'
   ),
   array(
     'description' =>
         'sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam,',
-    'id' => 1,
     'image' => 'http://via.placeholder.com/600x400'
   ),
   array(
     'description' =>
-        'quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.',
-    'id' => 2,
-    'image' => 'http://via.placeholder.com/750x500'
+        'This is a custom sign-up experience built for a one-day cyberpunk-themed puzzle hunt called Project Hyperskelion.',
+    'image' => '/bin/images/showcase_hyper.gif'
   ),
   array(
     'description' =>
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit,',
-    'id' => 3,
-    'image' => 'http://via.placeholder.com/450x300'
+        'This is an online grasp solver for point contacts with friction (PCWF). Check it out <a href="/force-closure/">online</a> or <a href="https://github.com/deeptoaster/force-closure">on GitHub</a>!',
+    'image' => '/bin/images/showcase_pcwf.png'
   ),
   array(
     'description' =>
         'sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam,',
-    'id' => 4,
     'image' => 'http://via.placeholder.com/600x400'
   ),
   array(
     'description' =>
-        'quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat.',
-    'id' => 5,
-    'image' => 'http://via.placeholder.com/750x500'
+        'An early webapp built for the graphing calculator community, the <a href="https://clrhome.org/ies/">Integrated Editor System</a> is an IDE for creating TI-83 Plus&ndash;series calculator programs and other variables online.',
+    'image' => '/bin/images/showcase_ies.png'
   )
-);
+));
 
-$pages = squiffles_showcase($items);
 $cleverly = new Cleverly();
 $cleverly->preserveIndent = true;
 $cleverly->setTemplateDir(__DIR__ . '/templates');

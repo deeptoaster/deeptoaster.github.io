@@ -20,7 +20,7 @@
     </a>
     <div class="honeycomb-cell"></div>
     <div class="honeycomb-cell"></div>
-    <a class="honeycomb-cell honeycomb-clrhome" href="http://clrhome.org/" title="ClrHome">
+    <a class="honeycomb-cell honeycomb-clrhome" href="https://clrhome.org/" title="ClrHome">
       <img class="honeycomb-honey" src="/bin/images/clrhome.png" alt="ClrHome" />
     </a>
     <div class="honeycomb-cell"></div>

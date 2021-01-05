@@ -10,6 +10,7 @@
 {foreach from=$page.thumbnails item=thumbnail}          <a class="showcase-thumbnail" href="#showcase-centerfold-{$thumbnail.id}">
             <img src="{$thumbnail.image}" alt="" />
           </a>
+{/foreach}{foreach from=$page.padding}          <span class="showcase-thumbnail"></span>
 {/foreach}          <a class="showcase-pager" href="#showcase-page-{$page.next}">
             &rang;
           </a>
@@ -21,7 +22,7 @@
 {foreach from=$pages item=page}{foreach from=$page.thumbnails item=thumbnail}        <div id="showcase-centerfold-{$thumbnail.id}" class="showcase-centerfold">
           <img src="{$thumbnail.image}" alt="" />
           <div class="showcase-caption">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+            <p>{$thumbnail.description}</p>
           </div>
         </div>
 {/foreach}{/foreach}      </div>
