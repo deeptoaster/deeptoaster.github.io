@@ -193,33 +193,38 @@ $points = array(
 $pages = squiffles_showcase(array(
   array(
     'description' =>
-        'This is a <a href="https://blacker.caltech.edu/">website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
-    'image' => '/bin/images/showcase_blacker.png'
-  ),
-  array(
-    'description' =>
-        'sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam,',
-    'image' => 'http://via.placeholder.com/600x400'
-  ),
-  array(
-    'description' =>
         'This is a custom sign-up experience built for a one-day cyberpunk-themed puzzle hunt called Project Hyperskelion.',
     'image' => '/bin/images/showcase_hyper.gif'
   ),
   array(
     'description' =>
         'This is an online grasp solver for point contacts with friction (PCWF). Check it out <a href="/force-closure/">online</a> or <a href="https://github.com/deeptoaster/force-closure">on GitHub</a>!',
-    'image' => '/bin/images/showcase_pcwf.png'
+    'image' => '/bin/images/showcase_pcwf.gif'
   ),
   array(
     'description' =>
-        'sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam,',
-    'image' => 'http://via.placeholder.com/600x400'
+        'This is a <a href="https://blacker.caltech.edu/">website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
+    'image' => '/bin/images/showcase_blacker.png'
   ),
   array(
     'description' =>
         'An early webapp built for the graphing calculator community, the <a href="https://clrhome.org/ies/">Integrated Editor System</a> is an IDE for creating TI-83 Plus&ndash;series calculator programs and other variables online.',
     'image' => '/bin/images/showcase_ies.png'
+  ),
+  array(
+    'description' =>
+        'Poster designed for We\'re All Mad Here, a one-day puzzle hunt in 2018.',
+    'image' => '/bin/images/showcase_mad.png'
+  ),
+  array(
+    'description' =>
+        'Poster designed for Hornsdale, a one-day puzzle hunt in 2017',
+    'image' => '/bin/images/showcase_hornsdale.png'
+  ),
+  array(
+    'description' =>
+        'Header of an infographic designed in 2016.',
+    'image' => '/bin/images/showcase_real.png'
   )
 ));
 
