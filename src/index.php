@@ -76,7 +76,14 @@ function squiffles_showcase($items) {
     $pages[$page_number]['padding'] = array();
   }
 
-  $pages[$page_number]['padding'] = array_fill(0, SQUIFFLES_ITEMS_PER_PAGE - 1 - (count($items) + SQUIFFLES_ITEMS_PER_PAGE - 1) % SQUIFFLES_ITEMS_PER_PAGE, null);
+  $pages[$page_number]['padding'] = array_fill(
+    0,
+    SQUIFFLES_ITEMS_PER_PAGE - 1 -
+        (count($items) + SQUIFFLES_ITEMS_PER_PAGE - 1) %
+        SQUIFFLES_ITEMS_PER_PAGE,
+    null
+  );
+
   return $pages;
 }
 
@@ -145,6 +152,8 @@ $arcs = array(
   squiffles_arc(39.7392, -104.9903, 40.4406,  -79.9959,  40, 'plane'), // 2020-03-10
   squiffles_arc(47.6062, -122.3321, 40.4406,  -79.9959,  45, 'plane'), // 2020-09-15
   squiffles_arc(21.3069, -157.8583, 47.6062, -122.3321,  60, 'plane'), // 2020-09-16
+  squiffles_arc(21.3069, -157.8583, 45.5051, -122.6750,  50, 'plane'), // 2020-11-16
+  squiffles_arc(45.5051, -122.6750, 39.7392, -104.9903,  25, 'plane'), // 2021-01-15
   squiffles_arc(35.0044, -118.9495, 34.0522, -118.2437,   5, 'thumb'), // 2014-11-06
   squiffles_arc(37.7749, -122.4194, 35.0044, -118.9495,  10, 'thumb'), // 2014-11-07
   squiffles_arc(38.5816, -121.4944, 34.0522, -118.2437,  25, 'thumb'), // 2015-03-23
@@ -185,9 +194,10 @@ $points = array(
   squiffles_point(31.9802,  120.8943, 'Nantong, China', false),
   squiffles_point(40.4406,  -79.9959, 'Pittsburgh, Pennsylvania', true),
   squiffles_point(45.5051, -122.6750, 'Portland, Oregon', false),
-  squiffles_point(40.2338, -111.6585, 'Provo, Utah', true),
+  squiffles_point(40.2338, -111.6585, 'Provo, Utah', false),
   squiffles_point(37.7749, -122.4194, 'San Francisco, California', false),
-  squiffles_point(21.4360, -158.1849, 'Waianae, Hawaii', true)
+  squiffles_point(21.4360, -158.1849, 'Waianae, Hawaii', true),
+  squiffles_point(39.2467, -106.2935, 'Leadville, Colorado', true)
 );
 
 $pages = squiffles_showcase(array(
@@ -203,8 +213,13 @@ $pages = squiffles_showcase(array(
   ),
   array(
     'description' =>
-        'This is a <a href="https://blacker.caltech.edu/">website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
-    'image' => '/bin/images/showcase_blacker.png'
+        'Poster designed for We\'re All Mad Here, a one-day puzzle hunt in 2018.',
+    'image' => '/bin/images/showcase_mad.png'
+  ),
+  array(
+    'description' =>
+        'One of my first projects to gain traction online, <a href="https://www.polygon.com/gaming/2012/9/28/3422822/fruit-ninja-gets-all-scientific-on-this-ti-83-plus-calculator">Fruit Ninja on a TI-83 Plus</a> is a real game for the graphing calculator series.',
+    'image' => '/bin/images/showcase_ninja.gif'
   ),
   array(
     'description' =>
@@ -213,8 +228,8 @@ $pages = squiffles_showcase(array(
   ),
   array(
     'description' =>
-        'Poster designed for We\'re All Mad Here, a one-day puzzle hunt in 2018.',
-    'image' => '/bin/images/showcase_mad.png'
+        'This is a <a href="https://blacker.caltech.edu/">website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
+    'image' => '/bin/images/showcase_blacker.png'
   ),
   array(
     'description' =>

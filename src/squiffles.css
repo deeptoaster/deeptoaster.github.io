@@ -278,7 +278,7 @@ td {
   background-color: rgba(196, 98, 119, 0.4);
   color: #761429;
 }
-.wp-block-quote a {
+.wp-block-quote a, .showcase a {
   text-decoration: underline;
 }
 .svg {
@@ -351,6 +351,7 @@ td {
   display: block;
   position: absolute;
   top: 0.2em;
+  z-index: 1;
   width: 0;
   height: 2em;
   overflow: hidden;
