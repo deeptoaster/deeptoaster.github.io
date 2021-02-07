@@ -242,14 +242,17 @@ td {
 .wp-block-embed, .wp-block-image {
   margin: 1em 0;
 }
-.wp-block-embed .fb-post, .wp-block-image img, .wp-block-table td > img {
+.wp-block-embed .fb-post,
+.wp-block-embed .wp-embedded-content,
+.wp-block-image img,
+.wp-block-table td > img {
   display: block;
   margin: auto;
   border: 0.1em solid #eee;
   box-shadow: 0 0 0.2em #222;
   background-color: #fff;
 }
-.wp-block-embed .fb-post {
+.wp-block-embed .fb-post, .wp-block-embed .wp-embedded-content {
   width: 500px;
 }
 .wp-block-image img, .wp-block-table td > img {
