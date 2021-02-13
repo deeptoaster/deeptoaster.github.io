@@ -10,3 +10,6 @@
 [submodule "slides"]
 	path = slides
 	url = ssh://git@github.com/deeptoaster/stupid-css-slides
+[submodule "tracker"]
+	path = tracker
+	url = ssh://git@github.com/deeptoaster/tasker-tracker
