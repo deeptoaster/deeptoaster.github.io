@@ -1443,12 +1443,12 @@ body.page #sidebar {
   }
 }
 @media (max-aspect-ratio: 3/5) {
-  h1 {
-    text-align: center;
-    font-size: 4em;
-  }
   #header {
     padding-bottom: 5em;
+  }
+  #header h1 {
+    text-align: center;
+    font-size: 4em;
   }
   #header .pull-right {
     position: absolute;
@@ -1457,6 +1457,10 @@ body.page #sidebar {
     text-align: center;
     font-size: 2em;
     top: 3em;
+  }
+  #main,
+  #sidebar {
+    padding-top: 16em;
   }
   #fishbot .links {
     font-size: 1.5em;
