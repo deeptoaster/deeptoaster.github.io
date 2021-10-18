@@ -1,18 +1,18 @@
 <ul class="links">
   <li>
-    <i class="flaticon-note"></i>
+    <i class="icon-note"></i>
     <a href="mailto:deeptoaster@gmail.com">Email</a>
   </li>
   <li>
-    <i class="flaticon-square"></i>
-    <a href="https://www.facebook.com/deeptoaster">Facebook</a>
+    <i class="icon-lastfm2"></i>
+    <a href="https://www.last.fm/user/deeptoaster">Last.fm</a>
   </li>
   <li>
-    <i class="flaticon-couchsurfing-logo"></i>
+    <i class="icon-couchsurfing-logo"></i>
     <a href="https://www.couchsurfing.com/people/deeptoaster">Couchsurfing</a>
   </li>
   <li>
-    <i class="flaticon-multimedia"></i>
+    <i class="icon-multimedia"></i>
     <a href="https://github.com/deeptoaster">GitHub</a>
   </li>
 </ul>

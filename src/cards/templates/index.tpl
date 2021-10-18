@@ -3,7 +3,7 @@
   <head>
     <title>Cards - Deep Toaster</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="/bin/fonts/flaticon.css" type="text/css" rel="stylesheet" />
+    <link href="/bin/fonts/squiffles.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:800%7CTitillium+Web:400,700" type="text/css" rel="stylesheet" />
     <link href="/squiffles.css" type="text/css" rel="stylesheet" />
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-168811289-1"></script>
@@ -53,15 +53,15 @@
             <h2>Will Yu</h2>
             <p>
               <a href="tel:+15034278483">(503) 427-8483</a>
-              <i class="flaticon-telephone-of-old-design"></i>
+              <i class="icon-telephone-of-old-design"></i>
             </p>
             <p>
               <a href="mailto:deeptoaster@gmail.com">deeptoaster@gmail.com</a>
-              <i class="flaticon-note"></i>
+              <i class="icon-note"></i>
             </p>
             <p>
               <a href="http://fishbotwilleatyou.com/">fishbotwilleatyou.com</a>
-              <i class="flaticon-link"></i>
+              <i class="icon-link"></i>
             </p>
           </div>
         </div>
