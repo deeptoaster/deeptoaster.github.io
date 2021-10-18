@@ -429,7 +429,7 @@ td {
 .links {
   display: block;
   position: absolute;
-  bottom: 2em;
+  bottom: 2.5em;
   width: 80%;
   margin: 0 10%;
   padding: 0;
@@ -656,6 +656,23 @@ a.honeycomb-cell {
 }
 .coaster-cup > span + span::after {
   bottom: 25%;
+}
+.bouncer {
+  display: block;
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  padding: 1em;
+  font-size: 0.5em;
+}
+.bouncer::after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 2em;
+  border-style: solid;
+  transform: rotate(45deg);
+  animation: 2s infinite bounce;
 }
 .progress {
   margin: 0.7em 0;
@@ -1014,6 +1031,9 @@ h3,
 #header a,
 #fishbot .links {
   color: #617078;
+}
+#fishbot .bouncer::after {
+  border-color: #617078;
 }
 #header a {
   display: inline-block;
@@ -1418,6 +1438,35 @@ body.page #sidebar {
   .links > li {
     width: 50%;
   }
+  .bouncer {
+    font-size: 0.8em;
+  }
+}
+@media (max-aspect-ratio: 3/5) {
+  h1 {
+    text-align: center;
+    font-size: 4em;
+  }
+  #header {
+    padding-bottom: 5em;
+  }
+  #header .pull-right {
+    position: absolute;
+    float: none;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    top: 3em;
+  }
+  #fishbot .links {
+    font-size: 1.5em;
+  }
+  .links > li {
+    width: 100%;
+  }
+  .bouncer {
+    font-size: 1em;
+  }
 }
 @media screen and (max-width: 1920px) {
   body {
@@ -1566,5 +1615,22 @@ body.page #sidebar {
   100% {
     left: 45.3em;
     transform: scale(2) rotateY(180deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    border-width: 0 0.3em 0.3em 0;
+    margin-bottom: 0;
+    margin-left: -1.65em;
+  }
+  50% {
+    border-width: 0 0.2em 0.2em 0;
+    margin-bottom: -0.5em;
+    margin-left: -1.6em;
+  }
+  100% {
+    border-width: 0 0.3em 0.3em 0;
+    margin-bottom: 0;
+    margin-left: -1.65em;
   }
 }
