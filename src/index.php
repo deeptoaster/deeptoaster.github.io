@@ -156,6 +156,8 @@ $arcs = array(
   squiffles_arc(45.5051, -122.6750, 39.7392, -104.9903,  25, 'plane'), // 2021-01-15
   squiffles_arc(45.5051, -122.6750, 41.8781,  -87.6298,  25, 'plane'), // 2021-06-17
   squiffles_arc(45.5051, -122.6750, 41.8781,  -87.6298,  15, 'plane'), // 2021-06-20
+  squiffles_arc(45.5051, -122.6750, 49.2827, -123.1207,  20, 'plane'), // 2021-09-19
+  squiffles_arc(49.2827, -123.1207, 40.4406,  -79.9959,  45, 'plane'), // 2021-10-19
   squiffles_arc(35.0044, -118.9495, 34.0522, -118.2437,   5, 'thumb'), // 2014-11-06
   squiffles_arc(37.7749, -122.4194, 35.0044, -118.9495,  10, 'thumb'), // 2014-11-07
   squiffles_arc(38.5816, -121.4944, 34.0522, -118.2437,  25, 'thumb'), // 2015-03-23
@@ -194,12 +196,14 @@ $points = array(
   squiffles_point(39.9042,  116.4074, 'Beijing, China', false),
   squiffles_point(34.0522, -118.2437, 'Los Angeles, California', true),
   squiffles_point(31.9802,  120.8943, 'Nantong, China', false),
-  squiffles_point(40.4406,  -79.9959, 'Pittsburgh, Pennsylvania', true),
+  squiffles_point(40.4406,  -79.9959, 'Pittsburgh, Pennsylvania', false),
   squiffles_point(45.5051, -122.6750, 'Portland, Oregon', false),
   squiffles_point(40.2338, -111.6585, 'Provo, Utah', false),
   squiffles_point(37.7749, -122.4194, 'San Francisco, California', false),
   squiffles_point(21.4360, -158.1849, 'Waianae, Hawaii', true),
-  squiffles_point(39.2467, -106.2935, 'Leadville, Colorado', true)
+  squiffles_point(39.2467, -106.2935, 'Leadville, Colorado', true),
+  squiffles_point(49.2827, -123.1207, 'Vancouver, British Columbia', true),
+  squiffles_point(40.7306,  -73.9352, 'New York, New York', true),
 );
 
 $pages = squiffles_showcase(array(
