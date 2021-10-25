@@ -503,7 +503,7 @@ a.honeycomb-cell {
   border-right-color: #819098;
 }
 .honeycomb-cell.honeycomb-light::after {
-  border-left-color: #829097;
+  border-left-color: #819098;
 }
 .honeycomb-honey {
   position: relative;
@@ -749,9 +749,11 @@ a.honeycomb-cell {
 .page .timeline > dt::after {
   right: -2.5em;
 }
-.timeline > dt.disabled + dd,
-#main .timeline > dt.disabled + dd h3 {
+#main .timeline > dt.disabled + dd > * {
   color: #617078;
+}
+#main .timeline > dt.disabled + dd > h4 {
+  color: #819098;
 }
 .timeline > dd {
   margin-left: 11.9em;
