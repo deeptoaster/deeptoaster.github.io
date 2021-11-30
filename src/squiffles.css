@@ -767,6 +767,7 @@ a.honeycomb-cell {
   padding-left: 1.5em;
 }
 .page .timeline ul {
+  margin: 0;
   font-size: 0.8em;
 }
 .page .timeline li {
