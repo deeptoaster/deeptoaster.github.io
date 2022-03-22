@@ -1,4 +1,10 @@
 <?
+define(
+  'SQUIFFLES_BLIP_TEMPLATE',
+  '<span class="map-blip" style="top: {$top}em; left: {$left}em;"></span>'
+);
+
+define('SQUIFFLES_PX_PER_EM', 20);
 define('SQUIFFLES_TRELLO_PATTERN', '/\bhttps?:\/\/trello.com\/c\/(\w+)/');
 
 $config = array();
@@ -57,5 +63,24 @@ function squiffles_attach_to_trello($cards, $url) {
   }
 
   curl_close($handle);
+}
+
+/**
+ * Projects a lat-lng pair onto a Mercator map.
+ * @param number $lat Latitude.
+ * @param number $lng Longitude.
+ * @return array<number> The x-y pair of the point on world.png.
+ */
+function squiffles_project($lat, $lng) {
+  static $width = 0;
+
+  if ($width === 0) {
+    $width = getimagesize(__DIR__ . '/../bin/images/world.png')[0];
+  }
+
+  return array(
+    ($lng + 188) * $width / 343,
+    440 - $width * log(tan(M_PI / 4 + $lat * M_PI / 360)) / M_PI / 2 * 1.05
+  );
 }
 ?>

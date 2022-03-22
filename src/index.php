@@ -2,16 +2,7 @@
 define('SQUIFFLES_ITEMS_PER_PAGE', 4);
 
 include(__DIR__ . '/../lib/cleverly/Cleverly.class.php');
-
-function squiffles_project($lat, $lng) {
-  static list($width, $height) =
-      getimagesize(__DIR__ . '/../bin/images/world.png');
-
-  return array(
-    ($lng + 188) * $width / 343,
-    440 - $width * log(tan(M_PI / 4 + $lat * M_PI / 360)) / M_PI / 2 * 1.05
-  );
-}
+include(__DIR__ . '/../lib/functions.php');
 
 function squiffles_arc($lat0, $lng0, $lat1, $lng1, $height, $type) {
   list($x0, $y0) = squiffles_project($lat0, $lng0);
@@ -46,7 +37,11 @@ function squiffles_point($lat, $lng, $label, $right) {
   return array(
     'label' => $label,
     'side' => $right ? 'right' : 'left',
-    'style' => sprintf('top: %.2fem; left: %.2fem;', $y / 20, $x / 20)
+    'style' => sprintf(
+      'top: %.2fem; left: %.2fem;',
+      $y / SQUIFFLES_PX_PER_EM,
+      $x / SQUIFFLES_PX_PER_EM
+    )
   );
 }
 
@@ -261,6 +256,10 @@ $coaster = ob_get_clean();
 
 $cleverly->display('index.tpl', array(
   'arcs' => $arcs,
+  'blip' => $cleverly->fetch(
+    'string:' . SQUIFFLES_BLIP_TEMPLATE,
+    array('left' => 99, 'top' => 99)
+  ),
   'coaster' => $coaster,
   'points' => $points,
   'pages' => $pages

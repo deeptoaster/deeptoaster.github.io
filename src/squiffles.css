@@ -345,6 +345,14 @@ td {
   position: absolute;
   height: 100%;
 }
+.map-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
 .map-arc {
   display: block;
   position: absolute;
@@ -359,7 +367,9 @@ td {
 .map-arc.map-arc-thumb {
   border-width: 0.2em 0 0 0;
 }
-.map-point {
+.map-point,
+.map-blip::before,
+.map-blip::after {
   display: block;
   position: absolute;
   width: 0.4em;
@@ -425,6 +435,22 @@ td {
 }
 .map-point.map-point-right > span > span {
   left: 1.1em;
+}
+.map-blip {
+  display: block;
+  position: absolute;
+}
+.map-blip::before,
+.map-blip::after {
+  content: "";
+  border-radius: 0.9em;
+  animation: 2s infinite;
+}
+.map-blip::before {
+  animation-name: blip-nova;
+}
+.map-blip::after {
+  animation-name: blip-core;
 }
 .pull-right {
   float: right;
@@ -1238,7 +1264,9 @@ body.page #sidebar {
   text-align: center;
 }
 #about,
-#about .honeycomb-cell.honeycomb-light {
+#about .honeycomb-cell.honeycomb-light,
+#travel .map-blip::before,
+#travel .map-blip::after {
   background-color: #d2d7d9;
 }
 #about {
@@ -1524,26 +1552,6 @@ body.page #sidebar {
     font-size: 13px;
   }
 }
-@keyframes reel {
-  0% {
-    top: 0;
-  }
-  5% {
-    top: -1.5em;
-  }
-  33% {
-    top: -1.5em;
-  }
-  38% {
-    top: -3em;
-  }
-  67% {
-    top: -3em;
-  }
-  72% {
-    top: 0;
-  }
-}
 @keyframes left {
   0% {
     left: 0;
@@ -1558,6 +1566,37 @@ body.page #sidebar {
   }
   15% {
     right: 0;
+  }
+}
+@keyframes blip-core {
+  0% {
+    width: 0.2em;
+    height: 0.2em;
+    margin: -0.1em;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    width: 0.6em;
+    height: 0.6em;
+    margin: -0.3em;
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes blip-nova {
+  0% {
+    width: 0.2em;
+    height: 0.2em;
+    margin: -0.1em;
+    opacity: 1;
+  }
+  80% {
+    width: 1.8em;
+    height: 1.8em;
+    margin: -0.9em;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes train-bottom {
