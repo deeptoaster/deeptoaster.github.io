@@ -4,7 +4,8 @@ define('SQUIFFLES_ITEMS_PER_PAGE', 4);
 include(__DIR__ . '/../lib/cleverly/Cleverly.class.php');
 
 function squiffles_project($lat, $lng) {
-  list($width, $height) = getimagesize(__DIR__ . '/../bin/images/world.png');
+  static list($width, $height) =
+      getimagesize(__DIR__ . '/../bin/images/world.png');
 
   return array(
     ($lng + 188) * $width / 343,
