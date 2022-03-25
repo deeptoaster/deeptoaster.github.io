@@ -1,8 +1,12 @@
 cards/index.html:src/cards/index.php
 cards/index.html:src/cards/templates/index.tpl
 cards/index.html:src/fishbot.php
+cards/index.html:src/images/fishbot.svg
+index.html:bin/images/world.png
+index.html:lib/functions.php
 index.html:src/coaster.php
 index.html:src/fishbot.php
+index.html:src/images/fishbot.svg
 index.html:src/index.php
 index.html:src/templates/about.tpl
 index.html:src/templates/gallery.tpl

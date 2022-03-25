@@ -90,7 +90,7 @@ $lat = null;
 $lng = null;
 $response_code = squiffles_fetch_location($lat, $lng);
 
-if ($response_code === 403) {
+if ($response_code === 401) {
   $handle = curl_init();
   curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($handle, CURLOPT_POST, true);

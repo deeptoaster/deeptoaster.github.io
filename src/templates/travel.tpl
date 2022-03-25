@@ -3,13 +3,13 @@
 </div>
 <div class="map">
   <img src="bin/images/world.png" alt="" />
-  <div class="map-container">
-{foreach from=$arcs item=arc}    <span class="map-arc map-arc-{$arc.type}" style="{$arc.style}"></span>
-{/foreach}    {$blip}
-{foreach from=$points item=point}    <span class="map-point map-point-{$point.side}" style="{$point.style}">
-      <span>
-        <span>{$point.label}</span>
-      </span>
+{foreach from=$arcs item=arc}  <span class="map-arc map-arc-{$arc.type}" style="{$arc.style}"></span>
+{/foreach}  <div class="map-container">
+    {$blip}
+  </div>
+{foreach from=$points item=point}  <span class="map-point map-point-{$point.side}" style="{$point.style}">
+    <span>
+      <span>{$point.label}</span>
     </span>
-{/foreach}  </div>
-</div>
+  </span>
+{/foreach}</div>

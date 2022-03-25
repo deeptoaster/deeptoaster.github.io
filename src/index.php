@@ -235,7 +235,7 @@ $pages = squiffles_showcase(array(
   ),
   array(
     'description' =>
-        'Poster designed for Hornsdale, a one-day puzzle hunt in 2017',
+        'Poster designed for Hornsdale, a one-day puzzle hunt in 2017.',
     'image' => '/bin/images/showcase_hornsdale.png'
   ),
   array(
