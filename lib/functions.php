@@ -4,12 +4,14 @@ define(
   '<span class="map-blip" style="top: {$top}em; left: {$left}em;"></span>'
 );
 
+define('SQUIFFLES_CONFIG_FILE', __DIR__ . '/../config.php');
+define('SQUIFFLES_MAP_FILE', __DIR__ . '/../bin/images/world.png');
 define('SQUIFFLES_PX_PER_EM', 20);
 define('SQUIFFLES_TRELLO_PATTERN', '/\bhttps?:\/\/trello.com\/c\/(\w+)/');
 
 $config = array();
 
-include(__DIR__ . '/../config.php');
+include(SQUIFFLES_CONFIG_FILE);
 
 /**
  * Creates attachments from a URL on each of a list of Trello cards.
@@ -77,7 +79,7 @@ function squiffles_config_set($settings) {
   }
 
   ksort($config);
-  $stream = fopen(__DIR__ . '/../config.php', 'w');
+  $stream = fopen(SQUIFFLES_CONFIG_FILE, 'w');
   fwrite($stream, "<?\n");
 
   foreach ($config as $key => $value) {
@@ -98,7 +100,7 @@ function squiffles_project($lat, $lng) {
   static $width = 0;
 
   if ($width === 0) {
-    $width = getimagesize(__DIR__ . '/../bin/images/world.png')[0];
+    $width = getimagesize(SQUIFFLES_MAP_FILE)[0];
   }
 
   return array(

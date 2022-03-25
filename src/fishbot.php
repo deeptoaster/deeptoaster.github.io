@@ -1,4 +1,6 @@
 <?
+define('SQUIFFLES_FISHBOT_FILE', __DIR__ . '/images/fishbot.svg');
+
 function squiffles_collect($xml, &$lines, &$ellipses) {
   switch ($xml->getName()) {
     case 'ellipse':
@@ -111,7 +113,7 @@ EOF
   }
 }
 
-$xml = simplexml_load_file(__DIR__ . '/images/fishbot.svg');
+$xml = simplexml_load_file(SQUIFFLES_FISHBOT_FILE);
 $width = $xml['width'] / 10;
 $height = $xml['height'] / 10;
 
