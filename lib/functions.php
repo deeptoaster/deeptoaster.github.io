@@ -66,6 +66,29 @@ function squiffles_attach_to_trello($cards, $url) {
 }
 
 /**
+ * Adds or updates config values both for the current session and persistently.
+ * @param array<string,string> $settings Settings as key-value pairs.
+ */
+function squiffles_config_set($settings) {
+  global $config;
+
+  foreach ($settings as $key => $value) {
+    $config[$key] = $value;
+  }
+
+  ksort($config);
+  $stream = fopen(__DIR__ . '/../config.php', 'w');
+  fwrite($stream, "<?\n");
+
+  foreach ($config as $key => $value) {
+    fwrite($stream, "\$config['$key'] = '$value';\n");
+  }
+
+  fwrite($stream, "?>\n");
+  fclose($stream);
+}
+
+/**
  * Projects a lat-lng pair onto a Mercator map.
  * @param number $lat Latitude.
  * @param number $lng Longitude.

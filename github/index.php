@@ -1,7 +1,4 @@
 <?
-$config = array();
-
-include(__DIR__ . '/../config.php');
 include(__DIR__ . '/../lib/functions.php');
 
 if ($_SERVER['HTTP_X_GITHUB_EVENT'] !== 'push') {
