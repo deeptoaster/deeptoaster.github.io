@@ -71,26 +71,29 @@ if (isset($_GET['code'])) {
   ));
 
   curl_close($handle);
-} elseif (
-  !@$config['google_access_token'] ||
-      !@$config['google_refresh_token']
-) {
-  header(sprintf(
-    'Location: %s?access_type=offline&client_id=%s&prompt=consent&redirect_uri=%s&response_type=code&scope=%s&state=state_parameter_passthrough_value',
-    SQUIFFLES_GOOGLE_AUTH_URL,
-    $config['google_client_id'],
-    rawurlencode(SQUIFFLES_REDIRECT_URL),
-    rawurlencode(SQUIFFLES_GOOGLE_SCOPE)
-  ));
-
-  die();
 }
 
 $lat = null;
 $lng = null;
-$response_code = squiffles_fetch_location($lat, $lng);
+$response_code = 401;
+
+if (@$config['google_access_token']) {
+  squiffles_fetch_location($lat, $lng);
+}
 
 if ($response_code === 401) {
+  if (!@$config['google_refresh_token']) {
+    header(sprintf(
+      'Location: %s?access_type=offline&client_id=%s&prompt=consent&redirect_uri=%s&response_type=code&scope=%s&state=state_parameter_passthrough_value',
+      SQUIFFLES_GOOGLE_AUTH_URL,
+      $config['google_client_id'],
+      rawurlencode(SQUIFFLES_REDIRECT_URL),
+      rawurlencode(SQUIFFLES_GOOGLE_SCOPE)
+    ));
+
+    die();
+  }
+
   $handle = curl_init();
   curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($handle, CURLOPT_POST, true);
