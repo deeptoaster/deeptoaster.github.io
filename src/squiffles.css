@@ -260,6 +260,19 @@ td {
   font-weight: bold;
   letter-spacing: normal;
 }
+.wp-block-buttons.wp-block-buttons {
+  display: block;
+  margin: 2em 0;
+  text-align: center;
+}
+.wp-block-buttons .wp-block-button__link {
+  background-color: #27556c;
+  text-decoration: none;
+  font-size: 1em;
+}
+.wp-block-buttons .wp-block-button__link:hover {
+  background-color: #467286;
+}
 .wp-block-embed,
 .wp-block-image {
   margin: 1em 0;
@@ -1053,7 +1066,8 @@ h1,
 h2,
 h3,
 .timeline > dt,
-.post-category {
+.post-category,
+.wp-block-button__link {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1;
