@@ -279,6 +279,7 @@ td {
 }
 .wp-block-embed .fb-post,
 .wp-block-embed .wp-embedded-content,
+.wp-block-embed iframe,
 .wp-block-image img,
 .wp-block-table td > img {
   display: block;
