@@ -13,3 +13,6 @@
 [submodule "tracker"]
 	path = tracker
 	url = ssh://git@github.com/deeptoaster/tasker-tracker
+[submodule "spaceteam"]
+	path = spaceteam
+	url = ssh://git@github.com/deeptoaster/spaceteam
