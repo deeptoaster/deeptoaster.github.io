@@ -300,7 +300,7 @@ td {
   max-height: 500px;
 }
 .wp-block-quote {
-  background-color: #d1d9dc;
+  background-color: #d2d7d9;
   background-color: rgba(166, 184, 193, 0.4);
   margin: 1em 0;
   border-left: 0.2em solid;
@@ -751,13 +751,14 @@ a.honeycomb-cell {
   width: 4.9em;
   margin-top: 2.8em;
   margin-left: 1.4em;
+  text-align: center;
 }
 .page .timeline > dt {
   position: relative;
   top: 0;
-  width: 3em;
+  width: 5em;
   margin-top: 0.5em;
-  margin-left: 0.9em;
+  margin-left: -0.1em;
   font-size: 1em;
 }
 .timeline > dt.disabled,
@@ -804,7 +805,8 @@ a.honeycomb-cell {
   padding: 1em 0 3em 2em;
 }
 .page .timeline > dd {
-  margin-left: 7em;
+  min-height: 2em;
+  margin-left: 8em;
   padding-top: 0.5em;
   padding-bottom: 0;
   padding-left: 1.5em;
@@ -1121,7 +1123,7 @@ body.page #main {
 }
 #main h1 {
   margin-right: -1em;
-  margin-left: 3.5em;
+  margin-left: 4em;
   padding-right: 1em;
   text-align: right;
 }

@@ -91,6 +91,41 @@ function squiffles_config_set($settings) {
 }
 
 /**
+ * Retrives a lat-lng pair from the blip spreadsheet.
+ * @param number [output] Latitude.
+ * @param number [output] Longitude.
+ * @return number The HTTP request's response code.
+ */
+function squiffles_fetch_location(&$lat, &$lng) {
+  global $config;
+
+  $handle = curl_init();
+  curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($handle, CURLOPT_HTTPGET, true);
+
+  curl_setopt($handle, CURLOPT_HTTPHEADER, array(
+    "Authorization: Bearer $config[google_access_token]"
+  ));
+
+  curl_setopt(
+    $handle,
+    CURLOPT_URL,
+    "https://sheets.googleapis.com/v4/spreadsheets/$config[blip_sheet_id]/values/'$config[blip_sheet_name]'!$config[blip_sheet_range]"
+  );
+
+  $response = json_decode(curl_exec($handle));
+  $response_code = curl_getinfo($handle, CURLINFO_RESPONSE_CODE);
+
+  if ($response_code === 200) {
+    $lat = (float)$response->values[0][0];
+    $lng = (float)$response->values[0][1];
+  }
+
+  curl_close($handle);
+  return $response_code;
+}
+
+/**
  * Projects a lat-lng pair onto a Mercator map.
  * @param number $lat Latitude.
  * @param number $lng Longitude.
