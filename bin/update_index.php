@@ -25,21 +25,21 @@ if (isset($_GET['code'])) {
   curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($handle, CURLOPT_POST, true);
 
-  curl_setopt($handle, CURLOPT_POSTFIELDS, array(
+  curl_setopt($handle, CURLOPT_POSTFIELDS, [
     'client_id' => $config['google_client_id'],
     'client_secret' => $config['google_client_secret'],
     'code' => $_GET['code'],
     'grant_type' => 'authorization_code',
     'redirect_uri' => SQUIFFLES_REDIRECT_URL
-  ));
+  ]);
 
   curl_setopt($handle, CURLOPT_URL, SQUIFFLES_GOOGLE_TOKEN_URL);
   $response = json_decode(curl_exec($handle));
 
-  squiffles_config_set(array(
+  squiffles_config_set([
     'google_access_token' => $response->access_token,
     'google_refresh_token' => $response->refresh_token
-  ));
+  ]);
 
   curl_close($handle);
 }
@@ -69,19 +69,19 @@ if ($response_code === 401) {
   curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($handle, CURLOPT_POST, true);
 
-  curl_setopt($handle, CURLOPT_POSTFIELDS, array(
+  curl_setopt($handle, CURLOPT_POSTFIELDS, [
     'client_id' => $config['google_client_id'],
     'client_secret' => $config['google_client_secret'],
     'grant_type' => 'refresh_token',
     'refresh_token' => $config['google_refresh_token']
-  ));
+  ]);
 
   curl_setopt($handle, CURLOPT_URL, SQUIFFLES_GOOGLE_TOKEN_URL);
   $response = json_decode(curl_exec($handle));
 
-  squiffles_config_set(array(
+  squiffles_config_set([
     'google_access_token' => $response->access_token
-  ));
+  ]);
 
   curl_close($handle);
   $response_code = squiffles_fetch_location($lat, $lng);
@@ -98,15 +98,15 @@ if ($response_code === 200) {
     '\\$\\$',
     '[\.\d]+', preg_quote($cleverly->fetch(
     'string:' . SQUIFFLES_BLIP_TEMPLATE,
-    array('left' => '$$', 'top' => '$$')
+    ['left' => '$$', 'top' => '$$']
   ), '/')) . '/';
 
   $replacement = $cleverly->fetch(
     'string:' . SQUIFFLES_BLIP_TEMPLATE,
-    array(
+    [
       'left' => round($x / SQUIFFLES_PX_PER_EM, 2),
       'top' => round($y / SQUIFFLES_PX_PER_EM, 2)
-    )
+    ]
   );
 
   while (($line = fgets($read_handle)) !== false) {

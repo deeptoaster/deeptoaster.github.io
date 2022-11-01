@@ -4,21 +4,21 @@ define('SQUIFFLES_FISHBOT_FILE', __DIR__ . '/images/fishbot.svg');
 function squiffles_collect($xml, &$lines, &$ellipses) {
   switch ($xml->getName()) {
     case 'ellipse':
-      $ellipses[] = array(
+      $ellipses[] = [
         'cx' => $xml['cx'],
         'cy' => $xml['cy'],
         'rx' => $xml['rx'],
         'ry' => $xml['ry']
-      );
+      ];
 
       break;
     case 'line':
-      $lines[] = array(
+      $lines[] = [
         'x1' => $xml['x1'],
         'x2' => $xml['x2'],
         'y1' => $xml['y1'],
         'y2' => $xml['y2']
-      );
+      ];
 
       break;
   }
@@ -29,8 +29,8 @@ function squiffles_collect($xml, &$lines, &$ellipses) {
 }
 
 function squiffles_fill($xml, $scale) {
-  $lines = array();
-  $ellipses = array();
+  $lines = [];
+  $ellipses = [];
   squiffles_collect($xml, $lines, $ellipses);
 }
 
@@ -122,7 +122,7 @@ echo <<<EOF
 
 EOF;
 
-squiffles_stroke($xml, array('stroke-linecap' => 'butt'), 0.1);
+squiffles_stroke($xml, ['stroke-linecap' => 'butt'], 0.1);
 squiffles_fill($xml, 0.1);
 
 echo <<<EOF

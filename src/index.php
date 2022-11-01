@@ -15,7 +15,7 @@ function squiffles_arc($lat0, $lng0, $lat1, $lng1, $height, $type) {
   $theta = atan2($y, $x) * 180 / M_PI;
   $transform = sprintf('transform: rotate(%.2fdeg);', $theta);
 
-  return array(
+  return [
     'style' => sprintf(
       'width: %.2fem; height: %.2fem; top: %.2fem; left: %.2fem; -webkit-%s ' .
           '-moz-%s %s',
@@ -28,13 +28,13 @@ function squiffles_arc($lat0, $lng0, $lat1, $lng1, $height, $type) {
       $transform
     ),
     'type' => $type
-  );
+  ];
 }
 
 function squiffles_point($lat, $lng, $label, $right) {
   list($x, $y) = squiffles_project($lat, $lng);
 
-  return array(
+  return [
     'label' => $label,
     'side' => $right ? 'right' : 'left',
     'style' => sprintf(
@@ -42,11 +42,11 @@ function squiffles_point($lat, $lng, $label, $right) {
       $y / SQUIFFLES_PX_PER_EM,
       $x / SQUIFFLES_PX_PER_EM
     )
-  );
+  ];
 }
 
 function squiffles_showcase($items) {
-  $pages = array();
+  $pages = [];
 
   $page_count = (int)(
     (count($items) + SQUIFFLES_ITEMS_PER_PAGE - 1) / SQUIFFLES_ITEMS_PER_PAGE
@@ -56,7 +56,7 @@ function squiffles_showcase($items) {
     if ($item_number % SQUIFFLES_ITEMS_PER_PAGE === 0) {
       $page_number = (int)($item_number / 4);
 
-      $pages[$page_number] = array(
+      $pages[$page_number] = [
         'id' => $page_number,
         'next' => $page_number === $page_count - 1
           ? 0
@@ -64,12 +64,12 @@ function squiffles_showcase($items) {
         'previous' => $page_number === 0
           ? $page_count - 1
           : $page_number - 1,
-        'thumbnails' => array()
-      );
+        'thumbnails' => []
+      ];
     }
 
-    $pages[$page_number]['thumbnails'][] = $item + array('id' => $item_number);
-    $pages[$page_number]['padding'] = array();
+    $pages[$page_number]['thumbnails'][] = $item + ['id' => $item_number];
+    $pages[$page_number]['padding'] = [];
   }
 
   $pages[$page_number]['padding'] = array_fill(
@@ -83,7 +83,7 @@ function squiffles_showcase($items) {
   return $pages;
 }
 
-$arcs = array(
+$arcs = [
   squiffles_arc(45.5051, -122.6750, 34.0522, -118.2437,  20, 'plane'), // 2013-04-23
   squiffles_arc(45.5051, -122.6750, 34.0522, -118.2437,  30, 'plane'), // 2013-04-28
   squiffles_arc(45.5051, -122.6750, 31.2304,  121.4737, 150, 'plane'), // 2014-09-09
@@ -144,7 +144,7 @@ $arcs = array(
   squiffles_arc(47.4979,   19.0402, 37.9838,   23.7275,  25, 'plane'), // 2020-01-10
   squiffles_arc(43.7102,    7.2620, 47.4979,   19.0402,  25, 'plane'), // 2020-01-17
   squiffles_arc(45.5051, -122.6750, 48.8566,    2.3522,  30, 'plane'), // 2020-01-23
-  squiffles_arc(45.5051, -122.6750, 40.4406,  -79.9959,  45, 'plane'), // 2020-01-26
+  squiffles_arc(45.5051, -122.6750, 40.4406,  -79.9959,  35, 'plane'), // 2020-01-26
   squiffles_arc(39.7392, -104.9903, 40.4406,  -79.9959,  40, 'plane'), // 2020-03-10
   squiffles_arc(47.6062, -122.3321, 40.4406,  -79.9959,  45, 'plane'), // 2020-09-15
   squiffles_arc(21.3069, -157.8583, 47.6062, -122.3321,  60, 'plane'), // 2020-09-16
@@ -154,6 +154,20 @@ $arcs = array(
   squiffles_arc(45.5051, -122.6750, 41.8781,  -87.6298,  15, 'plane'), // 2021-06-20
   squiffles_arc(45.5051, -122.6750, 49.2827, -123.1207,  20, 'plane'), // 2021-09-19
   squiffles_arc(49.2827, -123.1207, 40.4406,  -79.9959,  45, 'plane'), // 2021-10-19
+  squiffles_arc(45.5051, -122.6750, 40.7306,  -73.9352,  60, 'plane'), // 2021-11-25
+  squiffles_arc(40.7306,  -73.9352, 37.7749, -122.4194,  10, 'plane'), // 2021-12-06
+  squiffles_arc(40.7306,  -73.9352, 37.7749, -122.4194,  20, 'plane'), // 2021-12-17
+  squiffles_arc(40.4406,  -79.9959, 37.7749, -122.4194,  40, 'plane'), // 2022-01-15
+  squiffles_arc(51.0458, -114.0575, 40.7306,  -73.9352,  60, 'plane'), // 2022-03-21
+  squiffles_arc(47.6062, -122.3321, 51.0458, -114.0575,  15, 'plane'), // 2022-03-27
+  squiffles_arc(47.6062, -122.3321, 40.7306,  -73.9352,  75, 'plane'), // 2022-03-31
+  squiffles_arc(45.5051, -122.6750, 40.7306,  -73.9352,  70, 'plane'), // 2022-05-12
+  squiffles_arc(47.6062, -122.3321, 40.4406,  -79.9959,  35, 'plane'), // 2022-07-27
+  squiffles_arc(37.7749, -122.4194, 53.3498,   -6.2603, 120, 'plane'), // 2022-08-09
+  squiffles_arc(53.3498,   -6.2603, 40.7306,  -73.9352,  30, 'plane'), // 2022-08-17
+  squiffles_arc(40.4406,  -79.9959, 40.7306,  -73.9352,  10, 'plane'), // 2022-08-20
+  squiffles_arc(40.4406,  -79.9959, 40.7306,  -73.9352,  20, 'plane'), // 2022-09-10
+  squiffles_arc(40.4406,  -79.9959, 34.0522, -118.2437,  35, 'plane'), // 2022-10-26
   squiffles_arc(35.0044, -118.9495, 34.0522, -118.2437,   5, 'thumb'), // 2014-11-06
   squiffles_arc(37.7749, -122.4194, 35.0044, -118.9495,  10, 'thumb'), // 2014-11-07
   squiffles_arc(38.5816, -121.4944, 34.0522, -118.2437,  25, 'thumb'), // 2015-03-23
@@ -186,9 +200,9 @@ $arcs = array(
   squiffles_arc(55.9202,   21.0678, 56.5047,   21.0108,   5, 'thumb'), // 2018-09-21
   squiffles_arc( 3.1390,  101.6869,  5.4380,  100.3882,  10, 'thumb'), // 2019-01-26
   squiffles_arc(36.1699, -115.1398, 34.0522, -118.2437,  25, 'thumb')  // 2019-08-11
-);
+];
 
-$points = array(
+$points = [
   squiffles_point(39.9042,  116.4074, 'Beijing, China', false),
   squiffles_point(34.0522, -118.2437, 'Los Angeles, California', true),
   squiffles_point(31.9802,  120.8943, 'Nantong, China', false),
@@ -200,50 +214,50 @@ $points = array(
   squiffles_point(39.2467, -106.2935, 'Leadville, Colorado', true),
   squiffles_point(49.2827, -123.1207, 'Vancouver, British Columbia', true),
   squiffles_point(40.7306,  -73.9352, 'New York, New York', true),
-);
+];
 
-$pages = squiffles_showcase(array(
-  array(
+$pages = squiffles_showcase([
+  [
     'description' =>
         'This is a custom sign-up experience built for a one-day cyberpunk-themed puzzle hunt called Project Hyperskelion.',
     'image' => '/bin/images/showcase_hyper.gif'
-  ),
-  array(
+  ],
+  [
     'description' =>
         'This is an online grasp solver for point contacts with friction (PCWF). Check it out <a href="/force-closure/">online</a> or <a href="https://github.com/deeptoaster/force-closure">on GitHub</a>!',
     'image' => '/bin/images/showcase_pcwf.gif'
-  ),
-  array(
+  ],
+  [
     'description' =>
         'Poster designed for We\'re All Mad Here, a one-day puzzle hunt in 2018.',
     'image' => '/bin/images/showcase_mad.png'
-  ),
-  array(
+  ],
+  [
     'description' =>
         'One of my first projects to gain traction online, <a href="https://www.polygon.com/gaming/2012/9/28/3422822/fruit-ninja-gets-all-scientific-on-this-ti-83-plus-calculator">Fruit Ninja on a TI-83 Plus</a> is a real game for the graphing calculator series.',
     'image' => '/bin/images/showcase_ninja.gif'
-  ),
-  array(
+  ],
+  [
     'description' =>
         'An early webapp built for the graphing calculator community, the <a href="https://clrhome.org/ies/">Integrated Editor System</a> is an IDE for creating TI-83 Plus&ndash;series calculator programs and other variables online.',
     'image' => '/bin/images/showcase_ies.png'
-  ),
-  array(
+  ],
+  [
     'description' =>
         'This is a <a href="https://blacker.caltech.edu/">website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
     'image' => '/bin/images/showcase_blacker.png'
-  ),
-  array(
+  ],
+  [
     'description' =>
         'Poster designed for Hornsdale, a one-day puzzle hunt in 2017.',
     'image' => '/bin/images/showcase_hornsdale.png'
-  ),
-  array(
+  ],
+  [
     'description' =>
         'Header of an infographic designed in 2016.',
     'image' => '/bin/images/showcase_real.png'
-  )
-));
+  ]
+]);
 
 $cleverly = new Cleverly();
 $cleverly->preserveIndent = true;
@@ -254,14 +268,14 @@ include(__DIR__ . '/coaster.php');
 
 $coaster = ob_get_clean();
 
-$cleverly->display('index.tpl', array(
+$cleverly->display('index.tpl', [
   'arcs' => $arcs,
   'blip' => $cleverly->fetch(
     'string:' . SQUIFFLES_BLIP_TEMPLATE,
-    array('left' => 99, 'top' => 99)
+    ['left' => 99, 'top' => 99]
   ),
   'coaster' => $coaster,
   'points' => $points,
   'pages' => $pages
-));
+]);
 ?>

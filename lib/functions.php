@@ -9,7 +9,7 @@ define('SQUIFFLES_MAP_FILE', __DIR__ . '/../bin/images/world.png');
 define('SQUIFFLES_PX_PER_EM', 20);
 define('SQUIFFLES_TRELLO_PATTERN', '/\bhttps?:\/\/trello.com\/c\/(\w+)/');
 
-$config = array();
+$config = [];
 
 include(SQUIFFLES_CONFIG_FILE);
 
@@ -25,17 +25,17 @@ function squiffles_attach_to_trello($cards, $url) {
     return;
   }
 
-  $fields = array(
+  $fields = [
     'key' => $config['trello_key'],
     'token' => $config['trello_token'],
     'url' => $url
-  );
+  ];
 
-  $query = http_build_query(array(
+  $query = http_build_query([
     'fields' => 'url',
     'key' => $config['trello_key'],
     'token' => $config['trello_token']
-  ));
+  ]);
 
   $handle = curl_init();
   curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
@@ -103,9 +103,9 @@ function squiffles_fetch_location(&$lat, &$lng) {
   curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($handle, CURLOPT_HTTPGET, true);
 
-  curl_setopt($handle, CURLOPT_HTTPHEADER, array(
+  curl_setopt($handle, CURLOPT_HTTPHEADER, [
     "Authorization: Bearer $config[google_access_token]"
-  ));
+  ]);
 
   curl_setopt(
     $handle,
@@ -138,9 +138,9 @@ function squiffles_project($lat, $lng) {
     $width = getimagesize(SQUIFFLES_MAP_FILE)[0];
   }
 
-  return array(
-    ($lng + 188) * $width / 343,
+  return [
+    ($lng + 185) * $width / 333,
     440 - $width * log(tan(M_PI / 4 + $lat * M_PI / 360)) / M_PI / 2 * 1.05
-  );
+  ];
 }
 ?>

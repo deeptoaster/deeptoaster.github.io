@@ -9,5 +9,5 @@ ob_start();
 include(__DIR__ . '/../fishbot.php');
 
 $fishbot = ob_get_clean();
-$cleverly->display('index.tpl', array('fishbot' => $fishbot));
+$cleverly->display('index.tpl', ['fishbot' => $fishbot]);
 ?>
