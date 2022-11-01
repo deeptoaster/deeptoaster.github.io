@@ -275,6 +275,7 @@ $cleverly->display('index.tpl', [
     ['left' => 99, 'top' => 99]
   ),
   'coaster' => $coaster,
+  'date' => strftime('%F'),
   'points' => $points,
   'pages' => $pages
 ]);
