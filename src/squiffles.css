@@ -267,11 +267,13 @@ td {
 }
 .wp-block-buttons .wp-block-button__link {
   background-color: #27556c;
+  color: #a6b8c1;
   text-decoration: none;
   font-size: 1em;
 }
 .wp-block-buttons .wp-block-button__link:hover {
   background-color: #467286;
+  color: #bcc8cd;
 }
 .wp-block-embed,
 .wp-block-image {
@@ -896,7 +898,7 @@ a.honeycomb-cell {
   background-color: #637a14;
 }
 .cat-item-4 a:hover::after,
-.cat-item-3 a:focus::after {
+.cat-item-4 a:focus::after {
   background-color: #8aa236;
 }
 .skills {
