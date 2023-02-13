@@ -14,7 +14,8 @@ html {
   scroll-behavior: smooth;
 }
 body,
-.post-title {
+.post-title,
+#cancel-comment-reply-link {
   font-family: "Titillium Web", sans-serif;
 }
 body {
@@ -243,6 +244,17 @@ td {
 .comment-respond .comment-subscription-form {
   margin-bottom: 0;
 }
+#cancel-comment-reply-link {
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+#cancel-comment-reply-link::before {
+  content: "(";
+}
+#cancel-comment-reply-link::after {
+  content: ")";
+}
 .avatar {
   float: left;
   width: 3em;
@@ -252,13 +264,6 @@ td {
 .fn {
   font-style: normal;
   font-weight: bold;
-}
-.date {
-  float: right;
-  text-transform: none;
-  font: 0.9em/1 "Titillium Web", sans-serif;
-  font-weight: bold;
-  letter-spacing: normal;
 }
 .wp-block-buttons.wp-block-buttons {
   display: block;
