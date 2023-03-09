@@ -5,8 +5,9 @@ include(__DIR__ . '/../../lib/functions.php');
 $cleverly = new Cleverly();
 $cleverly->preserveIndent = true;
 $cleverly->setTemplateDir(__DIR__ . '/templates');
+$cleverly->addTemplateDir(__DIR__ . '/../common/templates');
 
-$cleverly->display('index.tpl', [
+$cleverly->display('index_service.tpl', [
   'date' => strftime('%F'),
   'education' => [
     [
@@ -69,7 +70,7 @@ $cleverly->display('index.tpl', [
       'notes' => [
         'Certified and trained to serve and wait tables in student dining services',
         'Point of contact for Caltech administration on undergrad housing allocation',
-        'Maintained student records and ran meetings for issues related to student life'
+        'Maintained student records and ran meetings for all student-life issues'
       ],
       'title' => 'Waiter, House Secretary'
     ],
@@ -108,8 +109,9 @@ $cleverly->display('index.tpl', [
     ['name' => 'Spanish', 'proficiency' => 60],
     ['name' => 'Russian', 'proficiency' => 40]
   ],
+  'path' => '/resume-service/',
   'root' => $config['root'],
-  'show_github' => true,
+  'show_github' => false,
   'title' => 'R&eacute;sum&eacute; - Deep Toaster'
 ]);
 ?>

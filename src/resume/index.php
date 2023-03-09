@@ -5,6 +5,7 @@ include(__DIR__ . '/../../lib/functions.php');
 $cleverly = new Cleverly();
 $cleverly->preserveIndent = true;
 $cleverly->setTemplateDir(__DIR__ . '/templates');
+$cleverly->addTemplateDir(__DIR__ . '/../common/templates');
 
 $cleverly->display('index.tpl', [
   'date' => strftime('%F'),
@@ -74,6 +75,7 @@ $cleverly->display('index.tpl', [
     ['name' => 'Spanish', 'proficiency' => 60],
     ['name' => 'Russian', 'proficiency' => 40]
   ],
+  'path' => '/resume',
   'root' => $config['root'],
   'show_github' => true,
   'title' => 'R&eacute;sum&eacute; - Deep Toaster'

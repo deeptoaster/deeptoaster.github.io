@@ -262,6 +262,7 @@ $pages = squiffles_showcase([
 $cleverly = new Cleverly();
 $cleverly->preserveIndent = true;
 $cleverly->setTemplateDir(__DIR__ . '/templates');
+$cleverly->addTemplateDir(__DIR__ . '/common/templates');
 ob_start();
 
 include(__DIR__ . '/coaster.php');
@@ -278,6 +279,7 @@ $cleverly->display('index.tpl', [
   'date' => strftime('%F'),
   'points' => $points,
   'pages' => $pages,
+  'path' => '/',
   'root' => $config['root'],
   'title' => 'Deep Toaster'
 ]);

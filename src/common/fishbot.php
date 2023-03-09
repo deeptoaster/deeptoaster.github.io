@@ -1,5 +1,5 @@
 <?
-define('SQUIFFLES_FISHBOT_FILE', __DIR__ . '/images/fishbot.svg');
+define('SQUIFFLES_FISHBOT_FILE', __DIR__ . '/../images/fishbot.svg');
 
 function squiffles_collect($xml, &$lines, &$ellipses) {
   switch ($xml->getName()) {
