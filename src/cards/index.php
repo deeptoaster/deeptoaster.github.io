@@ -1,5 +1,6 @@
 <?
 include(__DIR__ . '/../../lib/cleverly/Cleverly.class.php');
+include(__DIR__ . '/../../lib/functions.php');
 
 $cleverly = new Cleverly();
 $cleverly->preserveIndent = true;
@@ -12,6 +13,8 @@ $fishbot = ob_get_clean();
 
 $cleverly->display('index.tpl', [
   'date' => strftime('%F'),
-  'fishbot' => $fishbot
+  'fishbot' => $fishbot,
+  'root' => $config['root'],
+  'title' => 'Cards - Deep Toaster'
 ]);
 ?>

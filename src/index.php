@@ -277,6 +277,8 @@ $cleverly->display('index.tpl', [
   'coaster' => $coaster,
   'date' => strftime('%F'),
   'points' => $points,
-  'pages' => $pages
+  'pages' => $pages,
+  'root' => $config['root'],
+  'title' => 'Deep Toaster'
 ]);
 ?>
