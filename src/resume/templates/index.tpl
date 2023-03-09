@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>{$title}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:image" content="https://{$root}/bin/images/preview.png" />
+    <meta property="og:title" content="{$title}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://{$root}/resume/" />
+    <link href="/bin/fonts/squiffles.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:800%7CTitillium+Web:400,700" type="text/css" rel="stylesheet" />
+    <link href="/squiffles.css?v={$date}" type="text/css" rel="stylesheet" />
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-168811289-1"></script>
+    <script src="/bin/js/ga.js"></script>
+  </head>
+  <body class="page">
+    <div id="sidebar">
+      <h1>Will Yu</h1>
+      <p class="lead">Senior software engineer specializing in computer vision, gaming, and full-stack development with a knack for <strong>creative, efficient solutions</strong> to novel problems.</p>
+      <p class="lead">Fast learner, proven mentor, and <strong>detail-oriented problem solver</strong> who likes to have fun and works well under pressure.</p>
+      {include file='languages.tpl'}
+      {include file='hobbies.tpl'}
+      {include file='contact.tpl'}
+    </div>
+    <div id="main">
+      {include file='employment.tpl'}
+      {include file='education.tpl'}
+      <h1>Skills</h1>
+      <div class="col">
+        <div>
+          <h3>Things I Do Well</h3>
+          <ul>
+            <li>
+              <span>Classical computer vision and ML</span>
+            </li>
+            <li>
+              <span>Software development and tech leading</span>
+              <ul class="skills">
+                <li>C/C++</li>
+                <li>C#</li>
+                <li>Hack/PHP</li>
+                <li>Haskell</li>
+                <li>Java</li>
+              </ul>
+              <ul class="skills">
+                <li>JavaScript/TypeScript</li>
+                <li>Lua</li>
+                <li>Python</li>
+              </ul>
+            </li>
+            <li>
+              <span>Web development and architecture</span>
+              <ul class="skills">
+                <li>Apache</li>
+                <li>AWS</li>
+                <li>CSS3</li>
+                <li>HTML5</li>
+                <li>jQuery</li>
+              </ul>
+              <ul class="skills">
+                <li>MySQL</li>
+                <li>Node.js</li>
+                <li>React</li>
+                <li>Webpack</li>
+              </ul>
+            </li>
+            <li>
+              <span>System administration and security</span>
+            </li>
+            <li>
+              <span>Graphic design and image manipulation</span>
+            </li>
+            <li>Clear, accessible tech blogging</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <h3>Things I've Made</h3>
+          <ul>
+            <li>
+              <span>Crazy things on a TI-83 Plus</span>
+              <ul>
+                <li>Fruit Ninja with keypad swipe</li>
+                <li>Raycasting and physics engines</li>
+              </ul>
+            </li>
+            <li>
+              <span>Online IDEs and in-the-cloud compilers</span>
+            </li>
+            <li>
+              <span>Virtual reality finger painting app</span>
+            </li>
+          </ul>
+          <h3>Awards and Honors</h3>
+          <ul>
+            <li>
+              <span>Featured on The Verge</span>
+            </li>
+            <li>
+              <span>Program of the Year, ticalc.org</span>
+            </li>
+            <li>
+              <span>Winner, Caltech MCE competition</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
