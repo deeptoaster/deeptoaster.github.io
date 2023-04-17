@@ -4,7 +4,11 @@ define(
   'https://accounts.google.com/o/oauth2/v2/auth'
 );
 
-define('SQUIFFLES_GOOGLE_SCOPE', 'https://www.googleapis.com/auth/spreadsheets.readonly');
+define(
+  'SQUIFFLES_GOOGLE_SCOPE',
+  'https://www.googleapis.com/auth/spreadsheets.readonly'
+);
+
 define('SQUIFFLES_GOOGLE_TOKEN_URL', 'https://oauth2.googleapis.com/token');
 define('SQUIFFLES_INDEX_FILE', __DIR__ . '/../index.html');
 
@@ -96,10 +100,12 @@ if ($response_code === 200) {
 
   $pattern = '/' . str_replace(
     '\\$\\$',
-    '[\.\d]+', preg_quote($cleverly->fetch(
-    'string:' . SQUIFFLES_BLIP_TEMPLATE,
-    ['left' => '$$', 'top' => '$$']
-  ), '/')) . '/';
+    '[\.\d]+',
+    preg_quote($cleverly->fetch(
+      'string:' . SQUIFFLES_BLIP_TEMPLATE,
+      ['left' => '$$', 'top' => '$$']
+    ), '/')
+  ) . '/';
 
   $replacement = $cleverly->fetch(
     'string:' . SQUIFFLES_BLIP_TEMPLATE,
