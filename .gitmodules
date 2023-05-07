@@ -16,3 +16,6 @@
 [submodule "spaceteam"]
 	path = spaceteam
 	url = ssh://git@github.com/deeptoaster/spaceteam
+[submodule "ct3d"]
+	path = ct3d
+	url = ssh://git@github.com/deeptoaster/ct3d-site
