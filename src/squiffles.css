@@ -435,13 +435,13 @@ td {
   top: 0;
   border-width: 0 0 0.8em 0;
   border-style: solid;
-  border-color: transparent #aa9439;
+  border-color: transparent #aa9739;
 }
 .map-point > span > span {
   display: block;
   position: absolute;
   padding: 0.2em 0.4em;
-  background-color: #aa9439;
+  background-color: #aa9739;
 }
 .map-point.map-point-left > span::after {
   right: 0;
@@ -1107,7 +1107,7 @@ h3,
 }
 #header .pull-right a:hover,
 #header .pull-right a:focus {
-  color: #aa9439;
+  color: #aa9739;
 }
 #main,
 #sidebar {
@@ -1474,7 +1474,7 @@ body.page #sidebar {
   border-color: rgba(157, 54, 76, 0.6);
 }
 #travel .map-point {
-  background-color: #aa9439;
+  background-color: #aa9739;
 }
 #gallery {
   padding-top: 2em;
