@@ -2,24 +2,24 @@
 <table class="grid">
   <tr>
     <td>
-      <i class="icon-hiker"></i>
+      <i class="icon-mountains"></i>
     </td>
     <td>
       <i class="icon-headphones"></i>
     </td>
     <td>
-      <i class="icon-sports"></i>
+      <i class="icon-fencing"></i>
     </td>
   </tr>
   <tr>
     <td>
-      <i class="icon-fountain-pen-close-up"></i>
+      <i class="icon-pen"></i>
     </td>
     <td>
-      <i class="icon-matches"></i>
+      <i class="icon-fire"></i>
     </td>
     <td>
-      <i class="icon-drawing"></i>
+      <i class="icon-design"></i>
     </td>
   </tr>
 </table>

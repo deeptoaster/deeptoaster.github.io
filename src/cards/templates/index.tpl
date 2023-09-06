@@ -45,11 +45,11 @@
             <h2>Will Yu</h2>
             <p>
               <a href="tel:+15034278483">(503) 427-8483</a>
-              <i class="icon-telephone-of-old-design"></i>
+              <i class="icon-telephone"></i>
             </p>
             <p>
               <a href="mailto:deeptoaster@gmail.com">deeptoaster@gmail.com</a>
-              <i class="icon-note"></i>
+              <i class="icon-envelope"></i>
             </p>
             <p>
               <a href="http://{$root}/">{$root}</a>

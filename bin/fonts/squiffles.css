@@ -1,10 +1,10 @@
 @font-face {
   font-family: "squiffles";
-  src: url("squiffles.eot?foevc1");
-  src: url("squiffles.eot?foevc1#iefix") format("embedded-opentype"),
-    url("squiffles.ttf?foevc1") format("truetype"),
-    url("squiffles.woff?foevc1") format("woff"),
-    url("squiffles.svg?foevc1#squiffles") format("svg");
+  src: url("squiffles.eot?wo3bs2");
+  src: url("squiffles.eot?wo3bs2#iefix") format("embedded-opentype"),
+    url("squiffles.ttf?wo3bs2") format("truetype"),
+    url("squiffles.woff?wo3bs2") format("woff"),
+    url("squiffles.svg?wo3bs2#squiffles") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,42 +26,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-lastfm2:before {
-  content: "\f102";
+.icon-couchsurfing:before {
+  content: "\e900";
 }
-.icon-note:before {
-  content: "\f108";
+.icon-lastfm:before {
+  content: "\e901";
 }
-.icon-magnifying-glass-search:before {
-  content: "\f100";
+.icon-telephone:before {
+  content: "\e902";
 }
-.icon-hiker:before {
-  content: "\f107";
-}
-.icon-couchsurfing-logo:before {
-  content: "\f101";
+.icon-envelope:before {
+  content: "\e903";
 }
 .icon-link:before {
-  content: "\f109";
+  content: "\e904";
 }
-.icon-matches:before {
-  content: "\f10b";
+.icon-code:before {
+  content: "\e905";
 }
-.icon-telephone-of-old-design:before {
-  content: "\f106";
-}
-.icon-sports:before {
-  content: "\f104";
-}
-.icon-fountain-pen-close-up:before {
-  content: "\f105";
-}
-.icon-multimedia:before {
-  content: "\f10a";
+.icon-mountains:before {
+  content: "\e906";
 }
 .icon-headphones:before {
-  content: "\f10c";
+  content: "\e907";
 }
-.icon-drawing:before {
-  content: "\f103";
+.icon-fencing:before {
+  content: "\e908";
+}
+.icon-pen:before {
+  content: "\e909";
+}
+.icon-fire:before {
+  content: "\e90a";
+}
+.icon-design:before {
+  content: "\e90b";
 }
