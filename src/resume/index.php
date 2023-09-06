@@ -13,23 +13,33 @@ $cleverly->display('index.tpl', [
     [
       'date' => '2022&ndash;23',
       'major' => 'Computer Vision',
+      'notes' =>
+          'SLAM and modelling courses; laser interferometry capstone; 4.1 GPA',
       'school' => 'MS, Carnegie Mellon'
     ],
     [
       'date' => '2013&ndash;17',
       'major' => 'Computer Science, Aerospace (minor)',
       'notes' =>
-          'Completed Graphics, Robotics, and Machine Learning tracks, as well as the Mechanical Engineering capstone project; 3.9 GPA',
+          'Graphics track; Robotics track; Mech. Eng. capstone; 3.9 GPA',
       'school' => 'BS, Caltech'
     ]
   ],
   'employment' => [
     [
+      'date' => 2023,
+      'employer' => 'Mach9 Robotics',
+      'notes' => [
+        'Developed end-to-end solution using a combination of classical and ML-based computer vision to tackle major real-world infrastructure challenges'
+      ],
+      'title' => 'Computer Vision Intern'
+    ],
+    [
       'date' => '2020&ndash;22',
       'employer' => 'Compound Eye',
       'notes' => [
-        'Led end-to-end architecture, build, and deployment of various cloud-based computer vision tools, such as a real-time 3D visualizer and annotation tools',
-        'Developed novel odometry software for camera-based visuospatial perception'
+        'Led end-to-end architecture, build, and deployment of cloud-based computer vision applications, such as a real-time 3D visualizer and annotation tools',
+        'Created novel odometry software for camera-based visuospatial perception'
       ],
       'title' => 'Senior Engineer'
     ],
@@ -46,9 +56,6 @@ $cleverly->display('index.tpl', [
     [
       'date' => 2015,
       'employer' => 'TigerText',
-      'notes' => [
-        'Developed client-facing admin panels, features, and toolchain improvements'
-      ],
       'title' => 'Web Development Intern'
     ],
     [
@@ -62,9 +69,6 @@ $cleverly->display('index.tpl', [
     [
       'date' => '2012&ndash;13',
       'employer' => 'Intel',
-      'notes' => [
-        'Developed UX tracking and analysis library to determine tools\' cognitive load'
-      ],
       'title' => 'Software Development Intern'
     ]
   ],

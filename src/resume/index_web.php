@@ -7,7 +7,7 @@ $cleverly->preserveIndent = true;
 $cleverly->setTemplateDir(__DIR__ . '/templates');
 $cleverly->addTemplateDir(__DIR__ . '/../common/templates');
 
-$cleverly->display('index_service.tpl', [
+$cleverly->display('index_web.tpl', [
   'date' => strftime('%F'),
   'education' => [
     [
@@ -27,63 +27,34 @@ $cleverly->display('index_service.tpl', [
   ],
   'employment' => [
     [
-      'date' => 2023,
-      'employer' => 'The Urban Tap',
-      'notes' => [
-        'As host, managed hundreds of covers at four-room gastropub using Resy',
-        'As expo, ensured order quality through many a late-night happy-hour rush'
-      ],
-      'title' => 'Server, Expo, Host'
-    ],
-    [
       'date' => '2022&ndash;23',
-      'disabled' => true,
       'employer' => 'Self-Employed',
+      'notes' => [
+        'Front-end and full-stack lead for financial services startup, developing React- and Node.js-based product and infrastructure from the ground up',
+        'Responsible for hiring, mentoring, and maintaining quality of front-end team'
+      ],
       'title' => 'Engineering Consultant'
     ],
     [
-      'date' => 2021,
-      'employer' => 'Boho',
-      'notes' => [
-        'Host at upscale restaurant with indoor and outdoor seating using OpenTable'
-      ],
-      'title' => 'Host'
-    ],
-    [
       'date' => '2020&ndash;22',
-      'disabled' => true,
       'employer' => 'Compound Eye',
       'notes' => [
-        'Led end-to-end architecture, build, and deployment of various cloud-based computer vision tools, such as a real-time 3D visualizer and annotation tools',
+        'Led end-to-end architecture, build, and deployment of cloud-based computer vision applications, such as a real-time 3D visualizer and annotation tools'
       ],
       'title' => 'Senior Engineer'
     ],
     [
-      'date' => 2020,
-      'employer' => 'Starbucks',
-      'notes' => [
-        'Trained and worked on-site during the early COVID-19 pandemic'
-      ],
-      'title' => 'Barista'
-    ],
-    [
-      'date' => '2018&ndash;19',
-      'employer' => 'Another Planet Entertainment',
-      'notes' => ['Part-time usher for a variety of shows and events'],
-      'title' => 'Usher'
-    ],
-    [
       'date' => '2016&ndash;20',
-      'disabled' => true,
       'employer' => 'Facebook',
       'notes' => [
+        'Tech lead on rendering platform used by tens of thousands of moderators',
         'Coordinated effort among dozens of customer teams companywide which generated millions of dollars in identifiable cost savings',
+        'Regularly mentored interns and other engineers'
       ],
       'title' => 'Senior Software Engineer (E5)'
     ],
     [
       'date' => 2015,
-      'disabled' => true,
       'employer' => 'TigerText',
       'title' => 'Web Development Intern'
     ],
@@ -91,15 +62,12 @@ $cleverly->display('index_service.tpl', [
       'date' => '2014&ndash;17',
       'employer' => 'Caltech',
       'notes' => [
-        'Certified by California to serve and wait tables in student dining services',
-        'Point of contact for Caltech administration on undergrad housing allocation',
-        'Maintained student records and ran meetings for all student-life issues'
+        'Built large RAID 60 server and developed web, mail, and other services'
       ],
-      'title' => 'Waiter, House Secretary, IMSS Representative'
+      'title' => 'IMSS Representative'
     ],
     [
       'date' => '2012&ndash;13',
-      'disabled' => true,
       'employer' => 'Intel',
       'title' => 'Software Development Intern'
     ]
@@ -111,9 +79,9 @@ $cleverly->display('index_service.tpl', [
     ['name' => 'Spanish', 'proficiency' => 60],
     ['name' => 'Russian', 'proficiency' => 40]
   ],
-  'path' => '/resume-service/',
+  'path' => '/resume',
   'root' => $config['root'],
-  'show_github' => false,
+  'show_github' => true,
   'title' => 'R&eacute;sum&eacute; - Deep Toaster'
 ]);
 ?>

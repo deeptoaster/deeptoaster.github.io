@@ -7,8 +7,10 @@ squiffles:
 	cd src/resume && php -f index.php > ../../resume/index.html
 	mkdir -p resume-service
 	cd src/resume && php -f index_service.php > ../../resume-service/index.html
+	mkdir -p resume-web
+	cd src/resume && php -f index_web.php > ../../resume-web/index.html
 	cd css && make
 	cd slides && make
 
 clean:
-	rm -rf cards index.html squiffles.css
+	rm -rf cards index.html resume resume-service resume-web squiffles.css
