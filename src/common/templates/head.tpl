@@ -8,6 +8,6 @@
   <link href="/bin/fonts/squiffles.css?v={$date}" type="text/css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Raleway:800%7CTitillium+Web:400,700" type="text/css" rel="stylesheet" />
   <link href="/squiffles.css?v={$date}" type="text/css" rel="stylesheet" />
-  <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-168811289-1"></script>
-  <script src="/bin/js/ga.js"></script>
+  <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-49V202H3DJ"></script>
+  <script src="/bin/js/ga.js?v={$date}"></script>
 </head>

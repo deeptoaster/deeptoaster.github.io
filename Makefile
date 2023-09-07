@@ -11,6 +11,7 @@ squiffles:
 	cd src/resume && php -f index_web.php > ../../resume-web/index.html
 	cd css && make
 	cd slides && make
+	cd tracker && npm install && npm run build
 
 clean:
 	rm -rf cards index.html resume resume-service resume-web squiffles.css
