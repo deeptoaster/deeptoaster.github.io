@@ -4,14 +4,12 @@ define(
   '<span class="map-blip" style="top: {$top}em; left: {$left}em;"></span>'
 );
 
-define('SQUIFFLES_CONFIG_FILE', __DIR__ . '/../config.php');
+define('SQUIFFLES_CONFIG_FILE', __DIR__ . '/../.env');
 define('SQUIFFLES_MAP_FILE', __DIR__ . '/../bin/images/world.png');
 define('SQUIFFLES_PX_PER_EM', 20);
 define('SQUIFFLES_TRELLO_PATTERN', '/\bhttps?:\/\/trello.com\/c\/(\w+)/');
 
-$config = [];
-
-include(SQUIFFLES_CONFIG_FILE);
+$config = parse_ini_file(SQUIFFLES_CONFIG_FILE);
 
 /**
  * Creates attachments from a URL on each of a list of Trello cards.
@@ -21,20 +19,20 @@ include(SQUIFFLES_CONFIG_FILE);
 function squiffles_attach_to_trello($cards, $url) {
   global $config;
 
-  if (!isset($config['trello_key']) || !isset($config['trello_token'])) {
+  if (!isset($config['TRELLO_KEY']) || !isset($config['TRELLO_TOKEN'])) {
     return;
   }
 
   $fields = [
-    'key' => $config['trello_key'],
-    'token' => $config['trello_token'],
+    'key' => $config['TRELLO_KEY'],
+    'token' => $config['TRELLO_TOKEN'],
     'url' => $url
   ];
 
   $query = http_build_query([
     'fields' => 'url',
-    'key' => $config['trello_key'],
-    'token' => $config['trello_token']
+    'key' => $config['TRELLO_KEY'],
+    'token' => $config['TRELLO_TOKEN']
   ]);
 
   $handle = curl_init();
@@ -80,13 +78,11 @@ function squiffles_config_set($settings) {
 
   ksort($config);
   $stream = fopen(SQUIFFLES_CONFIG_FILE, 'w');
-  fwrite($stream, "<?\n");
 
   foreach ($config as $key => $value) {
-    fwrite($stream, "\$config['$key'] = '$value';\n");
+    fwrite($stream, "$key=\"$value\"\n");
   }
 
-  fwrite($stream, "?>\n");
   fclose($stream);
 }
 
@@ -104,13 +100,13 @@ function squiffles_fetch_location(&$lat, &$lng) {
   curl_setopt($handle, CURLOPT_HTTPGET, true);
 
   curl_setopt($handle, CURLOPT_HTTPHEADER, [
-    "Authorization: Bearer $config[google_access_token]"
+    "Authorization: Bearer $config[GOOGLE_ACCESS_TOKEN]"
   ]);
 
   curl_setopt(
     $handle,
     CURLOPT_URL,
-    "https://sheets.googleapis.com/v4/spreadsheets/$config[blip_sheet_id]/values/'$config[blip_sheet_name]'!$config[blip_sheet_range]"
+    "https://sheets.googleapis.com/v4/spreadsheets/$config[BLIP_SHEET_ID]/values/'$config[BLIP_SHEET_NAME]'!$config[BLIP_SHEET_RANGE]"
   );
 
   $response = json_decode(curl_exec($handle));

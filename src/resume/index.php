@@ -80,7 +80,7 @@ $cleverly->display('index.tpl', [
     ['name' => 'Russian', 'proficiency' => 40]
   ],
   'path' => '/resume',
-  'root' => $config['root'],
+  'root' => $config['ROOT'],
   'show_github' => true,
   'title' => 'R&eacute;sum&eacute; - Deep Toaster'
 ]);

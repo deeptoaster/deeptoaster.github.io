@@ -12,6 +12,7 @@ squiffles:
 	cd css && make
 	cd slides && make
 	cd tracker && npm install && npm run build
+	cd vacuum && npm install && npm run build
 
 clean:
 	rm -rf cards index.html resume resume-service resume-web squiffles.css

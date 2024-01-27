@@ -9,7 +9,7 @@ if (!hash_equals(
   'sha256=' . hash_hmac(
     'sha256',
     file_get_contents('php://input'),
-    $config['github_secret']
+    $config['GITHUB_SECRET']
   ),
   $_SERVER['HTTP_X_HUB_SIGNATURE_256']
 )) {

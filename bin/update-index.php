@@ -30,8 +30,8 @@ if (isset($_GET['code'])) {
   curl_setopt($handle, CURLOPT_POST, true);
 
   curl_setopt($handle, CURLOPT_POSTFIELDS, [
-    'client_id' => $config['google_client_id'],
-    'client_secret' => $config['google_client_secret'],
+    'client_id' => $config['GOOGLE_CLIENT_ID'],
+    'client_secret' => $config['GOOGLE_CLIENT_SECRET'],
     'code' => $_GET['code'],
     'grant_type' => 'authorization_code',
     'redirect_uri' => SQUIFFLES_REDIRECT_URL
@@ -41,8 +41,8 @@ if (isset($_GET['code'])) {
   $response = json_decode(curl_exec($handle));
 
   squiffles_config_set([
-    'google_access_token' => $response->access_token,
-    'google_refresh_token' => $response->refresh_token
+    'GOOGLE_ACCESS_TOKEN' => $response->access_token,
+    'GOOGLE_REFRESH_TOKEN' => $response->refresh_token
   ]);
 
   curl_close($handle);
@@ -52,16 +52,16 @@ $lat = null;
 $lng = null;
 $response_code = 401;
 
-if (@$config['google_access_token']) {
+if (@$config['GOOGLE_ACCESS_TOKEN']) {
   squiffles_fetch_location($lat, $lng);
 }
 
 if ($response_code === 401) {
-  if (!@$config['google_refresh_token']) {
+  if (!@$config['GOOGLE_REFRESH_TOKEN']) {
     header(sprintf(
       'Location: %s?access_type=offline&client_id=%s&prompt=consent&redirect_uri=%s&response_type=code&scope=%s&state=state_parameter_passthrough_value',
       SQUIFFLES_GOOGLE_AUTH_URL,
-      $config['google_client_id'],
+      $config['GOOGLE_CLIENT_ID'],
       rawurlencode(SQUIFFLES_REDIRECT_URL),
       rawurlencode(SQUIFFLES_GOOGLE_SCOPE)
     ));
@@ -74,17 +74,17 @@ if ($response_code === 401) {
   curl_setopt($handle, CURLOPT_POST, true);
 
   curl_setopt($handle, CURLOPT_POSTFIELDS, [
-    'client_id' => $config['google_client_id'],
-    'client_secret' => $config['google_client_secret'],
+    'client_id' => $config['GOOGLE_CLIENT_ID'],
+    'client_secret' => $config['GOOGLE_CLIENT_SECRET'],
     'grant_type' => 'refresh_token',
-    'refresh_token' => $config['google_refresh_token']
+    'refresh_token' => $config['GOOGLE_REFRESH_TOKEN']
   ]);
 
   curl_setopt($handle, CURLOPT_URL, SQUIFFLES_GOOGLE_TOKEN_URL);
   $response = json_decode(curl_exec($handle));
 
   squiffles_config_set([
-    'google_access_token' => $response->access_token
+    'GOOGLE_ACCESS_TOKEN' => $response->access_token
   ]);
 
   curl_close($handle);

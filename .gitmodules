@@ -19,3 +19,6 @@
 [submodule "ct3d"]
 	path = ct3d
 	url = ssh://git@github.com/deeptoaster/ct3d-site
+[submodule "vacuum"]
+	path = vacuum
+	url = ssh://git@github.com/deeptoaster/vacuum.fm

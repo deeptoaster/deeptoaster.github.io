@@ -280,7 +280,7 @@ $cleverly->display('index.tpl', [
   'points' => $points,
   'pages' => $pages,
   'path' => '/',
-  'root' => $config['root'],
+  'root' => $config['ROOT'],
   'title' => 'Deep Toaster'
 ]);
 ?>

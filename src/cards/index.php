@@ -16,7 +16,7 @@ $cleverly->display('index.tpl', [
   'date' => strftime('%F'),
   'fishbot' => $fishbot,
   'path' => '/cards/',
-  'root' => $config['root'],
+  'root' => $config['ROOT'],
   'title' => 'Cards - Deep Toaster'
 ]);
 ?>

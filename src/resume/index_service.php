@@ -112,7 +112,7 @@ $cleverly->display('index_service.tpl', [
     ['name' => 'Russian', 'proficiency' => 40]
   ],
   'path' => '/resume-service/',
-  'root' => $config['root'],
+  'root' => $config['ROOT'],
   'show_github' => false,
   'title' => 'R&eacute;sum&eacute; - Deep Toaster'
 ]);
