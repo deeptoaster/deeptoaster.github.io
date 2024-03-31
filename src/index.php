@@ -219,13 +219,13 @@ $points = [
 $pages = squiffles_showcase([
   [
     'description' =>
-        'This is a custom sign-up experience built for a one-day cyberpunk-themed puzzle hunt called Project Hyperskelion.',
+        'Custom sign-up experience built for a one-day cyberpunk-themed puzzle hunt called Project Hyperskelion.',
     'image' => '/bin/images/showcase_hyper.gif'
   ],
   [
     'description' =>
-        'This is an online grasp solver for point contacts with friction (PCWF). Check it out <a href="/force-closure/">online</a> or <a href="https://github.com/deeptoaster/force-closure">on GitHub</a>!',
-    'image' => '/bin/images/showcase_pcwf.gif'
+        'An easily extensible <a href="https://github.com/deeptoaster/nato-lights">software library</a> and Arduino Uno&ndash;based hardware demo for decorative NeoPixel lighting strips.',
+    'image' => '/bin/images/showcase_lights.gif'
   ],
   [
     'description' =>
@@ -239,13 +239,23 @@ $pages = squiffles_showcase([
   ],
   [
     'description' =>
-        'An early webapp built for the graphing calculator community, the <a href="https://clrhome.org/ies/">Integrated Editor System</a> is an IDE for creating TI-83 Plus&ndash;series calculator programs and other variables online.',
-    'image' => '/bin/images/showcase_ies.png'
+        'Fishbot, a jellyfish-like mechanism designed and built from machined acrylic and 3D-printed parts for Caltech\'s <a href="https://catalog.caltech.edu/current/2023-24/department/ME/#design-and-fabrication">ME 14</a>.',
+    'image' => '/bin/images/showcase_fishbot.gif'
   ],
   [
     'description' =>
-        'This is a <a href="https://blacker.caltech.edu/">website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
+        'Online demo of a bunch of <a href="/css/">stupid things</a> you can do with CSS. Check out the <a href="https://fishbotwilleatyou.com/blog/tag/stupid-css/">writeup on the blog</a> or the code <a href="https://github.com/deeptoaster/stupid-css">on GitHub</a>!',
+    'image' => '/bin/images/showcase_css.png'
+  ],
+  [
+    'description' =>
+        '<a href="https://blacker.caltech.edu/">Website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
     'image' => '/bin/images/showcase_blacker.png'
+  ],
+  [
+    'description' =>
+        'Online grasp solver for point contacts with friction (PCWF). Check it out <a href="/force-closure/">online</a> or <a href="https://github.com/deeptoaster/force-closure">on GitHub</a>!',
+    'image' => '/bin/images/showcase_pcwf.gif'
   ],
   [
     'description' =>
@@ -254,8 +264,18 @@ $pages = squiffles_showcase([
   ],
   [
     'description' =>
+        'A neuomorphic webapp for generating Tasker configs for quantified-self projects. Check it out <a href="/tracker/">online</a> or <a href="https://github.com/deeptoaster/tasker-tracker">on GitHub</a>!',
+    'image' => '/bin/images/showcase_tracker.gif'
+  ],
+  [
+    'description' =>
         'Header of an infographic designed in 2016.',
     'image' => '/bin/images/showcase_real.png'
+  ],
+  [
+    'description' =>
+        'An early webapp built for the graphing calculator community, the <a href="https://clrhome.org/ies/">Integrated Editor System</a> is an IDE for creating TI-83 Plus&ndash;series calculator programs and other variables online.',
+    'image' => '/bin/images/showcase_ies.png'
   ]
 ]);
 
