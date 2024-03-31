@@ -1456,25 +1456,25 @@ body.page #sidebar {
 #about .honeycomb-cell.honeycomb-omnimaga:focus::after {
   border-left-color: rgba(46, 25, 128, 0.8);
 }
-#about .honeycomb-cell.honeycomb-revsoft {
+#about .honeycomb-cell.honeycomb-ri {
   background-color: rgba(153, 117, 31, 0.6);
 }
-#about .honeycomb-cell.honeycomb-revsoft::before {
+#about .honeycomb-cell.honeycomb-ri::before {
   border-right-color: rgba(153, 117, 31, 0.6);
 }
-#about .honeycomb-cell.honeycomb-revsoft::after {
+#about .honeycomb-cell.honeycomb-ri::after {
   border-left-color: rgba(153, 117, 31, 0.6);
 }
-#about .honeycomb-cell.honeycomb-revsoft:hover,
-#about .honeycomb-cell.honeycomb-revsoft:focus {
+#about .honeycomb-cell.honeycomb-ri:hover,
+#about .honeycomb-cell.honeycomb-ri:focus {
   background-color: rgba(153, 117, 31, 0.8);
 }
-#about .honeycomb-cell.honeycomb-revsoft:hover::before,
-#about .honeycomb-cell.honeycomb-revsoft:focus::before {
+#about .honeycomb-cell.honeycomb-ri:hover::before,
+#about .honeycomb-cell.honeycomb-ri:focus::before {
   border-right-color: rgba(153, 117, 31, 0.8);
 }
-#about .honeycomb-cell.honeycomb-revsoft:hover::after,
-#about .honeycomb-cell.honeycomb-revsoft:focus::after {
+#about .honeycomb-cell.honeycomb-ri:hover::after,
+#about .honeycomb-cell.honeycomb-ri:focus::after {
   border-left-color: rgba(153, 117, 31, 0.8);
 }
 #about .lead {
