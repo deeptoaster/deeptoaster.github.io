@@ -4,7 +4,7 @@
   <body class="page">
     <div id="sidebar">
       <h1>Will Yu</h1>
-      <p class="lead">Seasoned software and computer vision engineer with experience leading state-of-the-art projects and cross-functional teams and a knack for <strong>creative, efficient solutions</strong> to novel problems.</p>
+      <p class="lead">Seasoned software lead and computer vision engineer with experience building state-of-the-art projects and cross-functional teams and a knack for <strong>creative, efficient solutions</strong> to novel problems.</p>
       <p class="lead">Fast learner, proven mentor, and <strong>detail-oriented problem solver</strong> who likes to have fun and works exceptionally well under pressure.</p>
       {include file='languages.tpl'}
       {include file='hobbies.tpl'}

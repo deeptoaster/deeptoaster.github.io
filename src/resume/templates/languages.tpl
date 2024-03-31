@@ -5,6 +5,7 @@
 <div class="col col-60">
   <div class="progress">
     <span style="width: {$language.proficiency}%;"></span>
+    <label>{$language.level}</label>
   </div>
 </div>
 {/foreach}

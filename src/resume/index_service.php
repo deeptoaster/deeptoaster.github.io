@@ -14,8 +14,14 @@ $cleverly->display('index_service.tpl', [
       'date' => '2022&ndash;23',
       'major' => 'Computer Vision',
       'notes' =>
-          'SLAM and modelling courses; laser interferometry capstone; 4.1 GPA',
+          'SLAM, ML, and modelling courses; laser interferometry capstone; 4.1 GPA',
       'school' => 'MS, Carnegie Mellon'
+    ],
+    [
+      'date' => 2023,
+      'disabled' => true,
+      'major' => 'Computer Vision Intern',
+      'school' => 'Mach9 Robotics'
     ],
     [
       'date' => '2013&ndash;17',
@@ -23,6 +29,12 @@ $cleverly->display('index_service.tpl', [
       'notes' =>
           'Graphics track; Robotics track; Mech. Eng. capstone; 3.9 GPA',
       'school' => 'BS, Caltech'
+    ],
+    [
+      'date' => 2015,
+      'disabled' => true,
+      'major' => 'Web Development Intern',
+      'school' => 'TigerText'
     ]
   ],
   'employment' => [
@@ -36,10 +48,13 @@ $cleverly->display('index_service.tpl', [
       'title' => 'Server, Expo, Host'
     ],
     [
-      'date' => '2022&ndash;23',
+      'date' => '2022&ndash;24',
       'disabled' => true,
-      'employer' => 'Self-Employed',
-      'title' => 'Engineering Consultant'
+      'employer' => 'AnchorZero',
+      'notes' => [
+        'Responsible for hiring, mentoring, and maintaining quality of front-end team'
+      ],
+      'title' => 'Consultant / Lead Engineer'
     ],
     [
       'date' => 2021,
@@ -82,12 +97,6 @@ $cleverly->display('index_service.tpl', [
       'title' => 'Senior Software Engineer (E5)'
     ],
     [
-      'date' => 2015,
-      'disabled' => true,
-      'employer' => 'TigerText',
-      'title' => 'Web Development Intern'
-    ],
-    [
       'date' => '2014&ndash;17',
       'employer' => 'Caltech',
       'notes' => [
@@ -105,11 +114,11 @@ $cleverly->display('index_service.tpl', [
     ]
   ],
   'languages' => [
-    ['name' => 'English', 'proficiency' => 100],
-    ['name' => 'Mandarin', 'proficiency' => 100],
-    ['name' => 'French', 'proficiency' => 80],
-    ['name' => 'Spanish', 'proficiency' => 60],
-    ['name' => 'Russian', 'proficiency' => 40]
+    ['level' => 'native', 'name' => 'English', 'proficiency' => 100],
+    ['level' => 'native', 'name' => 'Mandarin', 'proficiency' => 100],
+    ['level' => 'B2', 'name' => 'French', 'proficiency' => 70],
+    ['level' => 'B2', 'name' => 'Spanish', 'proficiency' => 60],
+    ['level' => 'B1', 'name' => 'Russian', 'proficiency' => 40]
   ],
   'path' => '/resume-service/',
   'root' => $config['ROOT'],

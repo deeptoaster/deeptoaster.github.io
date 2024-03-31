@@ -38,11 +38,8 @@ h1 {
 body.page h1 {
   clear: both;
   border-bottom: 0.1em solid #859fab;
-  padding-top: 1.5em;
-  padding-bottom: 0.5em;
-}
-body.page h1:first-child {
   padding-top: 1em;
+  padding-bottom: 0.5em;
 }
 h2 {
   margin: 0;
@@ -732,14 +729,27 @@ a.honeycomb-cell {
   animation: 2s infinite bounce;
 }
 .progress {
-  margin: 0.7em 0;
+  position: relative;
+  margin: 0.6em 0;
   padding-left: 0;
   background-color: #859fab;
 }
 .progress span {
   display: block;
-  height: 0.8em;
+  height: 1em;
   background-color: #467286;
+}
+#sidebar .progress label {
+  display: block;
+  position: absolute;
+  top: 0.125em;
+  right: 0;
+  bottom: 0.125em;
+  left: 0;
+  color: #a6b8c1;
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 1em;
 }
 .timeline {
   margin: 0;
@@ -826,9 +836,12 @@ a.honeycomb-cell {
   padding-bottom: 0;
   padding-left: 1.5em;
 }
+.page .timeline p,
+.page .timeline ul {
+  font-size: 0.8em;
+}
 .page .timeline ul {
   margin: 0;
-  font-size: 0.8em;
 }
 .page .timeline li {
   margin-bottom: 0;
