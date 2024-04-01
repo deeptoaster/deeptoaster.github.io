@@ -1,4 +1,6 @@
 <?
+namespace Squiffles;
+
 include(__DIR__ . '/../lib/functions.php');
 
 if ($_SERVER['HTTP_X_GITHUB_EVENT'] !== 'push') {
@@ -19,11 +21,7 @@ if (!hash_equals(
 $push = json_decode($_POST['payload']);
 
 foreach ($push->commits as $commit) {
-  if (preg_match_all(
-    SQUIFFLES_TRELLO_PATTERN,
-    $commit->message,
-    $matches
-  ) !== 0) {
+  if (preg_match_all(TRELLO_PATTERN, $commit->message, $matches) !== 0) {
     squiffles_attach_to_trello($matches[0], $commit->url);
   }
 }

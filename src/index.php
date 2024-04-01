@@ -1,5 +1,7 @@
 <?
-define('SQUIFFLES_ITEMS_PER_PAGE', 4);
+namespace Squiffles;
+
+define('Squiffles\ITEMS_PER_PAGE', 4);
 
 include(__DIR__ . '/../lib/cleverly/Cleverly.class.php');
 include(__DIR__ . '/../lib/functions.php');
@@ -39,21 +41,18 @@ function squiffles_point($city, $label, $right) {
     'side' => $right ? 'right' : 'left',
     'style' => sprintf(
       'top: %.2fem; left: %.2fem;',
-      $y / SQUIFFLES_PX_PER_EM,
-      $x / SQUIFFLES_PX_PER_EM
+      $y / PX_PER_EM,
+      $x / PX_PER_EM
     )
   ];
 }
 
 function squiffles_showcase($items) {
   $pages = [];
-
-  $page_count = (int)(
-    (count($items) + SQUIFFLES_ITEMS_PER_PAGE - 1) / SQUIFFLES_ITEMS_PER_PAGE
-  );
+  $page_count = (int)((count($items) + ITEMS_PER_PAGE - 1) / ITEMS_PER_PAGE);
 
   foreach ($items as $item_number => $item) {
-    if ($item_number % SQUIFFLES_ITEMS_PER_PAGE === 0) {
+    if ($item_number % ITEMS_PER_PAGE === 0) {
       $page_number = (int)($item_number / 4);
 
       $pages[$page_number] = [
@@ -74,9 +73,7 @@ function squiffles_showcase($items) {
 
   $pages[$page_number]['padding'] = array_fill(
     0,
-    SQUIFFLES_ITEMS_PER_PAGE - 1 -
-        (count($items) + SQUIFFLES_ITEMS_PER_PAGE - 1) %
-        SQUIFFLES_ITEMS_PER_PAGE,
+    ITEMS_PER_PAGE - 1 - (count($items) + ITEMS_PER_PAGE - 1) % ITEMS_PER_PAGE,
     null
   );
 
@@ -84,136 +81,136 @@ function squiffles_showcase($items) {
 }
 
 $arcs = [
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::LOS_ANGELES, 20, 'plane'), // 2013-04-23
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::LOS_ANGELES, 30, 'plane'), // 2013-04-28
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::SHANGHAI, 150, 'plane'), // 2014-09-09
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::SHANGHAI, 165, 'plane'), // 2014-09-24
-  squiffles_arc(SquifflesCity::LOS_ANGELES, SquifflesCity::SAN_FRANCISCO, 5, 'plane'), // 2015-01-11
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::LOS_ANGELES, 20, 'plane'), // 2015-01-12
-  squiffles_arc(SquifflesCity::VANCOUVER, SquifflesCity::LOS_ANGELES, 45, 'plane'), // 2015-03-31
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::MIAMI, 60, 'plane'), // 2015-09-10
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::MIAMI, 75, 'plane'), // 2015-09-19
-  squiffles_arc(SquifflesCity::BOGOTA, SquifflesCity::LOS_ANGELES, 45, 'plane'), // 2016-03-07
-  squiffles_arc(SquifflesCity::BOGOTA, SquifflesCity::LOS_ANGELES, 60, 'plane'), // 2016-03-11
-  squiffles_arc(SquifflesCity::VANCOUVER, SquifflesCity::LOS_ANGELES, 55, 'plane'), // 2016-03-16
-  squiffles_arc(SquifflesCity::DENVER, SquifflesCity::LOS_ANGELES, 30, 'plane'), // 2016-06-17
-  squiffles_arc(SquifflesCity::LOS_ANGELES, SquifflesCity::LONDON, 30, 'plane'), // 2016-12-03
-  squiffles_arc(SquifflesCity::LOS_ANGELES, SquifflesCity::LONDON, 45, 'plane'), // 2016-12-09
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::LAS_VEGAS, 35, 'plane'), // 2016-12-25
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::LAS_VEGAS, 45, 'plane'), // 2016-12-28
-  squiffles_arc(SquifflesCity::CHICAGO, SquifflesCity::LOS_ANGELES, 45, 'plane'), // 2016-02-03
-  squiffles_arc(SquifflesCity::CHICAGO, SquifflesCity::LOS_ANGELES, 60, 'plane'), // 2016-02-07
-  squiffles_arc(SquifflesCity::TOKYO, SquifflesCity::LOS_ANGELES, 165, 'plane'), // 2017-03-19
-  squiffles_arc(SquifflesCity::TOKYO, SquifflesCity::LOS_ANGELES, 180, 'plane'), // 2017-03-29
-  squiffles_arc(SquifflesCity::SHANGHAI, SquifflesCity::BUCHAREST, 60, 'plane'), // 2017-07-02
-  squiffles_arc(SquifflesCity::BELGRADE, SquifflesCity::LOS_ANGELES, 120, 'plane'), // 2017-07-21
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::DUBLIN, 135, 'plane'), // 2017-10-21
-  squiffles_arc(SquifflesCity::DUBLIN, SquifflesCity::PRAGUE, 45, 'plane'), // 2017-10-29
-  squiffles_arc(SquifflesCity::MUNICH, SquifflesCity::SAN_FRANCISCO, 45, 'plane'), // 2017-11-03
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::DENVER, 40, 'plane'), // 2017-11-18
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::DENVER, 50, 'plane'), // 2017-11-20
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::LAS_VEGAS, 15, 'plane'), // 2017-12-02
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::LAS_VEGAS, 25, 'plane'), // 2017-12-04
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::PORTLAND, 25, 'plane'), // 2017-12-22
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::PORTLAND, 35, 'plane'), // 2018-01-04
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::ALBUQUERQUE, 40, 'plane'), // 2018-01-13
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::ALBUQUERQUE, 50, 'plane'), // 2018-01-16
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::SEATTLE, 50, 'plane'), // 2018-03-16
-  squiffles_arc(SquifflesCity::SEATTLE, SquifflesCity::DUBLIN, 60, 'plane'), // 2018-03-19
-  squiffles_arc(SquifflesCity::DUBLIN, SquifflesCity::VENICE, 45, 'plane'), // 2018-03-24
-  squiffles_arc(SquifflesCity::ROME, SquifflesCity::SAN_FRANCISCO, 75, 'plane'), // 2018-03-31
-  squiffles_arc(SquifflesCity::DALLAS, SquifflesCity::SAN_FRANCISCO, 70, 'plane'), // 2018-06-24
-  squiffles_arc(SquifflesCity::DALLAS, SquifflesCity::SAN_FRANCISCO, 80, 'plane'), // 2018-06-27
-  squiffles_arc(SquifflesCity::CASABLANCA, SquifflesCity::SAN_FRANCISCO, 60, 'plane'), // 2018-09-01
-  squiffles_arc(SquifflesCity::CASABLANCA, SquifflesCity::SAN_FRANCISCO, 75, 'plane'), // 2018-09-07
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::OSLO, 165, 'plane'), // 2018-09-15
-  squiffles_arc(SquifflesCity::OSLO, SquifflesCity::RIGA, 30, 'plane'), // 2018-09-16
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::RIGA, 165, 'plane'), // 2018-09-26
-  squiffles_arc(SquifflesCity::TAMPA, SquifflesCity::SAN_FRANCISCO, 105, 'plane'), // 2018-10-07
-  squiffles_arc(SquifflesCity::TAMPA, SquifflesCity::SAN_FRANCISCO, 120, 'plane'), // 2018-10-09
-  squiffles_arc(SquifflesCity::DALLAS, SquifflesCity::LOS_ANGELES, 30, 'plane'), // 2019-01-07
-  squiffles_arc(SquifflesCity::KUALA_LUMPUR, SquifflesCity::SAN_FRANCISCO, 120, 'plane'), // 2019-01-19
-  squiffles_arc(SquifflesCity::LANGKAWI, SquifflesCity::SAN_FRANCISCO, 120, 'plane'), // 2019-01-19
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::WARSAW, 60, 'plane'), // 2019-03-31
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::WARSAW, 75, 'plane'), // 2019-04-14
-  squiffles_arc(SquifflesCity::AUSTIN, SquifflesCity::SAN_FRANCISCO, 75, 'plane'), // 2019-10-13
-  squiffles_arc(SquifflesCity::PITTSBURGH, SquifflesCity::AUSTIN, 30, 'plane'), // 2019-10-19
-  squiffles_arc(SquifflesCity::SAN_DIEGO, SquifflesCity::SAN_FRANCISCO, 60, 'plane'), // 2019-11-16
-  squiffles_arc(SquifflesCity::DENVER, SquifflesCity::LOS_ANGELES, 20, 'plane'), // 2019-11-23
-  squiffles_arc(SquifflesCity::ATHENS, SquifflesCity::SAN_FRANCISCO, 120, 'plane'), // 2020-01-05
-  squiffles_arc(SquifflesCity::BUDAPEST, SquifflesCity::ATHENS, 25, 'plane'), // 2020-01-10
-  squiffles_arc(SquifflesCity::NICE, SquifflesCity::BUDAPEST, 25, 'plane'), // 2020-01-17
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::PARIS, 30, 'plane'), // 2020-01-23
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::PITTSBURGH, 35, 'plane'), // 2020-01-26
-  squiffles_arc(SquifflesCity::DENVER, SquifflesCity::PITTSBURGH, 40, 'plane'), // 2020-03-10
-  squiffles_arc(SquifflesCity::SEATTLE, SquifflesCity::PITTSBURGH, 45, 'plane'), // 2020-09-15
-  squiffles_arc(SquifflesCity::HONOLULU, SquifflesCity::SEATTLE, 60, 'plane'), // 2020-09-16
-  squiffles_arc(SquifflesCity::HONOLULU, SquifflesCity::PORTLAND, 50, 'plane'), // 2020-11-16
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::DENVER, 25, 'plane'), // 2021-01-15
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::CHICAGO, 25, 'plane'), // 2021-06-17
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::CHICAGO, 15, 'plane'), // 2021-06-20
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::VANCOUVER, 20, 'plane'), // 2021-09-19
-  squiffles_arc(SquifflesCity::VANCOUVER, SquifflesCity::PITTSBURGH, 45, 'plane'), // 2021-10-19
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::NEW_YORK, 60, 'plane'), // 2021-11-25
-  squiffles_arc(SquifflesCity::NEW_YORK, SquifflesCity::SAN_FRANCISCO, 10, 'plane'), // 2021-12-06
-  squiffles_arc(SquifflesCity::NEW_YORK, SquifflesCity::SAN_FRANCISCO, 20, 'plane'), // 2021-12-17
-  squiffles_arc(SquifflesCity::PITTSBURGH, SquifflesCity::SAN_FRANCISCO, 40, 'plane'), // 2022-01-15
-  squiffles_arc(SquifflesCity::CALGARY, SquifflesCity::NEW_YORK, 60, 'plane'), // 2022-03-21
-  squiffles_arc(SquifflesCity::SEATTLE, SquifflesCity::CALGARY, 15, 'plane'), // 2022-03-27
-  squiffles_arc(SquifflesCity::SEATTLE, SquifflesCity::NEW_YORK, 75, 'plane'), // 2022-03-31
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::NEW_YORK, 70, 'plane'), // 2022-05-12
-  squiffles_arc(SquifflesCity::SEATTLE, SquifflesCity::PITTSBURGH, 35, 'plane'), // 2022-07-27
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::DUBLIN, 120, 'plane'), // 2022-08-09
-  squiffles_arc(SquifflesCity::DUBLIN, SquifflesCity::NEW_YORK, 30, 'plane'), // 2022-08-17
-  squiffles_arc(SquifflesCity::PITTSBURGH, SquifflesCity::NEW_YORK, 10, 'plane'), // 2022-08-20
-  squiffles_arc(SquifflesCity::PITTSBURGH, SquifflesCity::NEW_YORK, 20, 'plane'), // 2022-09-10
-  squiffles_arc(SquifflesCity::PITTSBURGH, SquifflesCity::LOS_ANGELES, 35, 'plane'), // 2022-10-26
-  squiffles_arc(SquifflesCity::WHEELER_RIDGE, SquifflesCity::LOS_ANGELES, 5, 'thumb'), // 2014-11-06
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::WHEELER_RIDGE, 10, 'thumb'), // 2014-11-07
-  squiffles_arc(SquifflesCity::SACRAMENTO, SquifflesCity::LOS_ANGELES, 25, 'thumb'), // 2015-03-23
-  squiffles_arc(SquifflesCity::EUGENE, SquifflesCity::SACRAMENTO, 10, 'thumb'), // 2015-03-24
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::EUGENE, 10, 'thumb'), // 2015-03-25
-  squiffles_arc(SquifflesCity::SEATTLE, SquifflesCity::PORTLAND, 10, 'thumb'), // 2015-03-27
-  squiffles_arc(SquifflesCity::VANCOUVER, SquifflesCity::SEATTLE, 10, 'thumb'), // 2015-03-29
-  squiffles_arc(SquifflesCity::LOS_ANGELES, SquifflesCity::ATASCADERO, 10, 'thumb'), // 2015-07-03
-  squiffles_arc(SquifflesCity::ATASCADERO, SquifflesCity::SAN_FRANCISCO, 10, 'thumb'), // 2015-07-04
-  squiffles_arc(SquifflesCity::LOS_ANGELES, SquifflesCity::SAN_FRANCISCO, 30, 'thumb'), // 2015-08-22
-  squiffles_arc(SquifflesCity::LOS_ANGELES, SquifflesCity::SAN_FRANCISCO, 45, 'thumb'), // 2015-11-21
-  squiffles_arc(SquifflesCity::VANCOUVER, SquifflesCity::EVERETT, 25, 'thumb'), // 2016-03-18
-  squiffles_arc(SquifflesCity::EVERETT, SquifflesCity::PORTLAND, 25, 'thumb'), // 2016-03-19
-  squiffles_arc(SquifflesCity::PORTLAND, SquifflesCity::SEATTLE, 10, 'thumb'), // 2016-03-20
-  squiffles_arc(SquifflesCity::SEATTLE, SquifflesCity::VANCOUVER, 10, 'thumb'), // 2016-03-21
-  squiffles_arc(SquifflesCity::LAS_VEGAS, SquifflesCity::LOS_ANGELES, 10, 'thumb'), // 2016-06-12
-  squiffles_arc(SquifflesCity::LAS_VEGAS, SquifflesCity::RICHFIELD, 15, 'thumb'), // 2016-06-13
-  squiffles_arc(SquifflesCity::RICHFIELD, SquifflesCity::DENVER, 20, 'thumb'), // 2016-06-14
-  squiffles_arc(SquifflesCity::TOKYO, SquifflesCity::OSAKA, 10, 'thumb'), // 2017-03-21
-  squiffles_arc(SquifflesCity::OSAKA, SquifflesCity::TOKYO, 10, 'thumb'), // 2017-03-24
-  squiffles_arc(SquifflesCity::BUCHAREST, SquifflesCity::BRASOV, 10, 'thumb'), // 2017-07-05
-  squiffles_arc(SquifflesCity::BRASOV, SquifflesCity::CONSTANTA, 10, 'thumb'), // 2017-07-07
-  squiffles_arc(SquifflesCity::CONSTANTA, SquifflesCity::VARNA, 15, 'thumb'), // 2017-07-11
-  squiffles_arc(SquifflesCity::VARNA, SquifflesCity::SKOPJE, 20, 'thumb'), // 2017-07-13
-  squiffles_arc(SquifflesCity::SKOPJE, SquifflesCity::PRISTINA, 5, 'thumb'), // 2017-07-16
-  squiffles_arc(SquifflesCity::TAHOE_CITY, SquifflesCity::SAN_FRANCISCO, 10, 'thumb'), // 2017-09-02
-  squiffles_arc(SquifflesCity::SAN_FRANCISCO, SquifflesCity::TAHOE_CITY, 10, 'thumb'), // 2017-09-03
-  squiffles_arc(SquifflesCity::VENICE, SquifflesCity::BOLOGNA, 10, 'thumb'), // 2018-03-26
-  squiffles_arc(SquifflesCity::CASABLANCA, SquifflesCity::MARRAKESH, 10, 'thumb'), // 2018-09-08
-  squiffles_arc(SquifflesCity::PALANGA, SquifflesCity::LIEPAJA, 5, 'thumb'), // 2018-09-21
-  squiffles_arc(SquifflesCity::KUALA_LUMPUR, SquifflesCity::BUTTERWORTH, 10, 'thumb'), // 2019-01-26
-  squiffles_arc(SquifflesCity::LAS_VEGAS, SquifflesCity::LOS_ANGELES, 25, 'thumb')  // 2019-08-11
+  squiffles_arc(City::PORTLAND, City::LOS_ANGELES, 20, 'plane'), // 2013-04-23
+  squiffles_arc(City::PORTLAND, City::LOS_ANGELES, 30, 'plane'), // 2013-04-28
+  squiffles_arc(City::PORTLAND, City::SHANGHAI, 150, 'plane'), // 2014-09-09
+  squiffles_arc(City::PORTLAND, City::SHANGHAI, 165, 'plane'), // 2014-09-24
+  squiffles_arc(City::LOS_ANGELES, City::SAN_FRANCISCO, 5, 'plane'), // 2015-01-11
+  squiffles_arc(City::SAN_FRANCISCO, City::LOS_ANGELES, 20, 'plane'), // 2015-01-12
+  squiffles_arc(City::VANCOUVER, City::LOS_ANGELES, 45, 'plane'), // 2015-03-31
+  squiffles_arc(City::PORTLAND, City::MIAMI, 60, 'plane'), // 2015-09-10
+  squiffles_arc(City::PORTLAND, City::MIAMI, 75, 'plane'), // 2015-09-19
+  squiffles_arc(City::BOGOTA, City::LOS_ANGELES, 45, 'plane'), // 2016-03-07
+  squiffles_arc(City::BOGOTA, City::LOS_ANGELES, 60, 'plane'), // 2016-03-11
+  squiffles_arc(City::VANCOUVER, City::LOS_ANGELES, 55, 'plane'), // 2016-03-16
+  squiffles_arc(City::DENVER, City::LOS_ANGELES, 30, 'plane'), // 2016-06-17
+  squiffles_arc(City::LOS_ANGELES, City::LONDON, 30, 'plane'), // 2016-12-03
+  squiffles_arc(City::LOS_ANGELES, City::LONDON, 45, 'plane'), // 2016-12-09
+  squiffles_arc(City::PORTLAND, City::LAS_VEGAS, 35, 'plane'), // 2016-12-25
+  squiffles_arc(City::PORTLAND, City::LAS_VEGAS, 45, 'plane'), // 2016-12-28
+  squiffles_arc(City::CHICAGO, City::LOS_ANGELES, 45, 'plane'), // 2016-02-03
+  squiffles_arc(City::CHICAGO, City::LOS_ANGELES, 60, 'plane'), // 2016-02-07
+  squiffles_arc(City::TOKYO, City::LOS_ANGELES, 165, 'plane'), // 2017-03-19
+  squiffles_arc(City::TOKYO, City::LOS_ANGELES, 180, 'plane'), // 2017-03-29
+  squiffles_arc(City::SHANGHAI, City::BUCHAREST, 60, 'plane'), // 2017-07-02
+  squiffles_arc(City::BELGRADE, City::LOS_ANGELES, 120, 'plane'), // 2017-07-21
+  squiffles_arc(City::SAN_FRANCISCO, City::DUBLIN, 135, 'plane'), // 2017-10-21
+  squiffles_arc(City::DUBLIN, City::PRAGUE, 45, 'plane'), // 2017-10-29
+  squiffles_arc(City::MUNICH, City::SAN_FRANCISCO, 45, 'plane'), // 2017-11-03
+  squiffles_arc(City::SAN_FRANCISCO, City::DENVER, 40, 'plane'), // 2017-11-18
+  squiffles_arc(City::SAN_FRANCISCO, City::DENVER, 50, 'plane'), // 2017-11-20
+  squiffles_arc(City::SAN_FRANCISCO, City::LAS_VEGAS, 15, 'plane'), // 2017-12-02
+  squiffles_arc(City::SAN_FRANCISCO, City::LAS_VEGAS, 25, 'plane'), // 2017-12-04
+  squiffles_arc(City::SAN_FRANCISCO, City::PORTLAND, 25, 'plane'), // 2017-12-22
+  squiffles_arc(City::SAN_FRANCISCO, City::PORTLAND, 35, 'plane'), // 2018-01-04
+  squiffles_arc(City::SAN_FRANCISCO, City::ALBUQUERQUE, 40, 'plane'), // 2018-01-13
+  squiffles_arc(City::SAN_FRANCISCO, City::ALBUQUERQUE, 50, 'plane'), // 2018-01-16
+  squiffles_arc(City::SAN_FRANCISCO, City::SEATTLE, 50, 'plane'), // 2018-03-16
+  squiffles_arc(City::SEATTLE, City::DUBLIN, 60, 'plane'), // 2018-03-19
+  squiffles_arc(City::DUBLIN, City::VENICE, 45, 'plane'), // 2018-03-24
+  squiffles_arc(City::ROME, City::SAN_FRANCISCO, 75, 'plane'), // 2018-03-31
+  squiffles_arc(City::DALLAS, City::SAN_FRANCISCO, 70, 'plane'), // 2018-06-24
+  squiffles_arc(City::DALLAS, City::SAN_FRANCISCO, 80, 'plane'), // 2018-06-27
+  squiffles_arc(City::CASABLANCA, City::SAN_FRANCISCO, 60, 'plane'), // 2018-09-01
+  squiffles_arc(City::CASABLANCA, City::SAN_FRANCISCO, 75, 'plane'), // 2018-09-07
+  squiffles_arc(City::SAN_FRANCISCO, City::OSLO, 165, 'plane'), // 2018-09-15
+  squiffles_arc(City::OSLO, City::RIGA, 30, 'plane'), // 2018-09-16
+  squiffles_arc(City::SAN_FRANCISCO, City::RIGA, 165, 'plane'), // 2018-09-26
+  squiffles_arc(City::TAMPA, City::SAN_FRANCISCO, 105, 'plane'), // 2018-10-07
+  squiffles_arc(City::TAMPA, City::SAN_FRANCISCO, 120, 'plane'), // 2018-10-09
+  squiffles_arc(City::DALLAS, City::LOS_ANGELES, 30, 'plane'), // 2019-01-07
+  squiffles_arc(City::KUALA_LUMPUR, City::SAN_FRANCISCO, 120, 'plane'), // 2019-01-19
+  squiffles_arc(City::LANGKAWI, City::SAN_FRANCISCO, 120, 'plane'), // 2019-01-19
+  squiffles_arc(City::SAN_FRANCISCO, City::WARSAW, 60, 'plane'), // 2019-03-31
+  squiffles_arc(City::SAN_FRANCISCO, City::WARSAW, 75, 'plane'), // 2019-04-14
+  squiffles_arc(City::AUSTIN, City::SAN_FRANCISCO, 75, 'plane'), // 2019-10-13
+  squiffles_arc(City::PITTSBURGH, City::AUSTIN, 30, 'plane'), // 2019-10-19
+  squiffles_arc(City::SAN_DIEGO, City::SAN_FRANCISCO, 60, 'plane'), // 2019-11-16
+  squiffles_arc(City::DENVER, City::LOS_ANGELES, 20, 'plane'), // 2019-11-23
+  squiffles_arc(City::ATHENS, City::SAN_FRANCISCO, 120, 'plane'), // 2020-01-05
+  squiffles_arc(City::BUDAPEST, City::ATHENS, 25, 'plane'), // 2020-01-10
+  squiffles_arc(City::NICE, City::BUDAPEST, 25, 'plane'), // 2020-01-17
+  squiffles_arc(City::PORTLAND, City::PARIS, 30, 'plane'), // 2020-01-23
+  squiffles_arc(City::PORTLAND, City::PITTSBURGH, 35, 'plane'), // 2020-01-26
+  squiffles_arc(City::DENVER, City::PITTSBURGH, 40, 'plane'), // 2020-03-10
+  squiffles_arc(City::SEATTLE, City::PITTSBURGH, 45, 'plane'), // 2020-09-15
+  squiffles_arc(City::HONOLULU, City::SEATTLE, 60, 'plane'), // 2020-09-16
+  squiffles_arc(City::HONOLULU, City::PORTLAND, 50, 'plane'), // 2020-11-16
+  squiffles_arc(City::PORTLAND, City::DENVER, 25, 'plane'), // 2021-01-15
+  squiffles_arc(City::PORTLAND, City::CHICAGO, 25, 'plane'), // 2021-06-17
+  squiffles_arc(City::PORTLAND, City::CHICAGO, 15, 'plane'), // 2021-06-20
+  squiffles_arc(City::PORTLAND, City::VANCOUVER, 20, 'plane'), // 2021-09-19
+  squiffles_arc(City::VANCOUVER, City::PITTSBURGH, 45, 'plane'), // 2021-10-19
+  squiffles_arc(City::PORTLAND, City::NEW_YORK, 60, 'plane'), // 2021-11-25
+  squiffles_arc(City::NEW_YORK, City::SAN_FRANCISCO, 10, 'plane'), // 2021-12-06
+  squiffles_arc(City::NEW_YORK, City::SAN_FRANCISCO, 20, 'plane'), // 2021-12-17
+  squiffles_arc(City::PITTSBURGH, City::SAN_FRANCISCO, 40, 'plane'), // 2022-01-15
+  squiffles_arc(City::CALGARY, City::NEW_YORK, 60, 'plane'), // 2022-03-21
+  squiffles_arc(City::SEATTLE, City::CALGARY, 15, 'plane'), // 2022-03-27
+  squiffles_arc(City::SEATTLE, City::NEW_YORK, 75, 'plane'), // 2022-03-31
+  squiffles_arc(City::PORTLAND, City::NEW_YORK, 70, 'plane'), // 2022-05-12
+  squiffles_arc(City::SEATTLE, City::PITTSBURGH, 35, 'plane'), // 2022-07-27
+  squiffles_arc(City::SAN_FRANCISCO, City::DUBLIN, 120, 'plane'), // 2022-08-09
+  squiffles_arc(City::DUBLIN, City::NEW_YORK, 30, 'plane'), // 2022-08-17
+  squiffles_arc(City::PITTSBURGH, City::NEW_YORK, 10, 'plane'), // 2022-08-20
+  squiffles_arc(City::PITTSBURGH, City::NEW_YORK, 20, 'plane'), // 2022-09-10
+  squiffles_arc(City::PITTSBURGH, City::LOS_ANGELES, 35, 'plane'), // 2022-10-26
+  squiffles_arc(City::WHEELER_RIDGE, City::LOS_ANGELES, 5, 'thumb'), // 2014-11-06
+  squiffles_arc(City::SAN_FRANCISCO, City::WHEELER_RIDGE, 10, 'thumb'), // 2014-11-07
+  squiffles_arc(City::SACRAMENTO, City::LOS_ANGELES, 25, 'thumb'), // 2015-03-23
+  squiffles_arc(City::EUGENE, City::SACRAMENTO, 10, 'thumb'), // 2015-03-24
+  squiffles_arc(City::PORTLAND, City::EUGENE, 10, 'thumb'), // 2015-03-25
+  squiffles_arc(City::SEATTLE, City::PORTLAND, 10, 'thumb'), // 2015-03-27
+  squiffles_arc(City::VANCOUVER, City::SEATTLE, 10, 'thumb'), // 2015-03-29
+  squiffles_arc(City::LOS_ANGELES, City::ATASCADERO, 10, 'thumb'), // 2015-07-03
+  squiffles_arc(City::ATASCADERO, City::SAN_FRANCISCO, 10, 'thumb'), // 2015-07-04
+  squiffles_arc(City::LOS_ANGELES, City::SAN_FRANCISCO, 30, 'thumb'), // 2015-08-22
+  squiffles_arc(City::LOS_ANGELES, City::SAN_FRANCISCO, 45, 'thumb'), // 2015-11-21
+  squiffles_arc(City::VANCOUVER, City::EVERETT, 25, 'thumb'), // 2016-03-18
+  squiffles_arc(City::EVERETT, City::PORTLAND, 25, 'thumb'), // 2016-03-19
+  squiffles_arc(City::PORTLAND, City::SEATTLE, 10, 'thumb'), // 2016-03-20
+  squiffles_arc(City::SEATTLE, City::VANCOUVER, 10, 'thumb'), // 2016-03-21
+  squiffles_arc(City::LAS_VEGAS, City::LOS_ANGELES, 10, 'thumb'), // 2016-06-12
+  squiffles_arc(City::LAS_VEGAS, City::RICHFIELD, 15, 'thumb'), // 2016-06-13
+  squiffles_arc(City::RICHFIELD, City::DENVER, 20, 'thumb'), // 2016-06-14
+  squiffles_arc(City::TOKYO, City::OSAKA, 10, 'thumb'), // 2017-03-21
+  squiffles_arc(City::OSAKA, City::TOKYO, 10, 'thumb'), // 2017-03-24
+  squiffles_arc(City::BUCHAREST, City::BRASOV, 10, 'thumb'), // 2017-07-05
+  squiffles_arc(City::BRASOV, City::CONSTANTA, 10, 'thumb'), // 2017-07-07
+  squiffles_arc(City::CONSTANTA, City::VARNA, 15, 'thumb'), // 2017-07-11
+  squiffles_arc(City::VARNA, City::SKOPJE, 20, 'thumb'), // 2017-07-13
+  squiffles_arc(City::SKOPJE, City::PRISTINA, 5, 'thumb'), // 2017-07-16
+  squiffles_arc(City::TAHOE_CITY, City::SAN_FRANCISCO, 10, 'thumb'), // 2017-09-02
+  squiffles_arc(City::SAN_FRANCISCO, City::TAHOE_CITY, 10, 'thumb'), // 2017-09-03
+  squiffles_arc(City::VENICE, City::BOLOGNA, 10, 'thumb'), // 2018-03-26
+  squiffles_arc(City::CASABLANCA, City::MARRAKESH, 10, 'thumb'), // 2018-09-08
+  squiffles_arc(City::PALANGA, City::LIEPAJA, 5, 'thumb'), // 2018-09-21
+  squiffles_arc(City::KUALA_LUMPUR, City::BUTTERWORTH, 10, 'thumb'), // 2019-01-26
+  squiffles_arc(City::LAS_VEGAS, City::LOS_ANGELES, 25, 'thumb')  // 2019-08-11
 ];
 
 $points = [
-  squiffles_point(SquifflesCity::BEIJING, 'Beijing, China', false),
-  squiffles_point(SquifflesCity::LOS_ANGELES, 'Los Angeles, California', true),
-  squiffles_point(SquifflesCity::NANTONG, 'Nantong, China', false),
-  squiffles_point(SquifflesCity::PITTSBURGH, 'Pittsburgh, Pennsylvania', false),
-  squiffles_point(SquifflesCity::PORTLAND, 'Portland, Oregon', false),
-  squiffles_point(SquifflesCity::PROVO, 'Provo, Utah', false),
-  squiffles_point(SquifflesCity::SAN_FRANCISCO, 'San Francisco, California', false),
-  squiffles_point(SquifflesCity::WAIANAE, 'Waianae, Hawaii', true),
-  squiffles_point(SquifflesCity::LEADVILLE, 'Leadville, Colorado', true),
-  squiffles_point(SquifflesCity::VANCOUVER, 'Vancouver, British Columbia', true),
-  squiffles_point(SquifflesCity::NEW_YORK, 'New York, New York', true),
+  squiffles_point(City::BEIJING, 'Beijing, China', false),
+  squiffles_point(City::LOS_ANGELES, 'Los Angeles, California', true),
+  squiffles_point(City::NANTONG, 'Nantong, China', false),
+  squiffles_point(City::PITTSBURGH, 'Pittsburgh, Pennsylvania', false),
+  squiffles_point(City::PORTLAND, 'Portland, Oregon', false),
+  squiffles_point(City::PROVO, 'Provo, Utah', false),
+  squiffles_point(City::SAN_FRANCISCO, 'San Francisco, California', false),
+  squiffles_point(City::WAIANAE, 'Waianae, Hawaii', true),
+  squiffles_point(City::LEADVILLE, 'Leadville, Colorado', true),
+  squiffles_point(City::VANCOUVER, 'Vancouver, British Columbia', true),
+  squiffles_point(City::NEW_YORK, 'New York, New York', true),
 ];
 
 $pages = squiffles_showcase([
@@ -279,7 +276,7 @@ $pages = squiffles_showcase([
   ]
 ]);
 
-$cleverly = new Cleverly();
+$cleverly = new \Cleverly();
 $cleverly->preserveIndent = true;
 $cleverly->setTemplateDir(__DIR__ . '/templates');
 $cleverly->addTemplateDir(__DIR__ . '/common/templates');
@@ -292,7 +289,7 @@ $coaster = ob_get_clean();
 $cleverly->display('index.tpl', [
   'arcs' => $arcs,
   'blip' => $cleverly->fetch(
-    'string:' . SQUIFFLES_BLIP_TEMPLATE,
+    'string:' . BLIP_TEMPLATE,
     ['left' => 99, 'top' => 99]
   ),
   'coaster' => $coaster,

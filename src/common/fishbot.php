@@ -1,5 +1,7 @@
 <?
-define('SQUIFFLES_FISHBOT_FILE', __DIR__ . '/../images/fishbot.svg');
+namespace Squiffles;
+
+define('Squiffles\FISHBOT_FILE', __DIR__ . '/../images/fishbot.svg');
 
 function squiffles_collect($xml, &$lines, &$ellipses) {
   switch ($xml->getName()) {
@@ -113,7 +115,7 @@ EOF
   }
 }
 
-$xml = simplexml_load_file(SQUIFFLES_FISHBOT_FILE);
+$xml = simplexml_load_file(FISHBOT_FILE);
 $width = $xml['width'] / 10;
 $height = $xml['height'] / 10;
 

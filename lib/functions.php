@@ -1,17 +1,19 @@
 <?
+namespace Squiffles;
+
 define(
-  'SQUIFFLES_BLIP_TEMPLATE',
+  'Squiffles\BLIP_TEMPLATE',
   '<span class="map-blip" style="top: {$top}em; left: {$left}em;"></span>'
 );
 
-define('SQUIFFLES_CONFIG_FILE', __DIR__ . '/../.env');
-define('SQUIFFLES_MAP_FILE', __DIR__ . '/../bin/images/world.png');
-define('SQUIFFLES_PX_PER_EM', 20);
-define('SQUIFFLES_TRELLO_PATTERN', '/\bhttps?:\/\/trello.com\/c\/(\w+)/');
+define('Squiffles\CONFIG_FILE', __DIR__ . '/../.env');
+define('Squiffles\MAP_FILE', __DIR__ . '/../bin/images/world.png');
+define('Squiffles\PX_PER_EM', 20);
+define('Squiffles\TRELLO_PATTERN', '/\bhttps?:\/\/trello.com\/c\/(\w+)/');
 
-$config = parse_ini_file(SQUIFFLES_CONFIG_FILE);
+$config = parse_ini_file(CONFIG_FILE);
 
-abstract class SquifflesCity {
+abstract class City {
   const ALBUQUERQUE = [35.0844, -106.6504];
   const ATASCADERO = [35.4894, -120.6707];
   const ATHENS = [37.9838, 23.7275];
@@ -104,7 +106,7 @@ function squiffles_attach_to_trello($cards, $url) {
   curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
 
   foreach ($cards as $card) {
-    if (preg_match(SQUIFFLES_TRELLO_PATTERN, $card, $matches)) {
+    if (preg_match(TRELLO_PATTERN, $card, $matches)) {
       $api_url = "https://api.trello.com/1/cards/$matches[1]/attachments";
       curl_setopt($handle, CURLOPT_HTTPGET, true);
       curl_setopt($handle, CURLOPT_URL, "$api_url?$query");
@@ -142,7 +144,7 @@ function squiffles_config_set($settings) {
   }
 
   ksort($config);
-  $stream = fopen(SQUIFFLES_CONFIG_FILE, 'w');
+  $stream = fopen(CONFIG_FILE, 'w');
 
   foreach ($config as $key => $value) {
     fwrite($stream, "$key=\"$value\"\n");
@@ -195,7 +197,7 @@ function squiffles_project($lat_lng) {
   static $width = 0;
 
   if ($width === 0) {
-    $width = getimagesize(SQUIFFLES_MAP_FILE)[0];
+    $width = getimagesize(MAP_FILE)[0];
   }
 
   list($latitude, $longitude) = $lat_lng;
