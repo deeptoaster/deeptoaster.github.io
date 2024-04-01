@@ -48,12 +48,12 @@ if (isset($_GET['code'])) {
   curl_close($handle);
 }
 
-$lat = null;
-$lng = null;
+$latitude = null;
+$longitude = null;
 $response_code = 401;
 
 if (@$config['GOOGLE_ACCESS_TOKEN']) {
-  squiffles_fetch_location($lat, $lng);
+  squiffles_fetch_location($latitude, $longitude);
 }
 
 if ($response_code === 401) {
@@ -88,11 +88,11 @@ if ($response_code === 401) {
   ]);
 
   curl_close($handle);
-  $response_code = squiffles_fetch_location($lat, $lng);
+  $response_code = squiffles_fetch_location($latitude, $longitude);
 }
 
 if ($response_code === 200) {
-  list($x, $y) = squiffles_project($lat, $lng);
+  list($x, $y) = squiffles_project($latitude, $longitude);
   $read_handle = fopen(SQUIFFLES_INDEX_FILE, 'r');
   $write_file = tempnam(sys_get_temp_dir(), '');
   $write_handle = fopen($write_file, 'c');

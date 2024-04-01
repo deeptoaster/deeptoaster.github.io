@@ -63,5 +63,5 @@
 </div>
 <p class="lead">
   <span class="drop">Hi.</span>
-  <span>I'm Will Yu, designer-developer, computer vision engineer, and student of life who drinks <strong>tea</strong> and poops <strong>code</strong>. I like music, krav maga, calligraphy, and <strong>opportunities</strong> to build things, climb things, or spin things. I do <a href="/css/">stupid things with CSS</a> and <a href="https://www.polygon.com/gaming/2012/9/28/3422822/fruit-ninja-gets-all-scientific-on-this-ti-83-plus-calculator">calculators</a>.</span>
+  <span>I'm Will Yu, computer vision engineer, avid hitchhiker, and student of life who drinks <strong>tea</strong> and poops <strong>code</strong>. I like music, krav maga, calligraphy, and <strong>opportunities</strong> to build things, climb things, or spin things. I do <a href="/css/">stupid things with CSS</a> and <a href="https://www.polygon.com/gaming/2012/9/28/3422822/fruit-ninja-gets-all-scientific-on-this-ti-83-plus-calculator">calculators</a>.</span>
 </p>
