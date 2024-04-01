@@ -115,12 +115,12 @@ $arcs = [
   squiffles_arc(City::SAN_FRANCISCO, City::PORTLAND, 35, 'plane'), // 2018-01-04
   squiffles_arc(City::SAN_FRANCISCO, City::ALBUQUERQUE, 40, 'plane'), // 2018-01-13
   squiffles_arc(City::SAN_FRANCISCO, City::ALBUQUERQUE, 50, 'plane'), // 2018-01-16
-  squiffles_arc(City::SAN_FRANCISCO, City::SEATTLE, 50, 'plane'), // 2018-03-16
+  squiffles_arc(City::SAN_FRANCISCO, City::SEATTLE, 45, 'plane'), // 2018-03-16
   squiffles_arc(City::SEATTLE, City::DUBLIN, 60, 'plane'), // 2018-03-19
   squiffles_arc(City::DUBLIN, City::VENICE, 45, 'plane'), // 2018-03-24
   squiffles_arc(City::ROME, City::SAN_FRANCISCO, 75, 'plane'), // 2018-03-31
-  squiffles_arc(City::DALLAS, City::SAN_FRANCISCO, 70, 'plane'), // 2018-06-24
-  squiffles_arc(City::DALLAS, City::SAN_FRANCISCO, 80, 'plane'), // 2018-06-27
+  squiffles_arc(City::DALLAS, City::SAN_FRANCISCO, 75, 'plane'), // 2018-06-24
+  squiffles_arc(City::DALLAS, City::SAN_FRANCISCO, 85, 'plane'), // 2018-06-27
   squiffles_arc(City::CASABLANCA, City::SAN_FRANCISCO, 60, 'plane'), // 2018-09-01
   squiffles_arc(City::CASABLANCA, City::SAN_FRANCISCO, 75, 'plane'), // 2018-09-07
   squiffles_arc(City::SAN_FRANCISCO, City::OSLO, 165, 'plane'), // 2018-09-15
@@ -133,7 +133,7 @@ $arcs = [
   squiffles_arc(City::LANGKAWI, City::SAN_FRANCISCO, 120, 'plane'), // 2019-01-19
   squiffles_arc(City::SAN_FRANCISCO, City::WARSAW, 60, 'plane'), // 2019-03-31
   squiffles_arc(City::SAN_FRANCISCO, City::WARSAW, 75, 'plane'), // 2019-04-14
-  squiffles_arc(City::AUSTIN, City::SAN_FRANCISCO, 75, 'plane'), // 2019-10-13
+  squiffles_arc(City::AUSTIN, City::SAN_FRANCISCO, 80, 'plane'), // 2019-10-13
   squiffles_arc(City::PITTSBURGH, City::AUSTIN, 30, 'plane'), // 2019-10-19
   squiffles_arc(City::SAN_DIEGO, City::SAN_FRANCISCO, 60, 'plane'), // 2019-11-16
   squiffles_arc(City::DENVER, City::LOS_ANGELES, 20, 'plane'), // 2019-11-23
@@ -149,12 +149,12 @@ $arcs = [
   squiffles_arc(City::PORTLAND, City::DENVER, 25, 'plane'), // 2021-01-15
   squiffles_arc(City::PORTLAND, City::CHICAGO, 25, 'plane'), // 2021-06-17
   squiffles_arc(City::PORTLAND, City::CHICAGO, 15, 'plane'), // 2021-06-20
-  squiffles_arc(City::PORTLAND, City::VANCOUVER, 20, 'plane'), // 2021-09-19
+  squiffles_arc(City::PORTLAND, City::VANCOUVER, 25, 'plane'), // 2021-09-19
   squiffles_arc(City::VANCOUVER, City::PITTSBURGH, 45, 'plane'), // 2021-10-19
   squiffles_arc(City::PORTLAND, City::NEW_YORK, 60, 'plane'), // 2021-11-25
   squiffles_arc(City::NEW_YORK, City::SAN_FRANCISCO, 10, 'plane'), // 2021-12-06
   squiffles_arc(City::NEW_YORK, City::SAN_FRANCISCO, 20, 'plane'), // 2021-12-17
-  squiffles_arc(City::PITTSBURGH, City::SAN_FRANCISCO, 40, 'plane'), // 2022-01-15
+  squiffles_arc(City::PITTSBURGH, City::SAN_FRANCISCO, 35, 'plane'), // 2022-01-15
   squiffles_arc(City::CALGARY, City::NEW_YORK, 60, 'plane'), // 2022-03-21
   squiffles_arc(City::SEATTLE, City::CALGARY, 15, 'plane'), // 2022-03-27
   squiffles_arc(City::SEATTLE, City::NEW_YORK, 75, 'plane'), // 2022-03-31
@@ -165,6 +165,21 @@ $arcs = [
   squiffles_arc(City::PITTSBURGH, City::NEW_YORK, 10, 'plane'), // 2022-08-20
   squiffles_arc(City::PITTSBURGH, City::NEW_YORK, 20, 'plane'), // 2022-09-10
   squiffles_arc(City::PITTSBURGH, City::LOS_ANGELES, 35, 'plane'), // 2022-10-26
+  squiffles_arc(City::PITTSBURGH, City::NASHVILLE, 15, 'plane'), // 2022-11-17
+  squiffles_arc(City::NEW_YORK, City::MINNEAPOLIS, 45, 'plane'), // 2022-11-21
+  squiffles_arc(City::SEATTLE, City::VANCOUVER, 20, 'plane'), // 2023-01-03
+  squiffles_arc(City::SAN_FRANCISCO, City::VANCOUVER, 60, 'plane'), // 2023-01-06
+  squiffles_arc(City::SAN_FRANCISCO, City::SEATTLE, 55, 'plane'), // 2023-04-30
+  squiffles_arc(City::PITTSBURGH, City::BOSTON, 30, 'plane'), // 2023-06-03
+  squiffles_arc(City::PITTSBURGH, City::BOSTON, 45, 'plane'), // 2023-06-04
+  squiffles_arc(City::PITTSBURGH, City::LOS_ANGELES, 45, 'plane'), // 2023-08-13
+  squiffles_arc(City::PITTSBURGH, City::SAN_FRANCISCO, 45, 'plane'), // 2023-10-19
+  squiffles_arc(City::NEW_YORK, City::LOS_ANGELES, 75, 'plane'), // 2023-12-15
+  squiffles_arc(City::NEW_YORK, City::LOS_ANGELES, 95, 'plane'), // 2024-01-21
+  squiffles_arc(City::HONG_KONG, City::LOS_ANGELES, 160, 'plane'), // 2024-01-28
+  squiffles_arc(City::HONG_KONG, City::SHANGHAI, 20, 'plane'), // 2024-01-30
+  squiffles_arc(City::GENEVA, City::SHANGHAI, 60, 'plane'), // 2024-02-13
+  squiffles_arc(City::NEW_YORK, City::MILAN, 45, 'plane'), // 2024-02-13
   squiffles_arc(City::WHEELER_RIDGE, City::LOS_ANGELES, 5, 'thumb'), // 2014-11-06
   squiffles_arc(City::SAN_FRANCISCO, City::WHEELER_RIDGE, 10, 'thumb'), // 2014-11-07
   squiffles_arc(City::SACRAMENTO, City::LOS_ANGELES, 25, 'thumb'), // 2015-03-23
@@ -221,7 +236,7 @@ $pages = squiffles_showcase([
   ],
   [
     'description' =>
-        'An easily extensible <a href="https://github.com/deeptoaster/nato-lights">software library</a> and Arduino Uno&ndash;based hardware demo for decorative NeoPixel lighting strips.',
+        'An efficient and easily extensible <a href="https://github.com/deeptoaster/nato-lights">software library</a> and Arduino Uno&ndash;based hardware demo for decorative NeoPixel lighting strips.',
     'image' => '/bin/images/showcase_lights.gif'
   ],
   [
@@ -241,7 +256,7 @@ $pages = squiffles_showcase([
   ],
   [
     'description' =>
-        'Online demo of a bunch of <a href="/css/">stupid things</a> you can do with CSS. Check out the <a href="https://fishbotwilleatyou.com/blog/tag/stupid-css/">writeup on the blog</a> or the code <a href="https://github.com/deeptoaster/stupid-css">on GitHub</a>!',
+        'Online demo of a bunch of <a href="/css/">stupid things</a> you can do with CSS. Check out the <a href="https://fishbotwilleatyou.com/blog/tag/stupid-css/">writeup on the blog</a> or the <a href="https://github.com/deeptoaster/stupid-css">code on GitHub</a>!',
     'image' => '/bin/images/showcase_css.png'
   ],
   [

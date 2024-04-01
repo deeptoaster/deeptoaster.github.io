@@ -22,6 +22,7 @@ abstract class City {
   const BELGRADE = [44.7866, 20.4489];
   const BOGOTA = [4.7110, -74.0721];
   const BOLOGNA = [44.4949, 11.3426];
+  const BOSTON = [42.3603, -71.0578];
   const BRASOV = [45.6427, 25.5887];
   const BUCHAREST = [44.4268, 26.1025];
   const BUDAPEST = [47.4979, 19.0402];
@@ -35,6 +36,8 @@ abstract class City {
   const DUBLIN = [53.3498, -6.2603];
   const EUGENE = [44.0521, -123.0868];
   const EVERETT = [47.9790, -122.2021];
+  const GENEVA = [46.2017, 6.1469];
+  const HONG_KONG = [22.3000, 114.2000];
   const HONOLULU = [21.3069, -157.8583];
   const KUALA_LUMPUR = [3.1390, 101.6869];
   const LANGKAWI = [6.3500, 99.8000];
@@ -45,8 +48,11 @@ abstract class City {
   const LOS_ANGELES = [34.0522, -118.2437];
   const MARRAKESH = [31.6295, -7.9811];
   const MIAMI = [25.7617, -80.1918];
+  const MILAN = [45.4669, 9.1900];
+  const MINNEAPOLIS = [44.9819, -93.2692];
   const MUNICH = [48.1351, 11.5820];
   const NANTONG = [31.9802, 120.8943];
+  const NASHVILLE = [36.1622, -86.7744];
   const NEW_YORK = [40.7306, -73.9352];
   const NICE = [43.7102, 7.2620];
   const OSAKA = [34.6937, 135.5023];
