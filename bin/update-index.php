@@ -92,7 +92,7 @@ if ($response_code === 401) {
 }
 
 if ($response_code === 200) {
-  list($x, $y) = squiffles_project($latitude, $longitude);
+  list($x, $y) = squiffles_project([$latitude, $longitude]);
   $read_handle = fopen(SQUIFFLES_INDEX_FILE, 'r');
   $write_file = tempnam(sys_get_temp_dir(), '');
   $write_handle = fopen($write_file, 'c');
