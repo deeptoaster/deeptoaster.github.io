@@ -3,5 +3,6 @@
 .git-ftp-include
 .gitignore
 .gitmodules
+.prettierrc
 Makefile
 src/*

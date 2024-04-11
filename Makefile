@@ -22,6 +22,7 @@ squiffles.css: src/squiffles.css
 
 submodules:
 	cd css && make
+	cd ct3d && make
 	cd slides && make
 
 bundled:
