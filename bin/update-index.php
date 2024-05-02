@@ -98,7 +98,7 @@ if ($response_code === 200) {
   $read_handle = fopen(INDEX_FILE, 'r');
   $write_file = tempnam(sys_get_temp_dir(), '');
   $write_handle = fopen($write_file, 'c');
-  $cleverly = new Cleverly();
+  $cleverly = new \Cleverly();
 
   $pattern = '/' . str_replace(
     '\\$\\$',
