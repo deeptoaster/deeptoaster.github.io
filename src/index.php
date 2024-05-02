@@ -267,7 +267,7 @@ $pages = squiffles_showcase([
   [
     'description' =>
         'Online grasp solver for point contacts with friction (PCWF). Check it out <a href="/force-closure/">online</a> or <a href="https://github.com/deeptoaster/force-closure">on GitHub</a>!',
-    'image' => '/bin/images/showcase_pcwf.gif'
+    'image' => '/bin/images/showcase_force-closure.gif'
   ],
   [
     'description' =>
@@ -276,7 +276,7 @@ $pages = squiffles_showcase([
   ],
   [
     'description' =>
-        'A neuomorphic webapp for generating Tasker configs for quantified-self projects. Check it out <a href="/tracker/">online</a> or <a href="https://github.com/deeptoaster/tasker-tracker">on GitHub</a>!',
+        'A neuomorphic webapp to generate Tasker configs for quantified-self projects. Check it out <a href="/tracker/">online</a> or <a href="https://github.com/deeptoaster/tasker-tracker">on GitHub</a>!',
     'image' => '/bin/images/showcase_tracker.gif'
   ],
   [
@@ -288,7 +288,17 @@ $pages = squiffles_showcase([
     'description' =>
         'An early webapp built for the graphing calculator community, the <a href="https://clrhome.org/ies/">Integrated Editor System</a> is an IDE for creating TI-83 Plus&ndash;series calculator programs and other variables online.',
     'image' => '/bin/images/showcase_ies.png'
-  ]
+  ],
+  [
+    'description' =>
+        'A neuomorphic webapp to automatically clean up Last.fm scrobbles. Check it out <a href="/vacuum/">online</a> or <a href="https://github.com/deeptoaster/vacuum">on GitHub</a>!',
+    'image' => '/bin/images/showcase_vacuum.gif'
+  ],
+  [
+    'description' =>
+        'A <a href="https://clrhome.org/table/">dynamic reference table</a> and API for Z80 assembly instructions.',
+    'image' => '/bin/images/showcase_table.png'
+  ],
 ]);
 
 $cleverly = new \Cleverly();
