@@ -225,14 +225,14 @@ $points = [
   squiffles_point(City::WAIANAE, 'Waianae, Hawaii', true),
   squiffles_point(City::LEADVILLE, 'Leadville, Colorado', true),
   squiffles_point(City::VANCOUVER, 'Vancouver, British Columbia', true),
-  squiffles_point(City::NEW_YORK, 'New York, New York', true),
+  squiffles_point(City::NEW_YORK, 'New York, New York', true)
 ];
 
 $pages = squiffles_showcase([
   [
     'description' =>
-        'Custom sign-up experience built for a one-day cyberpunk-themed puzzle hunt called Project Hyperskelion.',
-    'image' => '/bin/images/showcase_hyper.gif'
+        'Terminal interface built for a one-day action-movie-themed puzzle hunt.',
+    'image' => '/bin/images/showcase_action.gif'
   ],
   [
     'description' =>
@@ -261,8 +261,8 @@ $pages = squiffles_showcase([
   ],
   [
     'description' =>
-        '<a href="https://blacker.caltech.edu/">Website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
-    'image' => '/bin/images/showcase_blacker.png'
+        'Custom sign-up experience built for a one-day cyberpunk-themed puzzle hunt called Project Hyperskelion.',
+    'image' => '/bin/images/showcase_hyper.gif'
   ],
   [
     'description' =>
@@ -299,6 +299,11 @@ $pages = squiffles_showcase([
         'A <a href="https://clrhome.org/table/">dynamic reference table</a> and API for Z80 assembly instructions.',
     'image' => '/bin/images/showcase_table.png'
   ],
+  [
+    'description' =>
+        '<a href="https://blacker.caltech.edu/">Website and complete suite of administrative apps</a> built for Blacker Hovse, one of the eight undergraduate houses at Caltech.',
+    'image' => '/bin/images/showcase_blacker.png'
+  ]
 ]);
 
 $cleverly = new \Cleverly();
