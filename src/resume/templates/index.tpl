@@ -50,13 +50,6 @@
             </li>
             <li>
               <span>Full-stack development and architecture</span>
-              <ul class="skills">
-                <li>AWS</li>
-                <li>CSS3</li>
-                <li>HTML5</li>
-                <li>Node.js</li>
-                <li>React</li>
-              </ul>
             </li>
             <li>
               <span>System administration and security</span>
@@ -77,10 +70,7 @@
               </ul>
             </li>
             <li>
-              <span>Robots and other hardware projects</span>
-            </li>
-            <li>
-              <span>Virtual reality finger painting app</span>
+              <span>Robotics, VR, and hardware projects</span>
             </li>
           </ul>
           <h3>Awards and Honors</h3>

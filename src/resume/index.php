@@ -21,8 +21,6 @@ $cleverly->display('index.tpl', [
       'date' => 2023,
       'disabled' => true,
       'major' => 'Computer Vision Intern',
-      'notes' =>
-          'Developed end-to-end solution combining classical and ML-based computer vision to tackle major real-world infrastructure challenges',
       'school' => 'Mach9 Robotics'
     ],
     [
@@ -41,12 +39,13 @@ $cleverly->display('index.tpl', [
   ],
   'employment' => [
     [
-      'date' => '2022&ndash;24',
-      'employer' => 'AnchorZero',
+      'date' => '2024&ndash;25',
+      'employer' => 'Matterport',
       'notes' => [
-        'Responsible for hiring, mentoring, and maintaining quality of front-end team'
+        'Created central library and framework for training and managing models and datasets to accelerate ML development across the company',
+        'Designed, trained, and deployed ML models for computer vision pipeline'
       ],
-      'title' => 'Consultant / Lead Engineer'
+      'title' => 'Staff Machine Learning Engineer'
     ],
     [
       'date' => '2020&ndash;22',

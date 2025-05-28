@@ -39,7 +39,7 @@ $cleverly->display('index_web.tpl', [
   ],
   'employment' => [
     [
-      'date' => '2022&ndash;24',
+      'date' => '2022&ndash;25',
       'employer' => 'AnchorZero',
       'notes' => [
         'Front-end and full-stack lead for financial services startup, developing React- and Node.js-based product and infrastructure from the ground up',
@@ -51,8 +51,7 @@ $cleverly->display('index_web.tpl', [
       'date' => '2020&ndash;22',
       'employer' => 'Compound Eye',
       'notes' => [
-        'Led end-to-end architecture, build, and deployment of cloud-based computer vision applications, such as a real-time 3D visualizer and annotation tools',
-        'Created novel odometry software for camera-based visuospatial perception'
+        'Led end-to-end architecture, build, and deployment of cloud-based computer vision applications, such as a real-time 3D visualizer and annotation tools'
       ],
       'title' => 'Senior Engineer'
     ],

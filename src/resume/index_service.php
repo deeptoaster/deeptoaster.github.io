@@ -42,13 +42,13 @@ $cleverly->display('index_service.tpl', [
       'date' => 2023,
       'employer' => 'The Urban Tap',
       'notes' => [
-        'As host, managed hundreds of covers at four-room gastropub using Resy',
-        'As expo, ensured order quality through many a late-night happy-hour rush'
+        'Ensured guest experience across hundreds of covers at four-room gastropub',
+        'Maintained high standards with four-page menu and hundreds of craft beers'
       ],
       'title' => 'Server, Expo, Host'
     ],
     [
-      'date' => '2022&ndash;24',
+      'date' => '2022&ndash;25',
       'disabled' => true,
       'employer' => 'AnchorZero',
       'notes' => [
@@ -60,7 +60,7 @@ $cleverly->display('index_service.tpl', [
       'date' => 2021,
       'employer' => 'Boho',
       'notes' => [
-        'Host at upscale restaurant with indoor and outdoor seating using OpenTable'
+        'Host at upscale two-room restaurant with indoor and outdoor seating'
       ],
       'title' => 'Host'
     ],
