@@ -81,8 +81,8 @@ function squiffles_showcase($items) {
 }
 
 $arcs = [
-  squiffles_arc(City::PORTLAND, City::LOS_ANGELES, 20, 'plane'), // 2013-04-23
-  squiffles_arc(City::PORTLAND, City::LOS_ANGELES, 30, 'plane'), // 2013-04-28
+  squiffles_arc(City::PORTLAND, City::LOS_ANGELES, 25, 'plane'), // 2013-04-23
+  squiffles_arc(City::PORTLAND, City::LOS_ANGELES, 35, 'plane'), // 2013-04-28
   squiffles_arc(City::PORTLAND, City::SHANGHAI, 150, 'plane'), // 2014-09-09
   squiffles_arc(City::PORTLAND, City::SHANGHAI, 165, 'plane'), // 2014-09-24
   squiffles_arc(City::LOS_ANGELES, City::SAN_FRANCISCO, 5, 'plane'), // 2015-01-11
@@ -180,6 +180,24 @@ $arcs = [
   squiffles_arc(City::HONG_KONG, City::SHANGHAI, 20, 'plane'), // 2024-01-30
   squiffles_arc(City::GENEVA, City::SHANGHAI, 60, 'plane'), // 2024-02-13
   squiffles_arc(City::NEW_YORK, City::MILAN, 45, 'plane'), // 2024-02-13
+  squiffles_arc(City::LAS_VEGAS, City::PITTSBURGH, 50, 'plane'), // 2024-05-13
+  squiffles_arc(City::NEW_YORK, City::RIGA, 60, 'plane'), // 2024-09-09
+  squiffles_arc(City::RIGA, City::VILNIUS, 10, 'plane'), // 2024-09-14
+  squiffles_arc(City::BARCELONA, City::HELSINKI, 45, 'plane'), // 2024-09-20
+  squiffles_arc(City::MANCHESTER, City::PARIS, 15, 'plane'), // 2024-09-27
+  squiffles_arc(City::LONDON, City::NEW_YORK, 40, 'plane'), // 2024-10-03
+  squiffles_arc(City::BOSTON, City::NEW_YORK, 5, 'plane'), // 2024-11-13
+  squiffles_arc(City::DENVER, City::NEW_YORK, 55, 'plane'), // 2024-12-13
+  squiffles_arc(City::PORTLAND, City::RENO, 10, 'plane'), // 2025-01-28
+  squiffles_arc(City::VANCOUVER, City::NEW_YORK, 30, 'plane'), // 2025-02-06
+  squiffles_arc(City::NEW_YORK, City::MANCHESTER, 90, 'plane'), // 2025-02-26
+  squiffles_arc(City::MANCHESTER, City::OSLO, 30, 'plane'), // 2025-03-12
+  squiffles_arc(City::NEW_YORK, City::OSLO, 95, 'plane'), // 2025-03-13
+  squiffles_arc(City::DENVER, City::NEW_YORK, 70, 'plane'), // 2025-03-15
+  squiffles_arc(City::SAN_FRANCISCO, City::CHICAGO, 55, 'plane'), // 2025-04-03
+  squiffles_arc(City::ROME, City::NEW_YORK, 55, 'plane'), // 2025-04-19
+  squiffles_arc(City::MILAN, City::MANCHESTER, 20, 'plane'), // 2025-04-29
+  squiffles_arc(City::BOSTON, City::SAN_FRANCISCO, 75, 'plane'), // 2025-05-25
   squiffles_arc(City::WHEELER_RIDGE, City::LOS_ANGELES, 5, 'thumb'), // 2014-11-06
   squiffles_arc(City::SAN_FRANCISCO, City::WHEELER_RIDGE, 10, 'thumb'), // 2014-11-07
   squiffles_arc(City::SACRAMENTO, City::LOS_ANGELES, 25, 'thumb'), // 2015-03-23

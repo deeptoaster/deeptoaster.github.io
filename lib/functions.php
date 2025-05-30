@@ -18,6 +18,7 @@ abstract class City {
   const ATASCADERO = [35.4894, -120.6707];
   const ATHENS = [37.9838, 23.7275];
   const AUSTIN = [30.2672, -97.7431];
+  const BARCELONA = [41.3902, 2.1540];
   const BEIJING = [39.9042, 116.4074];
   const BELGRADE = [44.7866, 20.4489];
   const BOGOTA = [4.7110, -74.0721];
@@ -37,6 +38,7 @@ abstract class City {
   const EUGENE = [44.0521, -123.0868];
   const EVERETT = [47.9790, -122.2021];
   const GENEVA = [46.2017, 6.1469];
+  const HELSINKI = [60.1708, 24.9375];
   const HONG_KONG = [22.3000, 114.2000];
   const HONOLULU = [21.3069, -157.8583];
   const KUALA_LUMPUR = [3.1390, 101.6869];
@@ -46,6 +48,7 @@ abstract class City {
   const LIEPAJA = [56.5047, 21.0108];
   const LONDON = [51.5074, 0.1278];
   const LOS_ANGELES = [34.0522, -118.2437];
+  const MANCHESTER = [53.4790, -2.2452];
   const MARRAKESH = [31.6295, -7.9811];
   const MIAMI = [25.7617, -80.1918];
   const MILAN = [45.4669, 9.1900];
@@ -64,6 +67,7 @@ abstract class City {
   const PRAGUE = [50.0755, 14.4378];
   const PRISTINA = [42.6629, 21.1655];
   const PROVO = [40.2338, -111.6585];
+  const RENO = [39.5272, -119.8219];
   const RICHFIELD = [38.7725, -112.0841];
   const RIGA = [56.9489, 24.1064];
   const ROME = [41.9028, 12.4964];
@@ -79,6 +83,7 @@ abstract class City {
   const VANCOUVER = [49.2827, -123.1207];
   const VARNA = [43.2141, 27.9147];
   const VENICE = [45.4408, 12.3155];
+  const VILNIUS = [54.6872, 25.2797];
   const WAIANAE = [21.4360, -158.1849];
   const WARSAW = [52.2297, 21.0122];
   const WHEELER_RIDGE = [35.0044, -118.9495];
