@@ -558,6 +558,19 @@ a.honeycomb-cell {
   height: 2em;
   margin: 0.7em -1em;
 }
+.projects,
+.showcase {
+  font-size: 2vh;
+}
+.projects {
+  table-layout: auto;
+  width: auto;
+  margin: auto;
+}
+.projects td {
+  padding: 0 0.5em;
+  text-align: left;
+}
 .coaster {
   position: relative;
   height: 14em;
@@ -960,7 +973,6 @@ a.honeycomb-cell {
   text-align: center;
   width: 50em;
   margin: -4em auto 0 auto;
-  font-size: 2vh;
 }
 .showcase-pages {
   position: relative;
@@ -1501,11 +1513,13 @@ body.page #sidebar {
   color: #617078;
 }
 @media (max-aspect-ratio: 1.02) {
+  .projects,
   .showcase {
     font-size: 1.96vw;
   }
 }
 @media only screen and (hover: none) {
+  .projects,
   .showcase {
     font-size: 1em;
   }

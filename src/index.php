@@ -48,14 +48,14 @@ function squiffles_point($city, $label, $right) {
 }
 
 function squiffles_showcase($items) {
-  $pages = [];
+  $showcase = [];
   $page_count = (int)((count($items) + ITEMS_PER_PAGE - 1) / ITEMS_PER_PAGE);
 
   foreach ($items as $item_number => $item) {
     if ($item_number % ITEMS_PER_PAGE === 0) {
       $page_number = (int)($item_number / 4);
 
-      $pages[$page_number] = [
+      $showcase[$page_number] = [
         'id' => $page_number,
         'next' => $page_number === $page_count - 1
           ? 0
@@ -67,17 +67,17 @@ function squiffles_showcase($items) {
       ];
     }
 
-    $pages[$page_number]['thumbnails'][] = $item + ['id' => $item_number];
-    $pages[$page_number]['padding'] = [];
+    $showcase[$page_number]['thumbnails'][] = $item + ['id' => $item_number];
+    $showcase[$page_number]['padding'] = [];
   }
 
-  $pages[$page_number]['padding'] = array_fill(
+  $showcase[$page_number]['padding'] = array_fill(
     0,
     ITEMS_PER_PAGE - 1 - (count($items) + ITEMS_PER_PAGE - 1) % ITEMS_PER_PAGE,
     null
   );
 
-  return $pages;
+  return $showcase;
 }
 
 $arcs = [
@@ -246,7 +246,144 @@ $points = [
   squiffles_point(City::NEW_YORK, 'New York, New York', true)
 ];
 
-$pages = squiffles_showcase([
+$projects = [
+  [
+    'items' => [
+      [
+        'code' =>
+            'https://github.com/blacker-hovse/rigger-admin/blob/master/count.sql',
+        'description' =>
+            'Rigger: a Condorcet voting system written in pure SQL'
+      ],
+      [
+        'article' => 'https://css-tricks.com/whack-a-mole-the-css-edition/',
+        'code' => 'https://github.com/deeptoaster/stupid-css',
+        'demo' => '/css/',
+        'description' =>
+            'Stupid CSS: Whac-A-Mole and other stupid things that shouldn\'t be possible with CSS'
+      ],
+      [
+        'code' => 'https://github.com/deeptoaster/stupid-css-slides',
+        'demo' => '/slides/',
+        'description' => 'Stupid CSS Slides: a presentation on CSS, in CSS'
+      ]
+    ],
+    'link' => '/blog/category/stupid-hacks/',
+    'name' => 'Stupid Hacks'
+  ],
+  [
+    'items' => [
+      [
+        'article' => 'https://fishbotwilleatyou.com/blog/tasker-tracker/',
+        'code' => 'https://github.com/deeptoaster/tasker-tracker',
+        'demo' => '/tracker/',
+        'description' =>
+            'Tasker Tracker: set up mood, time, or other tracking in Google Sheets using Tasker'
+      ],
+      [
+        'code' => 'https://github.com/deeptoaster/vacuum.fm',
+        'demo' => '/vacuum/',
+        'description' =>
+            'Vacuum.fm: clean up your third-party Last.fm scrobbles'
+      ]
+    ],
+    'link' => '/blog/category/updates/',
+    'name' => 'Quantified Self'
+  ],
+  [
+    'items' => [
+      [
+        'article' =>
+            'https://www.pasadenastarnews.com/technology/20170309/robots-overcome-77-foot-obstacle-course-in-caltech-robotics-competition/',
+        'demo' => 'https://youtu.be/2wTtreo0QhE',
+        'description' => 'Caltech ME 72 2017 competition robots'
+      ],
+      [
+        'demo' => 'https://youtu.be/-FPRZtctb_0',
+        'description' =>
+            'Fishbot: a jellyfish-like mechanism built from machined acrylic and 3D-printed parts'
+      ],
+      [
+        'code' => 'https://github.com/deeptoaster/nato-lights',
+        'description' =>
+            'Nato Lights: an Arduino library for controlling multiple Neopixel LED strips'
+      ]
+    ],
+    'link' => 'https://github.com/deeptoaster',
+    'name' => 'Hardware'
+  ],
+  [
+    'items' => [
+      [
+        'article' =>
+            'https://www.polygon.com/gaming/2012/9/28/3422822/fruit-ninja-gets-all-scientific-on-this-ti-83-plus-calculator',
+        'code' =>
+            'http://www.ticalc.org/archives/files/fileinfo/450/45003.html',
+        'demo' => 'https://youtu.be/WhDquSJ2Rr8',
+        'description' => 'Fruit Ninja for TI-83 Plus'
+      ],
+      [
+        'article' =>
+            'https://www.ticalc.org/archives/news/articles/14/149/149077.html',
+        'code' =>
+            'https://www.ticalc.org/archives/files/fileinfo/435/43518.html',
+        'demo' => 'https://youtu.be/ArVxWCBNz2s',
+        'description' => 'PapiJump for TI-83 Plus'
+      ],
+      [
+        'article' =>
+            'https://www.ticalc.org/archives/news/articles/14/146/146866.html',
+        'code' =>
+            'https://www.ticalc.org/archives/files/fileinfo/445/44507.html',
+        'description' => 'Simul 2'
+      ]
+    ],
+    'link' => 'https://www.ticalc.org/archives/files/authors/105/10555.html',
+    'name' => 'Calculator Games'
+  ],
+  [
+    'items' => [
+      [
+        'article' => 'https://clrhome.org/2021/01/#announcingclrhometoolsphp',
+        'code' => 'https://github.com/deeptoaster/clrhome-tools-php',
+        'description' =>
+            'clrhome-tools-php: a PHP library for interacting with TI-83 Plus&ndash;series calculator variables'
+      ],
+      [
+        'article' => 'https://clrhome.org/2011/10/#homescreenimagemaker',
+        'code' => 'https://github.com/deeptoaster/homer',
+        'demo' => 'https://clrhome.org/homer/',
+        'description' => 'Homer: a graphing calculator screenshot maker'
+      ],
+      [
+        'article' => 'https://clrhome.org/2013/01/#newonlineeditorinbeta',
+        'demo' => 'https://clrhome.org/ies/',
+        'description' =>
+            'IES: an IDE for creating TI-83 Plus&ndash;series calculator programs and other variables'
+      ],
+      [
+        'article' => 'https://clrhome.org/2012/07/#abetterorg',
+        'demo' => 'https://clrhome.org/asm/',
+        'description' => 'ORG: an online IDE and assembler for Z80 projects'
+      ],
+      [
+        'article' => 'https://clrhome.org/2012/07/#twoprojectsoneidea',
+        'demo' => 'https://clrhome.org/pix/',
+        'description' =>
+            'Pixelscape: an online sprite, tilemap, and pixel animation editor'
+      ],
+      [
+        'code' => 'https://github.com/deeptoaster/opcode-table',
+        'demo' => 'https://clrhome.org/table/',
+        'description' => 'Z80 Opcode Table'
+      ]
+    ],
+    'link' => 'https://clrhome.org/resources/',
+    'name' => 'Z80 Programming Utilities'
+  ]
+];
+
+$showcase = squiffles_showcase([
   [
     'description' =>
         'Terminal interface built for a one-day action-movie-themed puzzle hunt.',
@@ -342,10 +479,11 @@ $cleverly->display('index.tpl', [
   ),
   'coaster' => $coaster,
   'date' => strftime('%F'),
-  'points' => $points,
-  'pages' => $pages,
   'path' => '/',
+  'points' => $points,
+  'projects' => $projects,
   'root' => $config['ROOT'],
+  'showcase' => $showcase,
   'title' => 'Deep Toaster'
 ]);
 ?>
