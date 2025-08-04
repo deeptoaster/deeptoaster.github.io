@@ -19,6 +19,7 @@ abstract class City {
   const ATHENS = [37.9838, 23.7275];
   const AUSTIN = [30.2672, -97.7431];
   const BARCELONA = [41.3902, 2.1540];
+  const BARI = [41.1253, 16.8667];
   const BEIJING = [39.9042, 116.4074];
   const BELGRADE = [44.7866, 20.4489];
   const BOGOTA = [4.7110, -74.0721];
@@ -35,6 +36,7 @@ abstract class City {
   const DALLAS = [32.7767, -96.7970];
   const DENVER = [39.7392, -104.9903];
   const DUBLIN = [53.3498, -6.2603];
+  const DUBROVNIK = [42.6403, 18.1083];
   const EUGENE = [44.0521, -123.0868];
   const EVERETT = [47.9790, -122.2021];
   const GENEVA = [46.2017, 6.1469];
@@ -77,6 +79,7 @@ abstract class City {
   const SEATTLE = [47.6062, -122.3321];
   const SHANGHAI = [31.2304, 121.4737];
   const SKOPJE = [41.9981, 21.4254];
+  const SPLIT = [43.5100, 16.4400];
   const TAHOE_CITY = [39.1677, -120.1452];
   const TAMPA = [27.9506, -82.4572];
   const TOKYO = [35.6762, 139.6503];
@@ -165,7 +168,7 @@ function squiffles_config_set($settings) {
 }
 
 /**
- * Retrives a lat-lng pair from the blip spreadsheet.
+ * Retrieves a lat-lng pair from the blip spreadsheet.
  * @param number [output] Latitude.
  * @param number [output] Longitude.
  * @return number The HTTP request's response code.

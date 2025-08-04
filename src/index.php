@@ -198,6 +198,10 @@ $arcs = [
   squiffles_arc(City::ROME, City::NEW_YORK, 55, 'plane'), // 2025-04-19
   squiffles_arc(City::MILAN, City::MANCHESTER, 20, 'plane'), // 2025-04-29
   squiffles_arc(City::BOSTON, City::SAN_FRANCISCO, 75, 'plane'), // 2025-05-25
+  squiffles_arc(City::NEW_YORK, City::OSLO, 110, 'plane'), // 2025-07-23
+  squiffles_arc(City::OSLO, City::DUBROVNIK, 30, 'plane'), // 2025-07-25
+  squiffles_arc(City::BARI, City::SPLIT, 10, 'plane'), // 2025-07-30
+  squiffles_arc(City::NEW_YORK, City::BARI, 30, 'plane'), // 2025-08-03
   squiffles_arc(City::WHEELER_RIDGE, City::LOS_ANGELES, 5, 'thumb'), // 2014-11-06
   squiffles_arc(City::SAN_FRANCISCO, City::WHEELER_RIDGE, 10, 'thumb'), // 2014-11-07
   squiffles_arc(City::SACRAMENTO, City::LOS_ANGELES, 25, 'thumb'), // 2015-03-23
@@ -391,7 +395,7 @@ $showcase = squiffles_showcase([
   ],
   [
     'description' =>
-        'An efficient and easily extensible <a href="https://github.com/deeptoaster/nato-lights">software library</a> and Arduino Uno&ndash;based hardware demo for decorative NeoPixel lighting strips.',
+        'An efficient and easily extensible <a href="https://github.com/deeptoaster/nato-lights">software library</a> and Arduino Uno&ndash;based hardware demo for decorative Neopixel lighting strips.',
     'image' => '/bin/images/showcase_lights.gif'
   ],
   [
@@ -435,8 +439,7 @@ $showcase = squiffles_showcase([
     'image' => '/bin/images/showcase_tracker.gif'
   ],
   [
-    'description' =>
-        'Header of an infographic designed in 2016.',
+    'description' => 'Header of an infographic designed in 2016.',
     'image' => '/bin/images/showcase_real.png'
   ],
   [
