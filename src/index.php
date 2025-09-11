@@ -1,4 +1,5 @@
 <?
+/** @file */
 namespace Squiffles;
 
 define('Squiffles\ITEMS_PER_PAGE', 4);
@@ -6,7 +7,12 @@ define('Squiffles\ITEMS_PER_PAGE', 4);
 include(__DIR__ . '/../lib/cleverly/Cleverly.class.php');
 include(__DIR__ . '/../lib/functions.php');
 
-function squiffles_arc($city0, $city1, $height, $type) {
+function squiffles_arc(
+  array $city0,
+  array $city1,
+  float $height,
+  string $type
+): array {
   list($x0, $y0) = squiffles_project($city0);
   list($x1, $y1) = squiffles_project($city1);
   $x = $x1 - $x0;
@@ -33,7 +39,11 @@ function squiffles_arc($city0, $city1, $height, $type) {
   ];
 }
 
-function squiffles_point($city, $label, $right) {
+function squiffles_point(
+  array $city,
+  string $label,
+  bool $right
+): array {
   list($x, $y) = squiffles_project($city);
 
   return [
@@ -47,7 +57,9 @@ function squiffles_point($city, $label, $right) {
   ];
 }
 
-function squiffles_showcase($items) {
+function squiffles_showcase(
+  array $items
+): array {
   $showcase = [];
   $page_count = (int)((count($items) + ITEMS_PER_PAGE - 1) / ITEMS_PER_PAGE);
 

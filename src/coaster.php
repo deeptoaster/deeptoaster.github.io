@@ -1,5 +1,11 @@
 <?
-function squiffles_print_cap($bottom, $left, $width, $height) {
+/** @file */
+function squiffles_print_cap(
+  float $bottom,
+  float $left,
+  float $width,
+  float $height
+): void {
   $x = $width / 10 - $left - 0.3;
   $y = $bottom + $height - 14 - 0.3;
 
@@ -24,7 +30,12 @@ EOF
   );
 }
 
-function squiffles_print_clear($bottom, $left, $width, $height) {
+function squiffles_print_clear(
+  float $bottom,
+  float $left,
+  float $width,
+  float $height
+): void {
   printf(
     <<<EOF
 <span class="coaster-clear" style="bottom: %.1fem; left: %.1fem; width: %.1fem; height: %.1fem;"></span>
@@ -38,7 +49,12 @@ EOF
   );
 }
 
-function squiffles_print_cup($bottom, $left, $width, $height) {
+function squiffles_print_cup(
+  float $bottom,
+  float $left,
+  float $width,
+  float $height
+): void {
   printf(
     <<<EOF
 <span class="coaster-cup" style="bottom: %.1fem; left: %.1fem; width: %dem; height: %dem;">
@@ -57,7 +73,12 @@ EOF
   );
 }
 
-function squiffles_print_line($bottom, $left, $width, $theta) {
+function squiffles_print_line(
+  float $bottom,
+  float $left,
+  float $width,
+  float $theta
+): void {
   $transform = sprintf('transform: rotate(%ddeg);', $theta);
 
   printf(

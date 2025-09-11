@@ -1,4 +1,5 @@
 <?
+/** @file */
 namespace Squiffles;
 
 define(
@@ -94,10 +95,10 @@ abstract class City {
 
 /**
  * Creates attachments from a URL on each of a list of Trello cards.
- * @param array<string> $cards The list of card URLs to attach to.
- * @param string $url The URL from which to create attachments.
+ * @param $cards The list of card URLs to attach to.
+ * @param $url The URL from which to create attachments.
  */
-function squiffles_attach_to_trello($cards, $url) {
+function squiffles_attach_to_trello(array $cards, string $url): void {
   global $config;
 
   if (!isset($config['TRELLO_KEY']) || !isset($config['TRELLO_TOKEN'])) {
@@ -148,9 +149,9 @@ function squiffles_attach_to_trello($cards, $url) {
 
 /**
  * Adds or updates config values both for the current session and persistently.
- * @param array<string,string> $settings Settings as key-value pairs.
+ * @param $settings Settings as key-value pairs.
  */
-function squiffles_config_set($settings) {
+function squiffles_config_set(array $settings): void {
   global $config;
 
   foreach ($settings as $key => $value) {
@@ -169,11 +170,11 @@ function squiffles_config_set($settings) {
 
 /**
  * Retrieves a lat-lng pair from the blip spreadsheet.
- * @param number [output] Latitude.
- * @param number [output] Longitude.
- * @return number The HTTP request's response code.
+ * @param [out] Latitude.
+ * @param [out] Longitude.
+ * @return The HTTP request's response code.
  */
-function squiffles_fetch_location(&$latitude, &$longitude) {
+function squiffles_fetch_location(float &$latitude, float &$longitude): int {
   global $config;
 
   $handle = curl_init();
@@ -204,10 +205,10 @@ function squiffles_fetch_location(&$latitude, &$longitude) {
 
 /**
  * Projects a lat-lng pair onto a Mercator map.
- * @param array<number> $lat_lng The lat-lng pair to project.
- * @return array<number> The x-y pair of the point on world.png.
+ * @param $lat_lng The lat-lng pair to project.
+ * @return The x-y pair of the point on world.png.
  */
-function squiffles_project($lat_lng) {
+function squiffles_project(array $lat_lng): array {
   static $width = 0;
 
   if ($width === 0) {
