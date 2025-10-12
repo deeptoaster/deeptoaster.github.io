@@ -9,6 +9,7 @@ include(__DIR__ . '/FishbotEdge.class.php');
 include(__DIR__ . '/FishbotEllipse.class.php');
 include(__DIR__ . '/FishbotLine.class.php');
 include(__DIR__ . '/FishbotNode.class.php');
+include(__DIR__ . '/FishbotWedge.class.php');
 
 /**
  * Collects line and ellipse parameters from an SVG object into a flat array.
@@ -69,7 +70,6 @@ function squiffles_collect(
  */
 function squiffles_fill(array $lines, array $ellipses, float $scale): void {
   $nodes = [];
-  $edges = [];
 
   foreach ($lines as $l1_index => $l1) {
     for ($l2_index = $l1_index + 1; $l2_index < count($lines); $l2_index++) {
@@ -78,15 +78,86 @@ function squiffles_fill(array $lines, array $ellipses, float $scale): void {
   }
 
   foreach ($lines as $line) {
-    echo "({$line->start->x}, {$line->start->y}) to ({$line->end->x}, {$line->end->y})\n";
+    echo "Line from ({$line->start->hash}) to ({$line->end->hash})\n";
   }
 
-  foreach ($nodes as $node) {
-    echo "Node at ($node->x, $node->y) with " . count($node->edges) . " edges\n";
-  }
+  $edges = [];
+  $edges_by_node = [];
 
   foreach ($lines as $line) {
     $line->collectEdges($edges);
+  }
+
+  foreach ($nodes as $node) {
+    $edges_by_node[$node->hash] = [];
+  }
+
+  foreach ($edges as $edge) {
+    $edges_by_node[$edge->start->hash][] = $edge;
+
+    $edges_by_node[$edge->end->hash][] = new FishbotEdge(
+      $edge->end,
+      $edge->start
+    );
+  }
+
+  # sorting &$node_edges in place leads to a duplication bug
+  foreach ($edges_by_node as $node_hash => $node_edges) {
+    usort($node_edges, function(FishbotEdge $a, FishbotEdge $b) {
+      return $a->theta <=> $b->theta;
+    });
+
+    $edges_by_node[$node_hash] = $node_edges;
+  }
+
+  foreach ($edges_by_node as $node_hash => $node_edges) {
+    echo count($node_edges), " edges from ($node_hash) to:\n";
+
+    foreach ($node_edges as $edge) {
+      echo "  ({$edge->end->hash}) at {$edge->theta}\n";
+    }
+  }
+
+  $wedges = [];
+  $wedges_by_node = [];
+
+  foreach ($nodes as $node) {
+    $wedges_by_node[$node->hash] = [];
+  }
+
+  foreach ($edges_by_node as $node_hash => $node_edges) {
+    foreach ($node_edges as $edge_index => $edge) {
+      $next_edge = $node_edges[($edge_index + 1) % count($node_edges)];
+      $wedge = new FishbotWedge($edge, $next_edge);
+      $wedges[] = $wedge;
+      $wedges_by_node[$edge->end->hash][$node_hash] = $wedge;
+    }
+  }
+
+  $regions = [];
+
+  foreach ($wedges as $start_wedge) {
+    if ($start_wedge->consumed) {
+      continue;
+    }
+
+    $region = [];
+    $wedge = $start_wedge;
+
+    do {
+      $region[] = $wedge->start;
+      $wedge->consumed = true;
+      $wedge = $wedges_by_node[$wedge->middle->hash][$wedge->end->hash];
+    } while ($wedge !== $start_wedge);
+
+    $regions[] = $region;
+    $start_wedge->consumed = true;
+  }
+
+  foreach ($regions as $region) {
+    echo "Region over (", implode("), (", array_map(function($node) {
+      return $node->hash;
+    }, $region)), ")\n";
   }
 }
 
