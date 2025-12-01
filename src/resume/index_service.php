@@ -113,13 +113,7 @@ $cleverly->display('index_service.tpl', [
       'title' => 'Software Development Intern'
     ]
   ],
-  'languages' => [
-    ['level' => 'native', 'name' => 'English', 'proficiency' => 100],
-    ['level' => 'native', 'name' => 'Mandarin', 'proficiency' => 100],
-    ['level' => 'B2', 'name' => 'French', 'proficiency' => 70],
-    ['level' => 'B2', 'name' => 'Spanish', 'proficiency' => 60],
-    ['level' => 'B1', 'name' => 'Russian', 'proficiency' => 40]
-  ],
+  'languages' => $config['resume_languages'],
   'path' => '/resume-service/',
   'root' => $config['ROOT'],
   'show_github' => false,

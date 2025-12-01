@@ -14,6 +14,14 @@ define('Squiffles\TRELLO_PATTERN', '/\bhttps?:\/\/trello.com\/c\/(\w+)/');
 
 $config = parse_ini_file(CONFIG_FILE);
 
+$config['resume_languages'] = [
+  ['level' => 'native', 'name' => 'English', 'proficiency' => 100],
+  ['level' => 'native', 'name' => 'Mandarin', 'proficiency' => 100],
+  ['level' => 'C1', 'name' => 'French', 'proficiency' => 70],
+  ['level' => 'B2', 'name' => 'Spanish', 'proficiency' => 60],
+  ['level' => 'B1', 'name' => 'Russian', 'proficiency' => 40]
+];
+
 abstract class City {
   const ALBUQUERQUE = [35.0844, -106.6504];
   const ATASCADERO = [35.4894, -120.6707];
