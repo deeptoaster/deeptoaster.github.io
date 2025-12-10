@@ -1,6 +1,8 @@
 <?php
 namespace Squiffles;
 
+include_once(__DIR__ . '/FishbotNode.class.php');
+
 /**
  * Represents an edge between two nodes.
  */

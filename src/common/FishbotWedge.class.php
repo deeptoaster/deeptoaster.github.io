@@ -1,6 +1,8 @@
 <?php
 namespace Squiffles;
 
+include_once(__DIR__ . '/FishbotEdge.class.php');
+
 /**
  * Represents a wedge formed by two adjacent edges.
  */
