@@ -43,7 +43,7 @@ class FishbotLine extends FishbotEdge {
 
   /**
    * Tests for an intersection between line segments and records it.
-   * @param FishbotLine $other The other line to intersect.
+   * @param $other The other line to intersect.
    * @param [in,out] $nodes The running list of nodes in the graph.
    * @return Whether or not the line segments intersect.
    */
@@ -78,11 +78,7 @@ class FishbotLine extends FishbotEdge {
       return false;
     }
 
-    $intersection = new FishbotNode(
-      $this->start->x + $t * ($this->end->x - $this->start->x),
-      $this->start->y + $t * ($this->end->y - $this->start->y)
-    );
-
+    $intersection = $this[$t];
     $node_found = false;
 
     foreach ($nodes as $node) {
@@ -116,20 +112,6 @@ class FishbotLine extends FishbotEdge {
 
   public float $cy {
     get => ($this->start->y + $this->end->y) / 2;
-  }
-
-  public float $length {
-    get => sqrt(
-      ($this->end->x - $this->start->x) ** 2 +
-          ($this->end->y - $this->start->y) ** 2
-    );
-  }
-
-  public float $theta {
-    get => atan2(
-      $this->end->y - $this->start->y,
-      $this->end->x - $this->start->x
-    ) * 180 / M_PI;
   }
 }
 ?>

@@ -70,7 +70,48 @@ function squiffles_fill(array $lines, array $ellipses, float $scale): void {
   $regions = $graph->getRegions();
 
   foreach ($regions as $region) {
-    $region->draw();
+    if ($region instanceof FishbotTriangularRegion) {
+      $projection = $region->anchor_edge->project($region->anchor_node);
+
+      $height = new FishbotEdge(
+        $region->anchor_node,
+        $projection
+      )->length * $scale;
+
+      $left = new FishbotEdge(
+        $region->anchor_edge->start,
+        $projection
+      )->length * $scale;
+      
+      $right = new FishbotEdge(
+        $region->anchor_edge->end,
+        $projection
+      )->length * $scale;
+
+      $transform =
+          sprintf('transform: rotate(%.2fdeg);', $region->anchor_edge->theta);
+      $transform_origin = sprintf('transform-origin: %.2fem top;', $left);
+
+      printf(
+        <<<EOF
+    <span class="svg-triangle" style="top: %.2fem; left: %.2fem; margin-left: -%.2fem; border-width: 0 %.2fem %.2fem %.2fem; -webkit-%s -moz-%s %s -webkit-%s -moz-%s %s"></span>
+
+  EOF
+        ,
+        $region->anchor_node->y * $scale,
+        $region->anchor_node->x * $scale,
+        $left,
+        $right,
+        $height,
+        $left,
+        $transform,
+        $transform,
+        $transform,
+        $transform_origin,
+        $transform_origin,
+        $transform_origin
+      );
+    }
   }
 }
 
@@ -152,8 +193,8 @@ $lines = [];
 $ellipses = [];
 $settings = ['stroke-linecap' => 'butt'];
 squiffles_collect($xml, $lines, $ellipses, $settings);
-squiffles_stroke($lines, $ellipses, 0.1);
 squiffles_fill($lines, $ellipses, 0.1);
+squiffles_stroke($lines, $ellipses, 0.1);
 
 echo <<<EOF
 </div>

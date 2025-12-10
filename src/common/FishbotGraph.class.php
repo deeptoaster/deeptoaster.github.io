@@ -9,8 +9,8 @@ include(__DIR__ . '/FishbotTriangularRegion.class.php');
  * Represents a planar graph derived form an SVG.
  */
 class FishbotGraph {
-  public array $edges = [];
-  public array $nodes = [];
+  private array $edges = [];
+  private array $nodes = [];
 
   public function __construct(array $lines, array $ellipses) {
     foreach ($lines as $l1_index => $l1) {
@@ -44,7 +44,7 @@ class FishbotGraph {
       );
     }
 
-    # sorting &$node_edges in place leads to a duplication bug
+    // sorting &$node_edges in place leads to a duplication bug
     foreach ($edges_by_node as $node_hash => $node_edges) {
       usort($node_edges, function(FishbotEdge $a, FishbotEdge $b) {
         return $a->theta <=> $b->theta;
@@ -78,12 +78,21 @@ class FishbotGraph {
 
       $region = [];
       $wedge = $start_wedge;
+      $skip_next_node = false;
 
       do {
-        $region[] = $wedge->start;
+        if (!$skip_next_node) {
+          $region[] = $wedge->start;
+        }
+
         $wedge->consumed = true;
+        $skip_next_node = $wedge->flat;
         $wedge = $wedges_by_node[$wedge->middle->hash][$wedge->end->hash];
       } while ($wedge !== $start_wedge);
+
+      if ($skip_next_node) {
+        array_shift($region);
+      }
 
       $regions[] = count($region) === 3
         ? new FishbotTriangularRegion($region)

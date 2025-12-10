@@ -331,10 +331,14 @@ td {
   position: relative;
 }
 .svg-ellipse,
-.svg-line {
+.svg-line,
+.svg-triangle {
   display: block;
   position: absolute;
   border-style: solid;
+}
+.svg-ellipse,
+.svg-line {
   border-color: #232627;
 }
 .svg-ellipse {
@@ -352,6 +356,10 @@ td {
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in, ease-out;
+}
+.svg-triangle {
+  border-color: transparent;
+  border-bottom-color: transparent;
 }
 .map {
   position: relative;

@@ -15,6 +15,7 @@ class FishbotRegion {
 
   /**
    * Draws the region as HTML elements.
+   * @param $scale The factor by which to scale to ems.
    */
-  public function draw(): void {}
+  public function draw(float $scale): void {}
 }
