@@ -1322,6 +1322,12 @@ body.page #sidebar {
   font-size: 0.4em;
   transform: translate(-50%, -50%);
 }
+#fishbot .svg:first-child {
+  filter: blur(0.5em);
+}
+#fishbot .svg:first-child .svg-line {
+  display: none;
+}
 #fishbot .links {
   font-size: 0.6em;
 }

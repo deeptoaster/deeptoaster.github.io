@@ -8,7 +8,7 @@ $cleverly->setTemplateDir(__DIR__ . '/templates');
 $cleverly->addTemplateDir(__DIR__ . '/../common/templates');
 ob_start();
 
-include(__DIR__ . '/../common/fishbot.php');
+include(__DIR__ . '/../fishbot.php');
 
 $fishbot = ob_get_clean();
 

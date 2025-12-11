@@ -3,7 +3,7 @@ from matplotlib.colors import Colormap
 
 BACKGROUND_COLOR = [22, 24, 25]
 STOP_COUNT = 20
-ALPHA = 0.6
+ALPHA = 0.67
 
 
 def print_keyframes(cmap: Colormap, name: str, property: str) -> None:

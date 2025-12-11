@@ -12,8 +12,7 @@
       </h1>
     </div>
     <div id="fishbot">
-      {include_php file='common/fishbot.php'}
-      {include file='links.tpl'}
+      {$fishbot}      {$fishbot}      {include file='links.tpl'}
     </div>
     <div id="scroll">
       <a id="top"></a>

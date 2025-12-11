@@ -485,6 +485,11 @@ ob_start();
 include(__DIR__ . '/coaster.php');
 
 $coaster = ob_get_clean();
+ob_start();
+
+include(__DIR__ . '/fishbot.php');
+
+$fishbot = ob_get_clean();
 
 $cleverly->display('index.tpl', [
   'arcs' => $arcs,
@@ -494,6 +499,7 @@ $cleverly->display('index.tpl', [
   ),
   'coaster' => $coaster,
   'date' => strftime('%F'),
+  'fishbot' => $fishbot,
   'path' => '/',
   'points' => $points,
   'projects' => $projects,

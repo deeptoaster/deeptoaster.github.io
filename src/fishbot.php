@@ -2,11 +2,11 @@
 /** @file */
 namespace Squiffles;
 
-define('Squiffles\FISHBOT_FILE', __DIR__ . '/../images/fishbot.svg');
+define('Squiffles\FISHBOT_FILE', __DIR__ . '/images/fishbot.svg');
 define('FISHBOT_THRESHOLD', 0.01);
 
-include(__DIR__ . '/FishbotGraph.class.php');
-include(__DIR__ . '/FishbotWedge.class.php');
+include(__DIR__ . '/common/classes/FishbotGraph.class.php');
+include(__DIR__ . '/common/classes/FishbotWedge.class.php');
 
 /**
  * Collects line and ellipse parameters from an SVG object into a flat array.
