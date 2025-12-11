@@ -4,6 +4,7 @@ namespace Squiffles;
 include(__DIR__ . '/FishbotEllipse.class.php');
 include(__DIR__ . '/FishbotLine.class.php');
 include(__DIR__ . '/FishbotTriangularRegion.class.php');
+include(__DIR__ . '/FishbotTrapezoidalRegion.class.php');
 
 /**
  * Represents a planar graph derived form an SVG.
@@ -94,9 +95,18 @@ class FishbotGraph {
         array_shift($region);
       }
 
-      $regions[] = count($region) === 3
-        ? new FishbotTriangularRegion($region)
-        : new FishbotRegion($region);
+      switch (count($region)) {
+        case 3:
+          $regions[] = new FishbotTriangularRegion($region);
+          break;
+        case 4:
+          $regions[] = new FishbotTrapezoidalRegion($region);
+          break;
+        default:
+          $regions[] = new FishbotRegion($region);
+          break;
+      }
+ 
       $start_wedge->consumed = true;
     }
 

@@ -343,6 +343,7 @@ td {
 }
 .svg-ellipse {
   border-radius: 100%;
+  animation: 4s linear infinite fishbot-ellipse;
 }
 .svg-line::after {
   content: '';
@@ -360,7 +361,7 @@ td {
 .svg-region {
   border-color: transparent;
   border-bottom-color: transparent;
-  animation: 4s linear infinite fishbot;
+  animation: 4s linear infinite fishbot-region;
 }
 .map {
   position: relative;

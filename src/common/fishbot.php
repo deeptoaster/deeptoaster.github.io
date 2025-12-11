@@ -70,6 +70,8 @@ function squiffles_fill(array $lines, array $ellipses, float $scale): void {
   $regions = $graph->getRegions();
 
   foreach ($regions as $region) {
+    $delay = -rand() / getrandmax();
+
     if ($region instanceof FishbotTriangularRegion) {
       $projection = $region->anchor_edge->project($region->anchor_node);
 
@@ -91,16 +93,58 @@ function squiffles_fill(array $lines, array $ellipses, float $scale): void {
       $transform =
           sprintf('transform: rotate(%.2fdeg);', $region->anchor_edge->theta);
       $transform_origin = sprintf('transform-origin: %.2fem top;', $left);
-      $delay = -rand() / getrandmax();
 
       printf(
         <<<EOF
-    <span class="svg-region" style="top: %.2fem; left: %.2fem; margin-left: -%.2fem; border-width: 0 %.2fem %.2fem %.2fem; -webkit-%s -moz-%s %s -webkit-%s -moz-%s %s animation-delay: %.1fs"></span>
+    <span class="svg-region" style="top: %.2fem; left: %.2fem; margin-left: -%.2fem; border-width: 0 %.2fem %.2fem %.2fem; -webkit-%s -moz-%s %s -webkit-%s -moz-%s %s animation-delay: %.1fs;"></span>
 
   EOF
         ,
         $region->anchor_node->y * $scale,
         $region->anchor_node->x * $scale,
+        $left,
+        $right,
+        $height,
+        $left,
+        $transform,
+        $transform,
+        $transform,
+        $transform_origin,
+        $transform_origin,
+        $transform_origin,
+        $delay
+      );
+    } else if ($region instanceof FishbotTrapezoidalRegion) {
+      $projection = $region->long_edge->project($region->short_edge->end);
+
+      $height = new FishbotEdge(
+        $region->short_edge->end,
+        $projection
+      )->length * $scale;
+
+      $left = new FishbotEdge(
+        $region->long_edge->start,
+        $projection
+      )->length * $scale;
+      
+      $right = (new FishbotEdge(
+        $region->long_edge->end,
+        $projection
+      )->length - $region->short_edge->length) * $scale;
+
+      $transform =
+          sprintf('transform: rotate(%.2fdeg);', $region->long_edge->theta);
+      $transform_origin = sprintf('transform-origin: %.2fem top;', $left);
+
+      printf(
+        <<<EOF
+    <span class="svg-region" style="top: %.2fem; left: %.2fem; width: %.2fem; margin-left: -%.2fem; border-width: 0 %.2fem %.2fem %.2fem; -webkit-%s -moz-%s %s -webkit-%s -moz-%s %s animation-delay: %.1fs;"></span>
+
+  EOF
+        ,
+        $region->short_edge->end->y * $scale,
+        $region->short_edge->end->x * $scale,
+        $region->short_edge->length * $scale,
         $left,
         $right,
         $height,
@@ -148,7 +192,7 @@ function squiffles_stroke(array $lines, array $ellipses, float $scale): void {
 
     printf(
       <<<EOF
-  <span class="svg-line" style="top: %.2fem; left: %.2fem; width: %.2fem; border-width: %.2fem%s;%s -webkit-%s -moz-%s %s animation-delay: %.1fs, %.1fs"></span>
+  <span class="svg-line" style="top: %.2fem; left: %.2fem; width: %.2fem; border-width: %.2fem%s;%s -webkit-%s -moz-%s %s animation-delay: %.1fs, %.1fs;"></span>
 
 EOF
       ,
@@ -167,9 +211,11 @@ EOF
   }
 
   foreach ($ellipses as $ellipse) {
+    $delay = -rand() / getrandmax();
+
     printf(
       <<<EOF
-  <span class="svg-ellipse" style="top: %.2fem; left: %.2fem; width: %.2fem; height: %.2fem; border-width: %.2fem;"></span>
+  <span class="svg-ellipse" style="top: %.2fem; left: %.2fem; width: %.2fem; height: %.2fem; border-width: %.2fem; animation-delay: %.1fs;"></span>
 
 EOF
       ,
@@ -177,7 +223,8 @@ EOF
       ($ellipse->cx - $ellipse->rx - $ellipse->width / 2) * $scale,
       ($ellipse->rx * 2 - $ellipse->width) * $scale,
       ($ellipse->ry * 2 - $ellipse->width) * $scale,
-      $ellipse->width * $scale
+      $ellipse->width * $scale,
+      $delay
     );
   }
 }
