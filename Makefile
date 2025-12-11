@@ -1,3 +1,5 @@
+SHELL=/bin/bash
+
 all: templated bundled
 
 templated: home cards resumes submodules
@@ -17,8 +19,8 @@ resumes: squiffles.css
 	mkdir -p resume-web
 	cd src/resume && php -f index_web.php > ../../resume-web/index.html
 
-squiffles.css: src/squiffles.css
-	postcss src/squiffles.css --use autoprefixer > squiffles.css
+squiffles.css: src/fishbot.py src/squiffles.css
+	cat src/squiffles.css <(python3 src/fishbot.py) | postcss --use autoprefixer > squiffles.css
 
 submodules:
 	cd css && make

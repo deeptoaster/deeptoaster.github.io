@@ -12,10 +12,4 @@ class FishbotRegion {
   public function __construct(array $nodes) {
     $this->nodes = $nodes;
   }
-
-  /**
-   * Draws the region as HTML elements.
-   * @param $scale The factor by which to scale to ems.
-   */
-  public function draw(float $scale): void {}
 }

@@ -332,7 +332,7 @@ td {
 }
 .svg-ellipse,
 .svg-line,
-.svg-triangle {
+.svg-region {
   display: block;
   position: absolute;
   border-style: solid;
@@ -357,9 +357,10 @@ td {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in, ease-out;
 }
-.svg-triangle {
+.svg-region {
   border-color: transparent;
   border-bottom-color: transparent;
+  animation: 4s linear infinite fishbot;
 }
 .map {
   position: relative;

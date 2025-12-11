@@ -60,7 +60,7 @@ function squiffles_collect(
 }
 
 /**
- * Finds triangles and quadrilaterals from lines and ellipses and fills them.
+ * Finds regions from lines and ellipses and fills them.
  * @param $lines The array of lines.
  * @param $ellipses The array of ellipses.
  * @param $scale The scale factor for the SVG.
@@ -91,10 +91,11 @@ function squiffles_fill(array $lines, array $ellipses, float $scale): void {
       $transform =
           sprintf('transform: rotate(%.2fdeg);', $region->anchor_edge->theta);
       $transform_origin = sprintf('transform-origin: %.2fem top;', $left);
+      $delay = -rand() / getrandmax();
 
       printf(
         <<<EOF
-    <span class="svg-triangle" style="top: %.2fem; left: %.2fem; margin-left: -%.2fem; border-width: 0 %.2fem %.2fem %.2fem; -webkit-%s -moz-%s %s -webkit-%s -moz-%s %s"></span>
+    <span class="svg-region" style="top: %.2fem; left: %.2fem; margin-left: -%.2fem; border-width: 0 %.2fem %.2fem %.2fem; -webkit-%s -moz-%s %s -webkit-%s -moz-%s %s animation-delay: %.1fs"></span>
 
   EOF
         ,
@@ -109,7 +110,8 @@ function squiffles_fill(array $lines, array $ellipses, float $scale): void {
         $transform,
         $transform_origin,
         $transform_origin,
-        $transform_origin
+        $transform_origin,
+        $delay
       );
     }
   }
