@@ -16,6 +16,7 @@
       {include file='links.tpl'}
     </div>
     <div id="scroll">
+      <a id="top"></a>
       <div id="about">
         {include file='about.tpl'}
       </div>

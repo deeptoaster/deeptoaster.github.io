@@ -1329,6 +1329,10 @@ body.page #sidebar {
   position: absolute;
   top: 100%;
 }
+#top {
+  position: relative;
+  top: -4em;
+}
 #scroll > div {
   position: relative;
   overflow: hidden;
@@ -1571,6 +1575,9 @@ body.page #sidebar {
   }
   #fishbot {
     font-size: 2em;
+  }
+  #top {
+    top: -17em;
   }
   .bouncer {
     font-size: 1em;
