@@ -1079,6 +1079,10 @@ a.honeycomb-cell {
 .card .svg-line {
   border-color: #617078;
 }
+.card .svg-ellipse,
+.card .svg-region {
+  animation: none;
+}
 .card .svg-line::after {
   display: none;
 }
