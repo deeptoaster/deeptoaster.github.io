@@ -25,6 +25,19 @@ class FishbotLine extends FishbotEdge {
   }
 
   /**
+   * Adds a node to the line segment's list of recorded intersections.
+   * @param $t The arc length parameter at which the intersection is found.
+   * @param $node The node to record as an intersection.
+   */
+  public function addNode(float $t, FishbotNode $node): void {
+    if (!in_array($node, $this->intersections, true)) {
+      $this->intersections[
+        (string)abs(round($t / FISHBOT_THRESHOLD) * FISHBOT_THRESHOLD)
+      ] = $node;
+    }
+  }
+
+  /**
    * Splits the line segment into edges at its recorded intersections.
    * @param [out] $edges The running list of edges in the graph.
    */
@@ -43,7 +56,7 @@ class FishbotLine extends FishbotEdge {
 
   /**
    * Tests for an intersection between line segments and records it.
-   * @param $other The other line to intersect.
+   * @param $other The other line segment to intersect.
    * @param [in,out] $nodes The running list of nodes in the graph.
    * @return Whether or not the line segments intersect.
    */
@@ -98,20 +111,11 @@ class FishbotLine extends FishbotEdge {
     return true;
   }
 
-  private function addNode(float $t, FishbotNode $node): void {
-    if (!in_array($node, $this->intersections, true)) {
-      $this->intersections[
-        (string)abs(round($t / FISHBOT_THRESHOLD) * FISHBOT_THRESHOLD)
-      ] = $node;
-    }
-  }
-
-  public float $cx {
-    get => ($this->start->x + $this->end->x) / 2;
-  }
-
-  public float $cy {
-    get => ($this->start->y + $this->end->y) / 2;
+  public FishbotNode $center {
+    get => new FishbotNode(
+      ($this->start->x + $this->end->x) / 2,
+      ($this->start->y + $this->end->y) / 2
+    );
   }
 }
 ?>

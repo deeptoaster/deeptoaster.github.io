@@ -2,7 +2,6 @@
 namespace Squiffles;
 
 include(__DIR__ . '/FishbotEllipse.class.php');
-include(__DIR__ . '/FishbotLine.class.php');
 include(__DIR__ . '/FishbotTriangularRegion.class.php');
 include(__DIR__ . '/FishbotTrapezoidalRegion.class.php');
 
@@ -20,8 +19,18 @@ class FishbotGraph {
       }
     }
 
+    foreach ($ellipses as $ellipse) {
+      foreach ($lines as $line) {
+        $ellipse->coincide($line, $this->nodes);
+      }
+    }
+
     foreach ($lines as $line) {
       $line->collectEdges($this->edges);
+    }
+
+    foreach ($ellipses as $ellipse) {
+      $ellipse->collectEdges($this->edges);
     }
   }
 

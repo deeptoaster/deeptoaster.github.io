@@ -146,7 +146,7 @@ function squiffles_fill(array $lines, array $ellipses, float $scale): void {
         $region->short_edge->end->x * $scale,
         $region->short_edge->length * $scale,
         $left,
-        $right,
+        max($right, 0),
         $height,
         $left,
         $transform,
@@ -170,8 +170,8 @@ function squiffles_fill(array $lines, array $ellipses, float $scale): void {
 function squiffles_stroke(array $lines, array $ellipses, float $scale): void {
   foreach ($lines as $line) {
     $width = $line->length * $scale;
-    $top = ($line->cy - $line->width / 2) * $scale;
-    $left = $line->cx * $scale - $width / 2;
+    $top = ($line->center->y - $line->width / 2) * $scale;
+    $left = $line->center->x * $scale - $width / 2;
     $transform = sprintf('transform: rotate(%.2fdeg);', $line->theta);
     $border = $line->width / 2 * $scale;
     $border_left_right = '';
@@ -219,8 +219,8 @@ EOF
 
 EOF
       ,
-      ($ellipse->cy - $ellipse->ry - $ellipse->width / 2) * $scale,
-      ($ellipse->cx - $ellipse->rx - $ellipse->width / 2) * $scale,
+      ($ellipse->center->y - $ellipse->ry - $ellipse->width / 2) * $scale,
+      ($ellipse->center->x - $ellipse->rx - $ellipse->width / 2) * $scale,
       ($ellipse->rx * 2 - $ellipse->width) * $scale,
       ($ellipse->ry * 2 - $ellipse->width) * $scale,
       $ellipse->width * $scale,
