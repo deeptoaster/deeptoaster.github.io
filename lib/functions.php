@@ -170,7 +170,9 @@ function squiffles_config_set(array $settings): void {
   $stream = fopen(CONFIG_FILE, 'w');
 
   foreach ($config as $key => $value) {
-    fwrite($stream, "$key=\"$value\"\n");
+    if (is_string($value)) {
+      fwrite($stream, "$key=\"$value\"\n");
+    }
   }
 
   fclose($stream);
@@ -182,7 +184,7 @@ function squiffles_config_set(array $settings): void {
  * @param [out] Longitude.
  * @return The HTTP request's response code.
  */
-function squiffles_fetch_location(float &$latitude, float &$longitude): int {
+function squiffles_fetch_location(?float &$latitude, ?float &$longitude): int {
   global $config;
 
   $handle = curl_init();
